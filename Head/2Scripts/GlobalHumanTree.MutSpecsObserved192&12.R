@@ -1,6 +1,8 @@
+### PRODUCE MutSpec12AllObs, MutSpec192AllObs, MutSpec12SynNoNd6Obs, MutSpec192SynNoNd6Obs
+
 rm(list=ls(all=TRUE))
 
-pdf("../../Body/4Figures/GlobalHumanTree.MutSpec192.R.pdf", width = 40, height = 20)
+pdf("../../Body/4Figures/GlobalHumanTree.MutSpecsObserved192&12.R.pdf", width = 40, height = 20)
 
 Mut = read.table('../../Body/2Derived/fulltreeCodons.csv', header = TRUE, sep = ';'); # "../../Body/3Results/fulltreeCodons.csv", sep=";"
 names(Mut)
@@ -61,7 +63,13 @@ Pc$SubstHeavy = apply(as.matrix(Pc$Subst), 1, FUN = Comp)
 RevComp <- function(x) {y = paste(rev(comp(s2c(as.character(x)))),collapse = ''); return(toupper(y))}
 Pc$ContextHeavy = apply(as.matrix(Pc$Context), 1, FUN = RevComp)
 
-### create artificial 192 matrix with zeroes
+######### SYN MutSpec12 without ND6
+MutSpec12 = as.data.frame(table(Pc[Pc$synonymous == 'synonymous',]$Subst))
+names(MutSpec12)=c('Subst','Freq')
+MutSpec12 = MutSpec12[order(MutSpec12$Subst),]
+write.table(MutSpec12,'../../Body/2Derived/MutSpec12SynObsNoNd6LightChain.txt')
+
+########## create artificial 192 matrix with zeroes
 VecOfSubst = c('AT','AG','AC','TA','TG','TC','CA','CG','CT','GA','GC','GT'); length(unique(VecOfSubst)) # 12
 VecOfFirsts = c('A','T','G','C')
 VecOfThirds = c('A','T','G','C')
@@ -126,6 +134,7 @@ MutSpec192$Subst = as.character(MutSpec192$Subst)
 MutSpec192$Context = as.character(MutSpec192$Context)
 MutSpec192 = MutSpec192[order(MutSpec192$Subst,MutSpec192$Context),]
 MutSpec192$names = paste(MutSpec192$Subst,': ',MutSpec192$Context,sep='')
+write.table(MutSpec192,'../../Body/2Derived/MutSpec192SynObsNoNd6LightChain.txt')
 
 barplot(MutSpec192$Freq,names=MutSpec192$names,las = 2,cex.names = 0.4,col=c(rgb(1,0.0,0.0,0.5),rgb(0.0,1,0.0,0.5),rgb(0.0,0.0,1,0.5),rgb(0.0,1,1,0.5)), main = 'MutSpec192 (4*12*4) for all synonymous mtDNA human substitutions (N=201102), light chain notation')
 
