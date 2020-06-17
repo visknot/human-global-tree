@@ -20,7 +20,7 @@ Before = ExtAnn$ref[c(1:(nrow(ExtAnn)-3))]; Before = c('Na','Na','Na',Before); l
 ExtAnn$Before = Before; ExtAnn$After = After;  
 ExtAnn$Context = paste(ExtAnn$Before,ExtAnn$ref,ExtAnn$After,sep='')
 ExtAnn$Subst = paste(ExtAnn$ref,ExtAnn$var,sep='')
-ExtAnn$names = paste(ExtAnn$Subst, ExtAnn$Context , sep=' : ') 
+ExtAnn$names = paste(ExtAnn$Subst, ExtAnn$Context , sep=': ') 
 ExtAnn = ExtAnn[c(4:(nrow(ExtAnn)-3)),]
 
 ##### MERGE ObsAll & ExtAnn (all.x = TRUE)
@@ -71,7 +71,7 @@ Context[] <- lapply(Context, function(x) (gsub("1", "A", x))); Context[] <- lapp
 Context[] <- lapply(Context, function(x) (gsub("3", "G", x))); Context[] <- lapply(Context, function(x) (gsub("4", "C", x)))
 Context = Context[Context$ref != Context$var,];
 Context = Context[Context$ref == Context$Middle,]; nrow(Context) # 192
-Context$names = paste(Context$ref,Context$var,' : ',Context$Before,Context$Middle,Context$After,sep = '')
+Context$names = paste(Context$ref,Context$var,': ',Context$Before,Context$Middle,Context$After,sep = '')
 Context$NumbObs = 0; Artificial192=select(Context,names,NumbObs)
 
 # generate ObsMut192:
