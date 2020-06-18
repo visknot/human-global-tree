@@ -1,0 +1,100 @@
+#### COMPARE OBSERVED  AND EXPECTED CANCER MutSpecs 
+rm(list=ls(all=TRUE))
+library('dplyr')
+library('gtools')
+
+pdf("../../Body/4Figures/04.MutSpecObservedVsExpected.Cancers.R.pdf", width = 22, height = 14)
+par(mfrow=c(3,1))
+ColVec=c('gray',rgb(0,1,0,0.2),'gray','gray','gray',rgb(1,0,0,0.2),rgb(1,0,0,1),'gray','gray','gray',rgb(0,1,0,1),'gray'); length(ColVec)
+
+##### READ ALL OBSERVED MUTATIONS FROM ALL CANCERS
+ObsAll = read.table("../../Body/1Raw/CancerDataFromCampbell/mtDNA_snv_Oct2016.txt", sep = '\t', header = TRUE)
+ObsAll=select(ObsAll,position,ref,var,tissue,Annot,X,X.1,is_nonsense)
+
+##### READ EXTENSIVELY MUTATED AND ANNOTATED ALL MTDNA MUTATIONS
+ExtAnn = read.table("../../Body/1Raw/FromCovidProject/HumanMtDnaRefSeq.fasta.ExtensiveMut.vcf.ann", sep = '\t', header = FALSE)
+ExtAnn = ExtAnn[c(2,4,5,8)]
+names(ExtAnn)=c('position','ref','var','annotation')
+After = ExtAnn$ref[c(4:nrow(ExtAnn))]; After = c(After,'Na','Na','Na'); length(After)
+Before = ExtAnn$ref[c(1:(nrow(ExtAnn)-3))]; Before = c('Na','Na','Na',Before); length(Before)
+ExtAnn$Before = Before; ExtAnn$After = After;  
+ExtAnn$Context = paste(ExtAnn$Before,ExtAnn$ref,ExtAnn$After,sep='')
+ExtAnn$Subst = paste(ExtAnn$ref,ExtAnn$var,sep='')
+ExtAnn$names = paste(ExtAnn$Subst, ExtAnn$Context , sep=': ') 
+ExtAnn = ExtAnn[c(4:(nrow(ExtAnn)-3)),]
+
+##### MERGE ObsAll & ExtAnn (all.x = TRUE)
+dim(ObsAll)
+ObsAll = merge(ObsAll,ExtAnn, by = c('position','ref','var'))
+dim(ObsAll)
+ObsAll = ObsAll[order(ObsAll$position),]  
+
+##### MANUAL CHECK IF ANNOTATION FROM CANCER AND my (SnpEff from Covid project) are the same (syn, npns, stop...)
+ObsAll[ObsAll$position == 9712,] # nsSNP; |missense_variant| => nonsynonymous substitution 
+ObsAll[ObsAll$position == 4558,] # nsSNP;  |stop_retained_variant| => from stop to stop
+ObsAll[ObsAll$position == 9962,] # synSNP ; |synonymous_variant| => synonymous variant
+ObsAll[ObsAll$position == 9962,] # synSNP ; |synonymous_variant| => synonymous variant
+
+##### keep in ObsAll and ExtAnn only cancer-neutral substitutions:
+AnnotationParser <- function(x) {unlist(strsplit(x,"\\|"))[2]}
+ObsAll$SubstClass = apply(as.matrix(ObsAll$annotation),1,FUN = AnnotationParser)
+table(ObsAll$SubstClass) 
+# out of all classes only two might be non-neutral in cancers: 'stop_gained' and 'stop_lost'  (see NatGen2020) => delete them from both: observed and expected
+ObsAll = ObsAll[ObsAll$SubstClass != 'stop_gained' & ObsAll$SubstClass != 'stop_lost',]
+ExtAnn$SubstClass = apply(as.matrix(ExtAnn$annotation),1,FUN = AnnotationParser)
+ExtAnn = ExtAnn[ExtAnn$SubstClass != 'stop_gained' & ExtAnn$SubstClass != 'stop_lost',]
+
+##### DERIVE, plot and save 12-component MutSpecs: observed, expected, observed/expected
+ObsAll$RefAlt = paste(ObsAll$ref,ObsAll$var, sep = ''); 
+ObsMut12 = data.frame(table(ObsAll$RefAlt)); names(ObsMut12) = c('Subst','NumbObs')
+ObsMut12$FreqObs = ObsMut12$NumbObs/sum(ObsMut12$NumbObs)
+
+ExtAnn$RefAlt = paste(ExtAnn$ref,ExtAnn$var, sep = ''); 
+ExpMut12 = data.frame(table(ExtAnn$RefAlt)); names(ExpMut12) = c('Subst','NumbExp')
+ExpMut12$FreqExp = ExpMut12$NumbExp/sum(ExpMut12$NumbExp)
+
+ObsExp12 = merge(ObsMut12,ExpMut12, by = 'Subst')
+ObsExp12$ObsToExpFreq = ObsExp12$FreqObs/ObsExp12$FreqExp
+ObsExp12 = ObsExp12[order(ObsExp12$Subst),]
+
+barplot(ObsExp12$FreqObs, names = ObsExp12$Subst, col = ColVec, main = paste("Frequencies of Observed neutral in cancer mtDNA substitutions"), cex.names = 2, cex.axis = 2)
+barplot(ObsExp12$FreqExp, names = ObsExp12$Subst, col = ColVec, main = paste("Frequencies of Expected neutral in cancer mtDNA substitutions"), cex.names = 2, cex.axis = 2)
+barplot(ObsExp12$ObsToExpFreq, names = ObsExp12$Subst, col = ColVec, main = paste("Frequencies of Observed/Frequencies of Expected  neutral in cancer mtDNA substitutions"), cex.names = 2, cex.axis = 2)
+write.table(ObsExp12, "../../Body/3Results/MutSpec12ObsToExpCancerNeutralClassesOfMut.txt", row.names = FALSE, quote = FALSE, sep = '\t')
+
+##### DERIVE, plot and save 192-component MutSpecs: observed, expected, observed/expected
+## generate artificial 192 matrix:
+Context = data.frame(permutations(4, 3, repeats.allowed = TRUE)); names(Context) = c('Before','Middle','After')
+Subst = data.frame(permutations(4, 2, repeats.allowed = TRUE)); names(Subst) = c('ref','var')
+Context = merge(Context,Subst)
+Context[] <- lapply(Context, function(x) (gsub("1", "A", x))); Context[] <- lapply(Context, function(x) (gsub("2", "T", x))); 
+Context[] <- lapply(Context, function(x) (gsub("3", "G", x))); Context[] <- lapply(Context, function(x) (gsub("4", "C", x)))
+Context = Context[Context$ref != Context$var,];
+Context = Context[Context$ref == Context$Middle,]; nrow(Context) # 192
+Context$names = paste(Context$ref,Context$var,': ',Context$Before,Context$Middle,Context$After,sep = '')
+Context$NumbObs = 0; Artificial192=select(Context,names,NumbObs)
+
+# generate ObsMut192:
+ObsMut192 = data.frame(table(ObsAll$names)); names(ObsMut192) = c('names','NumbObs')
+ObsMut192 = rbind(ObsMut192,Artificial192); ObsMut192 = aggregate(ObsMut192$NumbObs, by = list(ObsMut192$names), FUN = sum)
+names(ObsMut192) = c('names','NumbObs')
+ObsMut192$FreqObs = ObsMut192$NumbObs/sum(ObsMut192$NumbObs)
+
+# generate ExpMut192:
+ExpMut192 = data.frame(table(ExtAnn$names)); names(ExpMut192) = c('names','NumbExp')
+names(Artificial192)=c('names','NumbExp')
+ExpMut192 = rbind(ExpMut192,Artificial192); ExpMut192 = aggregate(ExpMut192$NumbExp, by = list(ExpMut192$names), FUN = sum)
+names(ExpMut192) = c('names','NumbExp')
+ExpMut192$FreqExp = ExpMut192$NumbExp/sum(ExpMut192$NumbExp)
+
+ObsExp192 = merge(ObsMut192,ExpMut192, by = 'names')
+ObsExp192$ObsToExpFreq = ObsExp192$FreqObs/ObsExp192$FreqExp
+ObsExp192 = ObsExp192[order(as.character(ObsExp192$names)),]
+
+ColVec=c(rep('gray',16),rep(rgb(0,1,0,0.2),16),rep('gray',16),rep('gray',16),rep('gray',16),rep(rgb(1,0,0,0.2),16),rep(rgb(1,0,0,1),16),rep('gray',16),rep('gray',16),rep('gray',16),rep(rgb(0,1,0,1),16),rep('gray',16)); length(ColVec)
+barplot(ObsExp192$FreqObs, names = ObsExp192$names, col = ColVec, main = paste("Frequencies of Observed neutral in cancer mtDNA substitutions"), cex.names = 1, cex.axis = 1, las = 2)
+barplot(ObsExp192$FreqExp, names = ObsExp192$names, col = ColVec, main = paste("Frequencies of Expected neutral in cancer mtDNA substitutions"), cex.names = 1, cex.axis = 1, las = 2)
+barplot(ObsExp192$ObsToExpFreq, names = ObsExp192$names, col = ColVec, main = paste("Frequencies of Observed/Frequencies of Expected  neutral in cancer mtDNA substitutions"), cex.names = 1, cex.axis = 1, las = 2)
+write.table(ObsExp192, "../../Body/3Results/MutSpec192ObsToExpCancerNeutralClassesOfMut.txt", row.names = FALSE, quote = FALSE, sep = '\t')
+
+dev.off()
