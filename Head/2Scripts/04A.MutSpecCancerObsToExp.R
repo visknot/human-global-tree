@@ -6,7 +6,7 @@ library('gtools')
 library(seqinr)
 
 pdf("../../Body/4Figures/04A.MutSpecCancerObsToExp.R.pdf", width = 22, height = 14)
-par(mfrow=c(2,1))
+par(mfrow=c(3,1))
 
 ###### MutSpec12
 ColVec=c('gray',rgb(0,1,0,1),'gray','gray','gray',rgb(1,0,0,1),rgb(1,0,0,0.2),'gray','gray','gray',rgb(0,1,0,0.2),'gray'); length(ColVec)
@@ -33,11 +33,13 @@ write.table(MS12,"../../Body/3Results/04A.MutSpecCancerObsToExp.MutSpec12.txt")
 # plot MutSpec in light chain notation:
 barplot(MS12[MS12$SubstType == 'AllExceptStopGains',]$ObsToExpFreq, names = MS12[MS12$SubstType == 'AllExceptStopGains',]$Subst, col = ColVec, main = paste("ObsFreq/ExpFreq AllExceptStopGain, Light Chain"), cex.names = 2, cex.axis = 2)
 barplot(MS12[MS12$SubstType == 'synonymous',]$ObsToExpFreq, names = MS12[MS12$SubstType == 'synonymous',]$Subst, col = ColVec, main = paste("ObsFreq/ExpFreq SynSubst, Light Chain"), cex.names = 2, cex.axis = 2)
+plot.new()
 
 MS12 = MS12[order(MS12$SubstType,MS12$SubstHeavy),]
 # plot MutSpec in heavy chain notation:
 barplot(MS12[MS12$SubstType == 'AllExceptStopGains',]$ObsToExpFreq, names = MS12[MS12$SubstType == 'AllExceptStopGains',]$SubstHeavy, col = ColVec, main = paste("ObsFreq/ExpFreq AllExceptStopGain, Heavy Chain"), cex.names = 2, cex.axis = 2)
 barplot(MS12[MS12$SubstType == 'synonymous',]$ObsToExpFreq, names = MS12[MS12$SubstType == 'synonymous',]$SubstHeavy, col = ColVec, main = paste("ObsFreq/ExpFreq SynSubst, Heavy Chain"), cex.names = 2, cex.axis = 2)
+plot.new()
 
 ####### MutSpec192
 ColVec=c(rep('gray',16),rep(rgb(0,1,0,1),16),rep('gray',16),rep('gray',16),rep('gray',16),rep(rgb(1,0,0,1),16),rep(rgb(1,0,0,0.2),16),rep('gray',16),rep('gray',16),rep('gray',16),rep(rgb(0,1,0,0.2),16),rep('gray',16)); length(ColVec)
@@ -75,11 +77,13 @@ write.table(MS192,"../../Body/3Results/04A.MutSpecCancerObsToExp.MutSpec192.txt"
 # plot in light chain notation 
 barplot(MS192[MS192$SubstType == 'AllExceptStopGains',]$ObsToExpFreq, names = MS192[MS192$SubstType == 'AllExceptStopGains',]$names, col = ColVec, border = BorderVec, main = paste("ObsFreq/ExpFreq, AllExceptStopGains, Light Chain"), cex.names = 1, cex.axis = 1, las = 2)
 barplot(MS192[MS192$SubstType == 'synonymous',]$ObsToExpFreq, names = MS192[MS192$SubstType == 'synonymous',]$names, col = ColVec, border = BorderVec, main = paste("ObsFreq/ExpFreq SynSubst, Light Chain"), cex.names = 1, cex.axis = 1, las = 2)
+plot.new()
 
 # plot in heavy chain notation 
 MS192 = MS192[order(MS192$NamesHeavy),]
 BorderVec = rep(c(rgb(0.1,0.1,0.1,0.1),rgb(0,0,0,1),rgb(0.1,0.1,0.1,0.1),rgb(0.1,0.1,0.1,0.1)),48) # 192/4 The second colum is with border
 barplot(MS192[MS192$SubstType == 'AllExceptStopGains',]$ObsToExpFreq, names = MS192[MS192$SubstType == 'AllExceptStopGains',]$NamesHeavy, col = ColVec, border = BorderVec, main = paste("ObsFreq/ExpFreq, AllExceptStopGains, Heavy Chain"), cex.names = 1, cex.axis = 1, las = 2)
 barplot(MS192[MS192$SubstType == 'synonymous',]$ObsToExpFreq, names = MS192[MS192$SubstType == 'synonymous',]$NamesHeavy, col = ColVec, border = BorderVec, main = paste("ObsFreq/ExpFreq SynSubst, Heavy Chain"), cex.names = 1, cex.axis = 1, las = 2)
+plot.new()
 
 dev.off()
