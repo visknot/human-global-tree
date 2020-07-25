@@ -1,672 +1,672 @@
-substitution_type	preceeding_nucleotide	functional_category	how_many	data
-ALL	ALL	ALL	49707	Expected
-A>G	ALL	ALL	5124	Expected
-A>G	A	ALL	1604	Expected
-A>G	T	ALL	1373	Expected
-A>G	G	ALL	613	Expected
-A>G	C	ALL	1534	Expected
-A>T	ALL	ALL	5124	Expected
-A>T	A	ALL	1604	Expected
-A>T	T	ALL	1373	Expected
-A>T	G	ALL	613	Expected
-A>T	C	ALL	1534	Expected
-A>C	ALL	ALL	5124	Expected
-A>C	A	ALL	1604	Expected
-A>C	T	ALL	1373	Expected
-A>C	G	ALL	613	Expected
-A>C	C	ALL	1534	Expected
-T>G	ALL	ALL	4094	Expected
-T>G	A	ALL	1230	Expected
-T>G	T	ALL	1004	Expected
-T>G	G	ALL	419	Expected
-T>G	C	ALL	1441	Expected
-T>C	ALL	ALL	4094	Expected
-T>C	A	ALL	1230	Expected
-T>C	T	ALL	1004	Expected
-T>C	G	ALL	419	Expected
-T>C	C	ALL	1441	Expected
-T>A	ALL	ALL	4094	Expected
-T>A	A	ALL	1230	Expected
-T>A	T	ALL	1004	Expected
-T>A	G	ALL	419	Expected
-T>A	C	ALL	1441	Expected
-G>A	ALL	ALL	2169	Expected
-G>A	A	ALL	795	Expected
-G>A	T	ALL	513	Expected
-G>A	G	ALL	426	Expected
-G>A	C	ALL	435	Expected
-G>T	ALL	ALL	2169	Expected
-G>T	A	ALL	795	Expected
-G>T	T	ALL	513	Expected
-G>T	G	ALL	426	Expected
-G>T	C	ALL	435	Expected
-G>C	ALL	ALL	2169	Expected
-G>C	A	ALL	795	Expected
-G>C	T	ALL	513	Expected
-G>C	G	ALL	426	Expected
-G>C	C	ALL	435	Expected
-C>A	ALL	ALL	5182	Expected
-C>A	A	ALL	1495	Expected
-C>A	T	ALL	1204	Expected
-C>A	G	ALL	711	Expected
-C>A	C	ALL	1772	Expected
-C>T	ALL	ALL	5182	Expected
-C>T	A	ALL	1495	Expected
-C>T	T	ALL	1204	Expected
-C>T	G	ALL	711	Expected
-C>T	C	ALL	1772	Expected
-C>G	ALL	ALL	5182	Expected
-C>G	A	ALL	1495	Expected
-C>G	T	ALL	1204	Expected
-C>G	G	ALL	711	Expected
-C>G	C	ALL	1772	Expected
-ALL	ALL	NODLOOP	46344	Expected
-A>G	ALL	NODLOOP	4785	Expected
-A>G	A	NODLOOP	1394	Expected
-A>G	T	NODLOOP	1274	Expected
-A>G	G	NODLOOP	616	Expected
-A>G	C	NODLOOP	1501	Expected
-A>T	ALL	NODLOOP	4785	Expected
-A>T	A	NODLOOP	1394	Expected
-A>T	T	NODLOOP	1274	Expected
-A>T	G	NODLOOP	616	Expected
-A>T	C	NODLOOP	1501	Expected
-A>C	ALL	NODLOOP	4785	Expected
-A>C	A	NODLOOP	1394	Expected
-A>C	T	NODLOOP	1274	Expected
-A>C	G	NODLOOP	616	Expected
-A>C	C	NODLOOP	1501	Expected
-T>G	ALL	NODLOOP	3835	Expected
-T>G	A	NODLOOP	1254	Expected
-T>G	T	NODLOOP	895	Expected
-T>G	G	NODLOOP	529	Expected
-T>G	C	NODLOOP	1157	Expected
-T>C	ALL	NODLOOP	3835	Expected
-T>C	A	NODLOOP	1254	Expected
-T>C	T	NODLOOP	895	Expected
-T>C	G	NODLOOP	529	Expected
-T>C	C	NODLOOP	1157	Expected
-T>A	ALL	NODLOOP	3835	Expected
-T>A	A	NODLOOP	1254	Expected
-T>A	T	NODLOOP	895	Expected
-T>A	G	NODLOOP	529	Expected
-T>A	C	NODLOOP	1157	Expected
-G>A	ALL	NODLOOP	2017	Expected
-G>A	A	NODLOOP	648	Expected
-G>A	T	NODLOOP	462	Expected
-G>A	G	NODLOOP	249	Expected
-G>A	C	NODLOOP	658	Expected
-G>T	ALL	NODLOOP	2017	Expected
-G>T	A	NODLOOP	648	Expected
-G>T	T	NODLOOP	462	Expected
-G>T	G	NODLOOP	249	Expected
-G>T	C	NODLOOP	658	Expected
-G>C	ALL	NODLOOP	2017	Expected
-G>C	A	NODLOOP	648	Expected
-G>C	T	NODLOOP	462	Expected
-G>C	G	NODLOOP	249	Expected
-G>C	C	NODLOOP	658	Expected
-C>A	ALL	NODLOOP	4811	Expected
-C>A	A	NODLOOP	1475	Expected
-C>A	T	NODLOOP	1191	Expected
-C>A	G	NODLOOP	637	Expected
-C>A	C	NODLOOP	1508	Expected
-C>T	ALL	NODLOOP	4811	Expected
-C>T	A	NODLOOP	1475	Expected
-C>T	T	NODLOOP	1191	Expected
-C>T	G	NODLOOP	637	Expected
-C>T	C	NODLOOP	1508	Expected
-C>G	ALL	NODLOOP	4811	Expected
-C>G	A	NODLOOP	1475	Expected
-C>G	T	NODLOOP	1191	Expected
-C>G	G	NODLOOP	637	Expected
-C>G	C	NODLOOP	1508	Expected
-ALL	ALL	SYNONYMALL	8678	Expected
-A>G	ALL	SYNONYMALL	1154	Expected
-A>G	A	SYNONYMALL	265	Expected
-A>G	T	SYNONYMALL	418	Expected
-A>G	G	SYNONYMALL	97	Expected
-A>G	C	SYNONYMALL	374	Expected
-A>T	ALL	SYNONYMALL	979	Expected
-A>T	A	SYNONYMALL	15	Expected
-A>T	T	SYNONYMALL	512	Expected
-A>T	G	SYNONYMALL	93	Expected
-A>T	C	SYNONYMALL	359	Expected
-A>C	ALL	SYNONYMALL	968	Expected
-A>C	A	SYNONYMALL	12	Expected
-A>C	T	SYNONYMALL	512	Expected
-A>C	G	SYNONYMALL	91	Expected
-A>C	C	SYNONYMALL	353	Expected
-T>G	ALL	SYNONYMALL	293	Expected
-T>G	A	SYNONYMALL	8	Expected
-T>G	T	SYNONYMALL	95	Expected
-T>G	G	SYNONYMALL	22	Expected
-T>G	C	SYNONYMALL	168	Expected
-T>C	ALL	SYNONYMALL	665	Expected
-T>C	A	SYNONYMALL	130	Expected
-T>C	T	SYNONYMALL	282	Expected
-T>C	G	SYNONYMALL	37	Expected
-T>C	C	SYNONYMALL	216	Expected
-T>A	ALL	SYNONYMALL	404	Expected
-T>A	A	SYNONYMALL	8	Expected
-T>A	T	SYNONYMALL	207	Expected
-T>A	G	SYNONYMALL	22	Expected
-T>A	C	SYNONYMALL	167	Expected
-G>A	ALL	SYNONYMALL	149	Expected
-G>A	A	SYNONYMALL	39	Expected
-G>A	T	SYNONYMALL	60	Expected
-G>A	G	SYNONYMALL	19	Expected
-G>A	C	SYNONYMALL	31	Expected
-G>T	ALL	SYNONYMALL	103	Expected
-G>T	A	SYNONYMALL	2	Expected
-G>T	T	SYNONYMALL	50	Expected
-G>T	G	SYNONYMALL	19	Expected
-G>T	C	SYNONYMALL	32	Expected
-G>C	ALL	SYNONYMALL	101	Expected
-G>C	A	SYNONYMALL	2	Expected
-G>C	T	SYNONYMALL	50	Expected
-G>C	G	SYNONYMALL	19	Expected
-G>C	C	SYNONYMALL	30	Expected
-C>A	ALL	SYNONYMALL	1079	Expected
-C>A	A	SYNONYMALL	18	Expected
-C>A	T	SYNONYMALL	421	Expected
-C>A	G	SYNONYMALL	119	Expected
-C>A	C	SYNONYMALL	521	Expected
-C>T	ALL	SYNONYMALL	1928	Expected
-C>T	A	SYNONYMALL	461	Expected
-C>T	T	SYNONYMALL	595	Expected
-C>T	G	SYNONYMALL	182	Expected
-C>T	C	SYNONYMALL	690	Expected
-C>G	ALL	SYNONYMALL	855	Expected
-C>G	A	SYNONYMALL	9	Expected
-C>G	T	SYNONYMALL	218	Expected
-C>G	G	SYNONYMALL	115	Expected
-C>G	C	SYNONYMALL	513	Expected
-ALL	ALL	SYN4FOLD	6144	Expected
-A>G	ALL	SYN4FOLD	802	Expected
-A>G	A	SYN4FOLD	12	Expected
-A>G	T	SYN4FOLD	346	Expected
-A>G	G	SYN4FOLD	91	Expected
-A>G	C	SYN4FOLD	353	Expected
-A>T	ALL	SYN4FOLD	802	Expected
-A>T	A	SYN4FOLD	12	Expected
-A>T	T	SYN4FOLD	346	Expected
-A>T	G	SYN4FOLD	91	Expected
-A>T	C	SYN4FOLD	353	Expected
-A>C	ALL	SYN4FOLD	802	Expected
-A>C	A	SYN4FOLD	12	Expected
-A>C	T	SYN4FOLD	346	Expected
-A>C	G	SYN4FOLD	91	Expected
-A>C	C	SYN4FOLD	353	Expected
-T>G	ALL	SYN4FOLD	290	Expected
-T>G	A	SYN4FOLD	8	Expected
-T>G	T	SYN4FOLD	94	Expected
-T>G	G	SYN4FOLD	22	Expected
-T>G	C	SYN4FOLD	166	Expected
-T>C	ALL	SYN4FOLD	290	Expected
-T>C	A	SYN4FOLD	8	Expected
-T>C	T	SYN4FOLD	94	Expected
-T>C	G	SYN4FOLD	22	Expected
-T>C	C	SYN4FOLD	166	Expected
-T>A	ALL	SYN4FOLD	290	Expected
-T>A	A	SYN4FOLD	8	Expected
-T>A	T	SYN4FOLD	94	Expected
-T>A	G	SYN4FOLD	22	Expected
-T>A	C	SYN4FOLD	166	Expected
-G>A	ALL	SYN4FOLD	101	Expected
-G>A	A	SYN4FOLD	2	Expected
-G>A	T	SYN4FOLD	50	Expected
-G>A	G	SYN4FOLD	19	Expected
-G>A	C	SYN4FOLD	30	Expected
-G>T	ALL	SYN4FOLD	101	Expected
-G>T	A	SYN4FOLD	2	Expected
-G>T	T	SYN4FOLD	50	Expected
-G>T	G	SYN4FOLD	19	Expected
-G>T	C	SYN4FOLD	30	Expected
-G>C	ALL	SYN4FOLD	101	Expected
-G>C	A	SYN4FOLD	2	Expected
-G>C	T	SYN4FOLD	50	Expected
-G>C	G	SYN4FOLD	19	Expected
-G>C	C	SYN4FOLD	30	Expected
-C>A	ALL	SYN4FOLD	855	Expected
-C>A	A	SYN4FOLD	9	Expected
-C>A	T	SYN4FOLD	218	Expected
-C>A	G	SYN4FOLD	115	Expected
-C>A	C	SYN4FOLD	513	Expected
-C>T	ALL	SYN4FOLD	855	Expected
-C>T	A	SYN4FOLD	9	Expected
-C>T	T	SYN4FOLD	218	Expected
-C>T	G	SYN4FOLD	115	Expected
-C>T	C	SYN4FOLD	513	Expected
-C>G	ALL	SYN4FOLD	855	Expected
-C>G	A	SYN4FOLD	9	Expected
-C>G	T	SYN4FOLD	218	Expected
-C>G	G	SYN4FOLD	115	Expected
-C>G	C	SYN4FOLD	513	Expected
-ALL	ALL	ALL	7611	Cancer
-A>G	ALL	ALL	481	Cancer
-A>G	A	ALL	175	Cancer
-A>G	T	ALL	132	Cancer
-A>G	G	ALL	102	Cancer
-A>G	C	ALL	72	Cancer
-A>T	ALL	ALL	72	Cancer
-A>T	A	ALL	24	Cancer
-A>T	T	ALL	19	Cancer
-A>T	G	ALL	7	Cancer
-A>T	C	ALL	22	Cancer
-A>C	ALL	ALL	91	Cancer
-A>C	A	ALL	18	Cancer
-A>C	T	ALL	10	Cancer
-A>C	G	ALL	3	Cancer
-A>C	C	ALL	60	Cancer
-T>G	ALL	ALL	27	Cancer
-T>G	A	ALL	7	Cancer
-T>G	T	ALL	3	Cancer
-T>G	G	ALL	12	Cancer
-T>G	C	ALL	5	Cancer
-T>C	ALL	ALL	2120	Cancer
-T>C	A	ALL	651	Cancer
-T>C	T	ALL	357	Cancer
-T>C	G	ALL	324	Cancer
-T>C	C	ALL	788	Cancer
-T>A	ALL	ALL	29	Cancer
-T>A	A	ALL	5	Cancer
-T>A	T	ALL	9	Cancer
-T>A	G	ALL	3	Cancer
-T>A	C	ALL	12	Cancer
-G>A	ALL	ALL	3663	Cancer
-G>A	A	ALL	1242	Cancer
-G>A	T	ALL	642	Cancer
-G>A	G	ALL	778	Cancer
-G>A	C	ALL	1001	Cancer
-G>T	ALL	ALL	49	Cancer
-G>T	A	ALL	11	Cancer
-G>T	T	ALL	20	Cancer
-G>T	G	ALL	3	Cancer
-G>T	C	ALL	15	Cancer
-G>C	ALL	ALL	119	Cancer
-G>C	A	ALL	28	Cancer
-G>C	T	ALL	34	Cancer
-G>C	G	ALL	19	Cancer
-G>C	C	ALL	38	Cancer
-C>A	ALL	ALL	167	Cancer
-C>A	A	ALL	36	Cancer
-C>A	T	ALL	63	Cancer
-C>A	G	ALL	23	Cancer
-C>A	C	ALL	45	Cancer
-C>T	ALL	ALL	771	Cancer
-C>T	A	ALL	202	Cancer
-C>T	T	ALL	181	Cancer
-C>T	G	ALL	124	Cancer
-C>T	C	ALL	264	Cancer
-C>G	ALL	ALL	22	Cancer
-C>G	A	ALL	7	Cancer
-C>G	T	ALL	4	Cancer
-C>G	G	ALL	5	Cancer
-C>G	C	ALL	6	Cancer
-ALL	ALL	NODLOOP	6628	Cancer
-A>G	ALL	NODLOOP	350	Cancer
-A>G	A	NODLOOP	130	Cancer
-A>G	T	NODLOOP	93	Cancer
-A>G	G	NODLOOP	86	Cancer
-A>G	C	NODLOOP	41	Cancer
-A>T	ALL	NODLOOP	65	Cancer
-A>T	A	NODLOOP	24	Cancer
-A>T	T	NODLOOP	17	Cancer
-A>T	G	NODLOOP	6	Cancer
-A>T	C	NODLOOP	18	Cancer
-A>C	ALL	NODLOOP	80	Cancer
-A>C	A	NODLOOP	17	Cancer
-A>C	T	NODLOOP	10	Cancer
-A>C	G	NODLOOP	3	Cancer
-A>C	C	NODLOOP	50	Cancer
-T>G	ALL	NODLOOP	18	Cancer
-T>G	A	NODLOOP	5	Cancer
-T>G	T	NODLOOP	3	Cancer
-T>G	G	NODLOOP	6	Cancer
-T>G	C	NODLOOP	4	Cancer
-T>C	ALL	NODLOOP	1884	Cancer
-T>C	A	NODLOOP	623	Cancer
-T>C	T	NODLOOP	308	Cancer
-T>C	G	NODLOOP	242	Cancer
-T>C	C	NODLOOP	711	Cancer
-T>A	ALL	NODLOOP	23	Cancer
-T>A	A	NODLOOP	5	Cancer
-T>A	T	NODLOOP	5	Cancer
-T>A	G	NODLOOP	3	Cancer
-T>A	C	NODLOOP	10	Cancer
-G>A	ALL	NODLOOP	3452	Cancer
-G>A	A	NODLOOP	1189	Cancer
-G>A	T	NODLOOP	586	Cancer
-G>A	G	NODLOOP	715	Cancer
-G>A	C	NODLOOP	962	Cancer
-G>T	ALL	NODLOOP	32	Cancer
-G>T	A	NODLOOP	10	Cancer
-G>T	T	NODLOOP	8	Cancer
-G>T	G	NODLOOP	3	Cancer
-G>T	C	NODLOOP	11	Cancer
-G>C	ALL	NODLOOP	112	Cancer
-G>C	A	NODLOOP	27	Cancer
-G>C	T	NODLOOP	32	Cancer
-G>C	G	NODLOOP	19	Cancer
-G>C	C	NODLOOP	34	Cancer
-C>A	ALL	NODLOOP	125	Cancer
-C>A	A	NODLOOP	27	Cancer
-C>A	T	NODLOOP	54	Cancer
-C>A	G	NODLOOP	19	Cancer
-C>A	C	NODLOOP	25	Cancer
-C>T	ALL	NODLOOP	471	Cancer
-C>T	A	NODLOOP	128	Cancer
-C>T	T	NODLOOP	118	Cancer
-C>T	G	NODLOOP	68	Cancer
-C>T	C	NODLOOP	157	Cancer
-C>G	ALL	NODLOOP	16	Cancer
-C>G	A	NODLOOP	2	Cancer
-C>G	T	NODLOOP	4	Cancer
-C>G	G	NODLOOP	5	Cancer
-C>G	C	NODLOOP	5	Cancer
-ALL	ALL	SYNONYMALL	874	Cancer
-A>G	ALL	SYNONYMALL	91	Cancer
-A>G	A	SYNONYMALL	17	Cancer
-A>G	T	SYNONYMALL	36	Cancer
-A>G	G	SYNONYMALL	28	Cancer
-A>G	C	SYNONYMALL	10	Cancer
-A>T	ALL	SYNONYMALL	11	Cancer
-A>T	A	SYNONYMALL	0	Cancer
-A>T	T	SYNONYMALL	6	Cancer
-A>T	G	SYNONYMALL	3	Cancer
-A>T	C	SYNONYMALL	2	Cancer
-A>C	ALL	SYNONYMALL	12	Cancer
-A>C	A	SYNONYMALL	0	Cancer
-A>C	T	SYNONYMALL	2	Cancer
-A>C	G	SYNONYMALL	1	Cancer
-A>C	C	SYNONYMALL	9	Cancer
-T>G	ALL	SYNONYMALL	3	Cancer
-T>G	A	SYNONYMALL	0	Cancer
-T>G	T	SYNONYMALL	3	Cancer
-T>G	G	SYNONYMALL	0	Cancer
-T>G	C	SYNONYMALL	0	Cancer
-T>C	ALL	SYNONYMALL	262	Cancer
-T>C	A	SYNONYMALL	51	Cancer
-T>C	T	SYNONYMALL	86	Cancer
-T>C	G	SYNONYMALL	30	Cancer
-T>C	C	SYNONYMALL	95	Cancer
-T>A	ALL	SYNONYMALL	1	Cancer
-T>A	A	SYNONYMALL	0	Cancer
-T>A	T	SYNONYMALL	0	Cancer
-T>A	G	SYNONYMALL	0	Cancer
-T>A	C	SYNONYMALL	1	Cancer
-G>A	ALL	SYNONYMALL	255	Cancer
-G>A	A	SYNONYMALL	52	Cancer
-G>A	T	SYNONYMALL	88	Cancer
-G>A	G	SYNONYMALL	46	Cancer
-G>A	C	SYNONYMALL	69	Cancer
-G>T	ALL	SYNONYMALL	0	Cancer
-G>T	A	SYNONYMALL	0	Cancer
-G>T	T	SYNONYMALL	0	Cancer
-G>T	G	SYNONYMALL	0	Cancer
-G>T	C	SYNONYMALL	0	Cancer
-G>C	ALL	SYNONYMALL	4	Cancer
-G>C	A	SYNONYMALL	0	Cancer
-G>C	T	SYNONYMALL	2	Cancer
-G>C	G	SYNONYMALL	0	Cancer
-G>C	C	SYNONYMALL	2	Cancer
-C>A	ALL	SYNONYMALL	20	Cancer
-C>A	A	SYNONYMALL	0	Cancer
-C>A	T	SYNONYMALL	8	Cancer
-C>A	G	SYNONYMALL	2	Cancer
-C>A	C	SYNONYMALL	10	Cancer
-C>T	ALL	SYNONYMALL	211	Cancer
-C>T	A	SYNONYMALL	44	Cancer
-C>T	T	SYNONYMALL	72	Cancer
-C>T	G	SYNONYMALL	24	Cancer
-C>T	C	SYNONYMALL	71	Cancer
-C>G	ALL	SYNONYMALL	4	Cancer
-C>G	A	SYNONYMALL	0	Cancer
-C>G	T	SYNONYMALL	2	Cancer
-C>G	G	SYNONYMALL	1	Cancer
-C>G	C	SYNONYMALL	1	Cancer
-ALL	ALL	ALL	502531	Germline
-A>G	ALL	ALL	108516	Germline
-A>G	A	ALL		Germline
-A>G	T	ALL		Germline
-A>G	G	ALL		Germline
-A>G	C	ALL		Germline
-A>T	ALL	ALL	3436	Germline
-A>T	A	ALL		Germline
-A>T	T	ALL		Germline
-A>T	G	ALL		Germline
-A>T	C	ALL		Germline
-A>C	ALL	ALL	6945	Germline
-A>C	A	ALL		Germline
-A>C	T	ALL		Germline
-A>C	G	ALL		Germline
-A>C	C	ALL		Germline
-T>G	ALL	ALL	1209	Germline
-T>G	A	ALL		Germline
-T>G	T	ALL		Germline
-T>G	G	ALL		Germline
-T>G	C	ALL		Germline
-T>C	ALL	ALL	131150	Germline
-T>C	A	ALL		Germline
-T>C	T	ALL		Germline
-T>C	G	ALL		Germline
-T>C	C	ALL		Germline
-T>A	ALL	ALL	3032	Germline
-T>A	A	ALL		Germline
-T>A	T	ALL		Germline
-T>A	G	ALL		Germline
-T>A	C	ALL		Germline
-G>A	ALL	ALL	112500	Germline
-G>A	A	ALL		Germline
-G>A	T	ALL		Germline
-G>A	G	ALL		Germline
-G>A	C	ALL		Germline
-G>T	ALL	ALL	1249	Germline
-G>T	A	ALL		Germline
-G>T	T	ALL		Germline
-G>T	G	ALL		Germline
-G>T	C	ALL		Germline
-G>C	ALL	ALL	2087	Germline
-G>C	A	ALL		Germline
-G>C	T	ALL		Germline
-G>C	G	ALL		Germline
-G>C	C	ALL		Germline
-C>A	ALL	ALL	6716	Germline
-C>A	A	ALL		Germline
-C>A	T	ALL		Germline
-C>A	G	ALL		Germline
-C>A	C	ALL		Germline
-C>T	ALL	ALL	123608	Germline
-C>T	A	ALL		Germline
-C>T	T	ALL		Germline
-C>T	G	ALL		Germline
-C>T	C	ALL		Germline
-C>G	ALL	ALL	2083	Germline
-C>G	A	ALL		Germline
-C>G	T	ALL		Germline
-C>G	G	ALL		Germline
-C>G	C	ALL		Germline
-ALL	ALL	NODLOOP	353515	Germline
-A>G	ALL	NODLOOP	87797	Germline
-A>G	A	NODLOOP		Germline
-A>G	T	NODLOOP		Germline
-A>G	G	NODLOOP		Germline
-A>G	C	NODLOOP		Germline
-A>T	ALL	NODLOOP	2660	Germline
-A>T	A	NODLOOP		Germline
-A>T	T	NODLOOP		Germline
-A>T	G	NODLOOP		Germline
-A>T	C	NODLOOP		Germline
-A>C	ALL	NODLOOP	3610	Germline
-A>C	A	NODLOOP		Germline
-A>C	T	NODLOOP		Germline
-A>C	G	NODLOOP		Germline
-A>C	C	NODLOOP		Germline
-T>G	ALL	NODLOOP	1023	Germline
-T>G	A	NODLOOP		Germline
-T>G	T	NODLOOP		Germline
-T>G	G	NODLOOP		Germline
-T>G	C	NODLOOP		Germline
-T>C	ALL	NODLOOP	81135	Germline
-T>C	A	NODLOOP		Germline
-T>C	T	NODLOOP		Germline
-T>C	G	NODLOOP		Germline
-T>C	C	NODLOOP		Germline
-T>A	ALL	NODLOOP	2292	Germline
-T>A	A	NODLOOP		Germline
-T>A	T	NODLOOP		Germline
-T>A	G	NODLOOP		Germline
-T>A	C	NODLOOP		Germline
-G>A	ALL	NODLOOP	90943	Germline
-G>A	A	NODLOOP		Germline
-G>A	T	NODLOOP		Germline
-G>A	G	NODLOOP		Germline
-G>A	C	NODLOOP		Germline
-G>T	ALL	NODLOOP	1018	Germline
-G>T	A	NODLOOP		Germline
-G>T	T	NODLOOP		Germline
-G>T	G	NODLOOP		Germline
-G>T	C	NODLOOP		Germline
-G>C	ALL	NODLOOP	1651	Germline
-G>C	A	NODLOOP		Germline
-G>C	T	NODLOOP		Germline
-G>C	G	NODLOOP		Germline
-G>C	C	NODLOOP		Germline
-C>A	ALL	NODLOOP	3568	Germline
-C>A	A	NODLOOP		Germline
-C>A	T	NODLOOP		Germline
-C>A	G	NODLOOP		Germline
-C>A	C	NODLOOP		Germline
-C>T	ALL	NODLOOP	76204	Germline
-C>T	A	NODLOOP		Germline
-C>T	T	NODLOOP		Germline
-C>T	G	NODLOOP		Germline
-C>T	C	NODLOOP		Germline
-C>G	ALL	NODLOOP	1614	Germline
-C>G	A	NODLOOP		Germline
-C>G	T	NODLOOP		Germline
-C>G	G	NODLOOP		Germline
-C>G	C	NODLOOP		Germline
-ALL	ALL	SYNONYMALL	192832	Germline
-A>G	ALL	SYNONYMALL	43972	Germline
-A>G	A	SYNONYMALL		Germline
-A>G	T	SYNONYMALL		Germline
-A>G	G	SYNONYMALL		Germline
-A>G	C	SYNONYMALL		Germline
-A>T	ALL	SYNONYMALL	787	Germline
-A>T	A	SYNONYMALL		Germline
-A>T	T	SYNONYMALL		Germline
-A>T	G	SYNONYMALL		Germline
-A>T	C	SYNONYMALL		Germline
-A>C	ALL	SYNONYMALL	1623	Germline
-A>C	A	SYNONYMALL		Germline
-A>C	T	SYNONYMALL		Germline
-A>C	G	SYNONYMALL		Germline
-A>C	C	SYNONYMALL		Germline
-T>G	ALL	SYNONYMALL	295	Germline
-T>G	A	SYNONYMALL		Germline
-T>G	T	SYNONYMALL		Germline
-T>G	G	SYNONYMALL		Germline
-T>G	C	SYNONYMALL		Germline
-T>C	ALL	SYNONYMALL	50005	Germline
-T>C	A	SYNONYMALL		Germline
-T>C	T	SYNONYMALL		Germline
-T>C	G	SYNONYMALL		Germline
-T>C	C	SYNONYMALL		Germline
-T>A	ALL	SYNONYMALL	719	Germline
-T>A	A	SYNONYMALL		Germline
-T>A	T	SYNONYMALL		Germline
-T>A	G	SYNONYMALL		Germline
-T>A	C	SYNONYMALL		Germline
-G>A	ALL	SYNONYMALL	45235	Germline
-G>A	A	SYNONYMALL		Germline
-G>A	T	SYNONYMALL		Germline
-G>A	G	SYNONYMALL		Germline
-G>A	C	SYNONYMALL		Germline
-G>T	ALL	SYNONYMALL	282	Germline
-G>T	A	SYNONYMALL		Germline
-G>T	T	SYNONYMALL		Germline
-G>T	G	SYNONYMALL		Germline
-G>T	C	SYNONYMALL		Germline
-G>C	ALL	SYNONYMALL	419	Germline
-G>C	A	SYNONYMALL		Germline
-G>C	T	SYNONYMALL		Germline
-G>C	G	SYNONYMALL		Germline
-G>C	C	SYNONYMALL		Germline
-C>A	ALL	SYNONYMALL	1642	Germline
-C>A	A	SYNONYMALL		Germline
-C>A	T	SYNONYMALL		Germline
-C>A	G	SYNONYMALL		Germline
-C>A	C	SYNONYMALL		Germline
-C>T	ALL	SYNONYMALL	47410	Germline
-C>T	A	SYNONYMALL		Germline
-C>T	T	SYNONYMALL		Germline
-C>T	G	SYNONYMALL		Germline
-C>T	C	SYNONYMALL		Germline
-C>G	ALL	SYNONYMALL	443	Germline
-C>G	A	SYNONYMALL		Germline
-C>G	T	SYNONYMALL		Germline
-C>G	G	SYNONYMALL		Germline
-C>G	C	SYNONYMALL		Germline
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
+substitution_type	preceeding_nucleotide	functional_category	how_many	data		
+ALL	ALL	ALL	49707	Expected		
+A>G	ALL	ALL	5124	Expected		
+A>G	A	ALL	1604	Expected		
+A>G	T	ALL	1373	Expected		
+A>G	G	ALL	613	Expected		
+A>G	C	ALL	1534	Expected		
+A>T	ALL	ALL	5124	Expected		
+A>T	A	ALL	1604	Expected		
+A>T	T	ALL	1373	Expected		
+A>T	G	ALL	613	Expected		
+A>T	C	ALL	1534	Expected		
+A>C	ALL	ALL	5124	Expected		
+A>C	A	ALL	1604	Expected		
+A>C	T	ALL	1373	Expected		
+A>C	G	ALL	613	Expected		
+A>C	C	ALL	1534	Expected		
+T>G	ALL	ALL	4094	Expected		
+T>G	A	ALL	1230	Expected		
+T>G	T	ALL	1004	Expected		
+T>G	G	ALL	419	Expected		
+T>G	C	ALL	1441	Expected		
+T>C	ALL	ALL	4094	Expected		
+T>C	A	ALL	1230	Expected		
+T>C	T	ALL	1004	Expected		
+T>C	G	ALL	419	Expected		
+T>C	C	ALL	1441	Expected		
+T>A	ALL	ALL	4094	Expected		
+T>A	A	ALL	1230	Expected		
+T>A	T	ALL	1004	Expected		
+T>A	G	ALL	419	Expected		
+T>A	C	ALL	1441	Expected		
+G>A	ALL	ALL	2169	Expected		
+G>A	A	ALL	795	Expected		
+G>A	T	ALL	513	Expected		
+G>A	G	ALL	426	Expected		
+G>A	C	ALL	435	Expected		
+G>T	ALL	ALL	2169	Expected		
+G>T	A	ALL	795	Expected		
+G>T	T	ALL	513	Expected		
+G>T	G	ALL	426	Expected		
+G>T	C	ALL	435	Expected		
+G>C	ALL	ALL	2169	Expected		
+G>C	A	ALL	795	Expected		
+G>C	T	ALL	513	Expected		
+G>C	G	ALL	426	Expected		
+G>C	C	ALL	435	Expected		
+C>A	ALL	ALL	5182	Expected		
+C>A	A	ALL	1495	Expected		
+C>A	T	ALL	1204	Expected		
+C>A	G	ALL	711	Expected		
+C>A	C	ALL	1772	Expected		
+C>T	ALL	ALL	5182	Expected		
+C>T	A	ALL	1495	Expected		
+C>T	T	ALL	1204	Expected		
+C>T	G	ALL	711	Expected		
+C>T	C	ALL	1772	Expected		
+C>G	ALL	ALL	5182	Expected		
+C>G	A	ALL	1495	Expected		
+C>G	T	ALL	1204	Expected		
+C>G	G	ALL	711	Expected		
+C>G	C	ALL	1772	Expected		
+ALL	ALL	NODLOOP	46344	Expected		
+A>G	ALL	NODLOOP	4785	Expected		
+A>G	A	NODLOOP	1394	Expected		
+A>G	T	NODLOOP	1274	Expected		
+A>G	G	NODLOOP	616	Expected		
+A>G	C	NODLOOP	1501	Expected		
+A>T	ALL	NODLOOP	4785	Expected		
+A>T	A	NODLOOP	1394	Expected		
+A>T	T	NODLOOP	1274	Expected		
+A>T	G	NODLOOP	616	Expected		
+A>T	C	NODLOOP	1501	Expected		
+A>C	ALL	NODLOOP	4785	Expected		
+A>C	A	NODLOOP	1394	Expected		
+A>C	T	NODLOOP	1274	Expected		
+A>C	G	NODLOOP	616	Expected		
+A>C	C	NODLOOP	1501	Expected		
+T>G	ALL	NODLOOP	3835	Expected		
+T>G	A	NODLOOP	1254	Expected		
+T>G	T	NODLOOP	895	Expected		
+T>G	G	NODLOOP	529	Expected		
+T>G	C	NODLOOP	1157	Expected		
+T>C	ALL	NODLOOP	3835	Expected		
+T>C	A	NODLOOP	1254	Expected		
+T>C	T	NODLOOP	895	Expected		
+T>C	G	NODLOOP	529	Expected		
+T>C	C	NODLOOP	1157	Expected		
+T>A	ALL	NODLOOP	3835	Expected		
+T>A	A	NODLOOP	1254	Expected		
+T>A	T	NODLOOP	895	Expected		
+T>A	G	NODLOOP	529	Expected		
+T>A	C	NODLOOP	1157	Expected		
+G>A	ALL	NODLOOP	2017	Expected		
+G>A	A	NODLOOP	648	Expected		
+G>A	T	NODLOOP	462	Expected		
+G>A	G	NODLOOP	249	Expected		
+G>A	C	NODLOOP	658	Expected		
+G>T	ALL	NODLOOP	2017	Expected		
+G>T	A	NODLOOP	648	Expected		
+G>T	T	NODLOOP	462	Expected		
+G>T	G	NODLOOP	249	Expected		
+G>T	C	NODLOOP	658	Expected		
+G>C	ALL	NODLOOP	2017	Expected		
+G>C	A	NODLOOP	648	Expected		
+G>C	T	NODLOOP	462	Expected		
+G>C	G	NODLOOP	249	Expected		
+G>C	C	NODLOOP	658	Expected		
+C>A	ALL	NODLOOP	4811	Expected		
+C>A	A	NODLOOP	1475	Expected		
+C>A	T	NODLOOP	1191	Expected		
+C>A	G	NODLOOP	637	Expected		
+C>A	C	NODLOOP	1508	Expected		
+C>T	ALL	NODLOOP	4811	Expected		
+C>T	A	NODLOOP	1475	Expected		
+C>T	T	NODLOOP	1191	Expected		
+C>T	G	NODLOOP	637	Expected		
+C>T	C	NODLOOP	1508	Expected		
+C>G	ALL	NODLOOP	4811	Expected		
+C>G	A	NODLOOP	1475	Expected		
+C>G	T	NODLOOP	1191	Expected		
+C>G	G	NODLOOP	637	Expected		
+C>G	C	NODLOOP	1508	Expected		
+ALL	ALL	SYNONYMALL	8678	Expected		
+A>G	ALL	SYNONYMALL	1154	Expected		
+A>G	A	SYNONYMALL	265	Expected		
+A>G	T	SYNONYMALL	418	Expected		
+A>G	G	SYNONYMALL	97	Expected		
+A>G	C	SYNONYMALL	374	Expected		
+A>T	ALL	SYNONYMALL	979	Expected		
+A>T	A	SYNONYMALL	15	Expected		
+A>T	T	SYNONYMALL	512	Expected		
+A>T	G	SYNONYMALL	93	Expected		
+A>T	C	SYNONYMALL	359	Expected		
+A>C	ALL	SYNONYMALL	968	Expected		
+A>C	A	SYNONYMALL	12	Expected		
+A>C	T	SYNONYMALL	512	Expected		
+A>C	G	SYNONYMALL	91	Expected		
+A>C	C	SYNONYMALL	353	Expected		
+T>G	ALL	SYNONYMALL	293	Expected		
+T>G	A	SYNONYMALL	8	Expected		
+T>G	T	SYNONYMALL	95	Expected		
+T>G	G	SYNONYMALL	22	Expected		
+T>G	C	SYNONYMALL	168	Expected		
+T>C	ALL	SYNONYMALL	665	Expected		
+T>C	A	SYNONYMALL	130	Expected		
+T>C	T	SYNONYMALL	282	Expected		
+T>C	G	SYNONYMALL	37	Expected		
+T>C	C	SYNONYMALL	216	Expected		
+T>A	ALL	SYNONYMALL	404	Expected		
+T>A	A	SYNONYMALL	8	Expected		
+T>A	T	SYNONYMALL	207	Expected		
+T>A	G	SYNONYMALL	22	Expected		
+T>A	C	SYNONYMALL	167	Expected		
+G>A	ALL	SYNONYMALL	149	Expected		
+G>A	A	SYNONYMALL	39	Expected		
+G>A	T	SYNONYMALL	60	Expected		
+G>A	G	SYNONYMALL	19	Expected		
+G>A	C	SYNONYMALL	31	Expected		
+G>T	ALL	SYNONYMALL	103	Expected		
+G>T	A	SYNONYMALL	2	Expected		
+G>T	T	SYNONYMALL	50	Expected		
+G>T	G	SYNONYMALL	19	Expected		
+G>T	C	SYNONYMALL	32	Expected		
+G>C	ALL	SYNONYMALL	101	Expected		
+G>C	A	SYNONYMALL	2	Expected		
+G>C	T	SYNONYMALL	50	Expected		
+G>C	G	SYNONYMALL	19	Expected		
+G>C	C	SYNONYMALL	30	Expected		
+C>A	ALL	SYNONYMALL	1079	Expected		
+C>A	A	SYNONYMALL	18	Expected		
+C>A	T	SYNONYMALL	421	Expected		
+C>A	G	SYNONYMALL	119	Expected		
+C>A	C	SYNONYMALL	521	Expected		
+C>T	ALL	SYNONYMALL	1928	Expected		
+C>T	A	SYNONYMALL	461	Expected		
+C>T	T	SYNONYMALL	595	Expected		
+C>T	G	SYNONYMALL	182	Expected		
+C>T	C	SYNONYMALL	690	Expected		
+C>G	ALL	SYNONYMALL	855	Expected		
+C>G	A	SYNONYMALL	9	Expected		
+C>G	T	SYNONYMALL	218	Expected		
+C>G	G	SYNONYMALL	115	Expected		
+C>G	C	SYNONYMALL	513	Expected		
+ALL	ALL	SYN4FOLD	6144	Expected		
+A>G	ALL	SYN4FOLD	802	Expected		
+A>G	A	SYN4FOLD	12	Expected		
+A>G	T	SYN4FOLD	346	Expected		
+A>G	G	SYN4FOLD	91	Expected		
+A>G	C	SYN4FOLD	353	Expected		
+A>T	ALL	SYN4FOLD	802	Expected		
+A>T	A	SYN4FOLD	12	Expected		
+A>T	T	SYN4FOLD	346	Expected		
+A>T	G	SYN4FOLD	91	Expected		
+A>T	C	SYN4FOLD	353	Expected		
+A>C	ALL	SYN4FOLD	802	Expected		
+A>C	A	SYN4FOLD	12	Expected		
+A>C	T	SYN4FOLD	346	Expected		
+A>C	G	SYN4FOLD	91	Expected		
+A>C	C	SYN4FOLD	353	Expected		
+T>G	ALL	SYN4FOLD	290	Expected		
+T>G	A	SYN4FOLD	8	Expected		
+T>G	T	SYN4FOLD	94	Expected		
+T>G	G	SYN4FOLD	22	Expected		
+T>G	C	SYN4FOLD	166	Expected		
+T>C	ALL	SYN4FOLD	290	Expected		
+T>C	A	SYN4FOLD	8	Expected		
+T>C	T	SYN4FOLD	94	Expected		
+T>C	G	SYN4FOLD	22	Expected		
+T>C	C	SYN4FOLD	166	Expected		
+T>A	ALL	SYN4FOLD	290	Expected		
+T>A	A	SYN4FOLD	8	Expected		
+T>A	T	SYN4FOLD	94	Expected		
+T>A	G	SYN4FOLD	22	Expected		
+T>A	C	SYN4FOLD	166	Expected		
+G>A	ALL	SYN4FOLD	101	Expected		
+G>A	A	SYN4FOLD	2	Expected		
+G>A	T	SYN4FOLD	50	Expected		
+G>A	G	SYN4FOLD	19	Expected		
+G>A	C	SYN4FOLD	30	Expected		
+G>T	ALL	SYN4FOLD	101	Expected		
+G>T	A	SYN4FOLD	2	Expected		
+G>T	T	SYN4FOLD	50	Expected		
+G>T	G	SYN4FOLD	19	Expected		
+G>T	C	SYN4FOLD	30	Expected		
+G>C	ALL	SYN4FOLD	101	Expected		
+G>C	A	SYN4FOLD	2	Expected		
+G>C	T	SYN4FOLD	50	Expected		
+G>C	G	SYN4FOLD	19	Expected		
+G>C	C	SYN4FOLD	30	Expected		
+C>A	ALL	SYN4FOLD	855	Expected		
+C>A	A	SYN4FOLD	9	Expected		
+C>A	T	SYN4FOLD	218	Expected		
+C>A	G	SYN4FOLD	115	Expected		
+C>A	C	SYN4FOLD	513	Expected		
+C>T	ALL	SYN4FOLD	855	Expected		
+C>T	A	SYN4FOLD	9	Expected		
+C>T	T	SYN4FOLD	218	Expected		
+C>T	G	SYN4FOLD	115	Expected		
+C>T	C	SYN4FOLD	513	Expected		
+C>G	ALL	SYN4FOLD	855	Expected		
+C>G	A	SYN4FOLD	9	Expected		
+C>G	T	SYN4FOLD	218	Expected		
+C>G	G	SYN4FOLD	115	Expected		
+C>G	C	SYN4FOLD	513	Expected		
+ALL	ALL	ALL	7611	Cancer		
+A>G	ALL	ALL	481	Cancer		
+A>G	A	ALL	175	Cancer		
+A>G	T	ALL	132	Cancer		
+A>G	G	ALL	102	Cancer		
+A>G	C	ALL	72	Cancer		
+A>T	ALL	ALL	72	Cancer		
+A>T	A	ALL	24	Cancer		
+A>T	T	ALL	19	Cancer		
+A>T	G	ALL	7	Cancer		
+A>T	C	ALL	22	Cancer		
+A>C	ALL	ALL	91	Cancer		
+A>C	A	ALL	18	Cancer		
+A>C	T	ALL	10	Cancer		
+A>C	G	ALL	3	Cancer		
+A>C	C	ALL	60	Cancer		
+T>G	ALL	ALL	27	Cancer		
+T>G	A	ALL	7	Cancer		
+T>G	T	ALL	3	Cancer		
+T>G	G	ALL	12	Cancer		
+T>G	C	ALL	5	Cancer		
+T>C	ALL	ALL	2120	Cancer		
+T>C	A	ALL	651	Cancer		
+T>C	T	ALL	357	Cancer		
+T>C	G	ALL	324	Cancer		
+T>C	C	ALL	788	Cancer		
+T>A	ALL	ALL	29	Cancer		
+T>A	A	ALL	5	Cancer		
+T>A	T	ALL	9	Cancer		
+T>A	G	ALL	3	Cancer		
+T>A	C	ALL	12	Cancer		
+G>A	ALL	ALL	3663	Cancer		
+G>A	A	ALL	1242	Cancer		
+G>A	T	ALL	642	Cancer		
+G>A	G	ALL	778	Cancer		
+G>A	C	ALL	1001	Cancer		
+G>T	ALL	ALL	49	Cancer		
+G>T	A	ALL	11	Cancer		
+G>T	T	ALL	20	Cancer		
+G>T	G	ALL	3	Cancer		
+G>T	C	ALL	15	Cancer		
+G>C	ALL	ALL	119	Cancer		
+G>C	A	ALL	28	Cancer		
+G>C	T	ALL	34	Cancer		
+G>C	G	ALL	19	Cancer		
+G>C	C	ALL	38	Cancer		
+C>A	ALL	ALL	167	Cancer		
+C>A	A	ALL	36	Cancer		
+C>A	T	ALL	63	Cancer		
+C>A	G	ALL	23	Cancer		
+C>A	C	ALL	45	Cancer		
+C>T	ALL	ALL	771	Cancer		
+C>T	A	ALL	202	Cancer		
+C>T	T	ALL	181	Cancer		
+C>T	G	ALL	124	Cancer		
+C>T	C	ALL	264	Cancer		
+C>G	ALL	ALL	22	Cancer		
+C>G	A	ALL	7	Cancer		
+C>G	T	ALL	4	Cancer		
+C>G	G	ALL	5	Cancer		
+C>G	C	ALL	6	Cancer		
+ALL	ALL	NODLOOP	6628	Cancer		
+A>G	ALL	NODLOOP	350	Cancer		
+A>G	A	NODLOOP	130	Cancer		
+A>G	T	NODLOOP	93	Cancer		
+A>G	G	NODLOOP	86	Cancer		
+A>G	C	NODLOOP	41	Cancer		
+A>T	ALL	NODLOOP	65	Cancer		
+A>T	A	NODLOOP	24	Cancer		
+A>T	T	NODLOOP	17	Cancer		
+A>T	G	NODLOOP	6	Cancer		
+A>T	C	NODLOOP	18	Cancer		
+A>C	ALL	NODLOOP	80	Cancer		
+A>C	A	NODLOOP	17	Cancer		
+A>C	T	NODLOOP	10	Cancer		
+A>C	G	NODLOOP	3	Cancer		
+A>C	C	NODLOOP	50	Cancer		
+T>G	ALL	NODLOOP	18	Cancer		
+T>G	A	NODLOOP	5	Cancer		
+T>G	T	NODLOOP	3	Cancer		
+T>G	G	NODLOOP	6	Cancer		
+T>G	C	NODLOOP	4	Cancer		
+T>C	ALL	NODLOOP	1884	Cancer		
+T>C	A	NODLOOP	623	Cancer		
+T>C	T	NODLOOP	308	Cancer		
+T>C	G	NODLOOP	242	Cancer		
+T>C	C	NODLOOP	711	Cancer		
+T>A	ALL	NODLOOP	23	Cancer		
+T>A	A	NODLOOP	5	Cancer		
+T>A	T	NODLOOP	5	Cancer		
+T>A	G	NODLOOP	3	Cancer		
+T>A	C	NODLOOP	10	Cancer		
+G>A	ALL	NODLOOP	3452	Cancer		
+G>A	A	NODLOOP	1189	Cancer		
+G>A	T	NODLOOP	586	Cancer		
+G>A	G	NODLOOP	715	Cancer		
+G>A	C	NODLOOP	962	Cancer		
+G>T	ALL	NODLOOP	32	Cancer		
+G>T	A	NODLOOP	10	Cancer		
+G>T	T	NODLOOP	8	Cancer		
+G>T	G	NODLOOP	3	Cancer		
+G>T	C	NODLOOP	11	Cancer		
+G>C	ALL	NODLOOP	112	Cancer		
+G>C	A	NODLOOP	27	Cancer		
+G>C	T	NODLOOP	32	Cancer		
+G>C	G	NODLOOP	19	Cancer		
+G>C	C	NODLOOP	34	Cancer		
+C>A	ALL	NODLOOP	125	Cancer		
+C>A	A	NODLOOP	27	Cancer		
+C>A	T	NODLOOP	54	Cancer		
+C>A	G	NODLOOP	19	Cancer		
+C>A	C	NODLOOP	25	Cancer		
+C>T	ALL	NODLOOP	471	Cancer		
+C>T	A	NODLOOP	128	Cancer		
+C>T	T	NODLOOP	118	Cancer		
+C>T	G	NODLOOP	68	Cancer		
+C>T	C	NODLOOP	157	Cancer		
+C>G	ALL	NODLOOP	16	Cancer		
+C>G	A	NODLOOP	2	Cancer		
+C>G	T	NODLOOP	4	Cancer		
+C>G	G	NODLOOP	5	Cancer		
+C>G	C	NODLOOP	5	Cancer		
+ALL	ALL	SYNONYMALL	874	Cancer		
+A>G	ALL	SYNONYMALL	91	Cancer		
+A>G	A	SYNONYMALL	17	Cancer		
+A>G	T	SYNONYMALL	36	Cancer		
+A>G	G	SYNONYMALL	28	Cancer		
+A>G	C	SYNONYMALL	10	Cancer		
+A>T	ALL	SYNONYMALL	11	Cancer		
+A>T	A	SYNONYMALL	0	Cancer		
+A>T	T	SYNONYMALL	6	Cancer		
+A>T	G	SYNONYMALL	3	Cancer		
+A>T	C	SYNONYMALL	2	Cancer		
+A>C	ALL	SYNONYMALL	12	Cancer		
+A>C	A	SYNONYMALL	0	Cancer		
+A>C	T	SYNONYMALL	2	Cancer		
+A>C	G	SYNONYMALL	1	Cancer		
+A>C	C	SYNONYMALL	9	Cancer		
+T>G	ALL	SYNONYMALL	3	Cancer		
+T>G	A	SYNONYMALL	0	Cancer		
+T>G	T	SYNONYMALL	3	Cancer		
+T>G	G	SYNONYMALL	0	Cancer		
+T>G	C	SYNONYMALL	0	Cancer		
+T>C	ALL	SYNONYMALL	262	Cancer		
+T>C	A	SYNONYMALL	51	Cancer		
+T>C	T	SYNONYMALL	86	Cancer		
+T>C	G	SYNONYMALL	30	Cancer		
+T>C	C	SYNONYMALL	95	Cancer		
+T>A	ALL	SYNONYMALL	1	Cancer		
+T>A	A	SYNONYMALL	0	Cancer		
+T>A	T	SYNONYMALL	0	Cancer		
+T>A	G	SYNONYMALL	0	Cancer		
+T>A	C	SYNONYMALL	1	Cancer		
+G>A	ALL	SYNONYMALL	255	Cancer		
+G>A	A	SYNONYMALL	52	Cancer		
+G>A	T	SYNONYMALL	88	Cancer		
+G>A	G	SYNONYMALL	46	Cancer		
+G>A	C	SYNONYMALL	69	Cancer		
+G>T	ALL	SYNONYMALL	0	Cancer		
+G>T	A	SYNONYMALL	0	Cancer		
+G>T	T	SYNONYMALL	0	Cancer		
+G>T	G	SYNONYMALL	0	Cancer		
+G>T	C	SYNONYMALL	0	Cancer		
+G>C	ALL	SYNONYMALL	4	Cancer		
+G>C	A	SYNONYMALL	0	Cancer		
+G>C	T	SYNONYMALL	2	Cancer		
+G>C	G	SYNONYMALL	0	Cancer		
+G>C	C	SYNONYMALL	2	Cancer		
+C>A	ALL	SYNONYMALL	20	Cancer		
+C>A	A	SYNONYMALL	0	Cancer		
+C>A	T	SYNONYMALL	8	Cancer		
+C>A	G	SYNONYMALL	2	Cancer		
+C>A	C	SYNONYMALL	10	Cancer		
+C>T	ALL	SYNONYMALL	211	Cancer		
+C>T	A	SYNONYMALL	44	Cancer		
+C>T	T	SYNONYMALL	72	Cancer		
+C>T	G	SYNONYMALL	24	Cancer		
+C>T	C	SYNONYMALL	71	Cancer		
+C>G	ALL	SYNONYMALL	4	Cancer		
+C>G	A	SYNONYMALL	0	Cancer		
+C>G	T	SYNONYMALL	2	Cancer		
+C>G	G	SYNONYMALL	1	Cancer		
+C>G	C	SYNONYMALL	1	Cancer		
+ALL	ALL	ALL	502531	Germline		
+A>G	ALL	ALL	108516	Germline		
+A>G	A	ALL	34169	Germline		
+A>G	T	ALL	30818	Germline		
+A>G	G	ALL	18576	Germline		
+A>G	C	ALL	24953	Germline		
+A>T	ALL	ALL	3436	Germline		
+A>T	A	ALL	1006	Germline		
+A>T	T	ALL	850	Germline		
+A>T	G	ALL	277	Germline		
+A>T	C	ALL	1303	Germline		
+A>C	ALL	ALL	6945	Germline		
+A>C	A	ALL	1558	Germline		
+A>C	T	ALL	1466	Germline		
+A>C	G	ALL	643	Germline		
+A>C	C	ALL	2278	Germline		
+T>G	ALL	ALL	1209	Germline		
+T>G	A	ALL	373	Germline		
+T>G	T	ALL	180	Germline		
+T>G	G	ALL	258	Germline		
+T>G	C	ALL	398	Germline		
+T>C	ALL	ALL	131150	Germline		
+T>C	A	ALL	36672	Germline		
+T>C	T	ALL	29145	Germline		
+T>C	G	ALL	21327	Germline		
+T>C	C	ALL	44006	Germline		
+T>A	ALL	ALL	3032	Germline		
+T>A	A	ALL	785	Germline		
+T>A	T	ALL	818	Germline		
+T>A	G	ALL	253	Germline		
+T>A	C	ALL	1176	Germline		
+G>A	ALL	ALL	112500	Germline		> # NODLOOP. A>G
+G>A	A	ALL	35359	Germline		
+G>A	T	ALL	31544	Germline		
+G>A	G	ALL	19371	Germline		
+G>A	C	ALL	26226	Germline		
+G>T	ALL	ALL	1249	Germline		
+G>T	A	ALL	398	Germline		
+G>T	T	ALL	180	Germline		
+G>T	G	ALL	275	Germline		
+G>T	C	ALL	396	Germline		
+G>C	ALL	ALL	2087	Germline		
+G>C	A	ALL	739	Germline		
+G>C	T	ALL	438	Germline		
+G>C	G	ALL	496	Germline		
+G>C	C	ALL	414	Germline		
+C>A	ALL	ALL	6716	Germline		
+C>A	A	ALL	2416	Germline		
+C>A	T	ALL	1519	Germline		
+C>A	G	ALL	599	Germline		
+C>A	C	ALL	2182	Germline		
+C>T	ALL	ALL	123608	Germline		
+C>T	A	ALL	34904	Germline		
+C>T	T	ALL	27320	Germline		
+C>T	G	ALL	19916	Germline		
+C>T	C	ALL	41468	Germline		
+C>G	ALL	ALL	2083	Germline		
+C>G	A	ALL	743	Germline		
+C>G	T	ALL	449	Germline		
+C>G	G	ALL	452	Germline		
+C>G	C	ALL	439	Germline		
+ALL	ALL	NODLOOP	353515	Germline		
+A>G	ALL	NODLOOP	87797	Germline		
+A>G	A	NODLOOP	27969	Germline		
+A>G	T	NODLOOP	23949	Germline		
+A>G	G	NODLOOP	15526	Germline		
+A>G	C	NODLOOP	20353	Germline		
+A>T	ALL	NODLOOP	2660	Germline		
+A>T	A	NODLOOP	812	Germline		
+A>T	T	NODLOOP	624	Germline		
+A>T	G	NODLOOP	192	Germline		
+A>T	C	NODLOOP	1032	Germline		
+A>C	ALL	NODLOOP	3610	Germline		
+A>C	A	NODLOOP	409	Germline		
+A>C	T	NODLOOP	1328	Germline		
+A>C	G	NODLOOP	300	Germline		
+A>C	C	NODLOOP	1573	Germline		
+T>G	ALL	NODLOOP	1023	Germline		
+T>G	A	NODLOOP	317	Germline		
+T>G	T	NODLOOP	154	Germline		
+T>G	G	NODLOOP	176	Germline		
+T>G	C	NODLOOP	376	Germline		
+T>C	ALL	NODLOOP	81135	Germline		
+T>C	A	NODLOOP	26786	Germline		
+T>C	T	NODLOOP	20694	Germline		
+T>C	G	NODLOOP	8172	Germline		
+T>C	C	NODLOOP	25483	Germline		
+T>A	ALL	NODLOOP	2292	Germline		
+T>A	A	NODLOOP	592	Germline		
+T>A	T	NODLOOP	591	Germline		
+T>A	G	NODLOOP	172	Germline		
+T>A	C	NODLOOP	937	Germline		
+G>A	ALL	NODLOOP	90943	Germline		
+G>A	A	NODLOOP	29021	Germline		
+G>A	T	NODLOOP	24467	Germline		
+G>A	G	NODLOOP	16100	Germline		
+G>A	C	NODLOOP	21355	Germline		
+G>T	ALL	NODLOOP	1018	Germline		
+G>T	A	NODLOOP	326	Germline		
+G>T	T	NODLOOP	151	Germline		
+G>T	G	NODLOOP	175	Germline		
+G>T	C	NODLOOP	366	Germline		
+G>C	ALL	NODLOOP	1651	Germline		
+G>C	A	NODLOOP	560	Germline		
+G>C	T	NODLOOP	361	Germline		
+G>C	G	NODLOOP	437	Germline		
+G>C	C	NODLOOP	293	Germline		
+C>A	ALL	NODLOOP	3568	Germline		
+C>A	A	NODLOOP	380	Germline		
+C>A	T	NODLOOP	1371	Germline		
+C>A	G	NODLOOP	287	Germline		
+C>A	C	NODLOOP	1530	Germline		
+C>T	ALL	NODLOOP	76204	Germline		
+C>T	A	NODLOOP	25152	Germline		
+C>T	T	NODLOOP	19439	Germline		
+C>T	G	NODLOOP	7675	Germline		
+C>T	C	NODLOOP	23938	Germline		
+C>G	ALL	NODLOOP	1614	Germline		
+C>G	A	NODLOOP	560	Germline		
+C>G	T	NODLOOP	368	Germline		
+C>G	G	NODLOOP	376	Germline		
+C>G	C	NODLOOP	310	Germline		
+ALL	ALL	SYNONYMALL	192832	Germline		
+A>G	ALL	SYNONYMALL	43972	Germline		
+A>G	A	SYNONYMALL	8343	Germline		
+A>G	T	SYNONYMALL	17350	Germline		
+A>G	G	SYNONYMALL	10606	Germline		
+A>G	C	SYNONYMALL	7673	Germline		
+A>T	ALL	SYNONYMALL	787	Germline		
+A>T	A	SYNONYMALL	0	Germline		
+A>T	T	SYNONYMALL	284	Germline		
+A>T	G	SYNONYMALL	94	Germline		
+A>T	C	SYNONYMALL	409	Germline		
+A>C	ALL	SYNONYMALL	1623	Germline		
+A>C	A	SYNONYMALL	0	Germline		
+A>C	T	SYNONYMALL	614	Germline		
+A>C	G	SYNONYMALL	132	Germline		
+A>C	C	SYNONYMALL	877	Germline		
+T>G	ALL	SYNONYMALL	295	Germline		
+T>G	A	SYNONYMALL	0	Germline		
+T>G	T	SYNONYMALL	46	Germline		
+T>G	G	SYNONYMALL	56	Germline		
+T>G	C	SYNONYMALL	193	Germline		
+T>C	ALL	SYNONYMALL	50005	Germline		
+T>C	A	SYNONYMALL	12800	Germline		
+T>C	T	SYNONYMALL	16008	Germline		
+T>C	G	SYNONYMALL	4631	Germline		
+T>C	C	SYNONYMALL	16566	Germline		
+T>A	ALL	SYNONYMALL	719	Germline		
+T>A	A	SYNONYMALL	0	Germline		
+T>A	T	SYNONYMALL	263	Germline		
+T>A	G	SYNONYMALL	87	Germline		
+T>A	C	SYNONYMALL	369	Germline		
+G>A	ALL	SYNONYMALL	45235	Germline		
+G>A	A	SYNONYMALL	8634	Germline		
+G>A	T	SYNONYMALL	17665	Germline		
+G>A	G	SYNONYMALL	10932	Germline		
+G>A	C	SYNONYMALL	8004	Germline		
+G>T	ALL	SYNONYMALL	282	Germline		
+G>T	A	SYNONYMALL	0	Germline		
+G>T	T	SYNONYMALL	45	Germline		
+G>T	G	SYNONYMALL	57	Germline		
+G>T	C	SYNONYMALL	180	Germline		
+G>C	ALL	SYNONYMALL	419	Germline		
+G>C	A	SYNONYMALL	0	Germline		
+G>C	T	SYNONYMALL	148	Germline		
+G>C	G	SYNONYMALL	120	Germline		
+G>C	C	SYNONYMALL	151	Germline		
+C>A	ALL	SYNONYMALL	1642	Germline		
+C>A	A	SYNONYMALL	0	Germline		
+C>A	T	SYNONYMALL	633	Germline		
+C>A	G	SYNONYMALL	136	Germline		
+C>A	C	SYNONYMALL	873	Germline		
+C>T	ALL	SYNONYMALL	47410	Germline		
+C>T	A	SYNONYMALL	12236	Germline		
+C>T	T	SYNONYMALL	15122	Germline		
+C>T	G	SYNONYMALL	4348	Germline		
+C>T	C	SYNONYMALL	15704	Germline		
+C>G	ALL	SYNONYMALL	443	Germline		
+C>G	A	SYNONYMALL	0	Germline		
+C>G	T	SYNONYMALL	146	Germline		
+C>G	G	SYNONYMALL	138	Germline		
+C>G	C	SYNONYMALL	159	Germline		
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
