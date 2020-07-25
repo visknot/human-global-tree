@@ -1,4 +1,4 @@
-[	preceeding_nucleotide	functional_category	how_many	data
+substitution_type	preceeding_nucleotide	functional_category	how_many	data
 ALL	ALL	ALL	49707	Expected
 A>G	ALL	ALL	5124	Expected
 A>G	A	ALL	1604	Expected
@@ -426,247 +426,247 @@ C>G	A	SYNONYMALL	0	Cancer
 C>G	T	SYNONYMALL	2	Cancer
 C>G	G	SYNONYMALL	1	Cancer
 C>G	C	SYNONYMALL	1	Cancer
-ALL	ALL	ALL		Germline
-A>G	ALL	ALL		Germline
+ALL	ALL	ALL	502531	Germline
+A>G	ALL	ALL	108516	Germline
 A>G	A	ALL		Germline
 A>G	T	ALL		Germline
 A>G	G	ALL		Germline
 A>G	C	ALL		Germline
-A>T	ALL	ALL		Germline
+A>T	ALL	ALL	3436	Germline
 A>T	A	ALL		Germline
 A>T	T	ALL		Germline
 A>T	G	ALL		Germline
 A>T	C	ALL		Germline
-A>C	ALL	ALL		Germline
+A>C	ALL	ALL	6945	Germline
 A>C	A	ALL		Germline
 A>C	T	ALL		Germline
 A>C	G	ALL		Germline
 A>C	C	ALL		Germline
-T>G	ALL	ALL		Germline
+T>G	ALL	ALL	1209	Germline
 T>G	A	ALL		Germline
 T>G	T	ALL		Germline
 T>G	G	ALL		Germline
 T>G	C	ALL		Germline
-T>C	ALL	ALL		Germline
+T>C	ALL	ALL	131150	Germline
 T>C	A	ALL		Germline
 T>C	T	ALL		Germline
 T>C	G	ALL		Germline
 T>C	C	ALL		Germline
-T>A	ALL	ALL		Germline
+T>A	ALL	ALL	3032	Germline
 T>A	A	ALL		Germline
 T>A	T	ALL		Germline
 T>A	G	ALL		Germline
 T>A	C	ALL		Germline
-G>A	ALL	ALL		Germline
+G>A	ALL	ALL	112500	Germline
 G>A	A	ALL		Germline
 G>A	T	ALL		Germline
 G>A	G	ALL		Germline
 G>A	C	ALL		Germline
-G>T	ALL	ALL		Germline
+G>T	ALL	ALL	1249	Germline
 G>T	A	ALL		Germline
 G>T	T	ALL		Germline
 G>T	G	ALL		Germline
 G>T	C	ALL		Germline
-G>C	ALL	ALL		Germline
+G>C	ALL	ALL	2087	Germline
 G>C	A	ALL		Germline
 G>C	T	ALL		Germline
 G>C	G	ALL		Germline
 G>C	C	ALL		Germline
-C>A	ALL	ALL		Germline
+C>A	ALL	ALL	6716	Germline
 C>A	A	ALL		Germline
 C>A	T	ALL		Germline
 C>A	G	ALL		Germline
 C>A	C	ALL		Germline
-C>T	ALL	ALL		Germline
+C>T	ALL	ALL	123608	Germline
 C>T	A	ALL		Germline
 C>T	T	ALL		Germline
 C>T	G	ALL		Germline
 C>T	C	ALL		Germline
-C>G	ALL	ALL		Germline
+C>G	ALL	ALL	2083	Germline
 C>G	A	ALL		Germline
 C>G	T	ALL		Germline
 C>G	G	ALL		Germline
 C>G	C	ALL		Germline
-ALL	ALL	NODLOOP		Germline
-A>G	ALL	NODLOOP		Germline
+ALL	ALL	NODLOOP	353515	Germline
+A>G	ALL	NODLOOP	87797	Germline
 A>G	A	NODLOOP		Germline
 A>G	T	NODLOOP		Germline
 A>G	G	NODLOOP		Germline
 A>G	C	NODLOOP		Germline
-A>T	ALL	NODLOOP		Germline
+A>T	ALL	NODLOOP	2660	Germline
 A>T	A	NODLOOP		Germline
 A>T	T	NODLOOP		Germline
 A>T	G	NODLOOP		Germline
 A>T	C	NODLOOP		Germline
-A>C	ALL	NODLOOP		Germline
+A>C	ALL	NODLOOP	3610	Germline
 A>C	A	NODLOOP		Germline
 A>C	T	NODLOOP		Germline
 A>C	G	NODLOOP		Germline
 A>C	C	NODLOOP		Germline
-T>G	ALL	NODLOOP		Germline
+T>G	ALL	NODLOOP	1023	Germline
 T>G	A	NODLOOP		Germline
 T>G	T	NODLOOP		Germline
 T>G	G	NODLOOP		Germline
 T>G	C	NODLOOP		Germline
-T>C	ALL	NODLOOP		Germline
+T>C	ALL	NODLOOP	81135	Germline
 T>C	A	NODLOOP		Germline
 T>C	T	NODLOOP		Germline
 T>C	G	NODLOOP		Germline
 T>C	C	NODLOOP		Germline
-T>A	ALL	NODLOOP		Germline
+T>A	ALL	NODLOOP	2292	Germline
 T>A	A	NODLOOP		Germline
 T>A	T	NODLOOP		Germline
 T>A	G	NODLOOP		Germline
 T>A	C	NODLOOP		Germline
-G>A	ALL	NODLOOP		Germline
+G>A	ALL	NODLOOP	90943	Germline
 G>A	A	NODLOOP		Germline
 G>A	T	NODLOOP		Germline
 G>A	G	NODLOOP		Germline
 G>A	C	NODLOOP		Germline
-G>T	ALL	NODLOOP		Germline
+G>T	ALL	NODLOOP	1018	Germline
 G>T	A	NODLOOP		Germline
 G>T	T	NODLOOP		Germline
 G>T	G	NODLOOP		Germline
 G>T	C	NODLOOP		Germline
-G>C	ALL	NODLOOP		Germline
+G>C	ALL	NODLOOP	1651	Germline
 G>C	A	NODLOOP		Germline
 G>C	T	NODLOOP		Germline
 G>C	G	NODLOOP		Germline
 G>C	C	NODLOOP		Germline
-C>A	ALL	NODLOOP		Germline
+C>A	ALL	NODLOOP	3568	Germline
 C>A	A	NODLOOP		Germline
 C>A	T	NODLOOP		Germline
 C>A	G	NODLOOP		Germline
 C>A	C	NODLOOP		Germline
-C>T	ALL	NODLOOP		Germline
+C>T	ALL	NODLOOP	76204	Germline
 C>T	A	NODLOOP		Germline
 C>T	T	NODLOOP		Germline
 C>T	G	NODLOOP		Germline
 C>T	C	NODLOOP		Germline
-C>G	ALL	NODLOOP		Germline
+C>G	ALL	NODLOOP	1614	Germline
 C>G	A	NODLOOP		Germline
 C>G	T	NODLOOP		Germline
 C>G	G	NODLOOP		Germline
 C>G	C	NODLOOP		Germline
-ALL	ALL	SYNONYMALL		Germline
-A>G	ALL	SYNONYMALL		Germline
+ALL	ALL	SYNONYMALL	192832	Germline
+A>G	ALL	SYNONYMALL	43972	Germline
 A>G	A	SYNONYMALL		Germline
 A>G	T	SYNONYMALL		Germline
 A>G	G	SYNONYMALL		Germline
 A>G	C	SYNONYMALL		Germline
-A>T	ALL	SYNONYMALL		Germline
+A>T	ALL	SYNONYMALL	787	Germline
 A>T	A	SYNONYMALL		Germline
 A>T	T	SYNONYMALL		Germline
 A>T	G	SYNONYMALL		Germline
 A>T	C	SYNONYMALL		Germline
-A>C	ALL	SYNONYMALL		Germline
+A>C	ALL	SYNONYMALL	1623	Germline
 A>C	A	SYNONYMALL		Germline
 A>C	T	SYNONYMALL		Germline
 A>C	G	SYNONYMALL		Germline
 A>C	C	SYNONYMALL		Germline
-T>G	ALL	SYNONYMALL		Germline
+T>G	ALL	SYNONYMALL	295	Germline
 T>G	A	SYNONYMALL		Germline
 T>G	T	SYNONYMALL		Germline
 T>G	G	SYNONYMALL		Germline
 T>G	C	SYNONYMALL		Germline
-T>C	ALL	SYNONYMALL		Germline
+T>C	ALL	SYNONYMALL	50005	Germline
 T>C	A	SYNONYMALL		Germline
 T>C	T	SYNONYMALL		Germline
 T>C	G	SYNONYMALL		Germline
 T>C	C	SYNONYMALL		Germline
-T>A	ALL	SYNONYMALL		Germline
+T>A	ALL	SYNONYMALL	719	Germline
 T>A	A	SYNONYMALL		Germline
 T>A	T	SYNONYMALL		Germline
 T>A	G	SYNONYMALL		Germline
 T>A	C	SYNONYMALL		Germline
-G>A	ALL	SYNONYMALL		Germline
+G>A	ALL	SYNONYMALL	45235	Germline
 G>A	A	SYNONYMALL		Germline
 G>A	T	SYNONYMALL		Germline
 G>A	G	SYNONYMALL		Germline
 G>A	C	SYNONYMALL		Germline
-G>T	ALL	SYNONYMALL		Germline
+G>T	ALL	SYNONYMALL	282	Germline
 G>T	A	SYNONYMALL		Germline
 G>T	T	SYNONYMALL		Germline
 G>T	G	SYNONYMALL		Germline
 G>T	C	SYNONYMALL		Germline
-G>C	ALL	SYNONYMALL		Germline
+G>C	ALL	SYNONYMALL	419	Germline
 G>C	A	SYNONYMALL		Germline
 G>C	T	SYNONYMALL		Germline
 G>C	G	SYNONYMALL		Germline
 G>C	C	SYNONYMALL		Germline
-C>A	ALL	SYNONYMALL		Germline
+C>A	ALL	SYNONYMALL	1642	Germline
 C>A	A	SYNONYMALL		Germline
 C>A	T	SYNONYMALL		Germline
 C>A	G	SYNONYMALL		Germline
 C>A	C	SYNONYMALL		Germline
-C>T	ALL	SYNONYMALL		Germline
+C>T	ALL	SYNONYMALL	47410	Germline
 C>T	A	SYNONYMALL		Germline
 C>T	T	SYNONYMALL		Germline
 C>T	G	SYNONYMALL		Germline
 C>T	C	SYNONYMALL		Germline
-C>G	ALL	SYNONYMALL		Germline
+C>G	ALL	SYNONYMALL	443	Germline
 C>G	A	SYNONYMALL		Germline
 C>G	T	SYNONYMALL		Germline
 C>G	G	SYNONYMALL		Germline
 C>G	C	SYNONYMALL		Germline
-ALL	ALL	SYN4FOLD		Germline
-A>G	ALL	SYN4FOLD		Germline
-A>G	A	SYN4FOLD		Germline
-A>G	T	SYN4FOLD		Germline
-A>G	G	SYN4FOLD		Germline
-A>G	C	SYN4FOLD		Germline
-A>T	ALL	SYN4FOLD		Germline
-A>T	A	SYN4FOLD		Germline
-A>T	T	SYN4FOLD		Germline
-A>T	G	SYN4FOLD		Germline
-A>T	C	SYN4FOLD		Germline
-A>C	ALL	SYN4FOLD		Germline
-A>C	A	SYN4FOLD		Germline
-A>C	T	SYN4FOLD		Germline
-A>C	G	SYN4FOLD		Germline
-A>C	C	SYN4FOLD		Germline
-T>G	ALL	SYN4FOLD		Germline
-T>G	A	SYN4FOLD		Germline
-T>G	T	SYN4FOLD		Germline
-T>G	G	SYN4FOLD		Germline
-T>G	C	SYN4FOLD		Germline
-T>C	ALL	SYN4FOLD		Germline
-T>C	A	SYN4FOLD		Germline
-T>C	T	SYN4FOLD		Germline
-T>C	G	SYN4FOLD		Germline
-T>C	C	SYN4FOLD		Germline
-T>A	ALL	SYN4FOLD		Germline
-T>A	A	SYN4FOLD		Germline
-T>A	T	SYN4FOLD		Germline
-T>A	G	SYN4FOLD		Germline
-T>A	C	SYN4FOLD		Germline
-G>A	ALL	SYN4FOLD		Germline
-G>A	A	SYN4FOLD		Germline
-G>A	T	SYN4FOLD		Germline
-G>A	G	SYN4FOLD		Germline
-G>A	C	SYN4FOLD		Germline
-G>T	ALL	SYN4FOLD		Germline
-G>T	A	SYN4FOLD		Germline
-G>T	T	SYN4FOLD		Germline
-G>T	G	SYN4FOLD		Germline
-G>T	C	SYN4FOLD		Germline
-G>C	ALL	SYN4FOLD		Germline
-G>C	A	SYN4FOLD		Germline
-G>C	T	SYN4FOLD		Germline
-G>C	G	SYN4FOLD		Germline
-G>C	C	SYN4FOLD		Germline
-C>A	ALL	SYN4FOLD		Germline
-C>A	A	SYN4FOLD		Germline
-C>A	T	SYN4FOLD		Germline
-C>A	G	SYN4FOLD		Germline
-C>A	C	SYN4FOLD		Germline
-C>T	ALL	SYN4FOLD		Germline
-C>T	A	SYN4FOLD		Germline
-C>T	T	SYN4FOLD		Germline
-C>T	G	SYN4FOLD		Germline
-C>T	C	SYN4FOLD		Germline
-C>G	ALL	SYN4FOLD		Germline
-C>G	A	SYN4FOLD		Germline
-C>G	T	SYN4FOLD		Germline
-C>G	G	SYN4FOLD		Germline
-C>G	C	SYN4FOLD		Germline
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
