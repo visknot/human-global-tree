@@ -2,108 +2,109 @@ rm(list=ls(all=TRUE))
 ########
 
 library(readr)
-df <- read_delim("~/mitoclub/human-global-tree/Body/1Raw/CancerDataFromCampbell/mtDNA_snv_Oct2016.txt", 
+df <- read_delim("~/mitoclub/human-global-tree/Body/1Raw/CancerDataFromCampbell/mtDNA_snv_Oct2016.txt",
                                 "\t", escape_double = FALSE, trim_ws = TRUE)
 
 
-# ALL Total number of mutations (rows in table) - 7611
+# ALL. Total number of mutations (rows in table)
 nrow(df)
 
 ########
 # ALL - All mutations of a certain type
-# ALL. A>G - 481
+# ALL. A>G
 nrow(df[which(df$ref== "A" & df$var == "G"),])
-# ALL. A>T - 72
+# ALL. A>T
 nrow(df[which(df$ref== "A" & df$var == "T"),])
-# ALL. A>C - 91
+# ALL. A>C
 nrow(df[which(df$ref== "A" & df$var == "C"),])
-# ALL. T>G - 27
+# ALL. T>G
 nrow(df[which(df$ref== "T" & df$var == "G"),])
-# ALL. T>C - 2120
+# ALL. T>C
 nrow(df[which(df$ref== "T" & df$var == "C"),])
-# ALL. T>A - 29
+# ALL. T>A
 nrow(df[which(df$ref== "T" & df$var == "A"),])
-# ALL. G>A - 3663
+# ALL. G>A
 nrow(df[which(df$ref== "G" & df$var == "A"),])
-# ALL. G>T - 49
+# ALL. G>T
 nrow(df[which(df$ref== "G" & df$var == "T"),])
-# ALL. G>C - 119
+# ALL. G>C
 nrow(df[which(df$ref== "G" & df$var == "C"),])
-# ALL. C>A - 167
+# ALL. C>A
 nrow(df[which(df$ref== "C" & df$var == "A"),])
-# ALL. C>T - 771
+# ALL. C>T
 nrow(df[which(df$ref== "C" & df$var == "T"),])
-# ALL. C>G - 22
+# ALL. C>G
 nrow(df[which(df$ref== "C" & df$var == "G"),])
 
-# #ALL Nodloop 6628
+########
+# NODLOOP
 #> summary(nodloop$position)
-#Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
-#577    3841    7983    8132   12354   16023 
-#ref var position  (16024..16569,1..576)
+#Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+#577    3841    7983    8132   12354   16023
+# ref var position  (16024..16569,1..576)
 nodloop <- mtDNA[which(mtDNA$position > 576 & mtDNA$position < 16024),]
 nrow(mtDNA[which(mtDNA$position > 576 & mtDNA$position < 16024),])
 
-# NODLOOP. A>G - 350
+# NODLOOP. A>G
 nrow(nodloop[which(nodloop$ref== "A" & nodloop$var == "G"),])
-# NODLOOP. A>T - 65
+# NODLOOP. A>T
 nrow(nodloop[which(nodloop$ref== "A" & nodloop$var == "T"),])
-# NODLOOP. A>C - 80
+# NODLOOP. A>C
 nrow(nodloop[which(nodloop$ref== "A" & nodloop$var == "C"),])
-# NODLOOP. T>G - 18
+# NODLOOP. T>G
 nrow(nodloop[which(nodloop$ref== "T" & nodloop$var == "G"),])
-# NODLOOP. T>C - 1884
+# NODLOOP. T>C
 nrow(nodloop[which(nodloop$ref== "T" & nodloop$var == "C"),])
-# NODLOOP. T>A - 23
+# NODLOOP. T>A
 nrow(nodloop[which(nodloop$ref== "T" & nodloop$var == "A"),])
-# NODLOOP. G>A - 1452
+# NODLOOP. G>A
 nrow(nodloop[which(nodloop$ref== "G" & nodloop$var == "A"),])
-# NODLOOP. G>T - 32
+# NODLOOP. G>T
 nrow(nodloop[which(nodloop$ref== "G" & nodloop$var == "T"),])
-# NODLOOP. G>C - 112
+# NODLOOP. G>C
 nrow(nodloop[which(nodloop$ref== "G" & nodloop$var == "C"),])
-# NODLOOP. C>A - 125
+# NODLOOP. C>A
 nrow(nodloop[which(nodloop$ref== "C" & nodloop$var == "A"),])
-# NODLOOP. C>T - 471
+# NODLOOP. C>T
 nrow(nodloop[which(nodloop$ref== "C" & nodloop$var == "T"),])
-# NODLOOP. C>G - 16
+# NODLOOP. C>G
 nrow(nodloop[which(nodloop$ref== "C" & nodloop$var == "G"),])
 
 
-#Synonymall 874
+########
+# SYNONYMALL
 synonymall = mtDNA[which(mtDNA$is_silent == 1),]
 nrow(nodloop[which(nodloop$is_silent == 1),])
 
-# SYNONYMALL. A>G - 91
+# SYNONYMALL. A>G
 nrow(synonymall[which(synonymall$ref== "A" & synonymall$var == "G"),])
-# SYNONYMALL. A>T - 11
+# SYNONYMALL. A>T
 nrow(synonymall[which(synonymall$ref== "A" & synonymall$var == "T"),])
-# SYNONYMALL. A>C - 12
+# SYNONYMALL. A>C
 nrow(synonymall[which(synonymall$ref== "A" & synonymall$var == "C"),])
-# SYNONYMALL. T>G - 3
+# SYNONYMALL. T>G
 nrow(synonymall[which(synonymall$ref== "T" & synonymall$var == "G"),])
-# SYNONYMALL. T>C - 262
+# SYNONYMALL. T>C
 nrow(synonymall[which(synonymall$ref== "T" & synonymall$var == "C"),])
-# SYNONYMALL. T>A - 1
+# SYNONYMALL. T>A
 nrow(synonymall[which(synonymall$ref== "T" & synonymall$var == "A"),])
-# SYNONYMALL. G>A - 255
+# SYNONYMALL. G>A
 nrow(synonymall[which(synonymall$ref== "G" & synonymall$var == "A"),])
-# SYNONYMALL. G>T - 0
+# SYNONYMALL. G>T
 nrow(synonymall[which(synonymall$ref== "G" & synonymall$var == "T"),])
-# SYNONYMALL. G>C - 4
+# SYNONYMALL. G>C
 nrow(synonymall[which(synonymall$ref== "G" & synonymall$var == "C"),])
-# SYNONYMALL. C>A - 20
+# SYNONYMALL. C>A
 nrow(synonymall[which(synonymall$ref== "C" & synonymall$var == "A"),])
-# SYNONYMALL. C>T - 211
+# SYNONYMALL. C>T
 nrow(synonymall[which(synonymall$ref== "C" & synonymall$var == "T"),])
-# SYNONYMALL. C>G - 4
+# SYNONYMALL. C>G
 nrow(synonymall[which(synonymall$ref== "C" & synonymall$var == "G"),])
 
 
 
 ########
-# Adding preceeding_nucl from expected
-# Adding preceeding_nucl
+# Adding preceeding_nucl from Expected
 datalist = c()
 poslist = c()
 count = 1
@@ -134,62 +135,62 @@ df_merged =  merge(df_context, df, by = "position")
 df_merged['preceeding'] = df_merged$context.y
 
 ########
-# ALL. A>G - 
+# ALL. A>G
 nrow(df_merged[which(df_merged$ref== "A" & df_merged$var == "G" & df_merged$context == "A"),])/3
 nrow(df_merged[which(df_merged$ref== "A" & df_merged$var == "G" & df_merged$context == "T"),])/3
 nrow(df_merged[which(df_merged$ref== "A" & df_merged$var == "G" & df_merged$context == "G"),])/3
 nrow(df_merged[which(df_merged$ref== "A" & df_merged$var == "G" & df_merged$context == "C"),])/3
-# ALL. A>T - 5124
+# ALL. A>T
 nrow(df_merged[which(df_merged$ref== "A" & df_merged$var == "T" & df_merged$context == "A"),])/3
 nrow(df_merged[which(df_merged$ref== "A" & df_merged$var == "T" & df_merged$context == "T"),])/3
 nrow(df_merged[which(df_merged$ref== "A" & df_merged$var == "T" & df_merged$context == "G"),])/3
 nrow(df_merged[which(df_merged$ref== "A" & df_merged$var == "T" & df_merged$context == "C"),])/3
-# ALL. A>C - 5124
+# ALL. A>C
 nrow(df_merged[which(df_merged$ref== "A" & df_merged$var == "C" & df_merged$context == "A"),])/3
 nrow(df_merged[which(df_merged$ref== "A" & df_merged$var == "C" & df_merged$context == "T"),])/3
 nrow(df_merged[which(df_merged$ref== "A" & df_merged$var == "C" & df_merged$context == "G"),])/3
 nrow(df_merged[which(df_merged$ref== "A" & df_merged$var == "C" & df_merged$context == "C"),])/3
-# ALL. T>G - 4094
+# ALL. T>G
 nrow(df_merged[which(df_merged$ref== "T" & df_merged$var == "G" & df_merged$context == "A"),])/3
 nrow(df_merged[which(df_merged$ref== "T" & df_merged$var == "G" & df_merged$context == "T"),])/3
 nrow(df_merged[which(df_merged$ref== "T" & df_merged$var == "G" & df_merged$context == "G"),])/3
 nrow(df_merged[which(df_merged$ref== "T" & df_merged$var == "G" & df_merged$context == "C"),])/3
-# ALL. T>C - 4094
+# ALL. T>C
 nrow(df_merged[which(df_merged$ref== "T" & df_merged$var == "C" & df_merged$context == "A"),])/3
 nrow(df_merged[which(df_merged$ref== "T" & df_merged$var == "C" & df_merged$context == "T"),])/3
 nrow(df_merged[which(df_merged$ref== "T" & df_merged$var == "C" & df_merged$context == "G"),])/3
 nrow(df_merged[which(df_merged$ref== "T" & df_merged$var == "C" & df_merged$context == "C"),])/3
-# ALL. T>A - 4094
+# ALL. T>A
 nrow(df_merged[which(df_merged$ref== "T" & df_merged$var == "A" & df_merged$context == "A"),])/3
 nrow(df_merged[which(df_merged$ref== "T" & df_merged$var == "A" & df_merged$context == "T"),])/3
 nrow(df_merged[which(df_merged$ref== "T" & df_merged$var == "A" & df_merged$context == "G"),])/3
 nrow(df_merged[which(df_merged$ref== "T" & df_merged$var == "A" & df_merged$context == "C"),])/3
-# ALL. G>A - 2169
+# ALL. G>A
 nrow(df_merged[which(df_merged$ref== "G" & df_merged$var == "A" & df_merged$context == "A"),])/3
 nrow(df_merged[which(df_merged$ref== "G" & df_merged$var == "A" & df_merged$context == "T"),])/3
 nrow(df_merged[which(df_merged$ref== "G" & df_merged$var == "A" & df_merged$context == "G"),])/3
 nrow(df_merged[which(df_merged$ref== "G" & df_merged$var == "A" & df_merged$context == "C"),])/3
-# ALL. G>T - 2169
+# ALL. G>T
 nrow(df_merged[which(df_merged$ref== "G" & df_merged$var == "T" & df_merged$context == "A"),])/3
 nrow(df_merged[which(df_merged$ref== "G" & df_merged$var == "T" & df_merged$context == "T"),])/3
 nrow(df_merged[which(df_merged$ref== "G" & df_merged$var == "T" & df_merged$context == "G"),])/3
 nrow(df_merged[which(df_merged$ref== "G" & df_merged$var == "T" & df_merged$context == "C"),])/3
-# ALL. G>C - 2169
+# ALL. G>C
 nrow(df_merged[which(df_merged$ref== "G" & df_merged$var == "C" & df_merged$context == "A"),])/3
 nrow(df_merged[which(df_merged$ref== "G" & df_merged$var == "C" & df_merged$context == "T"),])/3
 nrow(df_merged[which(df_merged$ref== "G" & df_merged$var == "C" & df_merged$context == "G"),])/3
 nrow(df_merged[which(df_merged$ref== "G" & df_merged$var == "C" & df_merged$context == "C"),])/3
-# ALL. C>A - 5182
+# ALL. C>A
 nrow(df_merged[which(df_merged$ref== "C" & df_merged$var == "A" & df_merged$context == "A"),])/3
 nrow(df_merged[which(df_merged$ref== "C" & df_merged$var == "A" & df_merged$context == "T"),])/3
 nrow(df_merged[which(df_merged$ref== "C" & df_merged$var == "A" & df_merged$context == "G"),])/3
 nrow(df_merged[which(df_merged$ref== "C" & df_merged$var == "A" & df_merged$context == "C"),])/3
-# ALL. C>T - 5182
+# ALL. C>T
 nrow(df_merged[which(df_merged$ref== "C" & df_merged$var == "T" & df_merged$context == "A"),])/3
 nrow(df_merged[which(df_merged$ref== "C" & df_merged$var == "T" & df_merged$context == "T"),])/3
 nrow(df_merged[which(df_merged$ref== "C" & df_merged$var == "T" & df_merged$context == "G"),])/3
 nrow(df_merged[which(df_merged$ref== "C" & df_merged$var == "T" & df_merged$context == "C"),])/3
-# ALL. C>G - 5182
+# ALL. C>G
 nrow(df_merged[which(df_merged$ref== "C" & df_merged$var == "G" & df_merged$context == "A"),])/3
 nrow(df_merged[which(df_merged$ref== "C" & df_merged$var == "G" & df_merged$context == "T"),])/3
 nrow(df_merged[which(df_merged$ref== "C" & df_merged$var == "G" & df_merged$context == "G"),])/3
@@ -198,65 +199,62 @@ nrow(df_merged[which(df_merged$ref== "C" & df_merged$var == "G" & df_merged$cont
 
 ########
 # NODLOOP - Everything outside of D-loop. D-loop coordinates from NC_012920 (16024..16569,1..576)
-# Rows from df[1729,] to df[48072] 
-nodloop <- df_merged[which(df_merged$position > 576 & df_merged$position < 16024),]
-# NODLOOP. A>G - 4785
-# NODLOOP. A>G - 
+# NODLOOP. A>G
 nrow(nodloop[which(nodloop$ref== "A" & nodloop$var == "G" & nodloop$context == "A"),])/3
 nrow(nodloop[which(nodloop$ref== "A" & nodloop$var == "G" & nodloop$context == "T"),])/3
 nrow(nodloop[which(nodloop$ref== "A" & nodloop$var == "G" & nodloop$context == "G"),])/3
 nrow(nodloop[which(nodloop$ref== "A" & nodloop$var == "G" & nodloop$context == "C"),])/3
-# NODLOOP. A>T - 5124
+# NODLOOP. A>T
 nrow(nodloop[which(nodloop$ref== "A" & nodloop$var == "T" & nodloop$context == "A"),])/3
 nrow(nodloop[which(nodloop$ref== "A" & nodloop$var == "T" & nodloop$context == "T"),])/3
 nrow(nodloop[which(nodloop$ref== "A" & nodloop$var == "T" & nodloop$context == "G"),])/3
 nrow(nodloop[which(nodloop$ref== "A" & nodloop$var == "T" & nodloop$context == "C"),])/3
-# NODLOOP. A>C - 5124
+# NODLOOP. A>C
 nrow(nodloop[which(nodloop$ref== "A" & nodloop$var == "C" & nodloop$context == "A"),])/3
 nrow(nodloop[which(nodloop$ref== "A" & nodloop$var == "C" & nodloop$context == "T"),])/3
 nrow(nodloop[which(nodloop$ref== "A" & nodloop$var == "C" & nodloop$context == "G"),])/3
 nrow(nodloop[which(nodloop$ref== "A" & nodloop$var == "C" & nodloop$context == "C"),])/3
-# NODLOOP. T>G - 4094
+# NODLOOP. T>G
 nrow(nodloop[which(nodloop$ref== "T" & nodloop$var == "G" & nodloop$context == "A"),])/3
 nrow(nodloop[which(nodloop$ref== "T" & nodloop$var == "G" & nodloop$context == "T"),])/3
 nrow(nodloop[which(nodloop$ref== "T" & nodloop$var == "G" & nodloop$context == "G"),])/3
 nrow(nodloop[which(nodloop$ref== "T" & nodloop$var == "G" & nodloop$context == "C"),])/3
-# NODLOOP. T>C - 4094
+# NODLOOP. T>C
 nrow(nodloop[which(nodloop$ref== "T" & nodloop$var == "C" & nodloop$context == "A"),])/3
 nrow(nodloop[which(nodloop$ref== "T" & nodloop$var == "C" & nodloop$context == "T"),])/3
 nrow(nodloop[which(nodloop$ref== "T" & nodloop$var == "C" & nodloop$context == "G"),])/3
 nrow(nodloop[which(nodloop$ref== "T" & nodloop$var == "C" & nodloop$context == "C"),])/3
-# NODLOOP. T>A - 4094
+# NODLOOP. T>A
 nrow(nodloop[which(nodloop$ref== "T" & nodloop$var == "A" & nodloop$context == "A"),])/3
 nrow(nodloop[which(nodloop$ref== "T" & nodloop$var == "A" & nodloop$context == "T"),])/3
 nrow(nodloop[which(nodloop$ref== "T" & nodloop$var == "A" & nodloop$context == "G"),])/3
 nrow(nodloop[which(nodloop$ref== "T" & nodloop$var == "A" & nodloop$context == "C"),])/3
-# NODLOOP. G>A - 2169
+# NODLOOP. G>A
 nrow(nodloop[which(nodloop$ref== "G" & nodloop$var == "A" & nodloop$context == "A"),])/3
 nrow(nodloop[which(nodloop$ref== "G" & nodloop$var == "A" & nodloop$context == "T"),])/3
 nrow(nodloop[which(nodloop$ref== "G" & nodloop$var == "A" & nodloop$context == "G"),])/3
 nrow(nodloop[which(nodloop$ref== "G" & nodloop$var == "A" & nodloop$context == "C"),])/3
-# NODLOOP. G>T - 2169
+# NODLOOP. G>T
 nrow(nodloop[which(nodloop$ref== "G" & nodloop$var == "T" & nodloop$context == "A"),])/3
 nrow(nodloop[which(nodloop$ref== "G" & nodloop$var == "T" & nodloop$context == "T"),])/3
 nrow(nodloop[which(nodloop$ref== "G" & nodloop$var == "T" & nodloop$context == "G"),])/3
 nrow(nodloop[which(nodloop$ref== "G" & nodloop$var == "T" & nodloop$context == "C"),])/3
-# NODLOOP. G>C - 2169
+# NODLOOP. G>C
 nrow(nodloop[which(nodloop$ref== "G" & nodloop$var == "C" & nodloop$context == "A"),])/3
 nrow(nodloop[which(nodloop$ref== "G" & nodloop$var == "C" & nodloop$context == "T"),])/3
 nrow(nodloop[which(nodloop$ref== "G" & nodloop$var == "C" & nodloop$context == "G"),])/3
 nrow(nodloop[which(nodloop$ref== "G" & nodloop$var == "C" & nodloop$context == "C"),])/3
-# NODLOOP. C>A - 5182
+# NODLOOP. C>A
 nrow(nodloop[which(nodloop$ref== "C" & nodloop$var == "A" & nodloop$context == "A"),])/3
 nrow(nodloop[which(nodloop$ref== "C" & nodloop$var == "A" & nodloop$context == "T"),])/3
 nrow(nodloop[which(nodloop$ref== "C" & nodloop$var == "A" & nodloop$context == "G"),])/3
 nrow(nodloop[which(nodloop$ref== "C" & nodloop$var == "A" & nodloop$context == "C"),])/3
-# NODLOOP. C>T - 5182
+# NODLOOP. C>T
 nrow(nodloop[which(nodloop$ref== "C" & nodloop$var == "T" & nodloop$context == "A"),])/3
 nrow(nodloop[which(nodloop$ref== "C" & nodloop$var == "T" & nodloop$context == "T"),])/3
 nrow(nodloop[which(nodloop$ref== "C" & nodloop$var == "T" & nodloop$context == "G"),])/3
 nrow(nodloop[which(nodloop$ref== "C" & nodloop$var == "T" & nodloop$context == "C"),])/3
-# NODLOOP. C>G - 5182
+# NODLOOP. C>G
 nrow(nodloop[which(nodloop$ref== "C" & nodloop$var == "G" & nodloop$context == "A"),])/3
 nrow(nodloop[which(nodloop$ref== "C" & nodloop$var == "G" & nodloop$context == "T"),])/3
 nrow(nodloop[which(nodloop$ref== "C" & nodloop$var == "G" & nodloop$context == "G"),])/3
@@ -264,63 +262,63 @@ nrow(nodloop[which(nodloop$ref== "C" & nodloop$var == "G" & nodloop$context == "
 
 
 ########
-# SYNONYMALL - All synonymous variants - 8678
-# SYNONYMALL. A>G - 
+# SYNONYMALL - All synonymous variants
+# SYNONYMALL. A>G
 nrow(nodloop[which(nodloop$ref== "A" & nodloop$var == "G" & nodloop$context == "A" & nodloop$is_silent == 1),])/3
 nrow(nodloop[which(nodloop$ref== "A" & nodloop$var == "G" & nodloop$context == "T" & nodloop$is_silent == 1),])/3
 nrow(nodloop[which(nodloop$ref== "A" & nodloop$var == "G" & nodloop$context == "G" & nodloop$is_silent == 1),])/3
 nrow(nodloop[which(nodloop$ref== "A" & nodloop$var == "G" & nodloop$context == "C" & nodloop$is_silent == 1),])/3
-# SYNONYMALL. A>T - 5124
+# SYNONYMALL. A>T
 nrow(nodloop[which(nodloop$ref== "A" & nodloop$var == "T" & nodloop$context == "A" & nodloop$is_silent == 1),])/3
 nrow(nodloop[which(nodloop$ref== "A" & nodloop$var == "T" & nodloop$context == "T" & nodloop$is_silent == 1),])/3
 nrow(nodloop[which(nodloop$ref== "A" & nodloop$var == "T" & nodloop$context == "G" & nodloop$is_silent == 1),])/3
 nrow(nodloop[which(nodloop$ref== "A" & nodloop$var == "T" & nodloop$context == "C" & nodloop$is_silent == 1),])/3
-# SYNONYMALL. A>C - 5124
+# SYNONYMALL. A>C
 nrow(nodloop[which(nodloop$ref== "A" & nodloop$var == "C" & nodloop$context == "A" & nodloop$is_silent == 1),])/3
 nrow(nodloop[which(nodloop$ref== "A" & nodloop$var == "C" & nodloop$context == "T" & nodloop$is_silent == 1),])/3
 nrow(nodloop[which(nodloop$ref== "A" & nodloop$var == "C" & nodloop$context == "G" & nodloop$is_silent == 1),])/3
 nrow(nodloop[which(nodloop$ref== "A" & nodloop$var == "C" & nodloop$context == "C" & nodloop$is_silent == 1),])/3
-# SYNONYMALL. T>G - 4094
+# SYNONYMALL. T>G
 nrow(nodloop[which(nodloop$ref== "T" & nodloop$var == "G" & nodloop$context == "A" & nodloop$is_silent == 1),])/3
 nrow(nodloop[which(nodloop$ref== "T" & nodloop$var == "G" & nodloop$context == "T" & nodloop$is_silent == 1),])/3
 nrow(nodloop[which(nodloop$ref== "T" & nodloop$var == "G" & nodloop$context == "G" & nodloop$is_silent == 1),])/3
 nrow(nodloop[which(nodloop$ref== "T" & nodloop$var == "G" & nodloop$context == "C" & nodloop$is_silent == 1),])/3
-# SYNONYMALL. T>C - 4094
+# SYNONYMALL. T>C
 nrow(nodloop[which(nodloop$ref== "T" & nodloop$var == "C" & nodloop$context == "A" & nodloop$is_silent == 1),])/3
 nrow(nodloop[which(nodloop$ref== "T" & nodloop$var == "C" & nodloop$context == "T" & nodloop$is_silent == 1),])/3
 nrow(nodloop[which(nodloop$ref== "T" & nodloop$var == "C" & nodloop$context == "G" & nodloop$is_silent == 1),])/3
 nrow(nodloop[which(nodloop$ref== "T" & nodloop$var == "C" & nodloop$context == "C" & nodloop$is_silent == 1),])/3
-# SYNONYMALL. T>A - 4094
+# SYNONYMALL. T>A
 nrow(nodloop[which(nodloop$ref== "T" & nodloop$var == "A" & nodloop$context == "A" & nodloop$is_silent == 1),])/3
 nrow(nodloop[which(nodloop$ref== "T" & nodloop$var == "A" & nodloop$context == "T" & nodloop$is_silent == 1),])/3
 nrow(nodloop[which(nodloop$ref== "T" & nodloop$var == "A" & nodloop$context == "G" & nodloop$is_silent == 1),])/3
 nrow(nodloop[which(nodloop$ref== "T" & nodloop$var == "A" & nodloop$context == "C" & nodloop$is_silent == 1),])/3
-# SYNONYMALL. G>A - 2169
+# SYNONYMALL. G>A
 nrow(nodloop[which(nodloop$ref== "G" & nodloop$var == "A" & nodloop$context == "A" & nodloop$is_silent == 1),])/3
 nrow(nodloop[which(nodloop$ref== "G" & nodloop$var == "A" & nodloop$context == "T" & nodloop$is_silent == 1),])/3
 nrow(nodloop[which(nodloop$ref== "G" & nodloop$var == "A" & nodloop$context == "G" & nodloop$is_silent == 1),])/3
 nrow(nodloop[which(nodloop$ref== "G" & nodloop$var == "A" & nodloop$context == "C" & nodloop$is_silent == 1),])/3
-# SYNONYMALL. G>T - 2169
+# SYNONYMALL. G>T
 nrow(nodloop[which(nodloop$ref== "G" & nodloop$var == "T" & nodloop$context == "A" & nodloop$is_silent == 1),])/3
 nrow(nodloop[which(nodloop$ref== "G" & nodloop$var == "T" & nodloop$context == "T" & nodloop$is_silent == 1),])/3
 nrow(nodloop[which(nodloop$ref== "G" & nodloop$var == "T" & nodloop$context == "G" & nodloop$is_silent == 1),])/3
 nrow(nodloop[which(nodloop$ref== "G" & nodloop$var == "T" & nodloop$context == "C" & nodloop$is_silent == 1),])/3
-# SYNONYMALL. G>C - 2169
+# SYNONYMALL. G>C
 nrow(nodloop[which(nodloop$ref== "G" & nodloop$var == "C" & nodloop$context == "A" & nodloop$is_silent == 1),])/3
 nrow(nodloop[which(nodloop$ref== "G" & nodloop$var == "C" & nodloop$context == "T" & nodloop$is_silent == 1),])/3
 nrow(nodloop[which(nodloop$ref== "G" & nodloop$var == "C" & nodloop$context == "G" & nodloop$is_silent == 1),])/3
 nrow(nodloop[which(nodloop$ref== "G" & nodloop$var == "C" & nodloop$context == "C" & nodloop$is_silent == 1),])/3
-# SYNONYMALL. C>A - 5182
+# SYNONYMALL. C>A
 nrow(nodloop[which(nodloop$ref== "C" & nodloop$var == "A" & nodloop$context == "A" & nodloop$is_silent == 1),])/3
 nrow(nodloop[which(nodloop$ref== "C" & nodloop$var == "A" & nodloop$context == "T" & nodloop$is_silent == 1),])/3
 nrow(nodloop[which(nodloop$ref== "C" & nodloop$var == "A" & nodloop$context == "G" & nodloop$is_silent == 1),])/3
 nrow(nodloop[which(nodloop$ref== "C" & nodloop$var == "A" & nodloop$context == "C" & nodloop$is_silent == 1),])/3
-# SYNONYMALL. C>T - 5182
+# SYNONYMALL. C>T
 nrow(nodloop[which(nodloop$ref== "C" & nodloop$var == "T" & nodloop$context == "A" & nodloop$is_silent == 1),])/3
 nrow(nodloop[which(nodloop$ref== "C" & nodloop$var == "T" & nodloop$context == "T" & nodloop$is_silent == 1),])/3
 nrow(nodloop[which(nodloop$ref== "C" & nodloop$var == "T" & nodloop$context == "G" & nodloop$is_silent == 1),])/3
 nrow(nodloop[which(nodloop$ref== "C" & nodloop$var == "T" & nodloop$context == "C" & nodloop$is_silent == 1),])/3
-# SYNONYMALL. C>G - 5182
+# SYNONYMALL. C>G
 nrow(nodloop[which(nodloop$ref== "C" & nodloop$var == "G" & nodloop$context == "A" & nodloop$is_silent == 1),])/3
 nrow(nodloop[which(nodloop$ref== "C" & nodloop$var == "G" & nodloop$context == "T" & nodloop$is_silent == 1),])/3
 nrow(nodloop[which(nodloop$ref== "C" & nodloop$var == "G" & nodloop$context == "G" & nodloop$is_silent == 1),])/3
