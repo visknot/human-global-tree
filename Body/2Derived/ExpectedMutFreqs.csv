@@ -457,7 +457,7 @@ T>A	A	ALL	785	Germline
 T>A	T	ALL	818	Germline		
 T>A	G	ALL	253	Germline		
 T>A	C	ALL	1176	Germline		
-G>A	ALL	ALL	112500	Germline		> # NODLOOP. A>G
+G>A	ALL	ALL	112500	Germline
 G>A	A	ALL	35359	Germline		
 G>A	T	ALL	31544	Germline		
 G>A	G	ALL	19371	Germline		
