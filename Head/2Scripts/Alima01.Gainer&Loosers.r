@@ -1,133 +1,29 @@
-# MS192$names[1] = AC: AAA
-SwitchNamesToHeavy <- function(x) {
-subst = unlist(strsplit(x,': '))[1];  subst = toupper(paste(comp(s2c(as.character(subst))),collapse = ''));
-context = unlist(strsplit(x,': '))[2];  context = toupper(paste(rev(comp(s2c(as.character(context)))),collapse = ''));
-paste(subst,context, sep = ': ')  }
-MS192$NamesHeavy = apply(as.matrix(MS192$names), 1, FUN = SwitchNamesToHeavy)
-write.table(MS192,"../../Body/3Results/04A.MutSpecCancerObsToExp.MutSpec192.txt")
-# plot in light chain notation
-barplot(MS192[MS192$SubstType == 'AllExceptStopGains',]$ObsToExpFreq, names = MS192[MS192$SubstType == 'AllExceptStopGains',]$names, col = ColVec, border = BorderVec, main = paste("ObsFreq/ExpFreq, AllExceptStopGains, Light Chain"), cex.names = 1, cex.axis = 1, las = 2)
-barplot(MS192[MS192$SubstType == 'synonymous',]$ObsToExpFreq, names = MS192[MS192$SubstType == 'synonymous',]$names, col = ColVec, border = BorderVec, main = paste("ObsFreq/ExpFreq SynSubst, Light Chain"), cex.names = 1, cex.axis = 1, las = 2)
-plot.new()
-# plot in heavy chain notation
-MS192 = MS192[order(MS192$NamesHeavy),]
-BorderVec = rep(c(rgb(0.1,0.1,0.1,0.1),rgb(0,0,0,1),rgb(0.1,0.1,0.1,0.1),rgb(0.1,0.1,0.1,0.1)),48) # 192/4 The second colum is with border
-barplot(MS192[MS192$SubstType == 'AllExceptStopGains',]$ObsToExpFreq, names = MS192[MS192$SubstType == 'AllExceptStopGains',]$NamesHeavy, col = ColVec, border = BorderVec, main = paste("ObsFreq/ExpFreq, AllExceptStopGains, Heavy Chain"), cex.names = 1, cex.axis = 1, las = 2)
-barplot(MS192[MS192$SubstType == 'synonymous',]$ObsToExpFreq, names = MS192[MS192$SubstType == 'synonymous',]$NamesHeavy, col = ColVec, border = BorderVec, main = paste("ObsFreq/ExpFreq SynSubst, Heavy Chain"), cex.names = 1, cex.axis = 1, las = 2)
-plot.new()
-dev.off()
-#### READ EXPECTED, OBSERVED, GET A RATIO, WRITE AND PLOTG
 rm(list=ls(all=TRUE))
-library('dplyr')
-library('gtools')
-library(seqinr)
-pdf("../../Body/4Figures/04A.MutSpecCancerObsToExp.R.pdf", width = 22, height = 14)
-par(mfrow=c(3,1))
-###### MutSpec12
-ColVec=c('gray',rgb(0,1,0,1),'gray','gray','gray',rgb(1,0,0,1),rgb(1,0,0,0.2),'gray','gray','gray',rgb(0,1,0,0.2),'gray'); length(ColVec)
-Obs = read.table("../../Body/2Derived/04.MutSpecObserved.Cancers.MutSpecObs12.txt")
-Exp = read.table("../../Body/2Derived/03.MutSpecMtDnaExpected.MutSpecExp12.txt")
-ObsExp = merge(Obs,Exp, by = c('Subst','Genes','SubstType'))
-VecOfSubst = unique(ObsExp$SubstType)
-MS12 = data.frame()
-for (i in 1:length(VecOfSubst))
-{ # i = 1
-temp = ObsExp[ObsExp$SubstType == VecOfSubst[i],]
-temp$FreqObs = temp$NumbObs/sum(temp$NumbObs);
-temp$FreqExp = temp$NumbExp/sum(temp$NumbExp);
-temp$ObsToExpFreq = temp$FreqObs/temp$FreqExp
-MS12 = rbind(MS12,temp)
-}
-# add heavy chain Subst
-Comp <- function(x) {y = paste(comp(s2c(as.character(x))),collapse = ''); return(toupper(y))}
-MS12$SubstHeavy = apply(as.matrix(MS12$Subst), 1, FUN = Comp)
-write.table(MS12,"../../Body/3Results/04A.MutSpecCancerObsToExp.MutSpec12.txt")
-# plot MutSpec in light chain notation:
-barplot(MS12[MS12$SubstType == 'AllExceptStopGains',]$ObsToExpFreq, names = MS12[MS12$SubstType == 'AllExceptStopGains',]$Subst, col = ColVec, main = paste("ObsFreq/ExpFreq AllExceptStopGain, Light Chain"), cex.names = 2, cex.axis = 2)
-barplot(MS12[MS12$SubstType == 'synonymous',]$ObsToExpFreq, names = MS12[MS12$SubstType == 'synonymous',]$Subst, col = ColVec, main = paste("ObsFreq/ExpFreq SynSubst, Light Chain"), cex.names = 2, cex.axis = 2)
-plot.new()
-MS12 = MS12[order(MS12$SubstType,MS12$SubstHeavy),]
-# plot MutSpec in heavy chain notation:
-barplot(MS12[MS12$SubstType == 'AllExceptStopGains',]$ObsToExpFreq, names = MS12[MS12$SubstType == 'AllExceptStopGains',]$SubstHeavy, col = ColVec, main = paste("ObsFreq/ExpFreq AllExceptStopGain, Heavy Chain"), cex.names = 2, cex.axis = 2)
-barplot(MS12[MS12$SubstType == 'synonymous',]$ObsToExpFreq, names = MS12[MS12$SubstType == 'synonymous',]$SubstHeavy, col = ColVec, main = paste("ObsFreq/ExpFreq SynSubst, Heavy Chain"), cex.names = 2, cex.axis = 2)
-plot.new()
-####### MutSpec192
-ColVec=c(rep('gray',16),rep(rgb(0,1,0,1),16),rep('gray',16),rep('gray',16),rep('gray',16),rep(rgb(1,0,0,1),16),rep(rgb(1,0,0,0.2),16),rep('gray',16),rep('gray',16),rep('gray',16),rep(rgb(0,1,0,0.2),16),rep('gray',16)); length(ColVec)
-BorderVec = rep(c(rgb(0.1,0.1,0.1,0.1),rgb(0.1,0.1,0.1,0.1),rgb(0.1,0.1,0.1,0.1),rgb(0.1,0.1,0.1,0.1),
-rgb(0.1,0.1,0.1,0.1),rgb(0.1,0.1,0.1,0.1),rgb(0.1,0.1,0.1,0.1),rgb(0.1,0.1,0.1,0.1),
-rgb( 0,0,0,1),rgb( 0,0,0,1),rgb( 0,0,0,1),rgb( 0,0,0,1),
-rgb(0.1,0.1,0.1,0.1),rgb(0.1,0.1,0.1,0.1),rgb(0.1,0.1,0.1,0.1),rgb(0.1,0.1,0.1,0.1)),12)
-length(BorderVec) # the third tetrade is with border (G is the first)
-Obs = read.table("../../Body/2Derived/04.MutSpecObserved.Cancers.MutSpecObs192.txt")
-Exp = read.table("../../Body/2Derived/03.MutSpecMtDnaExpected.MutSpecExp192.txt")
-ObsExp = merge(Obs,Exp, by = c('names','Genes','SubstType'))
-VecOfSubst = unique(ObsExp$SubstType)
-MS192 = data.frame()
-for (i in 1:length(VecOfSubst))
-{ # i = 1
-temp = ObsExp[ObsExp$SubstType == VecOfSubst[i],]
-temp$FreqObs = temp$NumbObs/sum(temp$NumbObs);
-temp$FreqExp = temp$NumbExp/sum(temp$NumbExp);
-temp$ObsToExpFreq = temp$FreqObs/temp$FreqExp
-MS192 = rbind(MS192,temp)
-}
-MS192[MS192$ObsToExpFreq == Inf | is.na(MS192$ObsToExpFreq),]$ObsToExpFreq <- 0 # WHY THERE ARE SOME NA???? I AHVE A BIT OF IBSERVED BUT THERE IS NO EXPECTED!!!!!!!????
-# MS192$names[1] = AC: AAA
-SwitchNamesToHeavy <- function(x) {
-subst = unlist(strsplit(x,': '))[1];  subst = toupper(paste(comp(s2c(as.character(subst))),collapse = ''));
-context = unlist(strsplit(x,': '))[2];  context = toupper(paste(rev(comp(s2c(as.character(context)))),collapse = ''));
-paste(subst,context, sep = ': ')  }
-MS192$NamesHeavy = apply(as.matrix(MS192$names), 1, FUN = SwitchNamesToHeavy)
-write.table(MS192,"../../Body/3Results/04A.MutSpecCancerObsToExp.MutSpec192.txt")
-# plot in light chain notation
-barplot(MS192[MS192$SubstType == 'AllExceptStopGains',]$ObsToExpFreq, names = MS192[MS192$SubstType == 'AllExceptStopGains',]$names, col = ColVec, border = BorderVec, main = paste("ObsFreq/ExpFreq, AllExceptStopGains, Light Chain"), cex.names = 1, cex.axis = 1, las = 2)
-barplot(MS192[MS192$SubstType == 'synonymous',]$ObsToExpFreq, names = MS192[MS192$SubstType == 'synonymous',]$names, col = ColVec, border = BorderVec, main = paste("ObsFreq/ExpFreq SynSubst, Light Chain"), cex.names = 1, cex.axis = 1, las = 2)
-plot.new()
-# plot in heavy chain notation
-MS192 = MS192[order(MS192$NamesHeavy),]
-BorderVec = rep(c(rgb(0.1,0.1,0.1,0.1),rgb(0,0,0,1),rgb(0.1,0.1,0.1,0.1),rgb(0.1,0.1,0.1,0.1)),48) # 192/4 The second colum is with border
-barplot(MS192[MS192$SubstType == 'AllExceptStopGains',]$ObsToExpFreq, names = MS192[MS192$SubstType == 'AllExceptStopGains',]$NamesHeavy, col = ColVec, border = BorderVec, main = paste("ObsFreq/ExpFreq, AllExceptStopGains, Heavy Chain"), cex.names = 1, cex.axis = 1, las = 2)
-barplot(MS192[MS192$SubstType == 'synonymous',]$ObsToExpFreq, names = MS192[MS192$SubstType == 'synonymous',]$NamesHeavy, col = ColVec, border = BorderVec, main = paste("ObsFreq/ExpFreq SynSubst, Heavy Chain"), cex.names = 1, cex.axis = 1, las = 2)
-plot.new()
-dev.off()
-rm(list=ls(all=TRUE))
-indata = read.table("../../Body/2Derived/fulltreeCodons.csv")
-rm(list=ls(all=TRUE))
-#indata <- read.csv("/home/alima/arrr/fulltreeCodons.csv", header = TRUE, sep = ";") #читаю файл
-indata = read.table("../../Body/2Derived/fulltreeCodons.csv")
-rm(list=ls(all=TRUE))
-#indata <- read.csv("/home/alima/arrr/fulltreeCodons.csv", header = TRUE, sep = ";") #читаю файл
-indata = read.csv("../../Body/2Derived/fulltreeCodons.csv")
-rm(list=ls(all=TRUE))
-#indata <- read.csv("/home/alima/arrr/fulltreeCodons.csv", header = TRUE, sep = ";") #читаю файл
+
+#indata <- read.csv("/home/alima/arrr/fulltreeCodons.csv", header = TRUE, sep = ";") #читаю файл 
 indata = read.csv("../../Body/2Derived/fulltreeCodons.csv", header = TRUE, sep = ";")
-View(indata)
+
 data <- subset(indata, synonymous == "non-synonymous" & derived_aa != "Ambiguous")  #убираю лишнее
-View(data)
+
 aa <- data.frame(data$ancestral_aa, data$derived_aa) #упрощённая таблица для подсчёта пар aa
-View(aa)
-aa_count <- table(as.character(interaction(aa)))
+aa_count <- table(as.character(interaction(aa))) 
 aa_count
-View(aa)
-rm(list=ls(all=TRUE))
-#indata <- read.csv("/home/alima/arrr/fulltreeCodons.csv", header = TRUE, sep = ";") #читаю файл
-indata = read.csv("../../Body/2Derived/fulltreeCodons.csv", header = TRUE, sep = ";")
-data <- subset(indata, synonymous == "non-synonymous" & derived_aa != "Ambiguous")  #убираю лишнее
-aa <- data.frame(data$ancestral_aa, data$derived_aa) #упрощённая таблица для подсчёта пар aa
-aa_count <- table(as.character(interaction(aa)))
-aa_count
+
 #library(dplyr)  #альтернативный вариант подсчёта пар, раньше не работала, f теперь
 #вызывается библиотека:
 #aa %>% group_by(data$ancestral_aa, data$derived_aa) %>%
 #sum <- summarize(Count = n())
+
 #library(qdap)  #альтернативный вариант подсчёта пар, почему-то не вызывается библиотека
 #table(paste2(aa))
+
 m <- matrix(nrow = 20, ncol = 20)   #по горизонтали ancestral_aa, по вертикали - derived_aa
-rownames(m) <- c('Gly', 'Ala', 'Val', 'Ile', 'Leu', 'Pro', 'Ser', 'Thr', 'Cys', 'Met',
-'Asp', 'Asn', 'Glu', 'Gln', 'Lys', 'Arg', 'His', 'Phe', 'Tyr', 'Trp')
-colnames(m) <- c('Gly', 'Ala', 'Val', 'Ile', 'Leu', 'Pro', 'Ser', 'Thr', 'Cys', 'Met',
-'Asp', 'Asn', 'Glu', 'Gln', 'Lys', 'Arg', 'His', 'Phe', 'Tyr', 'Trp')
-#кажется мне, что это тоже можно было сделать проще, но да ладно
+rownames(m) <- c('Gly', 'Ala', 'Val', 'Ile', 'Leu', 'Pro', 'Ser', 'Thr', 'Cys', 'Met', 
+                 'Asp', 'Asn', 'Glu', 'Gln', 'Lys', 'Arg', 'His', 'Phe', 'Tyr', 'Trp')
+colnames(m) <- c('Gly', 'Ala', 'Val', 'Ile', 'Leu', 'Pro', 'Ser', 'Thr', 'Cys', 'Met', 
+                 'Asp', 'Asn', 'Glu', 'Gln', 'Lys', 'Arg', 'His', 'Phe', 'Tyr', 'Trp')
+#кажется мне, что это тоже можно было сделать проще, но да ладно 
+
 m['Gly', 'Ala'] <- aa_count['Gly.Ala']  #костылии
 m['Gly', 'Val'] <- aa_count['Gly.Val']
 m['Gly', 'Ile'] <- aa_count['Gly.Ile']
@@ -147,6 +43,8 @@ m['Gly', 'His'] <- aa_count['Gly.His']
 m['Gly', 'Phe'] <- aa_count['Gly.Phe']
 m['Gly', 'Tyr'] <- aa_count['Gly.Tyr']
 m['Gly', 'Trp'] <- aa_count['Gly.Trp']
+
+
 m['Ala', 'Gly'] <- aa_count['Ala.Gly']
 m['Ala', 'Val'] <- aa_count['Ala.Val']
 m['Ala', 'Ile'] <- aa_count['Ala.Ile']
@@ -166,6 +64,7 @@ m['Ala', 'His'] <- aa_count['Ala.His']
 m['Ala', 'Phe'] <- aa_count['Ala.Phe']
 m['Ala', 'Tyr'] <- aa_count['Ala.Tyr']
 m['Ala', 'Trp'] <- aa_count['Ala.Trp']
+
 m['Val', 'Gly'] <- aa_count['Val.Gly']
 m['Val', 'Ala'] <- aa_count['Val.Ala']
 m['Val', 'Ile'] <- aa_count['Val.Ile']
@@ -185,6 +84,7 @@ m['Val', 'His'] <- aa_count['Val.His']
 m['Val', 'Phe'] <- aa_count['Val.Phe']
 m['Val', 'Tyr'] <- aa_count['Val.Tyr']
 m['Val', 'Trp'] <- aa_count['Val.Trp']
+
 m['Ile', 'Gly'] <- aa_count['Ile.Gly']
 m['Ile', 'Ala'] <- aa_count['Ile.Ala']
 m['Ile', 'Val'] <- aa_count['Ile.Val']
@@ -204,6 +104,7 @@ m['Ile', 'His'] <- aa_count['Ile.His']
 m['Ile', 'Phe'] <- aa_count['Ile.Phe']
 m['Ile', 'Tyr'] <- aa_count['Ile.Tyr']
 m['Ile', 'Trp'] <- aa_count['Ile.Trp']
+
 m['Leu', 'Gly'] <- aa_count['Leu.Gly']
 m['Leu', 'Ala'] <- aa_count['Leu.Ala']
 m['Leu', 'Val'] <- aa_count['Leu.Val']
@@ -223,6 +124,7 @@ m['Leu', 'His'] <- aa_count['Leu.His']
 m['Leu', 'Phe'] <- aa_count['Leu.Phe']
 m['Leu', 'Tyr'] <- aa_count['Leu.Tyr']
 m['Leu', 'Trp'] <- aa_count['Leu.Trp']
+
 m['Pro', 'Gly'] <- aa_count['Pro.Gly']
 m['Pro', 'Ala'] <- aa_count['Pro.Ala']
 m['Pro', 'Val'] <- aa_count['Pro.Val']
@@ -242,6 +144,7 @@ m['Pro', 'His'] <- aa_count['Pro.His']
 m['Pro', 'Phe'] <- aa_count['Pro.Phe']
 m['Pro', 'Tyr'] <- aa_count['Pro.Tyr']
 m['Pro', 'Trp'] <- aa_count['Pro.Trp']
+
 m['Ser', 'Gly'] <- aa_count['Ser.Gly']
 m['Ser', 'Ala'] <- aa_count['Ser.Ala']
 m['Ser', 'Val'] <- aa_count['Ser.Val']
@@ -261,6 +164,7 @@ m['Ser', 'His'] <- aa_count['Ser.His']
 m['Ser', 'Phe'] <- aa_count['Ser.Phe']
 m['Ser', 'Tyr'] <- aa_count['Ser.Tyr']
 m['Ser', 'Trp'] <- aa_count['Ser.Trp']
+
 m['Thr', 'Gly'] <- aa_count['Thr.Gly']
 m['Thr', 'Ala'] <- aa_count['Thr.Ala']
 m['Thr', 'Val'] <- aa_count['Thr.Val']
@@ -280,6 +184,7 @@ m['Thr', 'His'] <- aa_count['Thr.His']
 m['Thr', 'Phe'] <- aa_count['Thr.Phe']
 m['Thr', 'Tyr'] <- aa_count['Thr.Tyr']
 m['Thr', 'Trp'] <- aa_count['Thr.Trp']
+
 m['Cys', 'Gly'] <- aa_count['Cys.Gly']
 m['Cys', 'Ala'] <- aa_count['Cys.Ala']
 m['Cys', 'Val'] <- aa_count['Cys.Val']
@@ -299,6 +204,7 @@ m['Cys', 'His'] <- aa_count['Cys.His']
 m['Cys', 'Phe'] <- aa_count['Cys.Phe']
 m['Cys', 'Tyr'] <- aa_count['Cys.Tyr']
 m['Cys', 'Trp'] <- aa_count['Cys.Trp']
+
 m['Met', 'Gly'] <- aa_count['Met.Gly']
 m['Met', 'Ala'] <- aa_count['Met.Ala']
 m['Met', 'Val'] <- aa_count['Met.Val']
@@ -318,6 +224,7 @@ m['Met', 'His'] <- aa_count['Met.His']
 m['Met', 'Phe'] <- aa_count['Met.Phe']
 m['Met', 'Tyr'] <- aa_count['Met.Tyr']
 m['Met', 'Trp'] <- aa_count['Met.Trp']
+
 m['Asp', 'Gly'] <- aa_count['Asp.Gly']
 m['Asp', 'Ala'] <- aa_count['Asp.Ala']
 m['Asp', 'Val'] <- aa_count['Asp.Val']
@@ -337,6 +244,7 @@ m['Asp', 'His'] <- aa_count['Asp.His']
 m['Asp', 'Phe'] <- aa_count['Asp.Phe']
 m['Asp', 'Tyr'] <- aa_count['Asp.Tyr']
 m['Asp', 'Trp'] <- aa_count['Asp.Trp']
+
 m['Asn', 'Gly'] <- aa_count['Asn.Gly']
 m['Asn', 'Ala'] <- aa_count['Asn.Ala']
 m['Asn', 'Val'] <- aa_count['Asn.Val']
@@ -356,6 +264,7 @@ m['Asn', 'His'] <- aa_count['Asn.His']
 m['Asn', 'Phe'] <- aa_count['Asn.Phe']
 m['Asn', 'Tyr'] <- aa_count['Asn.Tyr']
 m['Asn', 'Trp'] <- aa_count['Asn.Trp']
+
 m['Glu', 'Gly'] <- aa_count['Glu.Gly']
 m['Glu', 'Ala'] <- aa_count['Glu.Ala']
 m['Glu', 'Val'] <- aa_count['Glu.Val']
@@ -375,6 +284,7 @@ m['Glu', 'His'] <- aa_count['Glu.His']
 m['Glu', 'Phe'] <- aa_count['Glu.Phe']
 m['Glu', 'Tyr'] <- aa_count['Glu.Tyr']
 m['Glu', 'Trp'] <- aa_count['Glu.Trp']
+
 m['Gln', 'Gly'] <- aa_count['Gln.Gly']
 m['Gln', 'Ala'] <- aa_count['Gln.Ala']
 m['Gln', 'Val'] <- aa_count['Gln.Val']
@@ -394,6 +304,7 @@ m['Gln', 'His'] <- aa_count['Gln.His']
 m['Gln', 'Phe'] <- aa_count['Gln.Phe']
 m['Gln', 'Tyr'] <- aa_count['Gln.Tyr']
 m['Gln', 'Trp'] <- aa_count['Gln.Trp']
+
 m['Lys', 'Gly'] <- aa_count['Lys.Gly']
 m['Lys', 'Ala'] <- aa_count['Lys.Ala']
 m['Lys', 'Val'] <- aa_count['Lys.Val']
@@ -413,6 +324,7 @@ m['Lys', 'His'] <- aa_count['Lys.His']
 m['Lys', 'Phe'] <- aa_count['Lys.Phe']
 m['Lys', 'Tyr'] <- aa_count['Lys.Tyr']
 m['Lys', 'Trp'] <- aa_count['Lys.Trp']
+
 m['Arg', 'Gly'] <- aa_count['Arg.Gly']
 m['Arg', 'Ala'] <- aa_count['Arg.Ala']
 m['Arg', 'Val'] <- aa_count['Arg.Val']
@@ -432,6 +344,7 @@ m['Arg', 'His'] <- aa_count['Arg.His']
 m['Arg', 'Phe'] <- aa_count['Arg.Phe']
 m['Arg', 'Tyr'] <- aa_count['Arg.Tyr']
 m['Arg', 'Trp'] <- aa_count['Arg.Trp']
+
 m['His', 'Gly'] <- aa_count['His.Gly']
 m['His', 'Ala'] <- aa_count['His.Ala']
 m['His', 'Val'] <- aa_count['His.Val']
@@ -451,6 +364,7 @@ m['His', 'Arg'] <- aa_count['His.Arg']
 m['His', 'Phe'] <- aa_count['His.Phe']
 m['His', 'Tyr'] <- aa_count['His.Tyr']
 m['His', 'Trp'] <- aa_count['His.Trp']
+
 m['Phe', 'Gly'] <- aa_count['Phe.Gly']
 m['Phe', 'Ala'] <- aa_count['Phe.Ala']
 m['Phe', 'Val'] <- aa_count['Phe.Val']
@@ -470,6 +384,7 @@ m['Phe', 'Arg'] <- aa_count['Phe.Arg']
 m['Phe', 'His'] <- aa_count['Phe.His']
 m['Phe', 'Tyr'] <- aa_count['Phe.Tyr']
 m['Phe', 'Trp'] <- aa_count['Phe.Trp']
+
 m['Tyr', 'Gly'] <- aa_count['Tyr.Gly']
 m['Tyr', 'Ala'] <- aa_count['Tyr.Ala']
 m['Tyr', 'Val'] <- aa_count['Tyr.Val']
@@ -489,6 +404,7 @@ m['Tyr', 'Arg'] <- aa_count['Tyr.Arg']
 m['Tyr', 'His'] <- aa_count['Tyr.His']
 m['Tyr', 'Phe'] <- aa_count['Tyr.Phe']
 m['Tyr', 'Trp'] <- aa_count['Tyr.Trp']
+
 m['Trp', 'Gly'] <- aa_count['Trp.Gly']
 m['Trp', 'Ala'] <- aa_count['Trp.Ala']
 m['Trp', 'Val'] <- aa_count['Trp.Val']
@@ -508,5 +424,24 @@ m['Trp', 'Arg'] <- aa_count['Trp.Arg']
 m['Trp', 'His'] <- aa_count['Trp.His']
 m['Trp', 'Phe'] <- aa_count['Trp.Phe']
 m['Trp', 'Tyr'] <- aa_count['Trp.Tyr']
+
 m[is.na(m)] <- 0  #NA to 0
-heatmap(m, Colv = "Rowv", xlab = 'ancestral', ylab = 'derived') #ааааааааааааааааа!
+
+pdf("../../Body/4Figures/Alima01.Gainer&Loosers.pdf")
+heatmap(m, Colv = "Rowv", xlab = 'ancestral', ylab = 'derived')
+dev.off()
+
+#пишу сводную (табличку) ratio(anc/der): 
+From <- colSums(m)
+To <- rowSums(m) #по горизонтали
+RatioFromTo <- From/To #чем > , тем AA сильнее loser 
+
+GorL <- matrix(c(From, To, RatioFromTo), nrow = 20, 
+               dimnames = list(c('Gly', 'Ala', 'Val', 'Ile', 'Leu', 'Pro', 'Ser', 'Thr', 'Cys', 
+                                 'Met', 'Asp', 'Asn', 'Glu', 'Gln', 'Lys', 'Arg', 'His', 'Phe', 
+                                 'Tyr', 'Trp'), c('From', 'To', 'RatioFromTo')))
+
+GorL = data.frame(GorL)
+GorL = GorL[order(GorL$RatioFromTo),]
+
+write.table(GorL,"../../Body/3Results/Alima01.Gainer&Loosers.txt", sep = '\t')
