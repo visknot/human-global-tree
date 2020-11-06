@@ -1,4 +1,4 @@
-rm(list=ls(all=TRUE))
+rm(list=ls(all=TRUE)) 
 
 #indata <- read.csv("/home/alima/arrr/fulltreeCodons.csv", header = TRUE, sep = ";") #читаю файл 
 indata = read.csv("../../Body/2Derived/fulltreeCodons.csv", header = TRUE, sep = ";")
