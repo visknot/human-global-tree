@@ -1,6 +1,6 @@
 rm(list=ls(all=TRUE))
 
-#indata <- read.csv("/home/alima/arrr/fulltreeCodons.csv", header = TRUE, sep = ";") #читаю файл 
+#indata <- read.csv("/home/alima/arrr/fulltreeCodons.csv", header = TRUE, sep = ";") 
 indata = read.csv("../../Body/2Derived/fulltreeCodons.csv", header = TRUE, sep = ";")
 
 #### FILTER OUT: 
@@ -22,14 +22,13 @@ AllAa = data.frame(unique(data$ancestral_aa)); length(AllAa) # including stop
 aa_count <- table(as.character(interaction(data$ancestral_aa, data$derived_aa))) 
 aa_count
 
-m <- matrix(nrow = 21, ncol = 21)   #по горизонтали ancestral_aa, по вертикали - derived_aa
+m <- matrix(nrow = 21, ncol = 21)   #horizontal - ancestral_aa, vertical - derived_aa
 rownames(m) <- c('Gly', 'Ala', 'Val', 'Ile', 'Leu', 'Pro', 'Ser', 'Thr', 'Cys', 'Met', 
                  'Asp', 'Asn', 'Glu', 'Gln', 'Lys', 'Arg', 'His', 'Phe', 'Tyr', 'Trp', 'Stop')
 colnames(m) <- c('Gly', 'Ala', 'Val', 'Ile', 'Leu', 'Pro', 'Ser', 'Thr', 'Cys', 'Met', 
                  'Asp', 'Asn', 'Glu', 'Gln', 'Lys', 'Arg', 'His', 'Phe', 'Tyr', 'Trp', 'Stop')
-#кажется мне, что это тоже можно было сделать проще, но да ладно 
 
-m['Gly', 'Ala'] <- aa_count['Gly.Ala']  #костылии
+m['Gly', 'Ala'] <- aa_count['Gly.Ala']  
 m['Gly', 'Val'] <- aa_count['Gly.Val']
 m['Gly', 'Ile'] <- aa_count['Gly.Ile']
 m['Gly', 'Leu'] <- aa_count['Gly.Leu']
@@ -477,10 +476,10 @@ pdf("../../Body/4Figures/Alima01.Gainer&Loosers.pdf")
 heatmap(m, Colv = "Rowv", xlab = 'ancestral', ylab = 'derived')
 dev.off()
 
-#пишу сводную (табличку) ratio(anc/der): 
+#writing table ratio(anc/der): 
 From <- colSums(m)
-To <- rowSums(m) #по горизонтали
-RatioFromTo <- From/To #чем > , тем AA сильнее loser 
+To <- rowSums(m) #horizontal
+RatioFromTo <- From/To # the > , the more AA loser 
 
 GorL <- matrix(c(From, To, RatioFromTo), nrow = 21, 
                dimnames = list(c('Gly', 'Ala', 'Val', 'Ile', 'Leu', 'Pro', 'Ser', 'Thr', 'Cys', 
@@ -492,7 +491,7 @@ GorL = GorL[order(GorL$RatioFromTo),]
 
 write.table(GorL,"../../Body/3Results/Alima01.Gainer&Loosers.txt", sep = '\t')
 
-#Ищу корреляцию с Кондрашовым: 
+#seeking corr with Kondrashov: 
 Kondrashov <- matrix(c(-0.0063, -0.0239, +0.0098, +0.0089, -0.0017, -0.0139, +0.0167, +0.0091, +0.0067, 
                        +0.0088, -0.0039, +0.0073, -0.0137, +0.0020, -0.0065, +0.0038, +0.0073, +0.0042, 
                        -0.0005, +0.0002), nrow = 20, 
@@ -501,11 +500,11 @@ Kondrashov <- matrix(c(-0.0063, -0.0239, +0.0098, +0.0089, -0.0017, -0.0139, +0.
                                        'His', 'Phe', 'Tyr', 'Trp'), 'rate of g/l'))
 cor.test(ratio, Kondrashov, method = "spearman") 
 
-#Ищу корреляцию с рангом Кондрашова: 
+#seeking corr with rang of Kondrashov: 
 Kondrashov_rang <- matrix(c(17, 19, 9, 8, 13, 20, 4, 7, 1, 2, 15, 6, 18, 11, 16, 10, 3, 5, 14, 12), nrow = 20, 
                           dimnames = list(c('Gly', 'Ala', 'Val', 'Ile', 'Leu', 'Pro', 'Ser', 'Thr', 
                                             'Cys', 'Met', 'Asp', 'Asn', 'Glu', 'Gln', 'Lys', 'Arg', 
                                             'His', 'Phe', 'Tyr', 'Trp'), 'rate of g/l'))
 cor.test(ratio, Kondrashov_rang, method = "spearman") 
 
-#P.s.: её нет 
+#P.s.: no corr
