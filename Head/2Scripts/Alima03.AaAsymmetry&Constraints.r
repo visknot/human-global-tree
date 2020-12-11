@@ -7,6 +7,43 @@ data = read.csv("../../Body/2Derived/fulltreeCodons.csv", header = TRUE, sep = "
 data <- subset(data, synonymous == "non-synonymous" & derived_aa != "Ambiguous" & derived_aa != "Asn/Asp" & derived_aa != "Gln/Glu" & derived_aa != "Leu/Ile" & gene_info != "mRNA_ND6")  #убираю лишнее
 table(data$derived_aa)
 
+## temp analysis (Alima + Kostya): moving threshold ~ plot: frequencies of changes in a given position versus AaSymmetry 
+EvolConstOfPositions = data.frame(table(data$position)); 
+names(EvolConstOfPositions)=c('position','HowManySubstitutions')
+EvolConstOfPositions = EvolConstOfPositions[order(-EvolConstOfPositions$HowManySubstitutions),]
+head(EvolConstOfPositions) # ~ helix mtDB
+summary(EvolConstOfPositions$HowManySubstitutions)
+dim(EvolConstOfPositions)
+head(EvolConstOfPositions)
+EvolConstOfPositionsVec1 = EvolConstOfPositions[EvolConstOfPositions$HowManySubstitutions <= quantile(EvolConstOfPositions$HowManySubstitutions,0.1),]$position
+EvolConstOfPositionsVec2 = EvolConstOfPositions[(EvolConstOfPositions$HowManySubstitutions <= quantile(EvolConstOfPositions$HowManySubstitutions,0.2)) & (EvolConstOfPositions$HowManySubstitutions >= quantile(EvolConstOfPositions$HowManySubstitutions,0.1)),]$position
+EvolConstOfPositionsVec3 = EvolConstOfPositions[(EvolConstOfPositions$HowManySubstitutions <= quantile(EvolConstOfPositions$HowManySubstitutions,0.3)) & (EvolConstOfPositions$HowManySubstitutions >= quantile(EvolConstOfPositions$HowManySubstitutions,0.2)),]$position
+
+length(EvolConstOfPositionsVec1)
+length(EvolConstOfPositionsVec2)
+length(EvolConstOfPositionsVec3)
+
+
+temp = data[(data$ancestral_aa == 'Leu' & data$derived_aa == 'Pro' ) | (data$ancestral_aa == 'Pro' & data$derived_aa == 'Leu') ,]
+temp$AaSubst = paste(temp$ancestral_aa,temp$derived_aa, sep = '_'); nrow(temp)
+
+Freq = data.frame(table(temp$position))
+names(Freq)=c('position','HowManySubstitutions')
+Freq = Freq[order(Freq$HowManySubstitutions),]
+summary(Freq$HowManySubstitutions) # 1.00    4.00    4.00   33.02   12.00 1636.00 
+
+PositionsUnderMutagenesis = Freq[Freq$HowManySubstitutions > 12,]$position 
+PositionsUnderSelection  = Freq[Freq$HowManySubstitutions <= 12,]$position 
+TempUnderMutagenesis = temp[temp$position %in% PositionsUnderMutagenesis,]; nrow(TempUnderMutagenesis) # 2338
+TempUnderSelection =   temp[temp$position %in% PositionsUnderSelection,]; nrow(TempUnderSelection) # 601
+table(TempUnderSelection$AaSubst)   # 316 / 285  = 1.108;   491/460  = 1.06; 680/623 = 1.09; 87/71 = 1.22; 146/127 = 1/149; 
+table(TempUnderMutagenesis$AaSubst) #  1230 / 1108 = 1.110; 1055/933 = 1.13; 866 / 770 = 1.12;  1459  /  1322 =  1.1; 1400/1266 = 1.105
+
+
+
+
+
+
 ## ADD FILTER OF BACKGROUND (THE SAME NEIGHBOR NUCLEOTIDES)
 
 head(data)
