@@ -1,28 +1,28 @@
-NuclPosInCodon NuclSubstLightChainNotation ExpectedAminoAcidSubstBias
-1 T>C Phe>Leu
-1 T>C Ser>Pro
-1 T>C Tyr>His
-1 T>C Stop>Gln
-1 T>C Cys>Arg
-1 T>C Trp>Arg
-1 G>A Val>Ile
-1 G>A Val>Met
-1 G>A Ala>Thr
-1 G>A Asp>Asn
-1 G>A Glu>Lys
-1 G>A Gly>Ser
-1 G>A Gly>Stop 
-2 T>C Phe>Ser
-2 T>C Leu>Ser
-2 T>C Leu>Pro
-2 T>C Ile>Thr
-2 T>C Met>Thr
-2 T>C Val>Ala
-2 G>A Cys>Tyr
-2 G>A Trp>Stop
-2 G>A Arg>His
-2 G>A Arg>Gln
-2 G>A Ser>Asn
-2 G>A Stop>Lys
-2 G>A Gly>Asp
-2 G>A Gly>Glu 
+NuclPosInCodon NuclSubstLightChainNotation ExpectedAminoAcidSubstBias GranthamDistance
+1 T>C Phe>Leu 22
+1 T>C Ser>Pro 74
+1 T>C Tyr>His 83
+1 T>C Stop>Gln NA
+1 T>C Cys>Arg 180
+1 T>C Trp>Arg 101
+1 G>A Val>Ile 29
+1 G>A Val>Met 21
+1 G>A Ala>Thr 58
+1 G>A Asp>Asn 23
+1 G>A Glu>Lys 56
+1 G>A Gly>Ser 56
+1 G>A Gly>Stop NA
+2 T>C Phe>Ser 155
+2 T>C Leu>Ser 145
+2 T>C Leu>Pro 98
+2 T>C Ile>Thr 89
+2 T>C Met>Thr 81
+2 T>C Val>Ala 64
+2 G>A Cys>Tyr 194
+2 G>A Trp>Stop NA
+2 G>A Arg>His 29
+2 G>A Arg>Gln 43
+2 G>A Ser>Asn 46
+2 G>A Stop>Lys NA
+2 G>A Gly>Asp 94
+2 G>A Gly>Glu 98
