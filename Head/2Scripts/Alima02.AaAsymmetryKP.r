@@ -49,9 +49,35 @@ data$Context = paste(toupper(data$Pos2Anc),data$temp1,toupper(data$Pos4Anc),sep=
 data <- subset(data, synonymous == "non-synonymous" & derived_aa != "Ambiguous" & derived_aa != "Asn/Asp" & derived_aa != "Gln/Glu" & derived_aa != "Leu/Ile" & gene_info != "mRNA_ND6")  #убираю лишнее
 table(data$derived_aa)
 
-## ADD FILTER OF BACKGROUND (THE SAME NEIGHBOR NUCLEOTIDES)
-
 head(data)
+
+#### From Leu to LeuCT and LeuTT
+#### From Ser to SerTC and SerAG
+for (i in 1:nrow(data))
+{ # i = 1
+  if (data$ancestral_aa[i] == 'Leu')
+  {
+    if (tolower(data$ancestral_codon[i]) == 'ctt' | tolower(data$ancestral_codon[i]) == 'ctc' | tolower(data$ancestral_codon[i]) == 'cta' | tolower(data$ancestral_codon[i]) == 'ctg') {data$ancestral_aa[i] = 'LeuCT'}
+    if (tolower(data$ancestral_codon[i]) == 'tta' | tolower(data$ancestral_codon[i]) == 'ttg') {data$ancestral_aa[i] = 'LeuTT'}
+  }
+  if (data$ancestral_aa[i] == 'Ser')
+  {
+    if (tolower(data$ancestral_codon[i]) == 'tct' | tolower(data$ancestral_codon[i]) == 'tcc' | tolower(data$ancestral_codon[i]) == 'tca' | tolower(data$ancestral_codon[i]) == 'tcg') {data$ancestral_aa[i] = 'SerTC'}
+    if (tolower(data$ancestral_codon[i]) == 'agt' | tolower(data$ancestral_codon[i]) == 'agc') {data$ancestral_aa[i] = 'SerAG'}
+  }
+  if (data$derived_aa[i] == 'Leu')
+  {
+    if (tolower(data$derived_codon[i]) == 'ctt' | tolower(data$derived_codon[i]) == 'ctc' | tolower(data$derived_codon[i]) == 'cta' | tolower(data$derived_codon[i]) == 'ctg') {data$derived_aa[i] = 'LeuCT'}
+    if (tolower(data$derived_codon[i]) == 'tta' | tolower(data$derived_codon[i]) == 'ttg') {data$derived_aa[i] = 'LeuTT'}
+  }
+  if (data$derived_aa[i] == 'Ser')
+  {
+    if (tolower(data$derived_codon[i]) == 'tct' | tolower(data$derived_codon[i]) == 'tcc' | tolower(data$derived_codon[i]) == 'tca' | tolower(data$derived_codon[i]) == 'tcg') {data$derived_aa[i] = 'SerTC'}
+    if (tolower(data$derived_codon[i]) == 'agt' | tolower(data$derived_codon[i]) == 'agc') {data$derived_aa[i] = 'SerAG'}
+  }  
+}
+table(data$ancestral_aa)
+table(data$derived_aa)
 
 ##### DERIVE SUBSTITUTION MATRIX FromTo
 data$FromTo = paste(data$ancestral_aa,data$derived_aa,sep = '>')
@@ -59,6 +85,14 @@ FromTo = data.frame(table(data$FromTo))
 names(FromTo) = c('FromAncestralToDerived', 'NumberOfEvents')
 nrow(FromTo) # 236, but totally there are 21*21 possibilities
 FromTo$FromAncestralToDerived = as.character(FromTo$FromAncestralToDerived)
+head(FromTo)
+# FromAncestralToDerived NumberOfEvents
+# 1                Ala>Asp             24
+# 2                Ala>Glu              2
+# 3                Ala>Gly             78
+# 4                Ala>Pro             61
+# 5              Ala>SerTC            282
+# 6                Ala>Thr          13494
 
 ##### ADD DUMMY MATRIX WITH ZEROES 
 AllAa1 = data.frame(unique(data$ancestral_aa)); nrow(AllAa1); names(AllAa1) = c('AA1')
@@ -86,7 +120,7 @@ FromTo3 = merge(A,B)
 FromTo3$NumberOfEvents1To2 = FromTo3$NumberOfEvents1 / FromTo3$NumberOfEvents2 
 
 ##### read expectations, add AaPairId and merge
-exp = read.table("../../Body/2Derived/ExpectedAaSubstitutionDirection.txt", header = TRUE, sep = " ")
+exp = read.table("../../Body/2Derived/ExpectedAaSubstitutionDirection22AA.txt", header = TRUE, sep = " ")
 for (i in 1:nrow(exp)) {exp$AaPairId[i] = paste(sort(unlist(strsplit(exp$ExpectedAminoAcidSubstBias[i],'>'))),collapse = '>') }
 # exp=exp[c(3,4)]
 FromTo4 = merge(FromTo3,exp, by = 'AaPairId', all.x = TRUE)
@@ -116,7 +150,7 @@ for (i in 1:nrow(FromTo5[!is.na(FromTo5$ExpectedMoreThanOne),]))
 }
 
 hist(FromTo5$ExpectedMoreThanOne,breaks = 100)
-wilcox.test(FromTo5$ExpectedMoreThanOne, mu = 1) # p-value = 7.47e-05
+wilcox.test(FromTo5$ExpectedMoreThanOne, mu = 1) # PAPER !!!! p-value = 7.47e-05
 
 FromTo5$TotalSubst = FromTo5$NumberOfExpectedAaSubst + FromTo5$NumberOfUnexpectedAaSubst
 Short = FromTo5[!is.na(FromTo5$ExpectedMoreThanOne),]
