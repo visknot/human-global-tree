@@ -1,0 +1,24 @@
+"AaPairId" "NuclPosInCodon" "NuclSubstLightChainNotation" "ExpectedAminoAcidSubstBias" "GranthamDistance" "ExpectedMoreThanOne" "NumberOfExpectedAaSubst" "NumberOfUnexpectedAaSubst" "TotalSubst" "DummyAhGh"
+"150" "Leu>Ser" 2 "T>C" "Leu>Ser" 145 0.578947368421053 11 19 30 1
+"84" "Cys>Tyr" 2 "G>A" "Cys>Tyr" 194 1.36363636363636 30 22 52 0
+"22" "Arg>Cys" 1 "T>C" "Cys>Arg" 180 1.83333333333333 11 6 17 1
+"19" "Ala>Val" 2 "T>C" "Val>Ala" 64 1.84444444444444 83 45 128 1
+"50" "Asn>Ser" 2 "G>A" "Ser>Asn" 46 3.79166666666667 91 24 115 0
+"145" "Ile>Val" 1 "G>A" "Val>Ile" 29 4.31818181818182 95 22 117 0
+"176" "Pro>Ser" 1 "T>C" "Ser>Pro" 74 5.52 138 25 163 1
+"134" "His>Tyr" 1 "T>C" "Tyr>His" 83 6.2 62 10 72 1
+"171" "Phe>Ser" 2 "T>C" "Phe>Ser" 155 6.33333333333333 76 12 88 1
+"35" "Arg>Trp" 1 "T>C" "Trp>Arg" 101 6.66666666666667 40 6 46 1
+"169" "Met>Val" 1 "G>A" "Val>Met" 21 6.73333333333333 101 15 116 0
+"142" "Ile>Thr" 2 "T>C" "Ile>Thr" 89 7.32142857142857 205 28 233 1
+"148" "Leu>Phe" 1 "T>C" "Phe>Leu" 22 7.4375 119 16 135 1
+"26" "Arg>His" 2 "G>A" "Arg>His" 29 8.14285714285714 57 7 64 0
+"100" "Glu>Gly" 2 "G>A" "Gly>Glu" 98 8.58823529411765 146 17 163 0
+"149" "Leu>Pro" 2 "T>C" "Leu>Pro" 98 9.46875 303 32 335 1
+"58" "Asp>Gly" 2 "G>A" "Gly>Asp" 94 11.7647058823529 200 17 217 0
+"166" "Met>Thr" 2 "T>C" "Met>Thr" 81 12.25 98 8 106 1
+"16" "Ala>Thr" 1 "G>A" "Ala>Thr" 58 14 560 40 600 0
+"38" "Asn>Asp" 1 "G>A" "Asp>Asn" 23 22.5 90 4 94 0
+"120" "Gly>Ser" 1 "G>A" "Gly>Ser" 56 42 168 4 172 0
+"104" "Glu>Lys" 1 "G>A" "Glu>Lys" 56 64 128 2 130 0
+"23" "Arg>Gln" 2 "G>A" "Arg>Gln" 43 Inf 81 0 81 0
