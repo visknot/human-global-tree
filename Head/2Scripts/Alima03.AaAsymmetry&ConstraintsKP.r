@@ -3,8 +3,47 @@ rm(list=ls(all=TRUE))
 pdf("../../Body/4Figures/Alima03.AaAsymmetry&ConstraintsKP.pdf",)
 
 data = read.csv("../../Body/2Derived/fulltreeCodons.csv", header = TRUE, sep = ";")
+data = data[data$note == 'normal',] # filter out everything except protein-coding mutations:
+table(data$ancestral_aa)
+VecOfNormalAa = unique(data$ancestral_aa); length(VecOfNormalAa)
+table(data$derived_aa) # Ambiguous, Asn/Asp, Gln/Glu, Leu/Ile => why all noisy AA only among derived? All of them are on external branches?
+data = data[data$derived_aa %in% VecOfNormalAa,]
 
-#### FILTER OUT: 
+#### mutations are only a t g c;  Derive Subst and Context (two before and two after)
+# Subst
+ExtractThird<-function(x) {unlist(strsplit(x,''))[3]}
+data$temp1 = apply(as.matrix(data$ancestor),1,FUN = ExtractThird); data = data[data$temp1 %in% c('A','T','G','C'),]
+data$temp2 = apply(as.matrix(data$descendant),1,FUN = ExtractThird); data = data[data$temp2 %in% c('A','T','G','C'),]
+data$Subst = paste(data$temp1,data$temp2,sep='')
+table(data$Subst)
+
+# FILTER FOR THE SAME BACKGROUND (Pos1Anc == Pos1Der; Pos5Anc == Pos5Der; ):
+# very first (first) and very last (fifth) should be the same (important for codons - we will garantie, that in the codon there is only one substitution)
+nrow(data) # 292532
+ExtractFirst<-function(x) {unlist(strsplit(x,''))[1]}
+data$Pos1Anc = apply(as.matrix(data$ancestor),1,FUN = ExtractFirst);   data = data[data$Pos1Anc %in% c('a','t','g','c'),]
+data$Pos1Der = apply(as.matrix(data$descendant),1,FUN = ExtractFirst); data = data[data$Pos1Der %in% c('a','t','g','c'),]
+data=data[data$Pos1Anc == data$Pos1Der,]; nrow(data)
+
+ExtractFifth<-function(x) {unlist(strsplit(x,''))[5]}
+data$Pos5Anc = apply(as.matrix(data$ancestor),1,FUN = ExtractFifth);   data = data[data$Pos5Anc %in% c('a','t','g','c'),]
+data$Pos5Der = apply(as.matrix(data$descendant),1,FUN = ExtractFifth); data = data[data$Pos5Der %in% c('a','t','g','c'),]
+data=data[data$Pos5Anc == data$Pos5Der,]; nrow(data)
+
+# Context
+ExtractSecond<-function(x) {unlist(strsplit(x,''))[2]}
+data$Pos2Anc = apply(as.matrix(data$ancestor),1,FUN = ExtractSecond); data = data[data$Pos2Anc %in% c('a','t','g','c'),]
+data$Pos2Der = apply(as.matrix(data$descendant),1,FUN = ExtractSecond); data = data[data$Pos2Der %in% c('a','t','g','c'),]
+data=data[data$Pos2Anc == data$Pos2Der,]
+
+ExtractFourth<-function(x) {unlist(strsplit(x,''))[4]}
+data$Pos4Anc = apply(as.matrix(data$ancestor),1,FUN = ExtractFourth); data = data[data$Pos4Anc %in% c('a','t','g','c'),]
+data$Pos4Der = apply(as.matrix(data$descendant),1,FUN = ExtractFourth); data = data[data$Pos4Der %in% c('a','t','g','c'),]
+data=data[data$Pos4Anc == data$Pos4Der,]
+
+data$Context = paste(toupper(data$Pos2Anc),data$temp1,toupper(data$Pos4Anc),sep='')
+
+#### filter out synonymous
 data <- subset(data, synonymous == "non-synonymous" & derived_aa != "Ambiguous" & derived_aa != "Asn/Asp" & derived_aa != "Gln/Glu" & derived_aa != "Leu/Ile" & gene_info != "mRNA_ND6")  #убираю лишнее
 table(data$derived_aa)
 data$AaSubst = paste(data$ancestral_aa,data$derived_aa, sep = '_')
