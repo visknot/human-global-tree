@@ -2,9 +2,6 @@ rm(list=ls(all=TRUE))
 
 indata = read.csv("../../Body/2Derived/fulltreeCodons.csv", header = TRUE, sep = ";")
 
-
-data = read.csv("../../Body/2Derived/fulltreeCodons.csv", header = TRUE, sep = ";")
-
 data = data[data$note == 'normal',] # filter out everything except protein-coding mutations:
 table(data$ancestral_aa)
 VecOfNormalAa = unique(data$ancestral_aa); length(VecOfNormalAa)
@@ -48,6 +45,7 @@ data$Context = paste(toupper(data$Pos2Anc),data$temp1,toupper(data$Pos4Anc),sep=
 #### filter out synonymous
 data <- subset(data, synonymous == "non-synonymous" & derived_aa != "Ambiguous" & derived_aa != "Asn/Asp" & derived_aa != "Gln/Glu" & derived_aa != "Leu/Ile" & gene_info != "mRNA_ND6")  #убираю лишнее
 table(data$derived_aa)
+
 ## DERIVE SUBSTITUTION MATRIX
 
 data$FromTo = paste(data$ancestral_aa,data$derived_aa,sep = '>')
@@ -524,7 +522,6 @@ GorL <- matrix(c(From, To, RatioFromTo), nrow = 21,
                dimnames = list(c('Gly', 'Ala', 'Val', 'Ile', 'Leu', 'Pro', 'Ser', 'Thr', 'Cys', 
                                  'Met', 'Asp', 'Asn', 'Glu', 'Gln', 'Lys', 'Arg', 'His', 'Phe', 
                                  'Tyr', 'Trp', 'Stop'), c('From', 'To', 'RatioFromTo')))
-
 GorL = data.frame(GorL)
 GorL = GorL[order(GorL$RatioFromTo),]
 
@@ -538,12 +535,12 @@ Kondrashov <- matrix(c(-0.0063, -0.0239, +0.0098, +0.0089, -0.0017, -0.0139, +0.
                      dimnames = list(c('Gly', 'Ala', 'Val', 'Ile', 'Leu', 'Pro', 'Ser', 'Thr', 
                                        'Cys', 'Met', 'Asp', 'Asn', 'Glu', 'Gln', 'Lys', 'Arg', 
                                        'His', 'Phe', 'Tyr', 'Trp', 'Stop'), 'rate of g/l'))
-cor.test(RatioFromTo, Kondrashov, method = "spearman") # S = 1245, p-value = 0.7889, rho 0.06393381 
+cor.test(RatioFromTo, Kondrashov, method = "spearman") # S = 974.87, p-value = 0.2551, rho = 0.2670177 
 
 ###### SEEKING CORR WITH RANG OF KONDRASHOV (universal trend): 
 Kondrashov_rang <- matrix(c(17, 19, 9, 8, 13, 20, 4, 7, 1, 2, 15, 6, 18, 11, 16, 10, 3, 5, 14, 12, NA), nrow = 21, 
                           dimnames = list(c('Gly', 'Ala', 'Val', 'Ile', 'Leu', 'Pro', 'Ser', 'Thr', 
                                             'Cys', 'Met', 'Asp', 'Asn', 'Glu', 'Gln', 'Lys', 'Arg', 
                                             'His', 'Phe', 'Tyr', 'Trp', 'Stop'), 'rate of g/l'))
-cor.test(RatioFromTo, Kondrashov_rang, method = "spearman") # S = 1398, p-value = 0.8313, rho -0.05112782
+cor.test(RatioFromTo, Kondrashov_rang, method = "spearman") # S = 1666, p-value = 0.2813, rho = -0.2526316 
 
