@@ -1,0 +1,23 @@
+"ExpectedAminoAcidSubstBias" "NumberOfExpectedAaSubst" "NumberOfUnexpectedAaSubst" "ExpectedMoreThanOne" "NumberOfExpectedAaSubst.Nd6" "NumberOfUnexpectedAaSubst.Nd6" "ExpectedMoreThanOne.Nd6"
+"5" "Cys>Tyr" 30 13 1.21 0 0 NA
+"4" "Cys>Arg" 11 3 1.87 0 0 NA
+"15" "Phe>Ser" 76 9 3.08 0 0 NA
+"12" "Leu>Ser" 11 12 -0.13 0 0 NA
+"18" "Trp>Arg" 39 4 3.29 1 2 -1
+"8" "Gly>Glu" 145 1 7.18 1 16 -4
+"11" "Leu>Pro" 303 23 3.72 0 0 NA
+"7" "Gly>Asp" 199 13 3.94 1 4 -2
+"10" "Ile>Thr" 205 22 3.22 0 0 NA
+"19" "Tyr>His" 62 10 2.63 0 0 NA
+"13" "Met>Thr" 98 7 3.81 0 0 NA
+"17" "Ser>Pro" 138 21 2.72 0 0 NA
+"20" "Val>Ala" 78 27 1.53 5 18 -1.85
+"1" "Ala>Thr" 560 40 3.81 0 0 NA
+"6" "Glu>Lys" 128 1 7 0 0 NA
+"9" "Gly>Ser" 167 3 5.8 1 1 0
+"16" "Ser>Asn" 90 19 2.24 1 5 -2.32
+"2" "Arg>His" 57 7 3.03 0 0 NA
+"21" "Val>Ile" 94 16 2.55 1 6 -2.58
+"3" "Asp>Asn" 90 3 4.91 0 0 NA
+"14" "Phe>Leu" 119 16 2.89 0 0 NA
+"22" "Val>Met" 98 9 3.44 3 6 -1
