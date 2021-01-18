@@ -1,0 +1,22 @@
+# done by LERA
+# In this table mitochondrial genes are ranged by theirs evolutionary constraints. 
+# First genes were ranged by three metrics (KnKsMouse, FunctionalIndispensabilityScore, GenomeWideHaploinsuffisencyScore) independently and then all ranks were summed and result is written in SumRanks column. 
+# Genes are ranged by SumRanks in ascending order where smaller values meen more constraint genes and bigger values meen more relaxed genes.
+# Metrics that were used for SumRanks calculation:
+# -KnKsMouse (the less value, the more intolerant gene)
+# -Functional Indispensability Score - Proteins are classified as 'indispensable' based on their impact on the network upon removal of the specific protein (the more value, the more intolerant gene). 
+# -Genome-Wide Haploinsufficiency Score - Haploinsufficiency is defined as a dominant phenotype in diploid organisms that are heterozygous for a loss-of-function allele (the more value, the more intolerant gene).
+"genes" "KnKsMouseRanks" "FunctionalIndispensabilityScoreRanks" "GenomeWideHaploinsufficiencyScoreRanks" "SumRank"
+"MT-ND1" 3 2 1 6
+"MT-ND4L" 2 1 9 12
+"MT-CYB" 1 11 2 14
+"MT-ND5" 6 5 3 14
+"MT-ND3" 10 4 4 18
+"MT-ND2" 8 6 6 20
+"MT-CO1" 7 8 7 22
+"MT-ND6" 11 7 5 23
+"MT-ND4" 9 3 11 23
+"MT-ATP6" 4 10 10 24
+"MT-CO3" 5 9 12 26
+"MT-CO2" 12 12 8 32
+"MT-ATP8" 13 NA NA NA
