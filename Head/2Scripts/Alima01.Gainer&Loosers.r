@@ -1,6 +1,6 @@
 rm(list=ls(all=TRUE))
 
-indata = read.csv("../../Body/2Derived/fulltreeCodons.csv", header = TRUE, sep = ";")
+data = read.csv("../../Body/2Derived/fulltreeCodons.csv", header = TRUE, sep = ";")
 
 data = data[data$note == 'normal',] # filter out everything except protein-coding mutations:
 table(data$ancestral_aa)
