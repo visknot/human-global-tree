@@ -9,6 +9,7 @@ data$Loosers = data$Phe + data$Val + data$Gly + data$Cys + data$Trp  # 14 codons
 data$All = apply(as.matrix(data[,c(3:22)]),1,FUN = sum)
 data$Intermediate = data$All - data$Gainers - data$Loosers # 64 - 16 - 14 - 4 (Stops) = 30
 
+###################### FRACTION OF GAINERS VS FRACTION OF LOOSERS
 ###################
 #### 12 genes
 ###################
@@ -140,6 +141,126 @@ names(Temp) = c('Species','Temperature')
 nrow(Temp)
 
 Fish = merge(Agg1,Temp, by = 'Species') # 305
+
+par(mfrow=c(2,1))
+cor.test(Fish$FrOfGainers,Fish$Temperature, method = 'spearman') # "ALINA PICs"
+plot(Fish$Temperature, Fish$FrOfGainers) # ALINA PICs
+
+cor.test(Fish$FrOfLoosers,Fish$Temperature, method = 'spearman') # "ALINA PICs"
+plot(Fish$Temperature, Fish$FrOfLoosers) # ALINA PICs
+
+################### 5. gainers / loosers in second (only Ah>Gh) and fourth (only Ch>Th) quartiles in the relationship with Generation Length of Mammals (it seems that second quartile is stronger)
+###############################
+######### second quartile (works good)
+###############################
+data$Gainers = data$Pro
+data$Loosers = data$Phe
+data$All = data$Pro + data$Phe + data$Leu + data$Ser
+data$Intermediate = data$All - data$Gainers - data$Loosers # 64 - 16 - 14 - 4 (Stops) = 30
+
+#### 12 genes
+data1 = data[data$Gene != 'ND6',]
+Agg1 = aggregate(list(data1$Gainers,data1$Loosers,data1$Intermediate,data1$All), by = list(data1$Species,data1$Class), FUN = sum)
+names(Agg1) = c('Species','Class','Gainers','Loosers','Intermediate','All')
+Agg1$GainersToLosers = Agg1$Gainers - Agg1$Loosers
+Agg1$FrOfGainers = Agg1$Gainers/Agg1$All
+Agg1$FrOfLoosers = Agg1$Loosers/Agg1$All
+
+GL = read.table("../../Body/1Raw/GenerationLenghtforMammals.xlsx.txt", header = TRUE, sep = '\t')
+GL$Species = gsub(' ','_',GL$Scientific_name)
+
+par(mfrow=c(2,1))
+Mammals = merge(Agg1,GL, by = 'Species')
+cor.test(Mammals$FrOfGainers,Mammals$GenerationLength_d, method = 'spearman') #  "ALINA PICs"
+plot(log2(Mammals$GenerationLength_d),Mammals$FrOfGainers) # 0.4297347
+
+cor.test(Mammals$FrOfLoosers,Mammals$GenerationLength_d, method = 'spearman')  # "ALINA PICs"
+plot(log2(Mammals$GenerationLength_d),Mammals$FrOfLoosers) # -0.3426591 
+
+###############################
+######### fourth quartile (works good)
+###############################
+data$Gainers = data$Asn + data$Lys
+data$Loosers = data$Gly
+data$All = data$Asn + data$Lys + data$Ser + data$Asp + data$Glu
+data$Intermediate = data$All - data$Gainers - data$Loosers # 64 - 16 - 14 - 4 (Stops) = 30
+
+#### 12 genes
+data1 = data[data$Gene != 'ND6',]
+Agg1 = aggregate(list(data1$Gainers,data1$Loosers,data1$Intermediate,data1$All), by = list(data1$Species,data1$Class), FUN = sum)
+names(Agg1) = c('Species','Class','Gainers','Loosers','Intermediate','All')
+Agg1$GainersToLosers = Agg1$Gainers - Agg1$Loosers
+Agg1$FrOfGainers = Agg1$Gainers/Agg1$All
+Agg1$FrOfLoosers = Agg1$Loosers/Agg1$All
+
+GL = read.table("../../Body/1Raw/GenerationLenghtforMammals.xlsx.txt", header = TRUE, sep = '\t')
+GL$Species = gsub(' ','_',GL$Scientific_name)
+
+par(mfrow=c(2,1))
+Mammals = merge(Agg1,GL, by = 'Species')
+cor.test(Mammals$FrOfGainers,Mammals$GenerationLength_d, method = 'spearman') #  "ALINA PICs"
+plot(log2(Mammals$GenerationLength_d),Mammals$FrOfGainers) # 0.2972999
+
+cor.test(Mammals$FrOfLoosers,Mammals$GenerationLength_d, method = 'spearman')  # "ALINA PICs"
+plot(log2(Mammals$GenerationLength_d),Mammals$FrOfLoosers) # -0.3426591 - a bit positive
+
+################### 6. gainers / loosers in second (only Ah>Gh) and fourth (only Ch>Th) quartiles in the relationship with temperature of fishes (it seems that fourth quartile is stronger)
+###############################
+######### second quartile (works good)
+###############################
+data$Gainers = data$Pro
+data$Loosers = data$Phe
+data$All = data$Pro + data$Phe + data$Leu + data$Ser
+data$Intermediate = data$All - data$Gainers - data$Loosers # 64 - 16 - 14 - 4 (Stops) = 30
+
+#### 12 genes
+data1 = data[data$Gene != 'ND6',]
+Agg1 = aggregate(list(data1$Gainers,data1$Loosers,data1$Intermediate,data1$All), by = list(data1$Species,data1$Class), FUN = sum)
+names(Agg1) = c('Species','Class','Gainers','Loosers','Intermediate','All')
+Agg1$GainersToLosers = Agg1$Gainers - Agg1$Loosers
+Agg1$FrOfGainers = Agg1$Gainers/Agg1$All
+Agg1$FrOfLoosers = Agg1$Loosers/Agg1$All
+
+Agg1 = Agg1[Agg1$Class == 'Actinopterygii',]
+Temp = read.table("../../Body/1Raw/FishBaseTemperature.txt", header = TRUE)
+Temp = aggregate(Temp$Temperature, by = list(Temp$Species), FUN = median)
+names(Temp) = c('Species','Temperature')
+nrow(Temp)
+
+Fish = merge(Agg1,Temp, by = 'Species') # 305
+nrow(Fish)
+
+par(mfrow=c(2,1))
+cor.test(Fish$FrOfGainers,Fish$Temperature, method = 'spearman') # "ALINA PICs"
+plot(Fish$Temperature, Fish$FrOfGainers) # ALINA PICs
+
+cor.test(Fish$FrOfLoosers,Fish$Temperature, method = 'spearman') # "ALINA PICs"
+plot(Fish$Temperature, Fish$FrOfLoosers) # ALINA PICs
+
+###############################
+######### fourth quartile (works good)
+###############################
+data$Gainers = data$Asn + data$Lys
+data$Loosers = data$Gly
+data$All = data$Asn + data$Lys + data$Ser + data$Asp + data$Glu
+data$Intermediate = data$All - data$Gainers - data$Loosers # 64 - 16 - 14 - 4 (Stops) = 30
+
+#### 12 genes
+data1 = data[data$Gene != 'ND6',]
+Agg1 = aggregate(list(data1$Gainers,data1$Loosers,data1$Intermediate,data1$All), by = list(data1$Species,data1$Class), FUN = sum)
+names(Agg1) = c('Species','Class','Gainers','Loosers','Intermediate','All')
+Agg1$GainersToLosers = Agg1$Gainers - Agg1$Loosers
+Agg1$FrOfGainers = Agg1$Gainers/Agg1$All
+Agg1$FrOfLoosers = Agg1$Loosers/Agg1$All
+
+Agg1 = Agg1[Agg1$Class == 'Actinopterygii',]
+Temp = read.table("../../Body/1Raw/FishBaseTemperature.txt", header = TRUE)
+Temp = aggregate(Temp$Temperature, by = list(Temp$Species), FUN = median)
+names(Temp) = c('Species','Temperature')
+nrow(Temp)
+
+Fish = merge(Agg1,Temp, by = 'Species') # 305
+nrow(Fish)
 
 par(mfrow=c(2,1))
 cor.test(Fish$FrOfGainers,Fish$Temperature, method = 'spearman') # "ALINA PICs"
