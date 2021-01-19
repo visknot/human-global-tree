@@ -1,5 +1,10 @@
 rm(list=ls(all=TRUE)) 
 
+library(ggplot2)
+library(ggbeeswarm) 
+library(cowplot)
+library(tidyr)
+
 pdf("../../Body/4Figures/Alima06.AaAsymmetryChordataRefSeqs.r.pdf")
 data = read.table("../../Body/1Raw/AminoAcidFreqsChordata.txt", sep = ',', header = TRUE, quote = '')
 colnames(data)
@@ -45,6 +50,32 @@ boxplot(Agg1[Agg1$Class == 'Reptilia',]$FrOfGainers,Agg1[Agg1$Class == 'Reptilia
 boxplot(Agg1[Agg1$Class == 'Mammalia',]$FrOfGainers,Agg1[Agg1$Class == 'Mammalia',]$FrOfLoosers, ylim = c(0.16,0.31), names = c('gainers','loosers'), main = 'Mammalia', notch = TRUE, outline = FALSE, col = c(rgb(1,0.1,0.1,0.5),rgb(0.1,0.1,0.1,0.5)))
 boxplot(Agg1[Agg1$Class == 'Aves',]$FrOfGainers,Agg1[Agg1$Class == 'Aves',]$FrOfLoosers, ylim = c(0.16,0.31), names = c('gainers','loosers'), main = 'Aves', notch = TRUE, outline = FALSE, col = c(rgb(1,0.1,0.1,0.5),rgb(0.1,0.1,0.1,0.5)))
 
+
+###
+
+AggToPlot = Agg1 %>%
+  select(Species, FrOfGainers, FrOfLoosers, Class) %>%
+  filter(Class != 'AncientFish') %>%
+  gather(key = 'GainersOrLoosers', value = 'Fraction', FrOfGainers:FrOfLoosers) %>%
+  mutate(
+    WarmOrCold = as.factor(case_when(.$Class %in% c('Mammalia', 'Aves') ~ 1,
+                                     .$Class %in% c('Actinopterygii', 'Amphibia', 'Reptilia') ~ 0))
+  )
+
+all12Genes = ggplot(AggToPlot, aes(as.factor(Class), Fraction, colour = as.factor(GainersOrLoosers))) +
+  geom_quasirandom(shape = 1, cex = 0.5) + 
+  stat_summary(aes(group = factor(GainersOrLoosers)), 
+               fun.y = 'median', geom = 'point', shape = 8, size = 2, col = 'midnightblue') + # to show a median
+  theme_minimal() + # поменять серый фон на белый
+  theme(axis.text.x = element_text(color = "black", size = 12), 
+        axis.text.y = element_text(color = "black", size = 12)) +
+  scale_color_manual(name = '', labels = c('Gainers', 'Loosers'), 
+                     values = c(rgb(1,0.1,0.1,0.5), rgb(0.1,0.1,0.1,0.5))) +
+  scale_x_discrete(labels = c('Actinopterygii', 'Amphibia', 'Reptilia',
+                              'Mammalia', 'Aves')) +
+  # scale_fill_discrete(labels = c('Fraction of gainers', 'Fraction of loosers'))
+  labs(x = '', y = '12 genes')
+
 ###################
 #### ND6
 ###################
@@ -84,6 +115,35 @@ boxplot(Agg1[Agg1$Class == 'Amphibia',]$FrOfGainers,Agg1[Agg1$Class == 'Amphibia
 boxplot(Agg1[Agg1$Class == 'Reptilia',]$FrOfGainers,Agg1[Agg1$Class == 'Reptilia',]$FrOfLoosers, ylim = c(0,0.55), names = c('gainers','loosers'), main = 'Reptilia', notch = TRUE, outline = FALSE, col = c(rgb(1,0.1,0.1,0.5),rgb(0.1,0.1,0.1,0.5)))
 boxplot(Agg1[Agg1$Class == 'Mammalia',]$FrOfGainers,Agg1[Agg1$Class == 'Mammalia',]$FrOfLoosers, ylim = c(0,0.55), names = c('gainers','loosers'), main = 'Mammalia', notch = TRUE, outline = FALSE, col = c(rgb(1,0.1,0.1,0.5),rgb(0.1,0.1,0.1,0.5)))
 boxplot(Agg1[Agg1$Class == 'Aves',]$FrOfGainers,Agg1[Agg1$Class == 'Aves',]$FrOfLoosers, ylim = c(0,0.55), names = c('gainers','loosers'), main = 'Aves', notch = TRUE, outline = FALSE, col = c(rgb(1,0.1,0.1,0.5),rgb(0.1,0.1,0.1,0.5)))
+
+AggToPlot = Agg1 %>%
+  select(Species, FrOfGainers, FrOfLoosers, Class) %>%
+  filter(Class != 'AncientFish') %>%
+  gather(key = 'GainersOrLoosers', value = 'Fraction', FrOfGainers:FrOfLoosers) %>%
+  mutate(
+    WarmOrCold = as.factor(case_when(.$Class %in% c('Mammalia', 'Aves') ~ 1,
+                                     .$Class %in% c('Actinopterygii', 'Amphibia', 'Reptilia') ~ 0))
+  )
+
+nd6 = ggplot(AggToPlot, aes(as.factor(Class), Fraction, colour = as.factor(GainersOrLoosers))) +
+  geom_quasirandom(shape = 1, cex = 0.5) + 
+  stat_summary(aes(group = factor(GainersOrLoosers)), 
+               fun.y = 'median', geom = 'point', shape = 8, size = 2, col = 'midnightblue') + # to show a median
+  theme_minimal() + # поменять серый фон на белый
+  theme(axis.text.x = element_text(color = "black", size = 12), 
+        axis.text.y = element_text(color = "black", size = 12)) +
+  scale_color_manual(name = '', labels = c('Gainers', 'Loosers'), 
+                     values = c(rgb(1,0.1,0.1,0.5), rgb(0.1,0.1,0.1,0.5))) +
+  scale_x_discrete(labels = c('Actinopterygii', 'Amphibia', 'Reptilia',
+                              'Mammalia', 'Aves')) +
+  # scale_fill_discrete(labels = c('Fraction of gainers', 'Fraction of loosers'))
+  labs(x = '', y = 'ND6')
+
+plots = plot_grid(all12Genes, nd6, nrow = 2)
+
+save_plot('../../Body/4Figures/Alima06.AaAsymmetryChordataRefSeqs01.r.pdf', plots, nrow = 2,
+          base_height = 5)
+
 
 # old 
 #par(mfrow=c(1,1))
