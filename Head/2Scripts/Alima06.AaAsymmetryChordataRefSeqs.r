@@ -9,7 +9,7 @@ data$Loosers = data$Phe + data$Val + data$Gly + data$Cys + data$Trp  # 14 codons
 data$All = apply(as.matrix(data[,c(3:22)]),1,FUN = sum)
 data$Intermediate = data$All - data$Gainers - data$Loosers # 64 - 16 - 14 - 4 (Stops) = 30
 
-###################### FRACTION OF GAINERS VS FRACTION OF LOOSERS
+###################### TASK 1: FRACTION OF GAINERS VS FRACTION OF LOOSERS
 ###################
 #### 12 genes
 ###################
@@ -98,7 +98,7 @@ boxplot(Agg1[Agg1$Class == 'Aves',]$FrOfGainers,Agg1[Agg1$Class == 'Aves',]$FrOf
 #hist(Agg1[Agg1$Class == 'Reptilia',]$FrOfGainers, xlim = c(0.2,0.35), ylim = c(0,250), col =  rgb(1,0.1,0.1,0.5), main = '', xlab = '')
 
 
-######################## 2 Fr of gainers to loosers is higher in longlived mammals (aged oocytes with strong asymmetric damage!)
+######################## TASK 2: Fr of gainers to loosers is higher in longlived mammals (aged oocytes with strong asymmetric damage!)
 ###################
 #### 12 genes only (bigger statistics)
 ###################
@@ -115,14 +115,14 @@ GL$Species = gsub(' ','_',GL$Scientific_name)
 
 par(mfrow=c(2,1))
 Mammals = merge(Agg1,GL, by = 'Species')
-cor.test(Mammals$FrOfGainers,Mammals$GenerationLength_d, method = 'spearman') #  "ALINA PICs"
+cor.test(Mammals$FrOfGainers,Mammals$GenerationLength_d, method = 'spearman') #  "ALINA PICs" (MIN)
 plot(log2(Mammals$GenerationLength_d),Mammals$FrOfGainers) # dev.off()
 
 cor.test(Mammals$FrOfLoosers,Mammals$GenerationLength_d, method = 'spearman')  # "ALINA PICs"
 plot(log2(Mammals$GenerationLength_d),Mammals$FrOfLoosers) # dev.off()
 
 
-############################### 3 fishes and temperature
+############################### TASK 3 fishes and temperature
 ###################
 #### 12 genes only (bigger statistics)
 ###################
@@ -143,7 +143,7 @@ nrow(Temp)
 Fish = merge(Agg1,Temp, by = 'Species') # 305
 
 par(mfrow=c(2,1))
-cor.test(Fish$FrOfGainers,Fish$Temperature, method = 'spearman') # "ALINA PICs"
+cor.test(Fish$FrOfGainers,Fish$Temperature, method = 'spearman') # "ALINA PICs" (MIN)
 plot(Fish$Temperature, Fish$FrOfGainers) # ALINA PICs
 
 cor.test(Fish$FrOfLoosers,Fish$Temperature, method = 'spearman') # "ALINA PICs"
@@ -171,7 +171,7 @@ GL$Species = gsub(' ','_',GL$Scientific_name)
 
 par(mfrow=c(2,1))
 Mammals = merge(Agg1,GL, by = 'Species')
-cor.test(Mammals$FrOfGainers,Mammals$GenerationLength_d, method = 'spearman') #  "ALINA PICs"
+cor.test(Mammals$FrOfGainers,Mammals$GenerationLength_d, method = 'spearman') #  "ALINA PICs" (MIN 2)
 plot(log2(Mammals$GenerationLength_d),Mammals$FrOfGainers) # 0.4297347
 
 cor.test(Mammals$FrOfLoosers,Mammals$GenerationLength_d, method = 'spearman')  # "ALINA PICs"
