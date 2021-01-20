@@ -4,6 +4,7 @@ library(ggplot2)
 library(ggbeeswarm) 
 library(cowplot)
 library(tidyr)
+library(dplyr)
 
 pdf("../../Body/4Figures/Alima06.AaAsymmetryChordataRefSeqs.r.pdf")
 data = read.table("../../Body/1Raw/AminoAcidFreqsChordata.txt", sep = ',', header = TRUE, quote = '')
@@ -69,11 +70,11 @@ all12Genes = ggplot(AggToPlot, aes(as.factor(Class), Fraction, colour = as.facto
   theme_minimal() + # поменять серый фон на белый
   theme(axis.text.x = element_text(color = "black", size = 12), 
         axis.text.y = element_text(color = "black", size = 12)) +
-  scale_color_manual(name = '', labels = c('Gainers', 'Loosers'), 
+  scale_color_manual(name = '', labels = c('Gainers', 'Losers'), 
                      values = c(rgb(1,0.1,0.1,0.5), rgb(0.1,0.1,0.1,0.5))) +
   scale_x_discrete(labels = c('Actinopterygii', 'Amphibia', 'Reptilia',
                               'Mammalia', 'Aves')) +
-  # scale_fill_discrete(labels = c('Fraction of gainers', 'Fraction of loosers'))
+  # scale_fill_discrete(labels = c('Fraction of gainers', 'Fraction of losers'))
   labs(x = '', y = '12 genes')
 
 ###################
@@ -132,11 +133,11 @@ nd6 = ggplot(AggToPlot, aes(as.factor(Class), Fraction, colour = as.factor(Gaine
   theme_minimal() + # поменять серый фон на белый
   theme(axis.text.x = element_text(color = "black", size = 12), 
         axis.text.y = element_text(color = "black", size = 12)) +
-  scale_color_manual(name = '', labels = c('Gainers', 'Loosers'), 
+  scale_color_manual(name = '', labels = c('Gainers', 'Losers'), 
                      values = c(rgb(1,0.1,0.1,0.5), rgb(0.1,0.1,0.1,0.5))) +
   scale_x_discrete(labels = c('Actinopterygii', 'Amphibia', 'Reptilia',
                               'Mammalia', 'Aves')) +
-  # scale_fill_discrete(labels = c('Fraction of gainers', 'Fraction of loosers'))
+  # scale_fill_discrete(labels = c('Fraction of gainers', 'Fraction of losers'))
   labs(x = '', y = 'ND6')
 
 plots = plot_grid(all12Genes, nd6, nrow = 2)
