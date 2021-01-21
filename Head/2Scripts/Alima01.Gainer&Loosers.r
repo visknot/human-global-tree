@@ -530,24 +530,24 @@ write.table(GorL,"../../Body/3Results/Alima01.Gainer&Loosers.txt", sep = '\t')
 
 
 ###### SEEKING CORR WITH KONDRASHOV and WITH RANG OF KONDRASHOV (universal trend):
-CorTable <- data.frame(KondrashovHuman = c(-0.0063, -0.0239, +0.0098, +0.0089, -0.0017, -0.0139, +0.0167, +0.0091, +0.0067, 
+CorTable <- data.frame(JordanHuman = c(-0.0063, -0.0239, +0.0098, +0.0089, -0.0017, -0.0139, +0.0167, +0.0091, +0.0067, 
                        +0.0088, -0.0039, +0.0073, -0.0137, +0.0020, -0.0065, +0.0038, +0.0073, +0.0042, -0.0005, +0.0002), 
-                       KondrashovUniversalRang = c(17, 19, 9, 8, 13, 20, 4, 7, 1, 2, 15, 6, 18, 11, 16, 10, 3, 5, 14, 12), 
-                       RatioFromTo = From[1:20]/To[1:20],
+                       JordanUniversalTrend = c(17, 19, 9, 8, 13, 20, 4, 7, 1, 2, 15, 6, 18, 11, 16, 10, 3, 5, 14, 12), 
+                       MtRatioFromTo = From[1:20]/To[1:20],
                        row.names = c('Gly', 'Ala', 'Val', 'Ile', 'Leu', 'Pro', 'Ser', 'Thr', 'Cys', 'Met', 'Asp', 'Asn', 'Glu', 
                                      'Gln', 'Lys', 'Arg', 'His', 'Phe', 'Tyr', 'Trp') ) 
 
-cor.test(CorTable$RatioFromTo, CorTable$KondrashovHuman, method = "spearman")  # S = 974.87, p-value = 0.2551, rho = 0.2670177
-cor.test(CorTable$RatioFromTo, CorTable$KondrashovUniversalRang, method = "spearman")  # S = 1666, p-value = 0.2813, rho = -0.2526316
+cor.test(CorTable$MtRatioFromTo, CorTable$JordanHuman, method = "spearman")  # S = 974.87, p-value = 0.2551, rho = 0.2670177
+cor.test(CorTable$MtRatioFromTo, CorTable$JordanUniversalTrend, method = "spearman")  # S = 1666, p-value = 0.2813, rho = -0.2526316
 
 install.packages("ggpubr")
 library("ggpubr") 
-pdf("../../Body/4Figures/Alima01.KondrashovHumanCorr.pdf")
-ggscatter(CorTable, x = "RatioFromTo", y = "KondrashovHuman", add = "reg.line", conf.int = TRUE, cor.coef = TRUE, cor.method = "spearman", 
+pdf("../../Body/4Figures/Alima01.JordanHumanCorr.pdf")
+ggscatter(CorTable, x = "MtRatioFromTo", y = "JordanHuman", add = "reg.line", conf.int = TRUE, cor.coef = TRUE, cor.method = "spearman", 
           label = c('Gly', 'Ala', 'Val', 'Ile', 'Leu', 'Pro', 'Ser', 'Thr', 'Cys', 'Met', 'Asp', 'Asn', 'Glu', 'Gln', 'Lys', 'Arg', 'His', 'Phe', 'Tyr', 'Trp'))
 dev.off()
 
-pdf("../../Body/4Figures/Alima01.KondrashovUniversalRangCorr.pdf")
-ggscatter(CorTable, x = "RatioFromTo", y = "KondrashovUniversalRang", add = "reg.line", conf.int = TRUE, cor.coef = TRUE, cor.method = "spearman", 
+pdf("../../Body/4Figures/Alima01.JordanUniversalTrendCorr.pdf")
+ggscatter(CorTable, x = "MtRatioFromTo", y = "JordanUniversalTrend", add = "reg.line", conf.int = TRUE, cor.coef = TRUE, cor.method = "spearman", 
           label = c('Gly', 'Ala', 'Val', 'Ile', 'Leu', 'Pro', 'Ser', 'Thr', 'Cys', 'Met', 'Asp', 'Asn', 'Glu', 'Gln', 'Lys', 'Arg', 'His', 'Phe', 'Tyr', 'Trp'))
 dev.off()
