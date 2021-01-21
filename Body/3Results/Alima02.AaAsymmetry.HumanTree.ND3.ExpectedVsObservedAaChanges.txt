@@ -1,0 +1,18 @@
+"AaPairId" "NuclPosInCodon" "NuclSubstLightChainNotation" "ExpectedAminoAcidSubstBias" "GranthamDistance" "ExpectedMoreThanOne" "NumberOfExpectedAaSubst" "NumberOfUnexpectedAaSubst" "TotalSubst" "DummyAhGh"
+"73" "Asp>Gly" 2 "G>A" "Gly>Asp" 94 0.5 1 2 3 0
+"63" "Asn>SerAG" 2 "G>A" "SerAG>Asn" 46 0.8 4 5 9 0
+"48" "Asn>Asp" 1 "G>A" "Asp>Asn" 23 0.931034482758621 27 29 56 0
+"259" "Phe>SerTC" 2 "T>C" "Phe>SerTC" 155 0.940298507462687 63 67 130 1
+"255" "Met>Val" 1 "G>A" "Val>Met" 21 0.961538461538462 25 26 51 0
+"21" "Ala>Thr" 1 "G>A" "Ala>Thr" 58 0.99154334038055 469 473 942 0
+"28" "Arg>Gln" 2 "G>A" "Arg>Gln" 43 1 8 8 16 0
+"267" "Pro>SerTC" 1 "T>C" "SerTC>Pro" 74 1 8 8 16 1
+"252" "Met>Thr" 2 "T>C" "Met>Thr" 81 1.06060606060606 35 33 68 1
+"24" "Ala>Val" 2 "T>C" "Val>Ala" 64 1.09459459459459 81 74 155 1
+"195" "Ile>Val" 1 "G>A" "Val>Ile" 29 1.10344827586207 96 87 183 0
+"229" "LeuTT>SerTC" 2 "T>C" "LeuTT>SerTC" 145 1.11111111111111 30 27 57 1
+"192" "Ile>Thr" 2 "T>C" "Ile>Thr" 89 1.12662337662338 347 308 655 1
+"158" "Gly>SerAG" 1 "G>A" "Gly>SerAG" 56 1.16494845360825 113 97 210 0
+"214" "LeuCT>Pro" 2 "T>C" "LeuCT>Pro" 98 3 3 1 4 1
+"136" "Glu>Lys" 1 "G>A" "Glu>Lys" 56 Inf 1 0 1 0
+"213" "LeuCT>Phe" 1 "T>C" "Phe>LeuCT" 22 Inf 1 0 1 1

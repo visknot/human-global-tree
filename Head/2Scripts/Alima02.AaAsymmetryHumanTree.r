@@ -1,7 +1,6 @@
 rm(list=ls(all=TRUE)) 
 
-pdf("../../Body/4Figures/Alima02.AaAsymmetryKP.pdf")
-#indata <- read.csv("/home/alima/arrr/fulltreeCodons.csv", header = TRUE, sep = ";") #читаю файл 
+pdf("../../Body/4Figures/Alima02.AaAsymmetryHumanTree.pdf")
 
 data = read.csv("../../Body/2Derived/fulltreeCodons.csv", header = TRUE, sep = ";")
 
@@ -46,7 +45,7 @@ data=data[data$Pos4Anc == data$Pos4Der,]
 data$Context = paste(toupper(data$Pos2Anc),data$temp1,toupper(data$Pos4Anc),sep='')
 
 #### filter out synonymous
-data <- subset(data, synonymous == "non-synonymous" & derived_aa != "Ambiguous" & derived_aa != "Asn/Asp" & derived_aa != "Gln/Glu" & derived_aa != "Leu/Ile" & gene_info != "mRNA_ND6")  #убираю лишнее
+data <- subset(data, synonymous == "non-synonymous" & derived_aa != "Ambiguous" & derived_aa != "Asn/Asp" & derived_aa != "Gln/Glu" & derived_aa != "Leu/Ile")  #убираю лишнее
 table(data$derived_aa)
 
 head(data)
@@ -79,20 +78,56 @@ for (i in 1:nrow(data))
 table(data$ancestral_aa)
 table(data$derived_aa)
 
-##### DERIVE SUBSTITUTION MATRIX FromTo
 data$FromTo = paste(data$ancestral_aa,data$derived_aa,sep = '>')
-FromTo = data.frame(table(data$FromTo))
+
+#### read Victor Annotation:
+
+mt = read.table("../../Body/1Raw/mtNucAnnotation_MergeRazerV6TurboMaxPro.csv", header = TRUE, sep = ";")
+cor.test(mt$freq,mt$AfHomGnomad, method = 'spearman') # super positive as expected
+data=merge(data,mt,by.x = 'position', by.y = 'pos')
+summary(data$PhyloP)
+summary(data$freq)
+summary(data$AfHomGnomad)
+table(data$gene_info)
+VecOfHighlyConstrainedGenes = c('mRNA_ND1','mRNA_ND4L','mRNA_CYTB','mRNA_ND5','mRNA_ND3','mRNA_ND1')
+VecOfLowConstrainedGenes = c('mRNA_COX1','mRNA_ND4','mRNA_ATP6','mRNA_COX3','mRNA_COX2','mRNA_ATP8')
+table(data$tm) # tm should be more constrained!? I think yes! 
+#VecOfGenesWithLongTimeBeingSingleStranded = c('mRNA_CYTB','mRNA_ND5','mRNA_ND4','mRNA_ND4L','mRNA_ND3') # ND3 ND4L ND4 ND5 CytB
+#VecOfGenesWithShortTimeBeingSingleStranded = c('mRNA_COX1','mRNA_COX2','mRNA_ATP8','mRNA_ATP6','mRNA_COX3') # COX1 COX2 ATP8 ATP6 COX3
+VecOfGenesWithLongTimeBeingSingleStranded = c('mRNA_CYTB') # ND3 ND4L ND4 ND5 CytB
+VecOfGenesWithShortTimeBeingSingleStranded = c('mRNA_COX1') # COX1 COX2 ATP8 ATP6 COX3
+
+for (set in 1:14)
+{ # i =4
+  if (set == 1) {data1 = data[data$gene_info != 'mRNA_ND6',]; outfile = "../../Body/3Results/Alima02.AaAsymmetry.HumanTree.12Genes.ExpectedVsObservedAaChanges.txt"} # 12Genes
+  if (set == 2) {data1 = data[data$gene_info == 'mRNA_ND6',]; outfile = "../../Body/3Results/Alima02.AaAsymmetry.HumanTree.ND6.ExpectedVsObservedAaChanges.txt"} # Nd6
+# NO if (set == 3) {data1 = data[data$gene_info  != 'mRNA_ND6' & data$PhyloP < median(data$PhyloP),]; outfile = "../../Body/3Results/Alima02.AaAsymmetry.HumanTree.12GenesLowPhyloP.ExpectedVsObservedAaChanges.txt"} # 12GenesLowPhyloP
+# NO if (set == 4) {data1 = data[data$gene_info  != 'mRNA_ND6' & data$PhyloP >= median(data$PhyloP),]; outfile = "../../Body/3Results/Alima02.AaAsymmetry.HumanTree.12GenesHighPhyloP.ExpectedVsObservedAaChanges.txt"} # 12GenesHighPhyloP
+# NO if (set == 3) {data1 = data[data$gene_info  != 'mRNA_ND6' & data$freq >= quantile(data$freq,0.9),]; outfile = "../../Body/3Results/Alima02.AaAsymmetry.HumanTree.12GenesLowConst.ExpectedVsObservedAaChanges.txt"} # 12GenesLowPhyloP
+# NO if (set == 4) {data1 = data[data$gene_info  != 'mRNA_ND6' & data$freq <  quantile(data$freq,0.5),]; outfile = "../../Body/3Results/Alima02.AaAsymmetry.HumanTree.12GenesHighConst.ExpectedVsObservedAaChanges.txt"} # 12GenesHighPhyloP
+# a bit  if (set == 3) {data1 = data[data$gene_info  != 'mRNA_ND6' & data$gene_info %in% VecOfLowConstrainedGenes,]; outfile = "../../Body/3Results/Alima02.AaAsymmetry.HumanTree.12GenesLowConst.ExpectedVsObservedAaChanges.txt"} # 12GenesLowPhyloP 
+# a bit  if (set == 4) {data1 = data[data$gene_info  != 'mRNA_ND6' & data$gene_info %in% VecOfHighlyConstrainedGenes,]; outfile = "../../Body/3Results/Alima02.AaAsymmetry.HumanTree.12GenesHighConst.ExpectedVsObservedAaChanges.txt"} # 12GenesHighPhyloP
+# NO  if (set == 3) {data1 = data[data$gene_info  != 'mRNA_ND6' & data$tm == 'notransm',]; outfile = "../../Body/3Results/Alima02.AaAsymmetry.HumanTree.12GenesLowConst.ExpectedVsObservedAaChanges.txt"} # 12GenesLowPhyloP 
+# NO  if (set == 4) {data1 = data[data$gene_info  != 'mRNA_ND6' & data$tm == 'transm',]; outfile = "../../Body/3Results/Alima02.AaAsymmetry.HumanTree.12GenesHighConst.ExpectedVsObservedAaChanges.txt"} # 12GenesHighPhyloP
+#  if (set == 3) {data1 = data[data$gene_info  != 'mRNA_ND6' & data$gene_info %in% VecOfGenesWithLongTimeBeingSingleStranded,]; outfile = "../../Body/3Results/Alima02.AaAsymmetry.HumanTree.12GenesLowConst.ExpectedVsObservedAaChanges.txt"} # 12GenesLowPhyloP 
+#  if (set == 4) {data1 = data[data$gene_info  != 'mRNA_ND6' & data$gene_info %in% VecOfGenesWithShortTimeBeingSingleStranded  ,]; outfile = "../../Body/3Results/Alima02.AaAsymmetry.HumanTree.12GenesHighConst.ExpectedVsObservedAaChanges.txt"} # 12GenesHighPhyloP
+  if (set == 3) {data1 = data[data$gene_info == 'mRNA_CYTB',]; outfile = "../../Body/3Results/Alima02.AaAsymmetry.HumanTree.CYTB.ExpectedVsObservedAaChanges.txt"} 
+  if (set == 4) {data1 = data[data$gene_info == 'mRNA_ND5',]; outfile = "../../Body/3Results/Alima02.AaAsymmetry.HumanTree.ND5.ExpectedVsObservedAaChanges.txt"}
+  if (set == 5) {data1 = data[data$gene_info == 'mRNA_ND4',]; outfile = "../../Body/3Results/Alima02.AaAsymmetry.HumanTree.ND4.ExpectedVsObservedAaChanges.txt"}
+  if (set == 6) {data1 = data[data$gene_info == 'mRNA_ND3',]; outfile = "../../Body/3Results/Alima02.AaAsymmetry.HumanTree.ND3.ExpectedVsObservedAaChanges.txt"}
+  if (set == 7) {data1 = data[data$gene_info == 'mRNA_ND2',]; outfile = "../../Body/3Results/Alima02.AaAsymmetry.HumanTree.ND2.ExpectedVsObservedAaChanges.txt"}
+  if (set == 8) {data1 = data[data$gene_info == 'mRNA_ND1',]; outfile = "../../Body/3Results/Alima02.AaAsymmetry.HumanTree.ND1.ExpectedVsObservedAaChanges.txt"}
+  if (set == 9) {data1 = data[data$gene_info == 'mRNA_ND4L',]; outfile = "../../Body/3Results/Alima02.AaAsymmetry.HumanTree.ND4L.ExpectedVsObservedAaChanges.txt"}
+  if (set == 10) {data1 = data[data$gene_info == 'mRNA_COX1',]; outfile = "../../Body/3Results/Alima02.AaAsymmetry.HumanTree.COX1.ExpectedVsObservedAaChanges.txt"}
+  if (set == 11) {data1 = data[data$gene_info == 'mRNA_COX2',]; outfile = "../../Body/3Results/Alima02.AaAsymmetry.HumanTree.COX2.ExpectedVsObservedAaChanges.txt"}
+  if (set == 12) {data1 = data[data$gene_info == 'mRNA_COX3',]; outfile = "../../Body/3Results/Alima02.AaAsymmetry.HumanTree.COX3.ExpectedVsObservedAaChanges.txt"}
+  if (set == 13) {data1 = data[data$gene_info == 'mRNA_ATP6',]; outfile = "../../Body/3Results/Alima02.AaAsymmetry.HumanTree.ATP6.ExpectedVsObservedAaChanges.txt"}
+  if (set == 14) {data1 = data[data$gene_info == 'mRNA_ATP8',]; outfile = "../../Body/3Results/Alima02.AaAsymmetry.HumanTree.ATP8.ExpectedVsObservedAaChanges.txt"}
+  
+FromTo = data.frame(table(data1$FromTo))
 names(FromTo) = c('FromAncestralToDerived', 'NumberOfEvents')
 nrow(FromTo) # 236, but totally there are 21*21 possibilities
 FromTo$FromAncestralToDerived = as.character(FromTo$FromAncestralToDerived)
-head(FromTo)
-# FromAncestralToDerived NumberOfEvents
-# 1                Ala>Asp             24
-# 2                Ala>Glu              2
-# 3                Ala>Gly             78
-# 4                Ala>Pro             61
-# 5              Ala>SerTC            282
-# 6                Ala>Thr          13494
 
 ##### ADD DUMMY MATRIX WITH ZEROES 
 AllAa1 = data.frame(unique(data$ancestral_aa)); nrow(AllAa1); names(AllAa1) = c('AA1')
@@ -161,21 +196,18 @@ for (i in 1:nrow(Short))
   if (Short$NuclSubstLightChainNotation[i] == 'G>A') {Short$DummyAhGh[i] = 0}
 }
 
-cor.test(Short$ExpectedMoreThanOne,Short$GranthamDistance, method = 'spearman') 
-cor.test(Short$TotalSubst,Short$GranthamDistance, method = 'spearman') # a bit negative: the lower Grantham, the higher number of substitutions. good
-cor.test(Short$ExpectedMoreThanOne,Short$TotalSubst, method = 'spearman') 
-summary(lm(Short$ExpectedMoreThanOne ~ Short$TotalSubst*Short$GranthamDistance))
-summary(lm(Short[Short$NuclSubstLightChainNotation == 'T>C',]$ExpectedMoreThanOne ~ Short[Short$NuclSubstLightChainNotation == 'T>C',]$TotalSubst + Short[Short$NuclSubstLightChainNotation == 'T>C',]$GranthamDistance))
+#cor.test(Short$ExpectedMoreThanOne,Short$GranthamDistance, method = 'spearman') 
+#cor.test(Short$TotalSubst,Short$GranthamDistance, method = 'spearman') # a bit negative: the lower Grantham, the higher number of substitutions. good
+#cor.test(Short$ExpectedMoreThanOne,Short$TotalSubst, method = 'spearman') 
+#summary(lm(Short$ExpectedMoreThanOne ~ Short$TotalSubst*Short$GranthamDistance))
+#summary(lm(Short[Short$NuclSubstLightChainNotation == 'T>C',]$ExpectedMoreThanOne ~ Short[Short$NuclSubstLightChainNotation == 'T>C',]$TotalSubst + Short[Short$NuclSubstLightChainNotation == 'T>C',]$GranthamDistance))
 
 ## bias is higher in Ah>Gh than Ch>Th!!! why? Ah>Gh is more asymmetric on average???!!! may be yes!? check human global tree and mammalian average piechart
 wilcox.test(Short[Short$NuclSubstLightChainNotation == 'G>A',]$ExpectedMoreThanOne,Short[Short$NuclSubstLightChainNotation == 'T>C',]$ExpectedMoreThanOne)
 boxplot(Short[Short$NuclSubstLightChainNotation == 'G>A',]$ExpectedMoreThanOne,Short[Short$NuclSubstLightChainNotation == 'T>C',]$ExpectedMoreThanOne, names = c('Ch>Th','Ah>Gh'), ylab = 'expected shift')
 
-summary(lm(Short$ExpectedMoreThanOne ~ Short$DummyAhGh))
-
 Short = Short[,-c(2:6)]
-write.table(Short,"../../Body/3Results/Alima02.AaAsymmetry.ExpectedVsObservedAaChanges.txt")
+write.table(Short,outfile)
+}
+
 dev.off()
-
-###### controls and permutations  (how to kill signal and derive real p-value)?
-

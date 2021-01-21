@@ -1,23 +1,46 @@
-"ExpectedAminoAcidSubstBias" "NumberOfExpectedAaSubst" "NumberOfUnexpectedAaSubst" "ExpectedMoreThanOne" "NumberOfExpectedAaSubst.Nd6" "NumberOfUnexpectedAaSubst.Nd6" "ExpectedMoreThanOne.Nd6"
-"5" "Cys>Tyr" 30 13 1.21 0 0 NA
-"4" "Cys>Arg" 11 3 1.87 0 0 NA
-"15" "Phe>Ser" 76 9 3.08 0 0 NA
-"12" "Leu>Ser" 11 12 -0.13 0 0 NA
-"18" "Trp>Arg" 39 4 3.29 1 2 -1
-"8" "Gly>Glu" 145 1 7.18 1 16 -4
-"11" "Leu>Pro" 303 23 3.72 0 0 NA
-"7" "Gly>Asp" 199 13 3.94 1 4 -2
-"10" "Ile>Thr" 205 22 3.22 0 0 NA
-"19" "Tyr>His" 62 10 2.63 0 0 NA
-"13" "Met>Thr" 98 7 3.81 0 0 NA
-"17" "Ser>Pro" 138 21 2.72 0 0 NA
-"20" "Val>Ala" 78 27 1.53 5 18 -1.85
-"1" "Ala>Thr" 560 40 3.81 0 0 NA
-"6" "Glu>Lys" 128 1 7 0 0 NA
-"9" "Gly>Ser" 167 3 5.8 1 1 0
-"16" "Ser>Asn" 90 19 2.24 1 5 -2.32
-"2" "Arg>His" 57 7 3.03 0 0 NA
-"21" "Val>Ile" 94 16 2.55 1 6 -2.58
-"3" "Asp>Asn" 90 3 4.91 0 0 NA
-"14" "Phe>Leu" 119 16 2.89 0 0 NA
-"22" "Val>Met" 98 9 3.44 3 6 -1
+"ExpectedAminoAcidSubstBias" "NumberOfExpectedAaSubst" "NumberOfUnexpectedAaSubst" "ExpectedMoreThanOne" "NumberOfExpectedAaSubst.Nd6" "NumberOfUnexpectedAaSubst.Nd6" "ExpectedMoreThanOne.Nd6" "DataSet"
+"12" "Leu>Ser" 11 12 -0.13 0 0 NA "Cancer"
+"5" "Cys>Tyr" 30 13 1.21 0 0 NA "Cancer"
+"20" "Val>Ala" 78 27 1.53 5 18 -1.85 "Cancer"
+"4" "Cys>Arg" 11 3 1.87 0 0 NA "Cancer"
+"16" "Ser>Asn" 90 19 2.24 1 5 -2.32 "Cancer"
+"21" "Val>Ile" 94 16 2.55 1 6 -2.58 "Cancer"
+"19" "Tyr>His" 62 10 2.63 0 0 NA "Cancer"
+"17" "Ser>Pro" 138 21 2.72 0 0 NA "Cancer"
+"14" "Phe>Leu" 119 16 2.89 0 0 NA "Cancer"
+"2" "Arg>His" 57 7 3.03 0 0 NA "Cancer"
+"15" "Phe>Ser" 76 9 3.08 0 0 NA "Cancer"
+"10" "Ile>Thr" 205 22 3.22 0 0 NA "Cancer"
+"18" "Trp>Arg" 39 4 3.29 1 2 -1 "Cancer"
+"22" "Val>Met" 98 9 3.44 3 6 -1 "Cancer"
+"11" "Leu>Pro" 303 23 3.72 0 0 NA "Cancer"
+"1" "Ala>Thr" 560 40 3.81 0 0 NA "Cancer"
+"13" "Met>Thr" 98 7 3.81 0 0 NA "Cancer"
+"7" "Gly>Asp" 199 13 3.94 1 4 -2 "Cancer"
+"3" "Asp>Asn" 90 3 4.91 0 0 NA "Cancer"
+"9" "Gly>Ser" 167 3 5.8 1 1 0 "Cancer"
+"6" "Glu>Lys" 128 1 7 0 0 NA "Cancer"
+"8" "Gly>Glu" 145 1 7.18 1 16 -4 "Cancer"
+"91" "Gly>Glu" 93 96 -0.05 19 18 0.08 "Germ"
+"31" "Arg>His" 287 288 -0.01 6 6 0 "Germ"
+"61" "Cys>Tyr" 502 502 0 169 208 -0.3 "Germ"
+"171" "SerAG>Asn" 2663 2595 0.04 0 0 NA "Germ"
+"161" "Phe>SerTC" 513 495 0.05 0 0 NA "Germ"
+"221" "Val>Ile" 6542 6310 0.05 403 440 -0.13 "Germ"
+"24" "Arg>Gln" 212 203 0.06 14 14 0 "Germ"
+"81" "Gly>Asp" 168 160 0.07 0 0 NA "Germ"
+"211" "Val>Ala" 1792 1712 0.07 355 372 -0.07 "Germ"
+"23" "Val>Met" 1778 1689 0.07 112 131 -0.23 "Germ"
+"110" "Ala>Thr" 13494 12755 0.08 63 71 -0.17 "Germ"
+"181" "SerTC>Pro" 1067 995 0.1 0 0 NA "Germ"
+"111" "Ile>Thr" 4014 3713 0.11 56 67 -0.26 "Germ"
+"41" "Asp>Asn" 987 906 0.12 95 123 -0.37 "Germ"
+"71" "Glu>Lys" 344 316 0.12 2 2 0 "Germ"
+"201" "Tyr>His" 1263 1164 0.12 6 6 0 "Germ"
+"101" "Gly>SerAG" 1077 981 0.13 0 0 NA "Germ"
+"131" "LeuTT>SerTC" 243 222 0.13 0 0 NA "Germ"
+"141" "Met>Thr" 2327 2129 0.13 56 69 -0.3 "Germ"
+"151" "Phe>LeuCT" 2777 2523 0.14 0 0 NA "Germ"
+"121" "LeuCT>Pro" 1530 1377 0.15 0 0 NA "Germ"
+"191" "Trp>Arg" 64 56 0.19 2 2 0 "Germ"
+"51" "Cys>Arg" 20 14 0.51 23 27 -0.23 "Germ"

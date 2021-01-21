@@ -1,39 +1,56 @@
-rm(list=ls(all=TRUE)) 
+rm(list=ls(all=TRUE))
 
 pdf("../../Body/4Figures/Alima04.AsymmetryInCancers.r.pdf")
 
 data = read.table("../../Body/1Raw/CancerDataFromCampbell/mtDNA_snv_Oct2016.txt", header = TRUE, sep = '\t')
-
-####################################
-#### 1: if VAF is the metric of time, Kn/Ks should reflect it (low Kn/Ks in high VAF and high Kn/Ks in low Kn/Ks)
-#### it is rather opposite ! : KnKs.First5PerCent = 3.56; KnKs.Last5PerCent = 5.74 - not so simple... VAF ~ mutagenesis + selection
-####################################
-
-Nons=data[grepl('nsSNP', data$Annot),]; Nons$NumOfSyn = 0; Nons$NumOfNons = 1
-Syn=data[grepl('synSNP', data$Annot),]; Syn$NumOfSyn = 1; Syn$NumOfNons = 0
-KnKs = rbind(Nons,Syn)
-KnKs$Vaf = as.numeric(gsub('%','',KnKs$tumor_var_freq))
-summary(KnKs$Vaf)
-
-KnKs.quartile1 = sum(KnKs[KnKs$Vaf < quantile(KnKs$Vaf,0.25),]$NumOfNons)/sum(KnKs[KnKs$Vaf < quantile(KnKs$Vaf,0.25),]$NumOfSyn)
-KnKs.quartile2 = sum(KnKs[KnKs$Vaf >= quantile(KnKs$Vaf,0.25) & KnKs$Vaf < quantile(KnKs$Vaf,0.5),]$NumOfNons)/sum(KnKs[KnKs$Vaf >= quantile(KnKs$Vaf,0.25) & KnKs$Vaf < quantile(KnKs$Vaf,0.5),]$NumOfSyn)
-KnKs.quartile3 = sum(KnKs[KnKs$Vaf >= quantile(KnKs$Vaf,0.5) & KnKs$Vaf < quantile(KnKs$Vaf,0.75),]$NumOfNons)/sum(KnKs[KnKs$Vaf >= quantile(KnKs$Vaf,0.5) & KnKs$Vaf < quantile(KnKs$Vaf,0.75),]$NumOfSyn)
-KnKs.quartile4 = sum(KnKs[KnKs$Vaf >= quantile(KnKs$Vaf,0.75),]$NumOfNons)/sum(KnKs[KnKs$Vaf >= quantile(KnKs$Vaf,0.75),]$NumOfSyn)
-
-KnKs.First5PerCent = sum(KnKs[KnKs$Vaf < quantile(KnKs$Vaf,0.05),]$NumOfNons)/sum(KnKs[KnKs$Vaf < quantile(KnKs$Vaf,0.05),]$NumOfSyn)
-KnKs.Last5PerCent = sum(KnKs[KnKs$Vaf >= quantile(KnKs$Vaf,0.95),]$NumOfNons)/sum(KnKs[KnKs$Vaf >= quantile(KnKs$Vaf,0.95),]$NumOfSyn)
-
-####################################
-#### 2: AA asymmetry 
-####################################
-
-data=data[grepl('nsSNP', data$Annot),]
-
 for (i in 1:nrow(data)) {data$AaChanges[i] = unlist(strsplit(data$Annot[i],','))[5]}
 data$ancestral_aa = gsub("\\d(.*)",'',data$AaChanges)
 data$derived_aa = gsub("(.*)\\d",'',data$AaChanges)
-table(data$ancestral_aa)
-table(data$derived_aa)
+
+### read mtDNA annotation by Victor:
+#mt = read.table("../../Body/1Raw/mtNucAnnotation_MergeRazerV6TurboMaxPro.csv", header = TRUE, sep = ';')
+### read cancers, keep only nsSNPs and derive ancestral_aa and derived_aa
+#data=data[grepl('nsSNP', data$Annot),]
+#data$NucSub = paste(data$ref,data$var, sep = '>')
+
+### merge data with mt and rename Leu and Ser according to their codons
+#data = merge(data,mt,by.x = 'position', by.y = 'pos')
+#data$AaSub = paste(data$ancestral_aa,data$derived_aa, sep = '>')
+#for (i in 1:nrow(data))
+#{ # i = 1
+#  if (data$ancestral_aa[i] == 'L' & paste(unlist(strsplit(data$codon[i],''))[1:2],collapse = '') == 'TT')
+#  {data$ancestral_aa[i] = 'LeuTT'}
+#  if (data$ancestral_aa[i] == 'L' & paste(unlist(strsplit(data$codon[i],''))[1:2],collapse = '') == 'CT')
+#  {data$ancestral_aa[i] = 'LeuCT'}
+#  if (data$ancestral_aa[i] == 'S' & paste(unlist(strsplit(data$codon[i],''))[1:2],collapse = '') == 'TC')
+#  {data$ancestral_aa[i] = 'SerTC'}
+#  if (data$ancestral_aa[i] == 'S' & paste(unlist(strsplit(data$codon[i],''))[1:2],collapse = '') == 'AG')
+#  {data$ancestral_aa[i] = 'SerAG'}
+#}
+
+#table(data$ancestral_aa)  # till now there are some 'L' and 'S' => ND6 - parasha!!! victor!!!!
+#temp = data[data$ancestral_aa == 'L' | data$ancestral_aa == 'S',]
+#data$AaSub = paste(data$ancestral_aa,data$derived_aa, sep = '>')
+
+# in case of derived aminoacids it is more difficult to derive them:
+#1) I can assume that if from Gly to Ser it means: from Gly to SerAG etc..
+#temp = data[data$derived_aa == 'S',]
+#table(temp$AaSub)
+# A>S     C>S     F>S     G>S LeuTT>S     N>S     P>S     R>S     T>S     W>S     Y>S 
+# 3       3      76     168      11      24      25       2       4       4       2 
+
+#2) if from Phe to Leu and NucSub is 'T>C' it means from Phe to LeuCT, if NucSub is 'C>A' => LeuTT
+#temp = data[data$ancestral_aa == 'F' & data$derived_aa == 'L',]
+#names(temp)
+#temp$NucSub = paste(temp$ref,temp$var, sep = '>')
+#table(temp$NucSub)
+
+#for (i in 1:nrow(data))
+#{
+#  if (temp$AaSub[i] == 'Y>S') {temp$derived_aa[i] = 'SerTC'}
+#  if (temp$AaSub[i] == 'Y>S') {temp$derived_aa[i] = 'SerTC'}
+#}
+
 
 ####################################
 ### 2A: for all genes except ND6

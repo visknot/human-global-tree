@@ -1,9 +1,9 @@
 "AaPairId" "NuclPosInCodon" "NuclSubstLightChainNotation" "ExpectedAminoAcidSubstBias" "GranthamDistance" "ExpectedMoreThanOne" "NumberOfExpectedAaSubst" "NumberOfUnexpectedAaSubst" "TotalSubst" "DummyAhGh"
-"105" "Glu>Gly" 2 "G>A" "Gly>Glu" 98 0.0625 1 16 17 0
-"132" "Ile>Val" 1 "G>A" "Val>Ile" 29 0.166666666666667 1 6 7 0
-"23" "Asn>Ser" 2 "G>A" "Ser>Asn" 46 0.2 1 5 6 0
-"24" "Asp>Gly" 2 "G>A" "Gly>Asp" 94 0.25 1 4 5 0
-"21" "Ala>Val" 2 "T>C" "Val>Ala" 64 0.277777777777778 5 18 23 1
-"22" "Arg>Trp" 1 "T>C" "Trp>Arg" 101 0.5 1 2 3 1
-"163" "Met>Val" 1 "G>A" "Val>Met" 21 0.5 3 6 9 0
-"106" "Gly>Ser" 1 "G>A" "Gly>Ser" 56 1 1 1 2 0
+"349" "Glu>Gly" 2 "G>A" "Gly>Glu" 98 0.0625 1 16 17 0
+"384" "Ile>Val" 1 "G>A" "Val>Ile" 29 0.166666666666667 1 6 7 0
+"175" "Asn>Ser" 2 "G>A" "Ser>Asn" 46 0.2 1 5 6 0
+"176" "Asp>Gly" 2 "G>A" "Gly>Asp" 94 0.25 1 4 5 0
+"173" "Ala>Val" 2 "T>C" "Val>Ala" 64 0.277777777777778 5 18 23 1
+"174" "Arg>Trp" 1 "T>C" "Trp>Arg" 101 0.5 1 2 3 1
+"427" "Met>Val" 1 "G>A" "Val>Met" 21 0.5 3 6 9 0
+"350" "Gly>Ser" 1 "G>A" "Gly>Ser" 56 1 1 1 2 0
