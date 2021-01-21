@@ -15,6 +15,10 @@ data$Loosers = data$Phe + data$Val + data$Gly + data$Cys + data$Trp  # 14 codons
 data$All = apply(as.matrix(data[,c(3:22)]),1,FUN = sum)
 data$Intermediate = data$All - data$Gainers - data$Loosers # 64 - 16 - 14 - 4 (Stops) = 30
 
+nrow(data) # 46670
+length(unique(data$Species)) # 3590 species
+
+
 ###################### TASK 1: FRACTION OF GAINERS VS FRACTION OF LOOSERS
 ###################
 #### 12 genes

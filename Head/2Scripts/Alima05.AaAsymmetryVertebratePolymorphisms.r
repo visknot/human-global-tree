@@ -2,24 +2,37 @@ rm(list=ls(all=TRUE))
 
 pdf("../../Body/4Figures/Alima05.AaAsymmetryVertebratePolymorphisms.r.pdf")
 data = read.table("../../Body/1Raw/VertebratePolymorphisms.MutSpecAminoAcidSubs.txt", header = TRUE)
-data$TypeOfSub = gsub('_','>',data$TypeOfSub)
-data$ancestral_aa = gsub(">(.*)",'',data$TypeOfSub)
-data$derived_aa = gsub("(.*)>",'',data$TypeOfSub)
+data$TypesOfAASub = gsub('_','>',data$TypesOfAASub)
+data$ancestral_aa = gsub(">(.*)",'',data$TypesOfAASub)
+data$derived_aa = gsub("(.*)>",'',data$TypesOfAASub)
 
-# ">Non" - параша, которую пока просто удаляю, а вообще надо Але разобраться
-table(data$ancestral_aa) # 36 None
-table(data$derived_aa) # 49 Non\U3e35653c
-data = data[data$ancestral_aa != 'None',]
-data = data[data$derived_aa != 'Non\U3e35653c',]
-table(data$ancestral_aa) # 36 None
-table(data$derived_aa) # 49 Non\U3
+table(data$ancestral_aa)
+table(data$derived_aa)
 
-FromTo = aggregate(data$FreqOfAASub, by = list(data$TypeOfSub), FUN = sum)
+nrow(data) # 37221 reconstructed amino acid substitutions
+length(unique(data$Species)) # 2020 species
+table(data$Class) # 
+#Actinopterygii           Amphibia               Aves   Branchiostomidae     Chondrichthyes          Cladistia           Mammalia Petromyzontiformes 
+#10344               2106               3344                303                215                 58              13792                 67 
+#Reptilia 
+#5858 
+
+### here choose classes!!!
+for (set in 1:6)
+{ # set = 1
+if (set == 1) {data1 = data; output = '../../Body/3Results/Alima05.AaAsymmetryVertebratePolymorphisms.r.AllClasses.txt'}
+if (set == 2) {data1 = data[data$Class == 'Actinopterygii',]; output = '../../Body/3Results/Alima05.AaAsymmetryVertebratePolymorphisms.r.Actinopterygii.txt'}
+if (set == 3) {data1 = data[data$Class == 'Amphibia',]; output = '../../Body/3Results/Alima05.AaAsymmetryVertebratePolymorphisms.r.Amphibia.txt'}
+if (set == 4) {data1 = data[data$Class == 'Reptilia',]; output = '../../Body/3Results/Alima05.AaAsymmetryVertebratePolymorphisms.r.Reptilia.txt'}
+if (set == 5) {data1 = data[data$Class == 'Mammalia',]; output = '../../Body/3Results/Alima05.AaAsymmetryVertebratePolymorphisms.r.Mammalia.txt'}  
+if (set == 6) {data1 = data[data$Class == 'Aves',]; output = '../../Body/3Results/Alima05.AaAsymmetryVertebratePolymorphisms.r.Aves.txt'}    
+
+FromTo = aggregate(data1$FreqOfSub, by = list(data1$TypesOfAASub), FUN = sum)
 names(FromTo) = c('FromAncestralToDerived','NumberOfEvents')
 
 ##### ADD DUMMY MATRIX WITH ZEROES 
-AllAa1 = data.frame(unique(data$ancestral_aa)); nrow(AllAa1); names(AllAa1) = c('AA1')
-AllAa2 = data.frame(unique(data$ancestral_aa)); nrow(AllAa2); names(AllAa2) = c('AA2')
+AllAa1 = data.frame(unique(data1$ancestral_aa)); nrow(AllAa1); names(AllAa1) = c('AA1')
+AllAa2 = data.frame(unique(data1$ancestral_aa)); nrow(AllAa2); names(AllAa2) = c('AA2')
 DummyZeroes = merge(AllAa1,AllAa2)
 DummyZeroes$FromAncestralToDerived=paste(DummyZeroes$AA1,DummyZeroes$AA2,sep='>')
 DummyZeroes$NumberOfEvents = 0
@@ -98,12 +111,6 @@ boxplot(Short[Short$NuclSubstLightChainNotation == 'G>A',]$ExpectedMoreThanOne,S
 summary(lm(Short$ExpectedMoreThanOne ~ Short$DummyAhGh)) # significant
 
 Short = Short[,-c(2:6)]
-write.table(Short,"../../Body/3Results/Alima05.AaAsymmetryVertebratePolymorphisms.r.txt")
+write.table(Short,output)
+}
 dev.off()
-
-### compare humans and vertebrates:
-ShortVerteb = Short[,c(4,6)]; names(ShortVerteb)[2] = c('Verteb.ExpectedMoreThanOne')
-ShortHumans = read.table("../../Body/3Results/Alima02.AaAsymmetry.ExpectedVsObservedAaChanges.txt", header = TRUE)
-ShortHumans = ShortHumans[,c(4,6)]; names(ShortHumans)[2] = c('Humans.ExpectedMoreThanOne')
-Short = merge(ShortVerteb,ShortHumans)
-cor.test(Short$Verteb.ExpectedMoreThanOne,Short$Humans.ExpectedMoreThanOne, method = 'spearman') # non significant. May be will be significant with mammals

@@ -1,10 +1,12 @@
 ###################################
-##### prepare final cancer table and hist - make it a separate script, collecting cancer, germ data and vertebrate polymorphisms
+##### prepare final tables, stats and hists from all analyses
 ###################################
 
 rm(list=ls(all=TRUE)) 
 
 pdf("../../Body/4Figures/Alima08.CancersGermVertPolymorphismsFinalTableAndHists.r.pdf")
+
+SuperFinal = data.frame()
 
 ####################
 ## CANCERS
@@ -36,8 +38,8 @@ abline(v=0, lt = 2, lwd = 2, col = 'black')
 wilcox.test(Final$ExpectedMoreThanOne, mu = 0)     # 4.939e-05
 wilcox.test(Final$ExpectedMoreThanOne.Nd6, mu = 0) # 0.02225
 
-Cancer = Final
-Cancer$DataSet = 'Cancer'
+Final$DataSet = 'Cancer'
+SuperFinal=rbind(SuperFinal,Final)
 
 #########
 ## GERM - 12 genes and Nd6 - all positions
@@ -69,8 +71,8 @@ abline(v=0, lt = 2, lwd = 2, col = 'black')
 wilcox.test(Final$ExpectedMoreThanOne, mu = 0)     # 4.939e-05
 wilcox.test(Final$ExpectedMoreThanOne.Nd6, mu = 0) # 0.0107
 
-Germ = Final
-Germ$DataSet = 'Germ'
+Final$DataSet = 'Germ'
+SuperFinal=rbind(SuperFinal,Final)
 
 #########
 ## GermConst - 12 genes: different constraints:
@@ -112,8 +114,46 @@ wilcox.test(All$ExpectedMoreThanOne,All$ExpectedMoreThanOne.HighConst, paired = 
 
 GermConstr = Final
 
-Final = rbind(Cancer,Germ)
-write.table(Final,'../../Body/3Results/Alima08.CancersGermVertPolymorphismsFinalTableAndHists.r.txt') 
+########
+## VertebratePolym (one type of files - all genes without ND6)
+########
+
+for (set in 1:6)
+{ # set = 1
+  if (set == 1) {input = '../../Body/3Results/Alima05.AaAsymmetryVertebratePolymorphisms.r.AllClasses.txt'; class = 'AllClasses'}
+  if (set == 2) {input = '../../Body/3Results/Alima05.AaAsymmetryVertebratePolymorphisms.r.Actinopterygii.txt'; class = 'Actinopterygii'}
+  if (set == 3) {input = '../../Body/3Results/Alima05.AaAsymmetryVertebratePolymorphisms.r.Amphibia.txt'; class = 'Amphibia'}
+  if (set == 4) {input = '../../Body/3Results/Alima05.AaAsymmetryVertebratePolymorphisms.r.Reptilia.txt'; class = 'Reptilia'}
+  if (set == 5) {input = '../../Body/3Results/Alima05.AaAsymmetryVertebratePolymorphisms.r.Mammalia.txt'; class = 'Mammalia'}
+  if (set == 6) {input = '../../Body/3Results/Alima05.AaAsymmetryVertebratePolymorphisms.r.Aves.txt'; class = 'Aves'}    
+  
+AllExceptNd6 = read.table(input, header = TRUE)
+names(AllExceptNd6)
+AllExceptNd6 = AllExceptNd6[,c(2:8)]
+AllExceptNd6 = AllExceptNd6[]
+
+names(AllExceptNd6)
+Final = AllExceptNd6[,c(3,6,7,5)]
+Final$ExpectedMoreThanOne = round(log2(Final$ExpectedMoreThanOne),2); summary(Final$ExpectedMoreThanOne)
+Final = Final[order(Final$ExpectedMoreThanOne),]
+
+wilcox.test(Final$ExpectedMoreThanOne, mu = 0)     # 6.333e-05
+breaks = seq(-1,3,0.25)
+hist(Final$ExpectedMoreThanOne, xlim = c(-1,3), ylim = c(0,9), col = rgb(1,0.1,0.1,0.3), xlab = '', main = class, breaks = breaks); # par(new = TRUE)
+abline(v=0, lt = 2, lwd = 2, col = 'black')
+
+names(SuperFinal)
+Final$NumberOfExpectedAaSubst.Nd6 = '';
+Final$NumberOfUnexpectedAaSubst.Nd6 = '';
+Final$ExpectedMoreThanOne.Nd6 = '';
+Final$DataSet = class  # rbind in the loop!!!
+
+SuperFinal=rbind(SuperFinal,Final)
+}
+
+###### PRINT OUR EVERYTHING
+
+write.table(SuperFinal,'../../Body/3Results/Alima08.CancersGermVertPolymorphismsFinalTableAndHists.r.txt') 
 # copy and paste into LibreCalc => copy and special paste (rft)
 
 dev.off()
