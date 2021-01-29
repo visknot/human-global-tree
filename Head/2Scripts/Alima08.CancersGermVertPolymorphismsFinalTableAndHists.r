@@ -12,10 +12,54 @@ SuperFinal = data.frame()
 ## CANCERS
 ####################  
 
+# background human mtDNA with frequencies:
+MitAnno = read.table("../../Body/2Derived/mtNucAnnotation_MergeRazerV6TurboMaxPro_normMTcode_normND6_withGERP.AllTransitions.Tbss.txt")
+#MitAnno = MitAnno[MitAnno$acid != '',]
+MitAnno = MitAnno[!is.na(MitAnno$acid),]
+table(MitAnno$acid)
+MitAnno$AcidNew = gsub("\\/(.*)",'',MitAnno$acid)
+TwelveGenes = MitAnno[MitAnno$role != 'mRNA_ND6',]
+for (i in 1:nrow(TwelveGenes))
+{
+  if (TwelveGenes$RnaCodon[i] %in% c('TCT','TCC','TCA','TCG')) {MitAnno$AcidNew[i] = 'SerTC'}
+  if (TwelveGenes$RnaCodon[i] %in% c('AGT','AGC')) {MitAnno$AcidNew[i] = 'SerAG'}
+  if (TwelveGenes$RnaCodon[i] %in% c('TTA','TTG')) {MitAnno$AcidNew[i] = 'LeuTT'}
+  if (TwelveGenes$RnaCodon[i] %in% c('CTT','CTC','CTA','CTG')) {MitAnno$AcidNew[i] = 'LeuCT'}
+}
+TwelveGenesAaFreq = data.frame(table(MitAnno$AcidNew))  # should not be simply Leu or Ser !!!!!!!!!!!!!!!!!!!!!!
+names(TwelveGenesAaFreq)=c('Acid','Freq')
+TwelveGenesAaFreq = TwelveGenesAaFreq[!TwelveGenesAaFreq$Acid %in% c('Ser','Leu'),]
+TwelveGenesAaFreq$Freq = TwelveGenesAaFreq$Freq/3 # should be round!!!!!!!!!!!!
+TwelveGenesAaFreq$Freq = round(TwelveGenesAaFreq$Freq,0)
+
+# read cancer statistics:
 AllExceptNd6 = read.table("../../Body/3Results/Alima04.AsymmetryInCancers.12genes.txt", header = TRUE)
 names(AllExceptNd6)
 AllExceptNd6 = AllExceptNd6[,c(2:8)]
-AllExceptNd6 = AllExceptNd6[]
+AllExceptNd6$ExpectedAminoAcidSubstBias = gsub('Leu>Ser','LeuTT>SerTC',AllExceptNd6$ExpectedAminoAcidSubstBias)
+AllExceptNd6$ExpectedAminoAcidSubstBias = gsub('Ser>Asn','SerAG>Asn',AllExceptNd6$ExpectedAminoAcidSubstBias)
+AllExceptNd6$ExpectedAminoAcidSubstBias = gsub('Ser>Pro','SerTC>Pro',AllExceptNd6$ExpectedAminoAcidSubstBias)
+AllExceptNd6$ExpectedAminoAcidSubstBias = gsub('Phe>Leu','Phe>LeuCT',AllExceptNd6$ExpectedAminoAcidSubstBias)
+AllExceptNd6$ExpectedAminoAcidSubstBias = gsub('Leu>Pro','LeuCT>Pro',AllExceptNd6$ExpectedAminoAcidSubstBias)
+AllExceptNd6$ExpectedAminoAcidSubstBias = gsub('Gly>Ser','Gly>SerAG',AllExceptNd6$ExpectedAminoAcidSubstBias)
+AllExceptNd6$ExpectedAminoAcidSubstBias = gsub('Phe>Ser','Phe>SerTC',AllExceptNd6$ExpectedAminoAcidSubstBias)
+AllExceptNd6$FROM = gsub(">(.*)",'',AllExceptNd6$ExpectedAminoAcidSubstBias)
+AllExceptNd6$TO = gsub("(.*)>",'',AllExceptNd6$ExpectedAminoAcidSubstBias)
+AllExceptNd6 = merge(AllExceptNd6,TwelveGenesAaFreq, by.x = 'FROM', by.y = 'Acid') #  AllExceptNd6$FROM, by.y = TwelveGenesAaFreq$Acid)
+names(AllExceptNd6)[names(AllExceptNd6) == 'Freq'] <- 'FreqFrom'
+
+AllExceptNd6 = merge(AllExceptNd6,TwelveGenesAaFreq, by.x = 'TO', by.y = 'Acid') #  AllExceptNd6$FROM, by.y = TwelveGenesAaFreq$Acid)
+names(AllExceptNd6)[names(AllExceptNd6) == 'Freq'] <- 'FreqTo'
+
+AllExceptNd6$ExpectedRate = AllExceptNd6$NumberOfExpectedAaSubst/AllExceptNd6$FreqFrom
+AllExceptNd6$UnexpectedRate = AllExceptNd6$NumberOfUnexpectedAaSubst/AllExceptNd6$FreqTo
+AllExceptNd6$RatioOfExpToUnexpRates = AllExceptNd6$ExpectedRate / AllExceptNd6$UnexpectedRate
+summary(AllExceptNd6$RatioFromLosersToGainers)
+cor.test(AllExceptNd6$GranthamDistance,AllExceptNd6$RatioFromLosersToGainers, method = 'spearman') # nothing
+names(AllExceptNd6)
+AllExceptNd6 = AllExceptNd6[(c('ExpectedAminoAcidSubstBias','NumberOfExpectedAaSubst','FreqFrom','ExpectedRate','NumberOfUnexpectedAaSubst','FreqTo','UnexpectedRate','RatioOfExpToUnexpRates'))] # data <- data[c("A", "B", "C")]
+AllExceptNd6 = AllExceptNd6[order(AllExceptNd6$RatioOfExpToUnexpRates),]
+
 Nd6 = read.table("../../Body/3Results/Alima04.AsymmetryInCancers.ND6.txt", header = TRUE)
 names(Nd6)
 Nd6 = Nd6[,c(4,6,7,8)]

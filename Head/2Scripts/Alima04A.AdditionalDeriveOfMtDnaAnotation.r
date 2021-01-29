@@ -2,10 +2,11 @@
 
 rm(list=ls(all=TRUE))
 
-library('Biostrings')
+# library('Biostrings')
 
 #mt = read.table("../../Body/1Raw/mtNucAnnotation_MergeRazerV6TurboMaxPro_normMTcode_normND6_withGERP.csv", header = TRUE, sep = ';')
-mt = read.table("../../Body/1Raw/mtNucAnnotation_MergeRazerV6TurboMaxPro_normMTcode_normND6_withGERP_corrected280121.csv", header = TRUE, sep = ';')
+# mt = read.table("../../Body/1Raw/mtNucAnnotation_MergeRazerV6TurboMaxPro_normMTcode_normND6_withGERP_corrected280121.csv", header = TRUE, sep = ';')
+mt = read.table("../../Body/1Raw/mtDNAannotationMerge_300121.KPmodif.csv", header = TRUE, sep = '\t')
 
 table(mt$role)
 ProtCodGenes = c("mRNA_ATP6","mRNA_ATP6&COX3","mRNA_ATP8","mRNA_ATP8&ATP6","mRNA_COX1","mRNA_COX2","mRNA_COX3","mRNA_CYTB","mRNA_ND1","mRNA_ND2","mRNA_ND3","mRNA_ND4","mRNA_ND4L","mRNA_ND4L&ND4","mRNA_ND5","mRNA_ND6")
@@ -99,24 +100,27 @@ TranslateMitCodonsIntoThreeLetterAa<-function(x)
 # TranslateMitCodonsIntoThreeLetterAa('TTC')
 # MitCode = getGeneticCode("SGC1")
 mt$MutatedAa = ''
+mt$AcidTranslated = ''
 for (i in 1:nrow(mt))
 { # i = 7599
   if (mt$MutatedCodon[i] != '') 
   {
   mt$MutatedAa[i] = TranslateMitCodonsIntoThreeLetterAa(mt$MutatedCodon[i])
+  mt$AcidTranslated[i] = TranslateMitCodonsIntoThreeLetterAa(mt$RnaCodon[i])
   #codon = DNAString(x=mt$MutatedCodon[i], start=1, nchar=NA); 
   # AaOneLetter = AAString(translate(codon,genetic.code=MitCode)); 
   # mt$MutatedAa[i] = as.character(AMINO_ACID_CODE[strsplit(as.character(AaOneLetter), NULL)[[1]]]);
   }
 }
 
-mt$acid = gsub("STOP",'Stop',mt$acid)
+# mt$acid = gsub("STOP",'Stop',mt$acid)
 mt$AaSub = ''
 for (i in 1:nrow(mt))
 { # i = 10500
   if (mt$MutatedAa[i] != '' & !is.na(mt$MutatedAa[i])) 
   {
-    AncestralAa = gsub("\\/(.*)",'',mt$acid[i])
+    # AncestralAa = gsub("\\/(.*)",'',mt$acid[i])
+    AncestralAa = mt$AcidTranslated[i]
     if (AncestralAa != mt$MutatedAa[i])
       {
       mt$AaSub[i] = paste(AncestralAa,as.character(mt$MutatedAa[i]),sep='>')
@@ -132,5 +136,5 @@ for (i in 1:nrow(mt))
   if (mt$pos[i] <  5798) {mt$TimeBeingSingleStranded[i] = 16569 - 5798 - (5798 - mt$pos[i]) + mt$pos[i]} # path on major arc: 16569 - 5798 - (5798 - mt$pos[i]); path on minor arc = mt$pos[i]
 }
 
-write.table(mt,"../../Body/2Derived/'mtNucAnnotation_MergeRazerV6TurboMaxPro_normMTcode_normND6_withGERP.AllTransitions.Tbss.txt")
+write.table(mt,"../../Body/2Derived/mtNucAnnotation_MergeRazerV6TurboMaxPro_normMTcode_normND6_withGERP.AllTransitions.Tbss.txt")
 
