@@ -78,7 +78,7 @@ dim(Plants)
 ######################################################################
 VecOf10UniversalGenes = c('ATP6','COX1','COX2','COX3','CYTB','ND1','ND2','ND3','ND4','ND5')
 ## HERE SUBSTITUTE IT BY AlphaProteoBacteria or Fungi or Invertebrates or Plants
-# data = AlphaProteoBacteria  
+data = AlphaProteoBacteria  
 # data = Fungi
 # data = Invertebrates  
 # data = Plants
@@ -94,6 +94,9 @@ agg$FrOfGainers = agg$Gainers / agg$All
 agg$FrOfLosers = agg$Losers / agg$All
 
 boxplot(agg$FrOfGainers,agg$FrOfLosers)
+median(c(agg$FrOfGainers,agg$FrOfLosers)) # 0.2337901
+
+
 
 
 ######################################################################
