@@ -1,0 +1,26 @@
+"AaPairId" "AaSub" "NumberOfExpectedAaSubst" "NumberOfUnexpectedAaSubst"
+"1" "Ala>Thr" "Ala>Thr" 26 12
+"2" "Ala>Val" "Val>Ala" 8 5
+"3" "Arg>Cys" "Cys>Arg" 1 0
+"4" "Arg>Gln" "Arg>Gln" 3 2
+"5" "Arg>His" "Arg>His" 2 4
+"6" "Arg>Trp" "Trp>Arg" 3 1
+"7" "Asn>Asp" "Asp>Asn" 5 4
+"8" "Asn>Ser" "Ser>Asn" 2 6
+"9" "Asp>Gly" "Gly>Asp" 8 1
+"10" "Cys>Tyr" "Cys>Tyr" 1 3
+"12" "Glu>Gly" "Gly>Glu" 4 2
+"13" "Glu>Lys" "Glu>Lys" 9 2
+"14" "Gly>Ser" "Gly>Ser" 10 1
+"15" "Gly>Stop" "Gly>Stop" 10 1
+"16" "His>Tyr" "Tyr>His" 7 1
+"17" "Ile>Thr" "Ile>Thr" 18 4
+"18" "Ile>Val" "Val>Ile" 15 12
+"19" "Leu>Phe" "Phe>Leu" 9 4
+"20" "Leu>Pro" "Leu>Pro" 19 1
+"22" "Lys>Stop" "Stop>Lys" 1 0
+"23" "Met>Thr" "Met>Thr" 13 2
+"24" "Met>Val" "Val>Met" 5 5
+"25" "Phe>Ser" "Phe>Ser" 2 3
+"26" "Pro>Ser" "Ser>Pro" 11 5
+"27" "Stop>Trp" "Trp>Stop" 10 0

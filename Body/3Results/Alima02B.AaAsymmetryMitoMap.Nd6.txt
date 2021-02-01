@@ -1,0 +1,8 @@
+"AaPairId" "AaSub" "NumberOfExpectedAaSubst" "NumberOfUnexpectedAaSubst"
+"1" "Ala>Thr" "Ala>Thr" 1 0
+"2" "Ala>Val" "Val>Ala" 1 2
+"3" "Arg>Trp" "Trp>Arg" 1 0
+"6" "Gly>Ser" "Gly>Ser" 1 0
+"7" "Ile>Thr" "Ile>Thr" 1 0
+"10" "Leu>Ser" "Leu>Ser" 1 1
+"11" "Met>Val" "Val>Met" 1 2
