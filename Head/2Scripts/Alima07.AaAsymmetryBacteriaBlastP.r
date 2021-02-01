@@ -54,19 +54,39 @@ table(agg$Gene)
 Invertebrates = agg
 dim(Invertebrates)
 
+######## parsing of Plants
+data = read.table("../../Body/1Raw/BestiariiFromValeriya/PlantsAll.txt", sep = ';', header = TRUE, quote = '')
+agg = aggregate(data[,c(5:24)], by = list(data$Species,data$Gene), FUN = mean)
+names(agg)=c('Species','Gene',names(data)[c(5:24)])
+VecOfGenes =  data.frame(table(agg$Gene)); # VecOfGenes$Var1
+#VecOfGenes = c('ATP6','COX1','COX2','COX3','CYTB','ND1','ND2','ND3','ND4','ND4L','ND5','ND6')
+#VecOfGenes = c('ATP6','COX1','COX2','COX3','CYTB','ND1','ND2','ND3','ND4','ND4L','ND5')
+VecOfGenes = c('ATP6','COX1','COX2','COX3','CYTB','ND1','ND2','ND3','ND4','ND5')
+agg = agg[agg$Gene %in% VecOfGenes,]
+species = data.frame(table(agg$Species));
+VecOfSpecies = species[species$Freq == 10,]$Var1; length(VecOfSpecies)
+agg = agg[agg$Species %in% VecOfSpecies,]
+agg = agg[order(agg$Species,agg$Gene),]
+nrow(agg) # 1199/11 gens = 109 species
+length(unique(agg$Species)) 
+table(agg$Gene)
+Plants = agg
+dim(Plants)
+
 ######################################################################
 ####### ANALYSIS (we compare ALL species using only 10genes)
 ######################################################################
 VecOf10UniversalGenes = c('ATP6','COX1','COX2','COX3','CYTB','ND1','ND2','ND3','ND4','ND5')
-## HERE SUBSTITUTE IT BY AlphaProteoBacteria or Fungi or Invertebrates
-data = AlphaProteoBacteria  
+## HERE SUBSTITUTE IT BY AlphaProteoBacteria or Fungi or Invertebrates or Plants
+# data = AlphaProteoBacteria  
 # data = Fungi
 # data = Invertebrates  
+# data = Plants
 data = data[data$Gene %in% VecOf10UniversalGenes,]
 data$Gainers = data$Pro + data$Thr + data$His + data$Gln + data$Asn + data$Lys # 16 codons 
 data$Losers = data$Phe + data$Val + data$Gly + data$Cys + data$Trp  # 12 codons
 data$All = apply(as.matrix(data[,c(3:22)]),1,FUN = sum)
-data$Intermediate = data$All - data$Gainers - data$Loosers # 64 - 16 - 12 - 4 (Stops) = 32
+data$Intermediate = data$All - data$Gainers - data$Losers # 64 - 16 - 12 - 4 (Stops) = 32
 
 agg = aggregate(list(data$Gainers,data$Losers, data$All), by = list(data$Species), FUN = sum)
 names(agg)=c('Species','Gainers','Losers','All')
