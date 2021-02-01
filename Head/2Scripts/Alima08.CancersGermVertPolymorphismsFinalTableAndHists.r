@@ -19,14 +19,40 @@ MitAnno = MitAnno[!is.na(MitAnno$acid),]
 table(MitAnno$acid)
 MitAnno$AcidNew = gsub("\\/(.*)",'',MitAnno$acid)
 TwelveGenes = MitAnno[MitAnno$role != 'mRNA_ND6',]
-for (i in 1:nrow(TwelveGenes))
+
+TranslateMitCodonsIntoThreeLetterAa<-function(x)
 {
-  if (TwelveGenes$RnaCodon[i] %in% c('TCT','TCC','TCA','TCG')) {MitAnno$AcidNew[i] = 'SerTC'}
-  if (TwelveGenes$RnaCodon[i] %in% c('AGT','AGC')) {MitAnno$AcidNew[i] = 'SerAG'}
-  if (TwelveGenes$RnaCodon[i] %in% c('TTA','TTG')) {MitAnno$AcidNew[i] = 'LeuTT'}
-  if (TwelveGenes$RnaCodon[i] %in% c('CTT','CTC','CTA','CTG')) {MitAnno$AcidNew[i] = 'LeuCT'}
+  if (x %in% c('TTT','TTC')) {return ("Phe")}
+  if (x %in% c('TTA','TTG')) {return ("LeuTT")}
+  if (x %in% c('CTT','CTC','CTA','CTG')) {return ("LeuCT")}
+  if (x %in% c('ATT','ATC')) {return ("Ile")}
+  if (x %in% c('ATA','ATG')) {return ("Met")}
+  if (x %in% c('GTC','GTA','GTG','GTT')) {return ("Val")}
+  
+  if (x %in% c('TCT','TCC','TCA','TCG')) {return ("SerTC")}
+  if (x %in% c('CCT','CCC','CCA','CCG')) {return ("Pro")}
+  if (x %in% c('ACT','ACC','ACA','ACG')) {return ("Thr")}
+  if (x %in% c('GCT','GCC','GCA','GCG')) {return ("Ala")}
+  
+  if (x %in% c('TAT','TAC')) {return ("Tyr")}
+  if (x %in% c('TAA','TAG')) {return ("Stop")}
+  if (x %in% c('CAT','CAC')) {return ("His")}
+  if (x %in% c('CAA','CAG')) {return ("Gln")}
+  if (x %in% c('AAT','AAC')) {return ("Asn")}
+  if (x %in% c('AAA','AAG')) {return ("Lys")}
+  if (x %in% c('GAT','GAC')) {return ("Asp")}
+  if (x %in% c('GAA','GAG')) {return ("Glu")}
+  
+  if (x %in% c('TGT','TGC')) {return ("Cys")}
+  if (x %in% c('TGA','TGG')) {return ("Trp")}
+  if (x %in% c('CGT','CGC','CGA','CGG')) {return ("Arg")}
+  if (x %in% c('AGT','AGC')) {return ("SerAG")}
+  if (x %in% c('AGA','AGG')) {return ("Stop")}
+  if (x %in% c('GGT','GGC','GGA','GGG')) {return ("Gly")}
 }
-TwelveGenesAaFreq = data.frame(table(MitAnno$AcidNew))  # should not be simply Leu or Ser !!!!!!!!!!!!!!!!!!!!!!
+
+TwelveGenes$AcidNew = apply(as.matrix(TwelveGenes$RnaCodon),1,FUN = TranslateMitCodonsIntoThreeLetterAa)
+TwelveGenesAaFreq = data.frame(table(TwelveGenes$AcidNew))  # should not be simply Leu or Ser !!!!!!!!!!!!!!!!!!!!!!
 names(TwelveGenesAaFreq)=c('Acid','Freq')
 TwelveGenesAaFreq = TwelveGenesAaFreq[!TwelveGenesAaFreq$Acid %in% c('Ser','Leu'),]
 TwelveGenesAaFreq$Freq = TwelveGenesAaFreq$Freq/3 # should be round!!!!!!!!!!!!
