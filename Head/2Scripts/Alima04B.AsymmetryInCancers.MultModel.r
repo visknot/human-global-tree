@@ -29,11 +29,12 @@ for (i in 1:nrow(AaPredictions))
   if (grepl("Asn|Lys|Asp|Glu|Gly",AaPredictions$AaSub[i])) {AaPredictions$QuadrantFour[i] = 1}
 }
 
-##### 2. read extensively mutated file, take only nons and only driven by two most common transitions and make base
+##### 2. read extensively mutated file, take only nons and only driven by FOUR transitions and make base
 
 MitAnno = read.table("../../Body/2Derived/mtNucAnnotation_MergeRazerV6TurboMaxPro_normMTcode_normND6_withGERP.AllTransitions.Tbss.txt")
 MitAnno = MitAnno[MitAnno$AaSub!='',] # 7152
-MitAnno = merge(MitAnno,AaPredictions,by="AaSub") # 7152 
+MitAnno = merge(MitAnno,AaPredictions,by="AaSub") 
+# THERE ARE 7152 POTENTIAL NONSYNONYMOUS SUBSTITUTIONS BECAUSE OF 4 TRANSITIONS
 #MitAnno = merge(MitAnno,AaPredictions,by="AaSub",all.x=TRUE) # 6504 => 7597-6504 (1093 substitutions were not in MitAnno - which ones)
 #table(MitAnno$AaSub)
 #MitAnnoNa = MitAnno[is.na(MitAnno$ExpDummy),] # zero
@@ -98,6 +99,9 @@ data = data[data$AaSub %in% AaPredictions$AaSub,] # delete all substitutions due
 nrow(data) # 3540
 data = data[data$NucSub %in% c('C>T','T>C','A>G','G>A'),] # delete all substitutions due to transversions and double mutations
 nrow(data) # 3528
+# THERE ARE 3528 NONSYNONYMOUS SUBSTITUTIONS, DUE TO TRANSITIONS, OBSERVED IN CANCERS
+length(unique(data$position)) # 1940
+# THERE ARE 1940 NONSYNONYMOUS SUBSTITUTIONS, DUE TO TRANSITIONS, OBSERVED IN CANCERS
 
 ### rbind cancer with MitAnno and aggregate
 
