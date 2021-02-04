@@ -47,7 +47,8 @@ TranslateMitCodonsIntoThreeLetterAa<-function(x)
 }
 
 DataT$Aa = apply(as.matrix(DataT$Codons),1,FUN = TranslateMitCodonsIntoThreeLetterAa)
-agg = aggregate(DataT$X1001, by = list(DataT$Aa), FUN = sum)
+names(DataT)[1]=c('CodonFreq')
+agg = aggregate(DataT$CodonFreq, by = list(DataT$Aa), FUN = sum)
 names(agg)=c('Aa','Freq')
 
 VecOfGainers = c('Pro','Thr','His','Gln','Asn','Lys')
@@ -63,6 +64,38 @@ for (i in 1:nrow(agg))
   if (agg$Aa[i] %in% VecOfGainers) {agg$AaType[i] = 'gainer'}
   if (agg$Aa[i] %in% VecOfLosers) {agg$AaType[i] =  'loser'}
 }
+
+##### PREDICTIONS OF VALERIAN
+
+# задача разбивается на 4 простых случая:
+#1)  Если кодон состоит только из пиримидинов (типа TTT), то в финале в этом кодоне будет (в среднем) 0.999 T и 2.001 С.
+#2)  Если кодон состоит только из пуринов (типа AAA), то в финале в этом кодоне будет (в среднем) 2.769 A и 0.231 G.
+#3)  Более интересный случай – когда кодон изначально состоит из 2 пиримидинов и 1 пурина (скажем, TTA), мы после достаточно продолжительного периода свободных мутаций получим кодон, в среднем состоящий из: 0.666 T; 1.3334 C; 0.923 A; и 0.077 G.
+#4)  Наконец, для кодонов, состоящих из 1 пиримидина и 2 пуринов (скажем, CGG), мы в конце должны получить кодон, в среднем состоящий из: 0.333 T; 0.667 C; 1.846 A; и 0.154 G.
+
+## first class of codons - only Pyrimidines (C + T): 
+Class = DataT[DataT$Codons %in% c('TTT','TTC','CTT','CTC','TCT','TCC','CCT','CCC'),]
+for (i in 1:nrow(Class))
+{ # i = 1
+nucs = unlist(strsplit(Class$Codons[i],'')); Class$NumberOfT[i] = length(nucs[nucs == 'T'])
+}
+FreqOfT = sum(Class$CodonFreq*Class$NumberOfT)
+FreqOfC = sum(Class$CodonFreq*(3-Class$NumberOfT))
+FreqOfT # 0.1301563
+FreqOfC # 0.2420312
+FreqOfC/FreqOfT # 1.859544 ~ 2.001/0.999 = 2.003 
+
+## second class of codons - only Pyrines (A + G): 
+Class = DataT[DataT$Codons %in% c('AAA','AAG','GAA','GAG','AGA','AGG','GGA','GGG'),]
+for (i in 1:nrow(Class))
+{ # i = 1
+  nucs = unlist(strsplit(Class$Codons[i],'')); Class$NumberOfA[i] = length(nucs[nucs == 'A'])
+}
+FreqOfA = sum(Class$CodonFreq*Class$NumberOfA)
+FreqOfG = sum(Class$CodonFreq*(3-Class$NumberOfA))
+FreqOfA # 0.3476562
+FreqOfG # 0.0353125
+FreqOfA/FreqOfG # 9.845133 ~ 2.769 / 0.231 = 11.987
 
 
 
