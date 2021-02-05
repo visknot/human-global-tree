@@ -1,10 +1,27 @@
 rm(list=ls(all=TRUE)) 
 
+data = read.table("../../Body/1Raw/VertebratePolymorphisms.MutSpecAminoAcidSubsWithRefSeqData.txt", header = TRUE)
+data$TypesOfAASub = gsub('_','>',data$TypesOfAASub)
+data$ancestral_aa = gsub(">(.*)",'',data$TypesOfAASub)
+data$derived_aa = gsub("(.*)>",'',data$TypesOfAASub)
+
+?????????????
+
+
+
+################ OLD
 pdf("../../Body/4Figures/Alima05.AaAsymmetryVertebratePolymorphisms.r.pdf")
 data = read.table("../../Body/1Raw/VertebratePolymorphisms.MutSpecAminoAcidSubs.txt", header = TRUE)
 data$TypesOfAASub = gsub('_','>',data$TypesOfAASub)
 data$ancestral_aa = gsub(">(.*)",'',data$TypesOfAASub)
 data$derived_aa = gsub("(.*)>",'',data$TypesOfAASub)
+
+table(data$Gene) 
+#  ATP6  ATP8  COX1  COX2  COX3  CytB   ND1   ND2   ND3   ND4  ND4L 
+#  2436   706   996   839   845 17200  2194  7746   795  2916   548 
+# there is no ND6 and ND5 and the most common is CYTB.
+# => can we just count amino acid frequencies from all the rest 11 genes from RefSeqs and normalize on them? 
+# in this way we don't take into account gene-specific AA content, but we take the maximal statistics (if we want - we can rerun the same only for CYTB later)
 
 table(data$ancestral_aa)
 table(data$derived_aa)
