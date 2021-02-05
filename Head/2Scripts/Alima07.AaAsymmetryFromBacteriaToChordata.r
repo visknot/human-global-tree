@@ -42,10 +42,11 @@ names(agg)=c('Species','Gene',names(data)[c(5:24)])
 agg$Species = gsub('\\[','',agg$Species)
 VecOfGenes =  data.frame(table(agg$Gene)); # VecOfGenes$Var1
 #VecOfGenes = c('ATP6','COX1','COX2','COX3','CYTB','ND1','ND2','ND3','ND4','ND4L','ND5','ND6')
-VecOfGenes = c('ATP6','COX1','COX2','COX3','CYTB','ND1','ND2','ND3','ND4','ND4L','ND5')
+#VecOfGenes = c('ATP6','COX1','COX2','COX3','CYTB','ND1','ND2','ND3','ND4','ND4L','ND5')
+VecOfGenes = c('ATP6','COX1','COX2','COX3','CYTB','ND1','ND2','ND3','ND4','ND5')
 agg = agg[agg$Gene %in% VecOfGenes,]
 species = data.frame(table(agg$Species));
-VecOfSpecies = species[species$Freq == 11,]$Var1; length(VecOfSpecies)
+VecOfSpecies = species[species$Freq == 10,]$Var1; length(VecOfSpecies)
 agg = agg[agg$Species %in% VecOfSpecies,]
 agg = agg[order(agg$Species,agg$Gene),]
 nrow(agg) # 1199/11 gens = 109 species
@@ -78,9 +79,9 @@ dim(Plants)
 ######################################################################
 VecOf10UniversalGenes = c('ATP6','COX1','COX2','COX3','CYTB','ND1','ND2','ND3','ND4','ND5')
 ## HERE SUBSTITUTE IT BY AlphaProteoBacteria or Fungi or Invertebrates or Plants
-data = AlphaProteoBacteria  
+# data = AlphaProteoBacteria  
 # data = Fungi
-# data = Invertebrates  
+data = Invertebrates  
 # data = Plants
 data = data[data$Gene %in% VecOf10UniversalGenes,]
 data$Gainers = data$Pro + data$Thr + data$His + data$Gln + data$Asn + data$Lys # 16 codons 
@@ -95,9 +96,6 @@ agg$FrOfLosers = agg$Losers / agg$All
 
 boxplot(agg$FrOfGainers,agg$FrOfLosers)
 median(c(agg$FrOfGainers,agg$FrOfLosers)) # 0.2337901
-
-
-
 
 ######################################################################
 ####### PLOTTING BY ALINA
