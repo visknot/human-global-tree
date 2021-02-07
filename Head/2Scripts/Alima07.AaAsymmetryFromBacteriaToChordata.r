@@ -109,39 +109,68 @@ library(cowplot)
 library(tidyr)
 library(dplyr)
 
-pdf("../../Body/4Figures/Alima07.AaAsymmetryBacteriaBlastP.r.pdf")
-data = read.table("../../Body/1Raw/AminoAcidsFromBacteria.csv", sep = ';', header = TRUE, quote = '')
-descr = data.frame(table(data$GeneName))
+# reading table with vertebrates
+Vertebrates = read.table("../../Body/1Raw/AminoAcidFreqsChordata.txt", sep = ',', header = TRUE, quote = '')
+colnames(Vertebrates)
+Vertebrates = Vertebrates[,-c(23:33)]
+names(Vertebrates)[23] = 'Taxon'
 
-data$Gainers = data$Pro + data$Thr + data$His + data$Gln + data$Asn + data$Lys # 16 codons 
-data$Loosers = data$Phe + data$Val + data$Gly + data$Cys + data$Trp  # 12 codons
-names(data)
-data$All = apply(as.matrix(data[,c(4:23)]),1,FUN = sum)
-data$Intermediate = data$All - data$Gainers - data$Loosers # 64 - 16 - 12 - 4 (Stops) = 32
+# adding taxons to all other tables
+AlphaProteoBacteria[, 'Taxon'] = 'AlphaProteoBacteria'
+Fungi[, 'Taxon'] = 'Fungi'
+Invertebrates[, 'Taxon'] = 'Invertebrates'
+Plants[, 'Taxon'] = 'Plants'
 
-data$FrOfGainers = data$Gainers / data$All
-data$FrOfLoosers = data$Loosers / data$All
+bestiari = bind_rows(AlphaProteoBacteria, Fungi, Invertebrates, Plants, Vertebrates) %>%
+  filter(Gene %in% VecOfGenes) %>%
+  mutate(
+    Gainers = Pro + Thr + His + Gln + Asn + Lys,
+    Losers = Phe + Val + Gly + Cys + Trp,
+    All = rowSums(.[3:22])) %>%
+  select(Species, Gainers, Losers, All, Taxon) %>%
+  group_by(Species) %>% 
+  summarise(GainersSum = sum(Gainers), LosersSum = sum(Losers), AllSum = sum(All), 
+            Taxon = Taxon) %>%
+  mutate(FrOfGainers = GainersSum/AllSum,
+         FrOfLosers = LosersSum/AllSum) %>%
+  distinct()
 
-Agg1 = aggregate(list(data$FrOfGainers,data$FrOfLoosers), by = list(data$GeneName), FUN = mean)
-names(Agg1)=c('GeneName','FrOfGainers','FrOfLoosers')
-summary(Agg1$FrOfGainers)
-summary(Agg1$FrOfLoosers)
+table(bestiari$Taxon)
 
-boxplot(Agg1$FrOfGainers,Agg1$FrOfLoosers, col = c(rgb(1,0.1,0.1,0.5),rgb(0.1,0.1,0.1,0.5)), names = c('gainers','losers'), main = 'alphaproteobacteria') # ALINA!!!
-dev.off()
+# Actinopterygii AlphaProteoBacteria            Amphibia         AncientFish                Aves 
+# 1770                 770                 205                 126                 432 
+# Fungi       Invertebrates            Mammalia              Plants            Reptilia 
+# 167                 104                 788                  84                 269 
 
-AggToPlot = Agg1 %>%
-  gather(key = 'GainersOrLoosers', value = 'Fraction', FrOfGainers:FrOfLoosers)
+# which taxa have more losers ? 
+moreLosers = bestiari[bestiari$FrOfGainers < bestiari$FrOfLosers,]
 
-bacteria = ggplot(AggToPlot, aes(as.factor(GainersOrLoosers), Fraction, colour = as.factor(GainersOrLoosers))) +
-  geom_quasirandom(shape = 1, cex = 0.5) + 
-  stat_summary(aes(group = factor(GainersOrLoosers)), 
+table(moreLosers$Taxon)
+# Actinopterygii AlphaProteoBacteria               Fungi       Invertebrates              Plants 
+# 6                 770                 167                  90                  82 
+
+# All bacteria, fungi, most of the invertebrates and plants, few fish have more losers
+
+DataToPlot = bestiari %>%
+  filter(Taxon != 'AncientFish') %>%
+  select(Species, FrOfGainers, FrOfLosers, Taxon) %>%
+  gather(key = 'GainersOrLosers', value = 'Fraction', FrOfGainers:FrOfLosers)
+
+alltaxa = ggplot(DataToPlot, aes(as.factor(Taxon), Fraction, colour = as.factor(GainersOrLosers))) +
+  geom_quasirandom(shape = 1, cex = 1) + 
+  stat_summary(aes(group = factor(GainersOrLosers)), 
                fun.y = 'median', geom = 'point', shape = 8, size = 2, col = 'midnightblue') + # to show a median
   theme_minimal() + # поменять серый фон на белый
-  theme(axis.text.x = element_blank()) +
+  theme(axis.text.x = element_text(color = "black", size = 12), 
+        axis.text.y = element_text(color = "black", size = 12)) +
   scale_color_manual(name = '', labels = c('Gainers', 'Losers'), 
                      values = c(rgb(1,0.1,0.1,0.5), rgb(0.1,0.1,0.1,0.5))) +
+  scale_x_discrete(limits = c('AlphaProteoBacteria', 'Fungi', 'Plants', 'Invertebrates',
+                              'Actinopterygii', 'Amphibia', 'Reptilia',
+                              'Mammalia', 'Aves')) +
   # scale_fill_discrete(labels = c('Fraction of gainers', 'Fraction of losers'))
-  labs(x = '', y = '', title = 'alphaproteobacteria')
+  labs(x = '', y = '')
 
-save_plot('../../Body/4Figures/Alima07.AaAsymmetryBacteriaBlastP01.r.pdf', bacteria)
+
+save_plot('../../Body/4Figures/Alima07.AaAsymmetryFromBacteriaToChordata.r.pdf', alltaxa,
+          base_height = 8)

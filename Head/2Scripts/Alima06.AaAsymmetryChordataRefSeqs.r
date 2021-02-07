@@ -81,6 +81,17 @@ all12Genes = ggplot(AggToPlot, aes(as.factor(Class), Fraction, colour = as.facto
   # scale_fill_discrete(labels = c('Fraction of gainers', 'Fraction of losers'))
   labs(x = '', y = '12 genes')
 
+### genes separately
+
+data1$FrOfGainers = data1$Gainers/data1$All
+data1 = data1[data1$Class != 'AncientFish',]
+
+gene_order = ggplot(data1, aes(as.factor(Gene), FrOfGainers)) + 
+   geom_quasirandom(shape = 1, cex = 0.5, color = rgb(1,0.1,0.1,0.5)) +
+   scale_x_discrete(limits = c('COX1', 'COX2', 'ATP8', 'ATP6', 'COX3', 'ND3', 'ND4L', 
+                               'ND4', 'ND5', 'CytB', 'ND1', 'ND2')) +
+  facet_grid(as.factor(Class) ~ .)
+
 ###################
 #### ND6
 ###################
@@ -149,6 +160,8 @@ plots = plot_grid(all12Genes, nd6, nrow = 2)
 save_plot('../../Body/4Figures/Alima06.AaAsymmetryChordataRefSeqs01.r.pdf', plots, nrow = 2,
           base_height = 5)
 
+save_plot('../../Body/4Figures/Alima06.AaAsymmetryChordataRefSeqs_GeneOrder.r.pdf', gene_order,
+          base_height = 5)
 
 # old 
 #par(mfrow=c(1,1))
@@ -187,6 +200,54 @@ cor.test(Mammals$FrOfLoosers,Mammals$GenerationLength_d, method = 'spearman')  #
 plot(log2(Mammals$GenerationLength_d),Mammals$FrOfLoosers) # dev.off()
 
 
+### PICs 
+
+library(ape)
+library(geiger)
+library(caper)
+
+tree <- read.tree("../../Body/1Raw/mtalign.aln.treefile.rooted")
+
+Mammals = Mammals[-404, ] #remove duplicates
+row.names(Mammals) = Mammals$Species
+
+tree_w = treedata(tree, Mammals[, c('Species', 'FrOfGainers', 'FrOfLoosers', 'GenerationLength_d')], 
+                  sort=T, warnings=T)$phy
+
+data_tree = as.data.frame(treedata(tree_w, Mammals[, c('Species', 'FrOfGainers', 'FrOfLoosers', 'GenerationLength_d')], 
+                             sort=T, warnings=T)$data)
+
+data_tree$FrOfGainers = as.numeric(as.character(data_tree$FrOfGainers))
+data_tree$GenerationLength_d = as.numeric(as.character(data_tree$GenerationLength_d))
+data_tree$FrOfLoosers = as.numeric(as.character(data_tree$FrOfLoosers))
+
+cor.test(pic(data_tree$FrOfGainers, tree_w), pic(data_tree$GenerationLength_d, tree_w), method = 'spearman')
+# rho = 0.07723414, p-value = 0.04939
+
+cor.test(pic(data_tree$FrOfGainers, tree_w), pic(log2(data_tree$GenerationLength_d), tree_w), method = 'spearman')
+# rho = 0.08615036, p-value = 0.02832
+
+plot(pic(data_tree$FrOfGainers, tree_w), pic(log2(data_tree$GenerationLength_d), tree_w))
+
+cor.test(pic(data_tree$FrOfLoosers, tree_w), pic(log2(data_tree$GenerationLength_d), tree_w), method = 'spearman')
+# rho = -0.05329016, p-value = 0.1755
+
+###
+
+MammComp = comparative.data(tree_w, data_tree, Species, vcv=TRUE)
+
+model1 = pgls(log2(GenerationLength_d) ~ FrOfGainers, MammComp, lambda="ML")
+summary(model1)
+
+# lambda [ ML]  : 0.952
+
+# Coefficients:
+#   Estimate Std. Error t value  Pr(>|t|)    
+# (Intercept)   6.3979     1.4141  4.5242 7.212e-06 ***
+#   FrOfGainers  18.0385     5.3341  3.3818 0.0007636 ***
+# Multiple R-squared: 0.01737,	Adjusted R-squared: 0.01585 
+
+
 ############################### TASK 3 fishes and temperature
 ###################
 #### 12 genes only (bigger statistics)
@@ -213,6 +274,50 @@ plot(Fish$Temperature, Fish$FrOfGainers) # ALINA PICs
 
 cor.test(Fish$FrOfLoosers,Fish$Temperature, method = 'spearman') # "ALINA PICs"
 plot(Fish$Temperature, Fish$FrOfLoosers) # ALINA PICs
+
+
+### PICs
+
+library(ape)
+library(geiger)
+library(caper)
+
+tree <- read.tree("../../Body/1Raw/mtalign.aln.treefile.rooted")
+
+row.names(Fish) = Fish$Species
+
+tree_w = treedata(tree, Fish, 
+                  sort=T, warnings=T)$phy
+
+data_tree = as.data.frame(treedata(tree_w, Fish, 
+                                   sort=T, warnings=T)$data)
+
+data_tree$FrOfGainers = as.numeric(as.character(data_tree$FrOfGainers))
+data_tree$Temperature = as.numeric(as.character(data_tree$Temperature))
+data_tree$FrOfLoosers = as.numeric(as.character(data_tree$FrOfLoosers))
+
+cor.test(pic(data_tree$FrOfGainers, tree_w), pic(data_tree$Temperature, tree_w), method = 'spearman')
+# rho = 0.1870207, p-value = 0.001052
+
+cor.test(pic(data_tree$FrOfLoosers, tree_w), pic(data_tree$Temperature, tree_w), method = 'spearman')
+# rho = -0.1908986, p-value = 0.0008212
+
+plot(pic(data_tree$FrOfGainers, tree_w), pic(data_tree$Temperature, tree_w))
+plot(pic(data_tree$FrOfLoosers, tree_w), pic(data_tree$Temperature, tree_w))
+
+# PGLS
+
+FishComp = comparative.data(tree_w, data_tree, Species, vcv=TRUE)
+
+model1 = pgls(scale(Temperature) ~ scale(FrOfGainers), FishComp, lambda="ML")
+summary(model1)
+
+# lambda [ ML]  : 0.838
+# Coefficients:
+#   Estimate Std. Error t value  Pr(>|t|)    
+# (Intercept)        -0.657014   0.402888 -1.6308 0.1039797    
+# scale(FrOfGainers)  0.249319   0.066749  3.7352 0.0002241 ***
+# Multiple R-squared: 0.04402,	Adjusted R-squared: 0.04086 
 
 ################### 5. gainers / loosers in second (only Ah>Gh) and fourth (only Ch>Th) quartiles in the relationship with Generation Length of Mammals (it seems that second quartile is stronger)
 ###############################
