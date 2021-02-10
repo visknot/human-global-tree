@@ -140,13 +140,25 @@ MIN = round((min(Cancer$LogRatioOfExpToUnexpRates)-0.5),0)
 MAX = round((max(Cancer$LogRatioOfExpToUnexpRates)+0.5),0)
 
 breaks=seq(-10,10,0.5)
+hist(Cancer[Cancer$gene == 'TwelveGenes',]$LogRatioOfExpToUnexpRates, xlim = c(MIN,MAX), ylim = c(0,6), col = rgb(1,0.1,0.1,0.3), xlab = 'log2(forward rate / backward rate)', main = 'somatic mutations from cancers', breaks = breaks); 
+#hist(Cancer[Cancer$gene == 'Nd6',]$LogRatioOfExpToUnexpRates, xlim = c(MIN,MAX),ylim = c(0,6), col = rgb(0.1,0.1,0.1,0.3), xlab = 'log2(forward rate / backward rate)', main = 'somatic mutations from cancers', breaks = breaks);
+abline(v=0, lt = 2, lwd = 2, col = 'black') # dev.off() print it as a main figure
+#text(-4,6,'ND6', col = 'grey', cex = 2)
+#text(6,6,'12 genes', col = 'pink', cex = 2)
+
+
+breaks=seq(-10,10,0.5)
 hist(Cancer[Cancer$gene == 'TwelveGenes',]$LogRatioOfExpToUnexpRates, xlim = c(MIN,MAX), ylim = c(0,6), col = rgb(1,0.1,0.1,0.3), xlab = '', main = '', breaks = breaks); par(new = TRUE)
 hist(Cancer[Cancer$gene == 'Nd6',]$LogRatioOfExpToUnexpRates, xlim = c(MIN,MAX),ylim = c(0,6), col = rgb(0.1,0.1,0.1,0.3), xlab = 'log2(forward rate / backward rate)', main = 'somatic mutations from cancers', breaks = breaks);
 abline(v=0, lt = 2, lwd = 2, col = 'black') # dev.off() print it as a main figure
 text(-4,6,'ND6', col = 'grey', cex = 2)
 text(6,6,'12 genes', col = 'pink', cex = 2)
 
+
 Cancer$DataSet = 'Cancer'
+
+#plot(Cancer[Cancer$gene == 'TwelveGenes',]$ExpectedRate,Cancer[Cancer$gene == 'TwelveGenes',]$UnexpectedRate)
+#abline(a=0,b=1)
 
 #########
 ## PATHOGENIC HUMAN MUTATIONS - 12 genes and Nd6 - all positions
@@ -317,6 +329,7 @@ Germ$DataSet = 'Germ'
 #fisher.test(rbind(c(168,183),c(160,63))) # first is expected data, second - unexpected
 #fisher.test(rbind(c(502,22),c(502,124))) # first is expected data, second - unexpected
 # think about permutation?
+# plot(fisher.test(rbind(c(502,22),c(502,124))))
 
 Final=rbind(Cancer,MitoMap,Germ)
 Final$ExpectedRate = round(Final$ExpectedRate,3)
