@@ -157,6 +157,9 @@ text(6,6,'12 genes', col = 'pink', cex = 2)
 
 Cancer$DataSet = 'Cancer'
 
+sum(Cancer$NumberOfExpectedAaSubst)   # 2812 PAPER; 2812 + 337 = 3149 
+sum(Cancer$NumberOfUnexpectedAaSubst) # 337 PAPER 
+
 #plot(Cancer[Cancer$gene == 'TwelveGenes',]$ExpectedRate,Cancer[Cancer$gene == 'TwelveGenes',]$UnexpectedRate)
 #abline(a=0,b=1)
 
@@ -232,6 +235,12 @@ wilcox.test(MitoMap[MitoMap$gene == 'Nd6',]$LogRatioOfExpToUnexpRates, mu = 0)  
 
 #MIN = round((min(MitoMap$LogRatioOfExpToUnexpRates)-0.5),0)
 #MAX = round((max(MitoMap[MitoMap$LogRatioOfExpToUnexpRates < Inf,]$LogRatioOfExpToUnexpRates)+0.5),0)
+hist(MitoMap[MitoMap$gene == 'TwelveGenes',]$LogRatioOfExpToUnexpRates, xlim = c(MIN,MAX), ylim = c(0,6), col = rgb(1,0.1,0.1,0.3), xlab = 'log2(forward rate / backward rate)', main = 'pathogenic mutations', breaks = breaks)
+#hist(MitoMap[MitoMap$gene == 'Nd6',]$LogRatioOfExpToUnexpRates, xlim = c(MIN,MAX),ylim = c(0,6), col = rgb(0.1,0.1,0.1,0.3), xlab = 'log2(forward rate / backward rate)', main = 'pathogenic mutations', breaks = breaks);
+abline(v=0, lt = 2, lwd = 2, col = 'black') # dev.off() print it as a main figure
+#text(-4,6,'ND6', col = 'grey', cex = 2)
+#text(6,6,'12 genes', col = 'pink', cex = 2)
+
 
 hist(MitoMap[MitoMap$gene == 'TwelveGenes',]$LogRatioOfExpToUnexpRates, xlim = c(MIN,MAX), ylim = c(0,6), col = rgb(1,0.1,0.1,0.3), xlab = '', main = '', breaks = breaks); par(new = TRUE)
 hist(MitoMap[MitoMap$gene == 'Nd6',]$LogRatioOfExpToUnexpRates, xlim = c(MIN,MAX),ylim = c(0,6), col = rgb(0.1,0.1,0.1,0.3), xlab = 'log2(forward rate / backward rate)', main = 'pathogenic mutations', breaks = breaks);
@@ -241,6 +250,9 @@ text(6,6,'12 genes', col = 'pink', cex = 2)
 
 
 MitoMap$DataSet = 'MitoMap'
+
+sum(MitoMap$NumberOfExpectedAaSubst)   # 209 PAPER; 209 + 86 = 295 
+sum(MitoMap$NumberOfUnexpectedAaSubst) # 86 PAPER 
 
 #########
 ## GERM-LINE SUBSTITUTIONS FROM THE HUMAN TREE 
@@ -316,6 +328,12 @@ wilcox.test(Germ[Germ$gene == 'Nd6',]$LogRatioOfExpToUnexpRates, mu = 0, alterna
 #MIN = round((min(Germ$LogRatioOfExpToUnexpRates)-0.5),0)
 #MAX = round((max(Germ$LogRatioOfExpToUnexpRates)+0.5),0)
 
+hist(Germ[Germ$gene == 'TwelveGenes',]$LogRatioOfExpToUnexpRates, xlim = c(MIN,MAX), ylim = c(0,6), col = rgb(1,0.1,0.1,0.3),  xlab = 'log2(forward rate / backward rate)', main = 'germ-line substitutions in the human population', breaks = breaks)
+#hist(Germ[Germ$gene == 'Nd6',]$LogRatioOfExpToUnexpRates, xlim = c(MIN,MAX),ylim = c(0,6), col = rgb(0.1,0.1,0.1,0.3), xlab = 'log2(forward rate / backward rate)', main = 'germ-line substitutions in the human population', breaks = breaks);
+abline(v=0, lt = 2, lwd = 2, col = 'black') # dev.off() print it as a main figure
+#text(-4,6,'ND6', col = 'grey', cex = 2)
+#text(6,6,'12 genes', col = 'pink', cex = 2)
+
 hist(Germ[Germ$gene == 'TwelveGenes',]$LogRatioOfExpToUnexpRates, xlim = c(MIN,MAX), ylim = c(0,6), col = rgb(1,0.1,0.1,0.3), xlab = '', main = '', breaks = breaks); par(new = TRUE)
 hist(Germ[Germ$gene == 'Nd6',]$LogRatioOfExpToUnexpRates, xlim = c(MIN,MAX),ylim = c(0,6), col = rgb(0.1,0.1,0.1,0.3), xlab = 'log2(forward rate / backward rate)', main = 'germ-line substitutions in the human population', breaks = breaks);
 abline(v=0, lt = 2, lwd = 2, col = 'black') # dev.off() print it as a main figure
@@ -323,6 +341,9 @@ text(-4,6,'ND6', col = 'grey', cex = 2)
 text(6,6,'12 genes', col = 'pink', cex = 2)
 
 Germ$DataSet = 'Germ'
+
+sum(Germ$NumberOfExpectedAaSubst)   # 45112 PAPER; 45112 + 42731 = 87843 ;  45112/87843 = 0.5135526; 42731/87843 = 0.486
+sum(Germ$NumberOfUnexpectedAaSubst) # 42731 PAPER 
 
 # I can run fisher test for each substitution
 #fisher.test(rbind(c(1077,183),c(981,48))) # first is expected data, second - unexpected
