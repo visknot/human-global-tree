@@ -1,0 +1,884 @@
+Chromosome	Position	BaseChangeRefToAlt	Impact	GeneAffected	UniProtKBGeneName	GeneClassification	AminoAcidChange	CodonChange	SIFT
+MT	48	G>A	Non-coding transcript exon variant	ENSCAFG00000022708	N/A	Non-coding tRNA gene	-	-	-
+MT	79	G>A	Non-coding transcript exon variant	ENSCAFG00000022709	N/A	Non-coding rRNA gene	-	-	-
+MT	98	G>A	Non-coding transcript exon variant	ENSCAFG00000022709	N/A	Non-coding rRNA gene	-	-	-
+MT	100	T>G	Non-coding transcript exon variant	ENSCAFG00000022709	N/A	Non-coding rRNA gene	-	-	-
+MT	124	C>T	Non-coding transcript exon variant	ENSCAFG00000022709	N/A	Non-coding rRNA gene	-	-	-
+MT	161	G>A	Non-coding transcript exon variant	ENSCAFG00000022709	N/A	Non-coding rRNA gene	-	-	-
+MT	174	G>A	Non-coding transcript exon variant	ENSCAFG00000022709	N/A	Non-coding rRNA gene	-	-	-
+MT	198	T>C	Non-coding transcript exon variant	ENSCAFG00000022709	N/A	Non-coding rRNA gene	-	-	-
+MT	229	C>T	Non-coding transcript exon variant	ENSCAFG00000022709	N/A	Non-coding rRNA gene	-	-	-
+MT	244	T>C	Non-coding transcript exon variant	ENSCAFG00000022709	N/A	Non-coding rRNA gene	-	-	-
+MT	257	G>A	Non-coding transcript exon variant	ENSCAFG00000022709	N/A	Non-coding rRNA gene	-	-	-
+MT	260	A>G	Non-coding transcript exon variant	ENSCAFG00000022709	N/A	Non-coding rRNA gene	-	-	-
+MT	280	G>A	Non-coding transcript exon variant	ENSCAFG00000022709	N/A	Non-coding rRNA gene	-	-	-
+MT	294	G>A	Non-coding transcript exon variant	ENSCAFG00000022709	N/A	Non-coding rRNA gene	-	-	-
+MT	295	G>C	Non-coding transcript exon variant	ENSCAFG00000022709	N/A	Non-coding rRNA gene	-	-	-
+MT	338	C>T	Non-coding transcript exon variant	ENSCAFG00000022709	N/A	Non-coding rRNA gene	-	-	-
+MT	349	G>A	Non-coding transcript exon variant	ENSCAFG00000022709	N/A	Non-coding rRNA gene	-	-	-
+MT	363	G>A	Non-coding transcript exon variant	ENSCAFG00000022709	N/A	Non-coding rRNA gene	-	-	-
+MT	390	G>A	Non-coding transcript exon variant	ENSCAFG00000022709	N/A	Non-coding rRNA gene	-	-	-
+MT	395	A>T	Non-coding transcript exon variant	ENSCAFG00000022709	N/A	Non-coding rRNA gene	-	-	-
+MT	406	G>A	Non-coding transcript exon variant	ENSCAFG00000022709	N/A	Non-coding rRNA gene	-	-	-
+MT	423	T>C	Non-coding transcript exon variant	ENSCAFG00000022709	N/A	Non-coding rRNA gene	-	-	-
+MT	428	A>C	Non-coding transcript exon variant	ENSCAFG00000022709	N/A	Non-coding rRNA gene	-	-	-
+MT	436	A>G	Non-coding transcript exon variant	ENSCAFG00000022709	N/A	Non-coding rRNA gene	-	-	-
+MT	476	G>A	Non-coding transcript exon variant	ENSCAFG00000022709	N/A	Non-coding rRNA gene	-	-	-
+MT	483	C>T	Non-coding transcript exon variant	ENSCAFG00000022709	N/A	Non-coding rRNA gene	-	-	-
+MT	490	T>C	Non-coding transcript exon variant	ENSCAFG00000022709	N/A	Non-coding rRNA gene	-	-	-
+MT	511	G>A	Non-coding transcript exon variant	ENSCAFG00000022709	N/A	Non-coding rRNA gene	-	-	-
+MT	516	G>A	Non-coding transcript exon variant	ENSCAFG00000022709	N/A	Non-coding rRNA gene	-	-	-
+MT	529	A>G	Non-coding transcript exon variant	ENSCAFG00000022709	N/A	Non-coding rRNA gene	-	-	-
+MT	530	T>C	Non-coding transcript exon variant	ENSCAFG00000022709	N/A	Non-coding rRNA gene	-	-	-
+MT	532	A>G	Non-coding transcript exon variant	ENSCAFG00000022709	N/A	Non-coding rRNA gene	-	-	-
+MT	559	G>A	Non-coding transcript exon variant	ENSCAFG00000022709	N/A	Non-coding rRNA gene	-	-	-
+MT	581	C>T	Non-coding transcript exon variant	ENSCAFG00000022709	N/A	Non-coding rRNA gene	-	-	-
+MT	602	T>C	Non-coding transcript exon variant	ENSCAFG00000022709	N/A	Non-coding rRNA gene	-	-	-
+MT	615	G>A	Non-coding transcript exon variant	ENSCAFG00000022709	N/A	Non-coding rRNA gene	-	-	-
+MT	634	C>T	Non-coding transcript exon variant	ENSCAFG00000022709	N/A	Non-coding rRNA gene	-	-	-
+MT	660	C>T	Non-coding transcript exon variant	ENSCAFG00000022709	N/A	Non-coding rRNA gene	-	-	-
+MT	685	G>A	Non-coding transcript exon variant	ENSCAFG00000022709	N/A	Non-coding rRNA gene	-	-	-
+MT	709	G>A	Non-coding transcript exon variant	ENSCAFG00000022709	N/A	Non-coding rRNA gene	-	-	-
+MT	728	T>C	Non-coding transcript exon variant	ENSCAFG00000022709	N/A	Non-coding rRNA gene	-	-	-
+MT	732	T>C	Non-coding transcript exon variant	ENSCAFG00000022709	N/A	Non-coding rRNA gene	-	-	-
+MT	737	A>T	Non-coding transcript exon variant	ENSCAFG00000022709	N/A	Non-coding rRNA gene	-	-	-
+MT	769	G>A	Non-coding transcript exon variant	ENSCAFG00000022709	N/A	Non-coding rRNA gene	-	-	-
+MT	770	G>A	Non-coding transcript exon variant	ENSCAFG00000022709	N/A	Non-coding rRNA gene	-	-	-
+MT	774	G>A	Non-coding transcript exon variant	ENSCAFG00000022709	N/A	Non-coding rRNA gene	-	-	-
+MT	784	G>A	Non-coding transcript exon variant	ENSCAFG00000022709	N/A	Non-coding rRNA gene	-	-	-
+MT	807	T>C	Non-coding transcript exon variant	ENSCAFG00000022709	N/A	Non-coding rRNA gene	-	-	-
+MT	808	T>C	Non-coding transcript exon variant	ENSCAFG00000022709	N/A	Non-coding rRNA gene	-	-	-
+MT	817	G>A	Non-coding transcript exon variant	ENSCAFG00000022709	N/A	Non-coding rRNA gene	-	-	-
+MT	837	T>A	Non-coding transcript exon variant	ENSCAFG00000022709	N/A	Non-coding rRNA gene	-	-	-
+MT	843	A>G	Non-coding transcript exon variant	ENSCAFG00000022709	N/A	Non-coding rRNA gene	-	-	-
+MT	849	T>C	Non-coding transcript exon variant	ENSCAFG00000022709	N/A	Non-coding rRNA gene	-	-	-
+MT	868	G>A	Non-coding transcript exon variant	ENSCAFG00000022709	N/A	Non-coding rRNA gene	-	-	-
+MT	870	G>A	Non-coding transcript exon variant	ENSCAFG00000022709	N/A	Non-coding rRNA gene	-	-	-
+MT	885	G>A	Non-coding transcript exon variant	ENSCAFG00000022709	N/A	Non-coding rRNA gene	-	-	-
+MT	955	C>T	Non-coding transcript exon variant	ENSCAFG00000022709	N/A	Non-coding rRNA gene	-	-	-
+MT	956	T>C	Non-coding transcript exon variant	ENSCAFG00000022709	N/A	Non-coding rRNA gene	-	-	-
+MT	967	A>T	Non-coding transcript exon variant	ENSCAFG00000022709	N/A	Non-coding rRNA gene	-	-	-
+MT	1010	G>A	Non-coding transcript exon variant	ENSCAFG00000022709	N/A	Non-coding rRNA gene	-	-	-
+MT	1030	G>A	Non-coding transcript exon variant	ENSCAFG00000022710	N/A	Non-coding tRNA gene	-	-	-
+MT	1065	G>A	Non-coding transcript exon variant	ENSCAFG00000022710	N/A	Non-coding tRNA gene	-	-	-
+MT	1084	A>G	Non-coding transcript exon variant	ENSCAFG00000022710	N/A	Non-coding tRNA gene	-	-	-
+MT	1091	A>G	Non-coding transcript exon variant	ENSCAFG00000022711	N/A	Non-coding rRNA gene	-	-	-
+MT	1123	G>A	Non-coding transcript exon variant	ENSCAFG00000022711	N/A	Non-coding rRNA gene	-	-	-
+MT	1124	T>C	Non-coding transcript exon variant	ENSCAFG00000022711	N/A	Non-coding rRNA gene	-	-	-
+MT	1131	G>A	Non-coding transcript exon variant	ENSCAFG00000022711	N/A	Non-coding rRNA gene	-	-	-
+MT	1134	A>G	Non-coding transcript exon variant	ENSCAFG00000022711	N/A	Non-coding rRNA gene	-	-	-
+MT	1141	A>T	Non-coding transcript exon variant	ENSCAFG00000022711	N/A	Non-coding rRNA gene	-	-	-
+MT	1173	G>A	Non-coding transcript exon variant	ENSCAFG00000022711	N/A	Non-coding rRNA gene	-	-	-
+MT	1191	G>A	Non-coding transcript exon variant	ENSCAFG00000022711	N/A	Non-coding rRNA gene	-	-	-
+MT	1204	T>C	Non-coding transcript exon variant	ENSCAFG00000022711	N/A	Non-coding rRNA gene	-	-	-
+MT	1204	T>G	Non-coding transcript exon variant	ENSCAFG00000022711	N/A	Non-coding rRNA gene	-	-	-
+MT	1250	G>A	Non-coding transcript exon variant	ENSCAFG00000022711	N/A	Non-coding rRNA gene	-	-	-
+MT	1289	C>A	Non-coding transcript exon variant	ENSCAFG00000022711	N/A	Non-coding rRNA gene	-	-	-
+MT	1351	A>G	Non-coding transcript exon variant	ENSCAFG00000022711	N/A	Non-coding rRNA gene	-	-	-
+MT	1383	G>A	Non-coding transcript exon variant	ENSCAFG00000022711	N/A	Non-coding rRNA gene	-	-	-
+MT	1395	G>A	Non-coding transcript exon variant	ENSCAFG00000022711	N/A	Non-coding rRNA gene	-	-	-
+MT	1397	A>T	Non-coding transcript exon variant	ENSCAFG00000022711	N/A	Non-coding rRNA gene	-	-	-
+MT	1401	T>C	Non-coding transcript exon variant	ENSCAFG00000022711	N/A	Non-coding rRNA gene	-	-	-
+MT	1403	G>A	Non-coding transcript exon variant	ENSCAFG00000022711	N/A	Non-coding rRNA gene	-	-	-
+MT	1403	G>C	Non-coding transcript exon variant	ENSCAFG00000022711	N/A	Non-coding rRNA gene	-	-	-
+MT	1405	G>A	Non-coding transcript exon variant	ENSCAFG00000022711	N/A	Non-coding rRNA gene	-	-	-
+MT	1425	A>T	Non-coding transcript exon variant	ENSCAFG00000022711	N/A	Non-coding rRNA gene	-	-	-
+MT	1481	T>C	Non-coding transcript exon variant	ENSCAFG00000022711	N/A	Non-coding rRNA gene	-	-	-
+MT	1658	C>T	Non-coding transcript exon variant	ENSCAFG00000022711	N/A	Non-coding rRNA gene	-	-	-
+MT	1663	A>G	Non-coding transcript exon variant	ENSCAFG00000022711	N/A	Non-coding rRNA gene	-	-	-
+MT	1692	T>C	Non-coding transcript exon variant	ENSCAFG00000022711	N/A	Non-coding rRNA gene	-	-	-
+MT	1710	T>C	Non-coding transcript exon variant	ENSCAFG00000022711	N/A	Non-coding rRNA gene	-	-	-
+MT	1710	T>G	Non-coding transcript exon variant	ENSCAFG00000022711	N/A	Non-coding rRNA gene	-	-	-
+MT	1745	C>T	Non-coding transcript exon variant	ENSCAFG00000022711	N/A	Non-coding rRNA gene	-	-	-
+MT	1764	G>A	Non-coding transcript exon variant	ENSCAFG00000022711	N/A	Non-coding rRNA gene	-	-	-
+MT	1782	T>C	Non-coding transcript exon variant	ENSCAFG00000022711	N/A	Non-coding rRNA gene	-	-	-
+MT	1795	G>A	Non-coding transcript exon variant	ENSCAFG00000022711	N/A	Non-coding rRNA gene	-	-	-
+MT	1803	T>C	Non-coding transcript exon variant	ENSCAFG00000022711	N/A	Non-coding rRNA gene	-	-	-
+MT	1845	T>C	Non-coding transcript exon variant	ENSCAFG00000022711	N/A	Non-coding rRNA gene	-	-	-
+MT	1890	G>A	Non-coding transcript exon variant	ENSCAFG00000022711	N/A	Non-coding rRNA gene	-	-	-
+MT	1986	T>C	Non-coding transcript exon variant	ENSCAFG00000022711	N/A	Non-coding rRNA gene	-	-	-
+MT	2036	T>C	Non-coding transcript exon variant	ENSCAFG00000022711	N/A	Non-coding rRNA gene	-	-	-
+MT	2055	T>G	Non-coding transcript exon variant	ENSCAFG00000022711	N/A	Non-coding rRNA gene	-	-	-
+MT	2081	T>C	Non-coding transcript exon variant	ENSCAFG00000022711	N/A	Non-coding rRNA gene	-	-	-
+MT	2122	G>A	Non-coding transcript exon variant	ENSCAFG00000022711	N/A	Non-coding rRNA gene	-	-	-
+MT	2140	T>C	Non-coding transcript exon variant	ENSCAFG00000022711	N/A	Non-coding rRNA gene	-	-	-
+MT	2146	G>A	Non-coding transcript exon variant	ENSCAFG00000022711	N/A	Non-coding rRNA gene	-	-	-
+MT	2162	G>A	Non-coding transcript exon variant	ENSCAFG00000022711	N/A	Non-coding rRNA gene	-	-	-
+MT	2196	G>A	Non-coding transcript exon variant	ENSCAFG00000022711	N/A	Non-coding rRNA gene	-	-	-
+MT	2202	T>C	Non-coding transcript exon variant	ENSCAFG00000022711	N/A	Non-coding rRNA gene	-	-	-
+MT	2208	G>A	Non-coding transcript exon variant	ENSCAFG00000022711	N/A	Non-coding rRNA gene	-	-	-
+MT	2252	G>A	Non-coding transcript exon variant	ENSCAFG00000022711	N/A	Non-coding rRNA gene	-	-	-
+MT	2273	A>C	Non-coding transcript exon variant	ENSCAFG00000022711	N/A	Non-coding rRNA gene	-	-	-
+MT	2282	T>C	Non-coding transcript exon variant	ENSCAFG00000022711	N/A	Non-coding rRNA gene	-	-	-
+MT	2298	C>T	Non-coding transcript exon variant	ENSCAFG00000022711	N/A	Non-coding rRNA gene	-	-	-
+MT	2322	T>A	Non-coding transcript exon variant	ENSCAFG00000022711	N/A	Non-coding rRNA gene	-	-	-
+MT	2401	G>A	Non-coding transcript exon variant	ENSCAFG00000022711	N/A	Non-coding rRNA gene	-	-	-
+MT	2422	G>A	Non-coding transcript exon variant	ENSCAFG00000022711	N/A	Non-coding rRNA gene	-	-	-
+MT	2425	G>A	Non-coding transcript exon variant	ENSCAFG00000022711	N/A	Non-coding rRNA gene	-	-	-
+MT	2452	G>A	Non-coding transcript exon variant	ENSCAFG00000022711	N/A	Non-coding rRNA gene	-	-	-
+MT	2455	G>A	Non-coding transcript exon variant	ENSCAFG00000022711	N/A	Non-coding rRNA gene	-	-	-
+MT	2466	T>C	Non-coding transcript exon variant	ENSCAFG00000022711	N/A	Non-coding rRNA gene	-	-	-
+MT	2549	T>C	Non-coding transcript exon variant	ENSCAFG00000022711	N/A	Non-coding rRNA gene	-	-	-
+MT	2571	G>A	Non-coding transcript exon variant	ENSCAFG00000022711	N/A	Non-coding rRNA gene	-	-	-
+MT	2595	G>A	Non-coding transcript exon variant	ENSCAFG00000022711	N/A	Non-coding rRNA gene	-	-	-
+MT	2652	G>A	Non-coding transcript exon variant	ENSCAFG00000022711	N/A	Non-coding rRNA gene	-	-	-
+MT	2663	G>A	Non-coding transcript exon variant	ENSCAFG00000022711	N/A	Non-coding rRNA gene	-	-	-
+MT	2682	G>A	Non-coding transcript exon variant	ENSCAFG00000022712	N/A	Non-coding tRNA gene	-	-	-
+MT	2683	G>A	Non-coding transcript exon variant	ENSCAFG00000022712	N/A	Non-coding tRNA gene	-	-	-
+MT	2687	C>T	Non-coding transcript exon variant	ENSCAFG00000022712	N/A	Non-coding tRNA gene	-	-	-
+MT	2702	A>T	Non-coding transcript exon variant	ENSCAFG00000022712	N/A	Non-coding tRNA gene	-	-	-
+MT	2730	T>C	Non-coding transcript exon variant	ENSCAFG00000022712	N/A	Non-coding tRNA gene	-	-	-
+MT	2738	C>T	Non-coding transcript exon variant	ENSCAFG00000022712	N/A	Non-coding tRNA gene	-	-	-
+MT	2749	G>A	Synonymous variant	ENSCAFG00000022713	ND1	Protein-coding gene	M	atG/atA	-
+MT	2767	C>A	Non-synonymous variant	ENSCAFG00000022713	ND1	Protein-coding gene	I/M	atC/atA	deleterious_low_confidence(0.01)
+MT	2813	G>A	Non-synonymous variant	ENSCAFG00000022713	ND1	Protein-coding gene	V/I	Gtt/Att	tolerated_low_confidence(0.76)
+MT	2825	G>A	Non-synonymous variant	ENSCAFG00000022713	ND1	Protein-coding gene	V/I	Gtc/Atc	tolerated_low_confidence(0.47)
+MT	2833	C>T	Synonymous variant	ENSCAFG00000022713	ND1	Protein-coding gene	G	ggC/ggT	-
+MT	2859	A>G	Non-synonymous variant	ENSCAFG00000022713	ND1	Protein-coding gene	N/S	aAt/aGt	deleterious_low_confidence(0)
+MT	2867	G>A	Non-synonymous variant	ENSCAFG00000022713	ND1	Protein-coding gene	G/S	Ggc/Agc	deleterious_low_confidence(0)
+MT	2881	C>A	Synonymous variant	ENSCAFG00000022713	ND1	Protein-coding gene	L	ctC/ctA	-
+MT	2904	T>C	Non-synonymous variant	ENSCAFG00000022713	ND1	Protein-coding gene	V/A	gTa/gCa	deleterious_low_confidence(0.02)
+MT	2926	T>C	Synonymous variant	ENSCAFG00000022713	ND1	Protein-coding gene	P	ccT/ccC	-
+MT	2962	C>T	Synonymous variant	ENSCAFG00000022713	ND1	Protein-coding gene	I	atC/atT	-
+MT	3028	A>C	Synonymous variant	ENSCAFG00000022713	ND1	Protein-coding gene	P	ccA/ccC	-
+MT	3052	C>T	Synonymous variant	ENSCAFG00000022713	ND1	Protein-coding gene	V	gtC/gtT	-
+MT	3054	T>C	Non-synonymous variant	ENSCAFG00000022713	ND1	Protein-coding gene	L/P	cTa/cCa	deleterious_low_confidence(0)
+MT	3060	T>C	Non-synonymous variant	ENSCAFG00000022713	ND1	Protein-coding gene	M/T	aTa/aCa	deleterious_low_confidence(0)
+MT	3065	G>A	Non-synonymous variant	ENSCAFG00000022713	ND1	Protein-coding gene	A/T	Gca/Aca	deleterious_low_confidence(0.03)
+MT	3082	C>T	Synonymous variant	ENSCAFG00000022713	ND1	Protein-coding gene	A	gcC/gcT	-
+MT	3089	T>C	Non-synonymous variant	ENSCAFG00000022713	ND1	Protein-coding gene	S/P	Tcc/Ccc	deleterious_low_confidence(0.01)
+MT	3093	T>C	Non-synonymous variant	ENSCAFG00000022713	ND1	Protein-coding gene	I/T	aTc/aCc	deleterious_low_confidence(0.02)
+MT	3094	C>T	Synonymous variant	ENSCAFG00000022713	ND1	Protein-coding gene	I	atC/atT	-
+MT	3164	A>G	Non-synonymous variant	ENSCAFG00000022713	ND1	Protein-coding gene	I/V	Atc/Gtc	deleterious_low_confidence(0.04)
+MT	3169	A>T	Synonymous variant	ENSCAFG00000022713	ND1	Protein-coding gene	S	tcA/tcT	-
+MT	3179	A>T	Non-synonymous variant	ENSCAFG00000022713	ND1	Protein-coding gene	T/S	Acg/Tcg	tolerated_low_confidence(0.75)
+MT	3196	T>C	Synonymous variant	ENSCAFG00000022713	ND1	Protein-coding gene	L	ctT/ctC	-
+MT	3254	G>T	STOP	ENSCAFG00000022713	ND1	Protein-coding gene	E/*	Gaa/Taa	-
+MT	3277	G>A	Synonymous variant	ENSCAFG00000022713	ND1	Protein-coding gene	P	ccG/ccA	-
+MT	3278	G>A	Non-synonymous variant	ENSCAFG00000022713	ND1	Protein-coding gene	A/T	Gcc/Acc	tolerated_low_confidence(0.58)
+MT	3327	A>G	Non-synonymous variant	ENSCAFG00000022713	ND1	Protein-coding gene	N/S	aAt/aGt	deleterious_low_confidence(0)
+MT	3375	G>A	Non-synonymous variant	ENSCAFG00000022713	ND1	Protein-coding gene	G/E	gGa/gAa	deleterious_low_confidence(0)
+MT	3388	G>A	Synonymous variant	ENSCAFG00000022713	ND1	Protein-coding gene	E	gaG/gaA	-
+MT	3406	C>A	Non-synonymous variant	ENSCAFG00000022713	ND1	Protein-coding gene	F/L	ttC/ttA	deleterious_low_confidence(0)
+MT	3406	C>T	Synonymous variant	ENSCAFG00000022713	ND1	Protein-coding gene	F	ttC/ttT	-
+MT	3435	A>G	Non-synonymous variant	ENSCAFG00000022713	ND1	Protein-coding gene	N/S	aAt/aGt	deleterious_low_confidence(0)
+MT	3450	A>G	Non-synonymous variant	ENSCAFG00000022713	ND1	Protein-coding gene	N/S	aAc/aGc	deleterious_low_confidence(0.01)
+MT	3473	T>C	Non-synonymous variant	ENSCAFG00000022713	ND1	Protein-coding gene	F/L	Ttc/Ctc	tolerated_low_confidence(1)
+MT	3476	G>A	Non-synonymous variant	ENSCAFG00000022713	ND1	Protein-coding gene	G/S	Ggc/Agc	tolerated_low_confidence(0.11)
+MT	3507	T>C	Non-synonymous variant	ENSCAFG00000022713	ND1	Protein-coding gene	L/P	cTc/cCc	deleterious_low_confidence(0.01)
+MT	3519	A>T	Non-synonymous variant	ENSCAFG00000022713	ND1	Protein-coding gene	N/I	aAc/aTc	deleterious_low_confidence(0.04)
+MT	3520	C>T	Synonymous variant	ENSCAFG00000022713	ND1	Protein-coding gene	N	aaC/aaT	-
+MT	3555	T>C	Non-synonymous variant	ENSCAFG00000022713	ND1	Protein-coding gene	F/S	tTc/tCc	deleterious_low_confidence(0)
+MT	3569	G>A	Non-synonymous variant	ENSCAFG00000022713	ND1	Protein-coding gene	A/T	Gca/Aca	deleterious_low_confidence(0.03)
+MT	3625	T>C	Synonymous variant	ENSCAFG00000022713	ND1	Protein-coding gene	F	ttT/ttC	-
+MT	3628	A>C	Synonymous variant	ENSCAFG00000022713	ND1	Protein-coding gene	L	ctA/ctC	-
+MT	3628	A>T	Synonymous variant	ENSCAFG00000022713	ND1	Protein-coding gene	L	ctA/ctT	-
+MT	3637	T>C	Synonymous variant	ENSCAFG00000022713	ND1	Protein-coding gene	T	acT/acC	-
+MT	3639	T>C	Non-synonymous variant	ENSCAFG00000022713	ND1	Protein-coding gene	L/S	tTa/tCa	deleterious_low_confidence(0)
+MT	3641	G>A	Non-synonymous variant	ENSCAFG00000022713	ND1	Protein-coding gene	A/T	Gcc/Acc	deleterious_low_confidence(0.02)
+MT	3654	G>A	STOP	ENSCAFG00000022713	ND1	Protein-coding gene	W/*	tGa/tAa	-
+MT	3662	G>A	Non-synonymous variant	ENSCAFG00000022713	ND1	Protein-coding gene	A/T	Gcc/Acc	tolerated_low_confidence(0.18)
+MT	3673	T>C	Synonymous variant	ENSCAFG00000022713	ND1	Protein-coding gene	I	atT/atC	-
+MT	3756	A>T	Non-coding transcript exon variant	ENSCAFG00000022714	N/A	Non-coding tRNA gene	-	-	-
+MT	3762	C>T	Non-coding transcript exon variant	ENSCAFG00000022714	N/A	Non-coding tRNA gene	-	-	-
+MT	3781	G>A	Non-coding transcript exon variant	ENSCAFG00000022715	N/A	Non-coding tRNA gene	-	-	-
+MT	3786	G>A	Non-coding transcript exon variant	ENSCAFG00000022715	N/A	Non-coding tRNA gene	-	-	-
+MT	3786	G>T	Non-coding transcript exon variant	ENSCAFG00000022715	N/A	Non-coding tRNA gene	-	-	-
+MT	3802	A>G	Non-coding transcript exon variant	ENSCAFG00000022715	N/A	Non-coding tRNA gene	-	-	-
+MT	3802	A>T	Non-coding transcript exon variant	ENSCAFG00000022715	N/A	Non-coding tRNA gene	-	-	-
+MT	3826	A>G	Non-coding transcript exon variant	ENSCAFG00000022715	N/A	Non-coding tRNA gene	-	-	-
+MT	3843	C>T	Non-coding	N/A	N/A	N/A	-	-	-
+MT	3859	A>T	Non-coding transcript exon variant	ENSCAFG00000022716	N/A	Non-coding tRNA gene	-	-	-
+MT	3897	A>T	Non-coding transcript exon variant	ENSCAFG00000022716	N/A	Non-coding tRNA gene	-	-	-
+MT	3936	T>C	Non-synonymous variant	ENSCAFG00000022717	ND2	Protein-coding gene	I/T	aTc/aCc	tolerated(0.21)
+MT	3983	T>C	Non-synonymous variant	ENSCAFG00000022717	ND2	Protein-coding gene	S/P	Tcg/Ccg	deleterious(0.01)
+MT	3994	A>G	Synonymous variant	ENSCAFG00000022717	ND2	Protein-coding gene	L	ttA/ttG	-
+MT	4005	T>C	Non-synonymous variant	ENSCAFG00000022717	ND2	Protein-coding gene	I/T	aTt/aCt	tolerated(0.06)
+MT	4047	T>C	Non-synonymous variant	ENSCAFG00000022717	ND2	Protein-coding gene	M/T	aTa/aCa	tolerated(0.51)
+MT	4073	G>A	Non-synonymous variant	ENSCAFG00000022717	ND2	Protein-coding gene	E/K	Gag/Aag	deleterious(0)
+MT	4076	G>A	Non-synonymous variant	ENSCAFG00000022717	ND2	Protein-coding gene	A/T	Gcc/Acc	deleterious(0)
+MT	4122	T>A	Non-synonymous variant	ENSCAFG00000022717	ND2	Protein-coding gene	L/Q	cTa/cAa	deleterious(0)
+MT	4157	G>A	Non-synonymous variant	ENSCAFG00000022717	ND2	Protein-coding gene	G/S	Ggc/Agc	deleterious(0.03)
+MT	4158	G>A	Non-synonymous variant	ENSCAFG00000022717	ND2	Protein-coding gene	G/D	gGc/gAc	deleterious(0)
+MT	4168	A>T	Synonymous variant	ENSCAFG00000022717	ND2	Protein-coding gene	V	gtA/gtT	-
+MT	4238	T>C	Non-synonymous variant	ENSCAFG00000022717	ND2	Protein-coding gene	S/P	Tct/Cct	deleterious(0.01)
+MT	4254	G>A	STOP	ENSCAFG00000022717	ND2	Protein-coding gene	W/*	tGa/tAa	-
+MT	4256	G>A	Non-synonymous variant	ENSCAFG00000022717	ND2	Protein-coding gene	V/I	Gtt/Att	deleterious(0.03)
+MT	4265	G>A	Non-synonymous variant	ENSCAFG00000022717	ND2	Protein-coding gene	V/M	Gta/Ata	deleterious(0)
+MT	4269	C>T	Non-synonymous variant	ENSCAFG00000022717	ND2	Protein-coding gene	T/M	aCa/aTa	deleterious(0.01)
+MT	4272	A>T	Non-synonymous variant	ENSCAFG00000022717	ND2	Protein-coding gene	Q/L	cAg/cTg	deleterious(0)
+MT	4281	C>T	Non-synonymous variant	ENSCAFG00000022717	ND2	Protein-coding gene	T/M	aCg/aTg	deleterious(0)
+MT	4303	A>G	Synonymous variant	ENSCAFG00000022717	ND2	Protein-coding gene	L	ctA/ctG	-
+MT	4311	G>A	STOP	ENSCAFG00000022717	ND2	Protein-coding gene	W/*	tGa/tAa	-
+MT	4313	C>A	Non-synonymous variant	ENSCAFG00000022717	ND2	Protein-coding gene	Q/K	Caa/Aaa	deleterious(0)
+MT	4320	T>C	Non-synonymous variant	ENSCAFG00000022717	ND2	Protein-coding gene	I/T	aTc/aCc	deleterious(0)
+MT	4385	G>A	Non-synonymous variant	ENSCAFG00000022717	ND2	Protein-coding gene	A/T	Gcc/Acc	deleterious(0.02)
+MT	4422	T>C	Non-synonymous variant	ENSCAFG00000022717	ND2	Protein-coding gene	L/P	cTa/cCa	deleterious(0)
+MT	4426	T>C	Synonymous variant	ENSCAFG00000022717	ND2	Protein-coding gene	N	aaT/aaC	-
+MT	4466	G>A	Non-synonymous variant	ENSCAFG00000022717	ND2	Protein-coding gene	A/T	Gcc/Acc	tolerated(0.18)
+MT	4476	G>A	Non-synonymous variant	ENSCAFG00000022717	ND2	Protein-coding gene	G/D	gGc/gAc	deleterious(0)
+MT	4483	A>T	Non-synonymous variant	ENSCAFG00000022717	ND2	Protein-coding gene	M/I	atA/atT	deleterious(0.01)
+MT	4484	G>A	Non-synonymous variant	ENSCAFG00000022717	ND2	Protein-coding gene	A/T	Gcc/Acc	tolerated(1)
+MT	4487	G>A	Non-synonymous variant	ENSCAFG00000022717	ND2	Protein-coding gene	A/T	Gct/Act	tolerated(0.17)
+MT	4506	C>T	Non-synonymous variant	ENSCAFG00000022717	ND2	Protein-coding gene	P/L	cCt/cTt	deleterious(0)
+MT	4517	G>A	Non-synonymous variant	ENSCAFG00000022717	ND2	Protein-coding gene	V/I	Gtt/Att	tolerated(0.59)
+MT	4519	T>C	Synonymous variant	ENSCAFG00000022717	ND2	Protein-coding gene	V	gtT/gtC	-
+MT	4529	A>G	Non-synonymous variant	ENSCAFG00000022717	ND2	Protein-coding gene	T/A	Act/Gct	tolerated(0.43)
+MT	4539	T>C	Non-synonymous variant	ENSCAFG00000022717	ND2	Protein-coding gene	I/T	aTt/aCt	deleterious(0.02)
+MT	4549	A>T	Synonymous variant	ENSCAFG00000022717	ND2	Protein-coding gene	T	acA/acT	-
+MT	4575	T>C	Non-synonymous variant	ENSCAFG00000022717	ND2	Protein-coding gene	L/S	tTa/tCa	tolerated(0.26)
+MT	4591	G>A	Synonymous variant	ENSCAFG00000022717	ND2	Protein-coding gene	T	acG/acA	-
+MT	4600	T>C	Synonymous variant	ENSCAFG00000022717	ND2	Protein-coding gene	S	tcT/tcC	-
+MT	4635	C>T	Non-synonymous variant	ENSCAFG00000022717	ND2	Protein-coding gene	T/I	aCt/aTt	tolerated(0.13)
+MT	4641	T>C	Non-synonymous variant	ENSCAFG00000022717	ND2	Protein-coding gene	M/T	aTa/aCa	tolerated(0.29)
+MT	4663	C>A	Synonymous variant	ENSCAFG00000022717	ND2	Protein-coding gene	S	tcC/tcA	-
+MT	4708	A>G	Synonymous variant	ENSCAFG00000022717	ND2	Protein-coding gene	M	atA/atG	-
+MT	4726	G>A	Synonymous variant	ENSCAFG00000022717	ND2	Protein-coding gene	T	acG/acA	-
+MT	4746	T>C	Non-synonymous variant	ENSCAFG00000022717	ND2	Protein-coding gene	I/T	aTt/aCt	tolerated(0.23)
+MT	4769	G>A	Non-synonymous variant	ENSCAFG00000022717	ND2	Protein-coding gene	A/T	Gct/Act	tolerated(0.19)
+MT	4813	C>T	Synonymous variant	ENSCAFG00000022717	ND2	Protein-coding gene	T	acC/acT	-
+MT	4814	G>A	Non-synonymous variant	ENSCAFG00000022717	ND2	Protein-coding gene	A/T	Gca/Aca	tolerated(0.4)
+MT	4816	A>T	Synonymous variant	ENSCAFG00000022717	ND2	Protein-coding gene	A	gcA/gcT	-
+MT	4861	G>A	Synonymous variant	ENSCAFG00000022717	ND2	Protein-coding gene	Q	caG/caA	-
+MT	4865	G>A	Non-synonymous variant	ENSCAFG00000022717	ND2	Protein-coding gene	E/K	Gaa/Aaa	tolerated(0.55)
+MT	4879	G>A	Synonymous variant	ENSCAFG00000022717	ND2	Protein-coding gene	K	aaG/aaA	-
+MT	4913	A>G	Non-synonymous variant	ENSCAFG00000022717	ND2	Protein-coding gene	T/A	Act/Gct	deleterious(0.04)
+MT	4917	T>C	Non-synonymous variant	ENSCAFG00000022717	ND2	Protein-coding gene	M/T	aTa/aCa	deleterious(0.03)
+MT	4936	T>C	Synonymous variant	ENSCAFG00000022717	ND2	Protein-coding gene	P	ccT/ccC	-
+MT	4940	T>C	Synonymous variant	ENSCAFG00000022717	ND2	Protein-coding gene	L	Tta/Cta	-
+MT	4959	A>G	Non-coding transcript exon variant	ENSCAFG00000022718	N/A	Non-coding tRNA gene	-	-	-
+MT	5014	T>C	Non-coding transcript exon variant	ENSCAFG00000022718	N/A	Non-coding tRNA gene	-	-	-
+MT	5054	T>C	Non-coding transcript exon variant	ENSCAFG00000022719	N/A	Non-coding tRNA gene	-	-	-
+MT	5115	G>C	Non-coding transcript exon variant	ENSCAFG00000022720	N/A	Non-coding tRNA gene	-	-	-
+MT	5124	T>C	Non-coding transcript exon variant	ENSCAFG00000022720	N/A	Non-coding tRNA gene	-	-	-
+MT	5136	T>G	Non-coding transcript exon variant	ENSCAFG00000022720	N/A	Non-coding tRNA gene	-	-	-
+MT	5148	G>A	Non-coding transcript exon variant	ENSCAFG00000022720	N/A	Non-coding tRNA gene	-	-	-
+MT	5162	T>C	Non-coding transcript exon variant	ENSCAFG00000022720	N/A	Non-coding tRNA gene	-	-	-
+MT	5259	A>T	Non-coding transcript exon variant	ENSCAFG00000022721	N/A	Non-coding tRNA gene	-	-	-
+MT	5269	A>G	Non-coding transcript exon variant	ENSCAFG00000022721	N/A	Non-coding tRNA gene	-	-	-
+MT	5320	G>A	Non-coding transcript exon variant	ENSCAFG00000022722	N/A	Non-coding tRNA gene	-	-	-
+MT	5323	T>A	Non-coding transcript exon variant	ENSCAFG00000022722	N/A	Non-coding tRNA gene	-	-	-
+MT	5336	A>G	Non-coding transcript exon variant	ENSCAFG00000022722	N/A	Non-coding tRNA gene	-	-	-
+MT	5367	C>T	Synonymous variant	ENSCAFG00000022723	COX1	Protein-coding gene	L	Ctg/Ttg	-
+MT	5380	A>G	Non-synonymous variant	ENSCAFG00000022723	COX1	Protein-coding gene	N/S	aAt/aGt	deleterious_low_confidence(0)
+MT	5385	A>C	Non-synonymous variant	ENSCAFG00000022723	COX1	Protein-coding gene	K/Q	Aag/Cag	deleterious_low_confidence(0)
+MT	5399	T>C	Synonymous variant	ENSCAFG00000022723	COX1	Protein-coding gene	T	acT/acC	-
+MT	5402	A>G	Synonymous variant	ENSCAFG00000022723	COX1	Protein-coding gene	L	ttA/ttG	-
+MT	5444	T>C	Synonymous variant	ENSCAFG00000022723	COX1	Protein-coding gene	A	gcT/gcC	-
+MT	5463	G>A	Non-synonymous variant	ENSCAFG00000022723	COX1	Protein-coding gene	A/T	Gcc/Acc	tolerated_low_confidence(0.3)
+MT	5473	G>A	Non-synonymous variant	ENSCAFG00000022723	COX1	Protein-coding gene	G/D	gGt/gAt	deleterious_low_confidence(0)
+MT	5483	T>C	Synonymous variant	ENSCAFG00000022723	COX1	Protein-coding gene	G	ggT/ggC	-
+MT	5487	T>C	Synonymous variant	ENSCAFG00000022723	COX1	Protein-coding gene	L	Tta/Cta	-
+MT	5493	G>A	Non-synonymous variant	ENSCAFG00000022723	COX1	Protein-coding gene	G/S	Ggt/Agt	deleterious_low_confidence(0.01)
+MT	5505	A>G	Non-synonymous variant	ENSCAFG00000022723	COX1	Protein-coding gene	I/V	Att/Gtt	deleterious_low_confidence(0.02)
+MT	5561	G>A	Synonymous variant	ENSCAFG00000022723	COX1	Protein-coding gene	M	atG/atA	-
+MT	5565	A>G	Non-synonymous variant	ENSCAFG00000022723	COX1	Protein-coding gene	I/V	Atc/Gtc	tolerated_low_confidence(0.15)
+MT	5594	A>G	Synonymous variant	ENSCAFG00000022723	COX1	Protein-coding gene	L	ctA/ctG	-
+MT	5595	G>A	Non-synonymous variant	ENSCAFG00000022723	COX1	Protein-coding gene	V/M	Gtg/Atg	deleterious_low_confidence(0)
+MT	5601	T>C	Synonymous variant	ENSCAFG00000022723	COX1	Protein-coding gene	L	Tta/Cta	-
+MT	5613	G>A	Non-synonymous variant	ENSCAFG00000022723	COX1	Protein-coding gene	A/T	Gct/Act	deleterious_low_confidence(0)
+MT	5618	G>A	Synonymous variant	ENSCAFG00000022723	COX1	Protein-coding gene	P	ccG/ccA	-
+MT	5646	A>G	Non-synonymous variant	ENSCAFG00000022723	COX1	Protein-coding gene	M/V	Atg/Gtg	deleterious_low_confidence(0)
+MT	5700	G>A	Non-synonymous variant	ENSCAFG00000022723	COX1	Protein-coding gene	V/M	Gta/Ata	deleterious_low_confidence(0.02)
+MT	5701	T>C	Non-synonymous variant	ENSCAFG00000022723	COX1	Protein-coding gene	V/A	gTa/gCa	deleterious_low_confidence(0.03)
+MT	5712	G>A	Non-synonymous variant	ENSCAFG00000022723	COX1	Protein-coding gene	A/T	Gca/Aca	deleterious_low_confidence(0.03)
+MT	5715	G>A	STOP	ENSCAFG00000022723	COX1	Protein-coding gene	G/*	Gga/Aga	-
+MT	5730	G>A	Non-synonymous variant	ENSCAFG00000022723	COX1	Protein-coding gene	V/M	Gta/Ata	deleterious_low_confidence(0)
+MT	5738	C>A	Synonymous variant	ENSCAFG00000022723	COX1	Protein-coding gene	P	ccC/ccA	-
+MT	5738	C>T	Synonymous variant	ENSCAFG00000022723	COX1	Protein-coding gene	P	ccC/ccT	-
+MT	5756	G>A	Synonymous variant	ENSCAFG00000022723	COX1	Protein-coding gene	L	ctG/ctA	-
+MT	5757	G>A	Non-synonymous variant	ENSCAFG00000022723	COX1	Protein-coding gene	A/T	Gcc/Acc	deleterious_low_confidence(0.04)
+MT	5769	G>A	Non-synonymous variant	ENSCAFG00000022723	COX1	Protein-coding gene	A/T	Gca/Aca	deleterious_low_confidence(0.03)
+MT	5770	C>T	Non-synonymous variant	ENSCAFG00000022723	COX1	Protein-coding gene	A/V	gCa/gTa	deleterious_low_confidence(0.02)
+MT	5871	G>A	Non-synonymous variant	ENSCAFG00000022723	COX1	Protein-coding gene	A/T	Gca/Aca	tolerated_low_confidence(0.06)
+MT	5968	C>T	Non-synonymous variant	ENSCAFG00000022723	COX1	Protein-coding gene	T/M	aCa/aTa	deleterious_low_confidence(0)
+MT	6005	T>C	Synonymous variant	ENSCAFG00000022723	COX1	Protein-coding gene	F	ttT/ttC	-
+MT	6009	G>A	Non-synonymous variant	ENSCAFG00000022723	COX1	Protein-coding gene	D/N	Gat/Aat	deleterious_low_confidence(0)
+MT	6034	T>C	Non-synonymous variant	ENSCAFG00000022723	COX1	Protein-coding gene	I/T	aTc/aCc	deleterious_low_confidence(0.02)
+MT	6065	A>G	Synonymous variant	ENSCAFG00000022723	COX1	Protein-coding gene	G	ggA/ggG	-
+MT	6068	T>C	Synonymous variant	ENSCAFG00000022723	COX1	Protein-coding gene	H	caT/caC	-
+MT	6108	A>C	Non-synonymous variant	ENSCAFG00000022723	COX1	Protein-coding gene	I/L	Att/Ctt	deleterious_low_confidence(0)
+MT	6120	G>A	Non-synonymous variant	ENSCAFG00000022723	COX1	Protein-coding gene	V/I	Gtc/Atc	tolerated_low_confidence(0.97)
+MT	6143	A>T	Non-synonymous variant	ENSCAFG00000022723	COX1	Protein-coding gene	K/N	aaA/aaT	tolerated_low_confidence(0.1)
+MT	6146	G>A	Synonymous variant	ENSCAFG00000022723	COX1	Protein-coding gene	E	gaG/gaA	-
+MT	6152	C>T	Synonymous variant	ENSCAFG00000022723	COX1	Protein-coding gene	F	ttC/ttT	-
+MT	6154	G>A	Non-synonymous variant	ENSCAFG00000022723	COX1	Protein-coding gene	G/D	gGt/gAt	deleterious_low_confidence(0)
+MT	6170	A>G	Synonymous variant	ENSCAFG00000022723	COX1	Protein-coding gene	V	gtA/gtG	-
+MT	6175	C>T	Non-synonymous variant	ENSCAFG00000022723	COX1	Protein-coding gene	A/V	gCa/gTa	deleterious_low_confidence(0)
+MT	6192	T>G	Non-synonymous variant	ENSCAFG00000022723	COX1	Protein-coding gene	F/V	Ttt/Gtt	tolerated_low_confidence(0.1)
+MT	6257	G>A	Synonymous variant	ENSCAFG00000022723	COX1	Protein-coding gene	A	gcG/gcA	-
+MT	6266	G>A	Synonymous variant	ENSCAFG00000022723	COX1	Protein-coding gene	T	acG/acA	-
+MT	6270	G>A	Non-synonymous variant	ENSCAFG00000022723	COX1	Protein-coding gene	A/T	Gcc/Acc	deleterious_low_confidence(0)
+MT	6302	A>G	Synonymous variant	ENSCAFG00000022723	COX1	Protein-coding gene	V	gtA/gtG	-
+MT	6321	G>A	Non-synonymous variant	ENSCAFG00000022723	COX1	Protein-coding gene	A/T	Gca/Aca	deleterious_low_confidence(0.01)
+MT	6351	T>C	Non-synonymous variant	ENSCAFG00000022723	COX1	Protein-coding gene	S/P	Tct/Cct	deleterious_low_confidence(0.01)
+MT	6364	T>C	Non-synonymous variant	ENSCAFG00000022723	COX1	Protein-coding gene	L/P	cTa/cCa	deleterious_low_confidence(0)
+MT	6377	G>A	Synonymous variant	ENSCAFG00000022723	COX1	Protein-coding gene	G	ggG/ggA	-
+MT	6396	G>A	Non-synonymous variant	ENSCAFG00000022723	COX1	Protein-coding gene	V/M	Gta/Ata	tolerated_low_confidence(0.15)
+MT	6401	C>A	Synonymous variant	ENSCAFG00000022723	COX1	Protein-coding gene	G	ggC/ggA	-
+MT	6401	C>T	Synonymous variant	ENSCAFG00000022723	COX1	Protein-coding gene	G	ggC/ggT	-
+MT	6455	T>C	Synonymous variant	ENSCAFG00000022723	COX1	Protein-coding gene	D	gaT/gaC	-
+MT	6461	T>C	Synonymous variant	ENSCAFG00000022723	COX1	Protein-coding gene	Y	taT/taC	-
+MT	6473	T>C	Synonymous variant	ENSCAFG00000022723	COX1	Protein-coding gene	A	gcT/gcC	-
+MT	6494	A>G	Synonymous variant	ENSCAFG00000022723	COX1	Protein-coding gene	S	tcA/tcG	-
+MT	6506	T>C	Synonymous variant	ENSCAFG00000022723	COX1	Protein-coding gene	V	gtT/gtC	-
+MT	6518	G>A	Synonymous variant	ENSCAFG00000022723	COX1	Protein-coding gene	M	atG/atA	-
+MT	6537	T>C	Non-synonymous variant	ENSCAFG00000022723	COX1	Protein-coding gene	F/L	Ttc/Ctc	deleterious_low_confidence(0.01)
+MT	6554	T>C	Synonymous variant	ENSCAFG00000022723	COX1	Protein-coding gene	G	ggT/ggC	-
+MT	6588	T>A	Non-synonymous variant	ENSCAFG00000022723	COX1	Protein-coding gene	F/I	Ttt/Att	deleterious_low_confidence(0)
+MT	6610	T>C	Non-synonymous variant	ENSCAFG00000022723	COX1	Protein-coding gene	V/A	gTa/gCa	deleterious_low_confidence(0)
+MT	6636	T>C	Non-synonymous variant	ENSCAFG00000022723	COX1	Protein-coding gene	F/L	Ttc/Ctc	deleterious_low_confidence(0)
+MT	6712	C>T	Non-synonymous variant	ENSCAFG00000022723	COX1	Protein-coding gene	S/F	tCt/tTt	deleterious_low_confidence(0)
+MT	6726	A>G	Non-synonymous variant	ENSCAFG00000022723	COX1	Protein-coding gene	I/V	Atc/Gtc	tolerated_low_confidence(0.06)
+MT	6728	C>T	Synonymous variant	ENSCAFG00000022723	COX1	Protein-coding gene	I	atC/atT	-
+MT	6731	G>A	Synonymous variant	ENSCAFG00000022723	COX1	Protein-coding gene	S	tcG/tcA	-
+MT	6742	T>A	Non-synonymous variant	ENSCAFG00000022723	COX1	Protein-coding gene	V/E	gTg/gAg	deleterious_low_confidence(0)
+MT	6744	A>T	Non-synonymous variant	ENSCAFG00000022723	COX1	Protein-coding gene	M/L	Atg/Ttg	tolerated_low_confidence(0.69)
+MT	6752	A>G	Synonymous variant	ENSCAFG00000022723	COX1	Protein-coding gene	M	atA/atG	-
+MT	6754	T>C	Non-synonymous variant	ENSCAFG00000022723	COX1	Protein-coding gene	I/T	aTt/aCt	tolerated_low_confidence(0.07)
+MT	6778	C>T	Non-synonymous variant	ENSCAFG00000022723	COX1	Protein-coding gene	A/V	gCa/gTa	tolerated_low_confidence(0.61)
+MT	6795	G>A	Non-synonymous variant	ENSCAFG00000022723	COX1	Protein-coding gene	A/T	Gct/Act	tolerated_low_confidence(0.13)
+MT	6804	G>A	Non-synonymous variant	ENSCAFG00000022723	COX1	Protein-coding gene	E/K	Gaa/Aaa	tolerated_low_confidence(0.46)
+MT	6827	G>A	Synonymous variant	ENSCAFG00000022723	COX1	Protein-coding gene	E	gaG/gaA	-
+MT	6841	G>A	Non-synonymous variant	ENSCAFG00000022723	COX1	Protein-coding gene	C/Y	tGt/tAt	tolerated_low_confidence(0.6)
+MT	6883	T>C	Non-synonymous variant	ENSCAFG00000022723	COX1	Protein-coding gene	I/T	aTc/aCc	tolerated_low_confidence(0.18)
+MT	6907	C>T	Non-coding transcript exon variant	ENSCAFG00000022724	N/A	Non-coding tRNA gene	-	-	-
+MT	6947	T>C	Non-coding transcript exon variant	ENSCAFG00000022724	N/A	Non-coding tRNA gene	-	-	-
+MT	6950	T>C	Non-coding transcript exon variant	ENSCAFG00000022724	N/A	Non-coding tRNA gene	-	-	-
+MT	6973	T>C	Non-coding transcript exon variant	ENSCAFG00000022725	N/A	Non-coding tRNA gene	-	-	-
+MT	7003	T>C	Non-coding transcript exon variant	ENSCAFG00000022725	N/A	Non-coding tRNA gene	-	-	-
+MT	7013	G>A	Non-coding transcript exon variant	ENSCAFG00000022725	N/A	Non-coding tRNA gene	-	-	-
+MT	7016	A>G	Non-coding transcript exon variant	ENSCAFG00000022725	N/A	Non-coding tRNA gene	-	-	-
+MT	7058	T>C	Synonymous variant	ENSCAFG00000022726	COX2	Protein-coding gene	L	Tta/Cta	-
+MT	7087	G>A	Synonymous variant	ENSCAFG00000022726	COX2	Protein-coding gene	E	gaG/gaA	-
+MT	7093	A>G	Synonymous variant	ENSCAFG00000022726	COX2	Protein-coding gene	L	ctA/ctG	-
+MT	7145	G>A	Non-synonymous variant	ENSCAFG00000022726	COX2	Protein-coding gene	V/I	Gtt/Att	deleterious_low_confidence(0.03)
+MT	7170	T>C	Non-synonymous variant	ENSCAFG00000022726	COX2	Protein-coding gene	L/S	tTg/tCg	deleterious_low_confidence(0)
+MT	7184	A>G	Non-synonymous variant	ENSCAFG00000022726	COX2	Protein-coding gene	T/A	Acc/Gcc	deleterious_low_confidence(0)
+MT	7214	G>A	Non-synonymous variant	ENSCAFG00000022726	COX2	Protein-coding gene	V/M	Gtg/Atg	tolerated_low_confidence(0.06)
+MT	7233	T>C	Non-synonymous variant	ENSCAFG00000022726	COX2	Protein-coding gene	I/T	aTt/aCt	deleterious_low_confidence(0.02)
+MT	7241	G>A	Non-synonymous variant	ENSCAFG00000022726	COX2	Protein-coding gene	A/T	Gcc/Acc	deleterious_low_confidence(0.02)
+MT	7267	A>G	Synonymous variant	ENSCAFG00000022726	COX2	Protein-coding gene	L	ctA/ctG	-
+MT	7295	G>A	Non-synonymous variant	ENSCAFG00000022726	COX2	Protein-coding gene	D/N	Gac/Aac	deleterious_low_confidence(0)
+MT	7322	G>A	Non-synonymous variant	ENSCAFG00000022726	COX2	Protein-coding gene	V/M	Gtg/Atg	deleterious_low_confidence(0.03)
+MT	7324	G>A	Synonymous variant	ENSCAFG00000022726	COX2	Protein-coding gene	V	gtG/gtA	-
+MT	7327	A>T	Non-synonymous variant	ENSCAFG00000022726	COX2	Protein-coding gene	K/N	aaA/aaT	deleterious_low_confidence(0)
+MT	7360	A>G	Synonymous variant	ENSCAFG00000022726	COX2	Protein-coding gene	E	gaA/gaG	-
+MT	7378	C>T	Synonymous variant	ENSCAFG00000022726	COX2	Protein-coding gene	D	gaC/gaT	-
+MT	7384	C>T	Synonymous variant	ENSCAFG00000022726	COX2	Protein-coding gene	N	aaC/aaT	-
+MT	7400	A>G	Non-synonymous variant	ENSCAFG00000022726	COX2	Protein-coding gene	I/V	Atc/Gtc	tolerated_low_confidence(0.59)
+MT	7401	T>C	Non-synonymous variant	ENSCAFG00000022726	COX2	Protein-coding gene	I/T	aTc/aCc	tolerated_low_confidence(0.43)
+MT	7442	G>A	Non-synonymous variant	ENSCAFG00000022726	COX2	Protein-coding gene	E/K	Gaa/Aaa	deleterious_low_confidence(0)
+MT	7453	C>T	Synonymous variant	ENSCAFG00000022726	COX2	Protein-coding gene	N	aaC/aaT	-
+MT	7457	G>A	Non-synonymous variant	ENSCAFG00000022726	COX2	Protein-coding gene	V/I	Gtt/Att	deleterious_low_confidence(0.04)
+MT	7465	C>T	Synonymous variant	ENSCAFG00000022726	COX2	Protein-coding gene	L	ctC/ctT	-
+MT	7504	A>T	Non-synonymous variant	ENSCAFG00000022726	COX2	Protein-coding gene	E/D	gaA/gaT	tolerated_low_confidence(0.16)
+MT	7507	C>T	Synonymous variant	ENSCAFG00000022726	COX2	Protein-coding gene	D	gaC/gaT	-
+MT	7508	G>A	Non-synonymous variant	ENSCAFG00000022726	COX2	Protein-coding gene	V/I	Gtt/Att	deleterious_low_confidence(0)
+MT	7528	T>C	Synonymous variant	ENSCAFG00000022726	COX2	Protein-coding gene	V	gtT/gtC	-
+MT	7539	G>A	Non-synonymous variant	ENSCAFG00000022726	COX2	Protein-coding gene	G/D	gGt/gAt	deleterious_low_confidence(0)
+MT	7590	C>T	Non-synonymous variant	ENSCAFG00000022726	COX2	Protein-coding gene	A/V	gCc/gTc	tolerated_low_confidence(0.5)
+MT	7591	C>A	Synonymous variant	ENSCAFG00000022726	COX2	Protein-coding gene	A	gcC/gcA	-
+MT	7593	T>C	Non-synonymous variant	ENSCAFG00000022726	COX2	Protein-coding gene	M/T	aTa/aCa	tolerated_low_confidence(0.76)
+MT	7682	T>C	Non-synonymous variant	ENSCAFG00000022726	COX2	Protein-coding gene	S/P	Tct/Cct	tolerated_low_confidence(0.21)
+MT	7693	G>A	Synonymous variant	ENSCAFG00000022726	COX2	Protein-coding gene	E	gaG/gaA	-
+MT	7699	A>G	Synonymous variant	ENSCAFG00000022726	COX2	Protein-coding gene	W	tgA/tgG	-
+MT	7729	T>C	Non-coding	N/A	N/A	N/A	-	-	-
+MT	7779	G>A	Non-coding transcript exon variant	ENSCAFG00000022727	N/A	Non-coding tRNA gene	-	-	-
+MT	7837	T>C	Non-synonymous variant	ENSCAFG00000022728	ATP8	Protein-coding gene	M/T	aTa/aCa	tolerated(1)
+MT	7913	G>A	Synonymous variant	ENSCAFG00000022728	ATP8	Protein-coding gene	P	ccG/ccA	-
+MT	7919	C>T	Synonymous variant	ENSCAFG00000022728	ATP8	Protein-coding gene	T	acC/acT	-
+MT	7926	G>A	Non-synonymous variant	ENSCAFG00000022728	ATP8	Protein-coding gene	A/T	Gct/Act	tolerated(1)
+MT	7938	G>A	Non-synonymous variant	ENSCAFG00000022728	ATP8	Protein-coding gene	G/S	Ggt/Agt	tolerated(0.11)
+MT	8041	C>T	Synonymous variant	ENSCAFG00000022729	ATP6	Protein-coding gene	F	ttC/ttT	-
+MT	8067	G>A	Non-synonymous variant	ENSCAFG00000022729	ATP6	Protein-coding gene	S/N	aGt/aAt	tolerated(0.87)
+MT	8086	G>A	Synonymous variant	ENSCAFG00000022729	ATP6	Protein-coding gene	R	cgG/cgA	-
+MT	8145	A>G	Non-synonymous variant	ENSCAFG00000022729	ATP6	Protein-coding gene	H/R	cAt/cGt	deleterious_low_confidence(0.02)
+MT	8173	C>T	Synonymous variant	ENSCAFG00000022729	ATP6	Protein-coding gene	L	ctC/ctT	-
+MT	8180	A>G	Non-synonymous variant	ENSCAFG00000022729	ATP6	Protein-coding gene	M/V	Ata/Gta	tolerated(0.42)
+MT	8192	C>T	Synonymous variant	ENSCAFG00000022729	ATP6	Protein-coding gene	L	Cta/Tta	-
+MT	8213	C>A	Non-synonymous variant	ENSCAFG00000022729	ATP6	Protein-coding gene	L/M	Cta/Ata	tolerated(0.25)
+MT	8234	T>G	Non-synonymous variant	ENSCAFG00000022729	ATP6	Protein-coding gene	S/A	Tca/Gca	tolerated(0.06)
+MT	8236	A>T	Synonymous variant	ENSCAFG00000022729	ATP6	Protein-coding gene	S	tcA/tcT	-
+MT	8242	G>A	Synonymous variant	ENSCAFG00000022729	ATP6	Protein-coding gene	T	acG/acA	-
+MT	8265	A>G	Non-synonymous variant	ENSCAFG00000022729	ATP6	Protein-coding gene	N/S	aAc/aGc	deleterious(0.01)
+MT	8276	G>A	Non-synonymous variant	ENSCAFG00000022729	ATP6	Protein-coding gene	A/T	Gca/Aca	deleterious(0)
+MT	8281	T>C	Synonymous variant	ENSCAFG00000022729	ATP6	Protein-coding gene	I	atT/atC	-
+MT	8296	G>A	Synonymous variant	ENSCAFG00000022729	ATP6	Protein-coding gene	G	ggG/ggA	-
+MT	8297	A>G	Non-synonymous variant	ENSCAFG00000022729	ATP6	Protein-coding gene	T/A	Aca/Gca	tolerated(0.11)
+MT	8333	T>C	Non-synonymous variant	ENSCAFG00000022729	ATP6	Protein-coding gene	S/P	Tcc/Ccc	deleterious(0)
+MT	8336	T>C	Synonymous variant	ENSCAFG00000022729	ATP6	Protein-coding gene	L	Tta/Cta	-
+MT	8368	C>T	Synonymous variant	ENSCAFG00000022729	ATP6	Protein-coding gene	L	ctC/ctT	-
+MT	8408	C>T	Synonymous variant	ENSCAFG00000022729	ATP6	Protein-coding gene	L	Cta/Tta	-
+MT	8426	G>A	Non-synonymous variant	ENSCAFG00000022729	ATP6	Protein-coding gene	A/T	Gct/Act	deleterious(0.03)
+MT	8457	C>A	Non-synonymous variant	ENSCAFG00000022729	ATP6	Protein-coding gene	T/N	aCt/aAt	deleterious(0)
+MT	8470	C>T	Synonymous variant	ENSCAFG00000022729	ATP6	Protein-coding gene	L	ctC/ctT	-
+MT	8489	G>A	STOP	ENSCAFG00000022729	ATP6	Protein-coding gene	G/*	Ggg/Agg	-
+MT	8492	G>A	Non-synonymous variant	ENSCAFG00000022729	ATP6	Protein-coding gene	A/T	Gct/Act	tolerated(0.11)
+MT	8495	A>G	Non-synonymous variant	ENSCAFG00000022729	ATP6	Protein-coding gene	T/A	Acc/Gcc	tolerated(0.57)
+MT	8514	T>C	Non-synonymous variant	ENSCAFG00000022729	ATP6	Protein-coding gene	I/T	aTt/aCt	tolerated_low_confidence(0.19)
+MT	8517	G>A	Non-synonymous variant	ENSCAFG00000022729	ATP6	Protein-coding gene	S/N	aGc/aAc	tolerated(0.37)
+MT	8565	T>C	Non-synonymous variant	ENSCAFG00000022729	ATP6	Protein-coding gene	I/T	aTc/aCc	tolerated_low_confidence(0.1)
+MT	8567	C>T	Synonymous variant	ENSCAFG00000022729	ATP6	Protein-coding gene	L	Cta/Tta	-
+MT	8569	A>G	Synonymous variant	ENSCAFG00000022729	ATP6	Protein-coding gene	L	ctA/ctG	-
+MT	8581	T>C	Synonymous variant	ENSCAFG00000022729	ATP6	Protein-coding gene	V	gtT/gtC	-
+MT	8586	T>C	Non-synonymous variant	ENSCAFG00000022729	ATP6	Protein-coding gene	L/S	tTa/tCa	deleterious_low_confidence(0)
+MT	8603	T>C	Non-synonymous variant	ENSCAFG00000022729	ATP6	Protein-coding gene	F/L	Ttt/Ctt	deleterious_low_confidence(0)
+MT	8609	T>C	Synonymous variant	ENSCAFG00000022729	ATP6	Protein-coding gene	L	Tta/Cta	-
+MT	8611	A>G	Synonymous variant	ENSCAFG00000022729	ATP6	Protein-coding gene	L	ttA/ttG	-
+MT	8658	T>C	Synonymous variant	ENSCAFG00000022730	MT-CO3	Protein-coding gene	T	acT/acC	-
+MT	8662	G>A	Non-synonymous variant	ENSCAFG00000022730	MT-CO3	Protein-coding gene	A/T	Gct/Act	tolerated_low_confidence(0.09)
+MT	8664	T>C	Synonymous variant	ENSCAFG00000022730	MT-CO3	Protein-coding gene	A	gcT/gcC	-
+MT	8668	C>T	Non-synonymous variant	ENSCAFG00000022730	MT-CO3	Protein-coding gene	H/Y	Cac/Tac	deleterious_low_confidence(0)
+MT	8697	G>A	Synonymous variant	ENSCAFG00000022730	MT-CO3	Protein-coding gene	L	ctG/ctA	-
+MT	8699	C>T	Non-synonymous variant	ENSCAFG00000022730	MT-CO3	Protein-coding gene	T/M	aCa/aTa	deleterious_low_confidence(0.03)
+MT	8725	A>T	Non-synonymous variant	ENSCAFG00000022730	MT-CO3	Protein-coding gene	T/S	Aca/Tca	deleterious_low_confidence(0)
+MT	8760	A>G	Synonymous variant	ENSCAFG00000022730	MT-CO3	Protein-coding gene	S	tcA/tcG	-
+MT	8773	A>G	Non-synonymous variant	ENSCAFG00000022730	MT-CO3	Protein-coding gene	T/A	Aca/Gca	tolerated_low_confidence(0.61)
+MT	8807	G>A	Non-synonymous variant	ENSCAFG00000022730	MT-CO3	Protein-coding gene	C/Y	tGc/tAc	tolerated_low_confidence(1)
+MT	8808	C>T	Synonymous variant	ENSCAFG00000022730	MT-CO3	Protein-coding gene	C	tgC/tgT	-
+MT	8817	A>G	Synonymous variant	ENSCAFG00000022730	MT-CO3	Protein-coding gene	W	tgA/tgG	-
+MT	8822	A>G	Non-synonymous variant	ENSCAFG00000022730	MT-CO3	Protein-coding gene	D/G	gAt/gGt	deleterious_low_confidence(0)
+MT	8864	T>C	Non-synonymous variant	ENSCAFG00000022730	MT-CO3	Protein-coding gene	I/T	aTt/aCt	tolerated_low_confidence(0.21)
+MT	8882	G>A	Non-synonymous variant	ENSCAFG00000022730	MT-CO3	Protein-coding gene	R/Q	cGa/cAa	deleterious_low_confidence(0)
+MT	8915	T>C	Non-synonymous variant	ENSCAFG00000022730	MT-CO3	Protein-coding gene	V/A	gTa/gCa	deleterious_low_confidence(0.04)
+MT	8930	G>A	Non-synonymous variant	ENSCAFG00000022730	MT-CO3	Protein-coding gene	G/D	gGc/gAc	deleterious_low_confidence(0)
+MT	8961	A>G	Synonymous variant	ENSCAFG00000022730	MT-CO3	Protein-coding gene	L	ctA/ctG	-
+MT	8962	G>A	Non-synonymous variant	ENSCAFG00000022730	MT-CO3	Protein-coding gene	A/T	Gcc/Acc	deleterious_low_confidence(0.03)
+MT	8965	C>T	Non-synonymous variant	ENSCAFG00000022730	MT-CO3	Protein-coding gene	P/S	Cct/Tct	deleterious_low_confidence(0.01)
+MT	8974	G>A	Non-synonymous variant	ENSCAFG00000022730	MT-CO3	Protein-coding gene	E/K	Gaa/Aaa	deleterious_low_confidence(0.01)
+MT	8982	G>A	Synonymous variant	ENSCAFG00000022730	MT-CO3	Protein-coding gene	G	ggG/ggA	-
+MT	9001	G>A	Non-synonymous variant	ENSCAFG00000022730	MT-CO3	Protein-coding gene	G/S	Ggc/Agc	deleterious_low_confidence(0.01)
+MT	9035	T>C	Non-synonymous variant	ENSCAFG00000022730	MT-CO3	Protein-coding gene	L/P	cTa/cCa	deleterious_low_confidence(0)
+MT	9058	G>A	Non-synonymous variant	ENSCAFG00000022730	MT-CO3	Protein-coding gene	A/T	Gcc/Acc	deleterious_low_confidence(0.05)
+MT	9064	G>A	STOP	ENSCAFG00000022730	MT-CO3	Protein-coding gene	G/*	Gga/Aga	-
+MT	9107	A>G	Non-synonymous variant	ENSCAFG00000022730	MT-CO3	Protein-coding gene	N/S	aAt/aGt	tolerated_low_confidence(0.1)
+MT	9110	G>A	Non-synonymous variant	ENSCAFG00000022730	MT-CO3	Protein-coding gene	R/H	cGc/cAc	tolerated_low_confidence(0.1)
+MT	9120	A>G	Synonymous variant	ENSCAFG00000022730	MT-CO3	Protein-coding gene	M	atA/atG	-
+MT	9134	T>C	Non-synonymous variant	ENSCAFG00000022730	MT-CO3	Protein-coding gene	F/S	tTc/tCc	tolerated_low_confidence(0.48)
+MT	9152	G>A	Non-synonymous variant	ENSCAFG00000022730	MT-CO3	Protein-coding gene	G/D	gGc/gAc	deleterious_low_confidence(0.02)
+MT	9153	C>T	Synonymous variant	ENSCAFG00000022730	MT-CO3	Protein-coding gene	G	ggC/ggT	-
+MT	9154	G>A	Non-synonymous variant	ENSCAFG00000022730	MT-CO3	Protein-coding gene	V/M	Gta/Ata	tolerated_low_confidence(0.08)
+MT	9191	A>T	Non-synonymous variant	ENSCAFG00000022730	MT-CO3	Protein-coding gene	E/V	gAg/gTg	deleterious_low_confidence(0)
+MT	9211	G>A	Non-synonymous variant	ENSCAFG00000022730	MT-CO3	Protein-coding gene	D/N	Gat/Aat	deleterious_low_confidence(0)
+MT	9217	G>A	Non-synonymous variant	ENSCAFG00000022730	MT-CO3	Protein-coding gene	V/M	Gta/Ata	deleterious_low_confidence(0)
+MT	9241	G>A	Non-synonymous variant	ENSCAFG00000022730	MT-CO3	Protein-coding gene	A/T	Gcc/Acc	tolerated_low_confidence(0.05)
+MT	9274	G>A	Non-synonymous variant	ENSCAFG00000022730	MT-CO3	Protein-coding gene	G/S	Ggc/Agc	deleterious_low_confidence(0)
+MT	9278	C>T	Non-synonymous variant	ENSCAFG00000022730	MT-CO3	Protein-coding gene	S/F	tCt/tTt	deleterious_low_confidence(0)
+MT	9289	A>G	Non-synonymous variant	ENSCAFG00000022730	MT-CO3	Protein-coding gene	I/V	Atc/Gtc	tolerated_low_confidence(0.29)
+MT	9314	A>T	Non-synonymous variant	ENSCAFG00000022730	MT-CO3	Protein-coding gene	Y/F	tAc/tTc	tolerated_low_confidence(0.78)
+MT	9372	C>T	Synonymous variant	ENSCAFG00000022730	MT-CO3	Protein-coding gene	H	caC/caT	-
+MT	9376	G>A	Non-synonymous variant	ENSCAFG00000022730	MT-CO3	Protein-coding gene	V/I	Gtt/Att	deleterious_low_confidence(0)
+MT	9385	G>A	Non-synonymous variant	ENSCAFG00000022730	MT-CO3	Protein-coding gene	V/I	Gtc/Atc	tolerated_low_confidence(0.07)
+MT	9390	G>A	Synonymous variant	ENSCAFG00000022730	MT-CO3	Protein-coding gene	W	tgG/tgA	-
+MT	9452	T>C	Non-coding transcript exon variant	ENSCAFG00000022731	N/A	Non-coding tRNA gene	-	-	-
+MT	9478	T>C	Non-coding transcript exon variant	ENSCAFG00000022731	N/A	Non-coding tRNA gene	-	-	-
+MT	9483	C>T	Non-coding transcript exon variant	ENSCAFG00000022731	N/A	Non-coding tRNA gene	-	-	-
+MT	9513	T>C	Synonymous variant	ENSCAFG00000022732	ND3	Protein-coding gene	T	acT/acC	-
+MT	9616	T>C	Non-synonymous variant	ENSCAFG00000022732	ND3	Protein-coding gene	F/L	Ttt/Ctt	deleterious_low_confidence(0)
+MT	9693	C>T	Synonymous variant	ENSCAFG00000022732	ND3	Protein-coding gene	D	gaC/gaT	-
+MT	9697	G>A	Non-synonymous variant	ENSCAFG00000022732	ND3	Protein-coding gene	E/K	Gaa/Aaa	deleterious_low_confidence(0)
+MT	9711	A>G	Synonymous variant	ENSCAFG00000022732	ND3	Protein-coding gene	L	ctA/ctG	-
+MT	9725	G>C	Non-synonymous variant	ENSCAFG00000022732	ND3	Protein-coding gene	W/S	tGa/tCa	deleterious_low_confidence(0)
+MT	9729	G>A	Synonymous variant	ENSCAFG00000022732	ND3	Protein-coding gene	A	gcG/gcA	-
+MT	9744	G>A	Synonymous variant	ENSCAFG00000022732	ND3	Protein-coding gene	K	aaG/aaA	-
+MT	9762	C>T	Synonymous variant	ENSCAFG00000022732	ND3	Protein-coding gene	I	atC/atT	-
+MT	9786	C>T	Synonymous variant	ENSCAFG00000022732	ND3	Protein-coding gene	L	ctC/ctT	-
+MT	9790	G>A	Non-synonymous variant	ENSCAFG00000022732	ND3	Protein-coding gene	A/T	Gct/Act	tolerated_low_confidence(1)
+MT	9793	G>A	Non-synonymous variant	ENSCAFG00000022732	ND3	Protein-coding gene	A/T	Gcg/Acg	deleterious_low_confidence(0.02)
+MT	9795	G>A	Synonymous variant	ENSCAFG00000022732	ND3	Protein-coding gene	A	gcG/gcA	-
+MT	9802	G>A	Non-synonymous variant	ENSCAFG00000022732	ND3	Protein-coding gene	A/T	Gcg/Acg	tolerated_low_confidence(0.09)
+MT	9804	G>A	Synonymous variant	ENSCAFG00000022732	ND3	Protein-coding gene	A	gcG/gcA	-
+MT	9804	G>C	Synonymous variant	ENSCAFG00000022732	ND3	Protein-coding gene	A	gcG/gcC	-
+MT	9810	A>G	Synonymous variant	ENSCAFG00000022732	ND3	Protein-coding gene	E	gaA/gaG	-
+MT	9822	G>A	Synonymous variant	ENSCAFG00000022732	ND3	Protein-coding gene	K	aaG/aaA	-
+MT	9825	G>A	Synonymous variant	ENSCAFG00000022732	ND3	Protein-coding gene	G	ggG/ggA	-
+MT	9838	G>A	Non-synonymous variant	ENSCAFG00000022732	ND3	Protein-coding gene	E/K	Gaa/Aaa	deleterious_low_confidence(0.02)
+MT	9858	G>A	Non-coding transcript exon variant	ENSCAFG00000022733	N/A	Non-coding tRNA gene	-	-	-
+MT	9896	T>C	Non-coding transcript exon variant	ENSCAFG00000022733	N/A	Non-coding tRNA gene	-	-	-
+MT	9934	C>T	Synonymous variant	ENSCAFG00000022734	ND4L	Protein-coding gene	I	atC/atT	-
+MT	9938	C>A	Non-synonymous variant	ENSCAFG00000022734	ND4L	Protein-coding gene	L/M	Ctg/Atg	tolerated(0.31)
+MT	9940	G>A	Synonymous variant	ENSCAFG00000022734	ND4L	Protein-coding gene	L	ctG/ctA	-
+MT	9994	A>T	Synonymous variant	ENSCAFG00000022734	ND4L	Protein-coding gene	S	tcA/tcT	-
+MT	10014	G>A	Non-synonymous variant	ENSCAFG00000022734	ND4L	Protein-coding gene	G/D	gGc/gAc	deleterious(0)
+MT	10050	C>T	Non-synonymous variant	ENSCAFG00000022734	ND4L	Protein-coding gene	T/I	aCt/aTt	tolerated(0.55)
+MT	10080	G>A	Non-synonymous variant	ENSCAFG00000022734	ND4L	Protein-coding gene	S/N	aGc/aAc	tolerated(0.47)
+MT	10086	T>A	Non-synonymous variant	ENSCAFG00000022734	ND4L	Protein-coding gene	M/K	aTa/aAa	tolerated(0.06)
+MT	10092	T>C	Non-synonymous variant	ENSCAFG00000022734	ND4L	Protein-coding gene	I/T	aTc/aCc	deleterious(0.01)
+MT	10112	G>A	Non-synonymous variant	ENSCAFG00000022734	ND4L	Protein-coding gene	A/T	Gcc/Acc	deleterious(0.01)
+MT	10149	T>C	Non-synonymous variant	ENSCAFG00000022734	ND4L	Protein-coding gene	M/T	aTa/aCa	tolerated(0.21)
+MT	10175	T>C	Non-synonymous variant	ENSCAFG00000022734	ND4L	Protein-coding gene	Y/H	Tac/Cac	tolerated(0.59)
+MT	10211	T>C	Non-synonymous variant	ENSCAFG00000022735	ND4	Protein-coding gene	I/T	aTt/aCt	deleterious_low_confidence(0.02)
+MT	10293	T>C	Synonymous variant	ENSCAFG00000022735	ND4	Protein-coding gene	G	ggT/ggC	-
+MT	10304	G>A	Non-synonymous variant	ENSCAFG00000022735	ND4	Protein-coding gene	S/N	aGc/aAc	tolerated_low_confidence(0.08)
+MT	10313	G>A	Non-synonymous variant	ENSCAFG00000022735	ND4	Protein-coding gene	S/N	aGc/aAc	deleterious_low_confidence(0.01)
+MT	10315	T>C	Synonymous variant	ENSCAFG00000022735	ND4	Protein-coding gene	L	Tta/Cta	-
+MT	10331	A>T	Non-synonymous variant	ENSCAFG00000022735	ND4	Protein-coding gene	Q/L	cAa/cTa	tolerated_low_confidence(0.39)
+MT	10333	C>T	Non-synonymous variant	ENSCAFG00000022735	ND4	Protein-coding gene	P/S	Cca/Tca	tolerated_low_confidence(0.6)
+MT	10337	A>T	Non-synonymous variant	ENSCAFG00000022735	ND4	Protein-coding gene	N/I	aAt/aTt	tolerated_low_confidence(0.16)
+MT	10339	G>A	Non-synonymous variant	ENSCAFG00000022735	ND4	Protein-coding gene	D/N	Gat/Aat	tolerated_low_confidence(0.42)
+MT	10357	T>C	Non-synonymous variant	ENSCAFG00000022735	ND4	Protein-coding gene	S/P	Tcc/Ccc	deleterious_low_confidence(0.01)
+MT	10376	A>G	Non-synonymous variant	ENSCAFG00000022735	ND4	Protein-coding gene	D/G	gAt/gGt	deleterious_low_confidence(0)
+MT	10386	G>A	Synonymous variant	ENSCAFG00000022735	ND4	Protein-coding gene	S	tcG/tcA	-
+MT	10461	A>G	Synonymous variant	ENSCAFG00000022735	ND4	Protein-coding gene	E	gaA/gaG	-
+MT	10463	C>A	Non-synonymous variant	ENSCAFG00000022735	ND4	Protein-coding gene	P/H	cCc/cAc	deleterious_low_confidence(0.03)
+MT	10467	A>T	Non-synonymous variant	ENSCAFG00000022735	ND4	Protein-coding gene	L/F	ttA/ttT	tolerated_low_confidence(0.46)
+MT	10487	T>C	Non-synonymous variant	ENSCAFG00000022735	ND4	Protein-coding gene	I/T	aTt/aCt	deleterious_low_confidence(0.01)
+MT	10497	A>T	Synonymous variant	ENSCAFG00000022735	ND4	Protein-coding gene	L	ctA/ctT	-
+MT	10527	T>C	Synonymous variant	ENSCAFG00000022735	ND4	Protein-coding gene	T	acT/acC	-
+MT	10562	T>C	Non-synonymous variant	ENSCAFG00000022735	ND4	Protein-coding gene	L/P	cTa/cCa	deleterious_low_confidence(0.01)
+MT	10598	T>C	Non-synonymous variant	ENSCAFG00000022735	ND4	Protein-coding gene	I/T	aTt/aCt	deleterious_low_confidence(0)
+MT	10611	A>T	Synonymous variant	ENSCAFG00000022735	ND4	Protein-coding gene	G	ggA/ggT	-
+MT	10618	A>T	Non-synonymous variant	ENSCAFG00000022735	ND4	Protein-coding gene	T/S	Act/Tct	deleterious_low_confidence(0.04)
+MT	10666	G>T	Non-synonymous variant	ENSCAFG00000022735	ND4	Protein-coding gene	G/W	Gga/Tga	deleterious_low_confidence(0)
+MT	10668	A>G	Synonymous variant	ENSCAFG00000022735	ND4	Protein-coding gene	G	ggA/ggG	-
+MT	10682	T>C	Non-synonymous variant	ENSCAFG00000022735	ND4	Protein-coding gene	L/P	cTa/cCa	deleterious_low_confidence(0)
+MT	10700	T>C	Non-synonymous variant	ENSCAFG00000022735	ND4	Protein-coding gene	I/T	aTc/aCc	tolerated_low_confidence(0.34)
+MT	10713	G>A	Synonymous variant	ENSCAFG00000022735	ND4	Protein-coding gene	M	atG/atA	-
+MT	10735	A>G	Non-synonymous variant	ENSCAFG00000022735	ND4	Protein-coding gene	I/V	Att/Gtt	deleterious_low_confidence(0.05)
+MT	10743	C>T	Synonymous variant	ENSCAFG00000022735	ND4	Protein-coding gene	Y	taC/taT	-
+MT	10747	A>G	Non-synonymous variant	ENSCAFG00000022735	ND4	Protein-coding gene	I/V	Atc/Gtc	tolerated_low_confidence(0.61)
+MT	10754	C>T	Non-synonymous variant	ENSCAFG00000022735	ND4	Protein-coding gene	P/L	cCt/cTt	tolerated_low_confidence(0.21)
+MT	10789	C>T	Synonymous variant	ENSCAFG00000022735	ND4	Protein-coding gene	L	Ctg/Ttg	-
+MT	10804	G>A	Non-synonymous variant	ENSCAFG00000022735	ND4	Protein-coding gene	A/T	Gca/Aca	deleterious_low_confidence(0)
+MT	10842	G>A	Synonymous variant	ENSCAFG00000022735	ND4	Protein-coding gene	L	ttG/ttA	-
+MT	10935	A>T	Synonymous variant	ENSCAFG00000022735	ND4	Protein-coding gene	R	cgA/cgT	-
+MT	10944	C>T	Synonymous variant	ENSCAFG00000022735	ND4	Protein-coding gene	T	acC/acT	-
+MT	10953	T>C	Synonymous variant	ENSCAFG00000022735	ND4	Protein-coding gene	N	aaT/aaC	-
+MT	10992	G>A	Synonymous variant	ENSCAFG00000022735	ND4	Protein-coding gene	L	ttG/ttA	-
+MT	11050	T>C	Non-synonymous variant	ENSCAFG00000022735	ND4	Protein-coding gene	S/P	Tcc/Ccc	deleterious_low_confidence(0)
+MT	11082	G>A	Synonymous variant	ENSCAFG00000022735	ND4	Protein-coding gene	M	atG/atA	-
+MT	11096	T>C	Non-synonymous variant	ENSCAFG00000022735	ND4	Protein-coding gene	V/A	gTa/gCa	tolerated_low_confidence(0.68)
+MT	11098	G>A	Non-synonymous variant	ENSCAFG00000022735	ND4	Protein-coding gene	A/T	Gcg/Acg	deleterious_low_confidence(0)
+MT	11100	G>A	Synonymous variant	ENSCAFG00000022735	ND4	Protein-coding gene	A	gcG/gcA	-
+MT	11102	T>C	Non-synonymous variant	ENSCAFG00000022735	ND4	Protein-coding gene	V/A	gTt/gCt	tolerated_low_confidence(0.24)
+MT	11123	G>A	Non-synonymous variant	ENSCAFG00000022735	ND4	Protein-coding gene	S/N	aGt/aAt	deleterious_low_confidence(0)
+MT	11131	G>A	Non-synonymous variant	ENSCAFG00000022735	ND4	Protein-coding gene	G/S	Ggt/Agt	deleterious_low_confidence(0)
+MT	11140	G>A	Non-synonymous variant	ENSCAFG00000022735	ND4	Protein-coding gene	A/T	Gct/Act	tolerated_low_confidence(0.58)
+MT	11158	G>A	Non-synonymous variant	ENSCAFG00000022735	ND4	Protein-coding gene	G/S	Ggt/Agt	deleterious_low_confidence(0.02)
+MT	11163	A>G	Synonymous variant	ENSCAFG00000022735	ND4	Protein-coding gene	L	ttA/ttG	-
+MT	11188	G>A	Non-synonymous variant	ENSCAFG00000022735	ND4	Protein-coding gene	A/T	Gcc/Acc	deleterious_low_confidence(0)
+MT	11247	A>T	Non-synonymous variant	ENSCAFG00000022735	ND4	Protein-coding gene	Q/H	caA/caT	deleterious_low_confidence(0.02)
+MT	11263	A>G	Non-synonymous variant	ENSCAFG00000022735	ND4	Protein-coding gene	M/V	Ata/Gta	deleterious_low_confidence(0)
+MT	11266	G>A	Non-synonymous variant	ENSCAFG00000022735	ND4	Protein-coding gene	A/T	Gca/Aca	tolerated_low_confidence(0.22)
+MT	11269	G>A	Non-synonymous variant	ENSCAFG00000022735	ND4	Protein-coding gene	A/T	Gcc/Acc	tolerated_low_confidence(1)
+MT	11341	G>A	Non-synonymous variant	ENSCAFG00000022735	ND4	Protein-coding gene	V/M	Gta/Ata	deleterious_low_confidence(0)
+MT	11346	G>T	Synonymous variant	ENSCAFG00000022735	ND4	Protein-coding gene	V	gtG/gtT	-
+MT	11350	T>C	Non-synonymous variant	ENSCAFG00000022735	ND4	Protein-coding gene	S/P	Tcc/Ccc	deleterious_low_confidence(0.01)
+MT	11394	T>A	Non-synonymous variant	ENSCAFG00000022735	ND4	Protein-coding gene	I/M	atT/atA	tolerated_low_confidence(0.1)
+MT	11399	T>C	Non-synonymous variant	ENSCAFG00000022735	ND4	Protein-coding gene	I/T	aTt/aCt	tolerated_low_confidence(1)
+MT	11410	G>A	Non-synonymous variant	ENSCAFG00000022735	ND4	Protein-coding gene	A/T	Gcc/Acc	deleterious_low_confidence(0.02)
+MT	11425	T>C	Non-synonymous variant	ENSCAFG00000022735	ND4	Protein-coding gene	Y/H	Tat/Cat	tolerated_low_confidence(0.38)
+MT	11459	C>T	Non-synonymous variant	ENSCAFG00000022735	ND4	Protein-coding gene	S/F	tCc/tTc	deleterious_low_confidence(0.01)
+MT	11468	T>C	Non-synonymous variant	ENSCAFG00000022735	ND4	Protein-coding gene	I/T	aTc/aCc	tolerated_low_confidence(0.39)
+MT	11512	A>G	Non-synonymous variant	ENSCAFG00000022735	ND4	Protein-coding gene	T/A	Acc/Gcc	tolerated_low_confidence(1)
+MT	11567	G>A	Non-synonymous variant	ENSCAFG00000022735	ND4	Protein-coding gene	G/D	gGt/gAt	deleterious_low_confidence(0)
+MT	11586	T>C	Non-coding transcript exon variant	ENSCAFG00000022736	N/A	Non-coding tRNA gene	-	-	-
+MT	11591	T>C	Non-coding transcript exon variant	ENSCAFG00000022736	N/A	Non-coding tRNA gene	-	-	-
+MT	11614	T>C	Non-coding transcript exon variant	ENSCAFG00000022736	N/A	Non-coding tRNA gene	-	-	-
+MT	11643	T>C	Non-coding transcript exon variant	ENSCAFG00000022736	N/A	Non-coding tRNA gene	-	-	-
+MT	11657	C>A	Non-coding transcript exon variant	ENSCAFG00000022737	N/A	Non-coding tRNA gene	-	-	-
+MT	11686	G>A	Non-coding transcript exon variant	ENSCAFG00000022737	N/A	Non-coding tRNA gene	-	-	-
+MT	11726	T>C	Non-coding transcript exon variant	ENSCAFG00000022738	N/A	Non-coding tRNA gene	-	-	-
+MT	11728	A>G	Non-coding transcript exon variant	ENSCAFG00000022738	N/A	Non-coding tRNA gene	-	-	-
+MT	11754	T>C	Non-coding transcript exon variant	ENSCAFG00000022738	N/A	Non-coding tRNA gene	-	-	-
+MT	11800	T>C	Non-synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	M/T	aTa/aCa	tolerated_low_confidence(0.72)
+MT	11813	A>G	Synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	L	ctA/ctG	-
+MT	11814	G>A	Non-synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	V/I	Gtt/Att	tolerated_low_confidence(1)
+MT	11825	T>C	Synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	T	acT/acC	-
+MT	11866	A>T	Non-synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	K/M	aAg/aTg	tolerated_low_confidence(0.16)
+MT	11904	G>A	Non-synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	A/T	Gcg/Acg	deleterious_low_confidence(0.05)
+MT	11924	T>C	Synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	I	atT/atC	-
+MT	11945	C>T	Synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	Y	taC/taT	-
+MT	11965	T>C	Non-synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	I/T	aTt/aCt	tolerated_low_confidence(0.17)
+MT	11975	G>A	Synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	W	tgG/tgA	-
+MT	12006	T>C	Non-synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	S/P	Tcc/Ccc	deleterious_low_confidence(0)
+MT	12013	G>A	Non-synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	S/N	aGt/aAt	tolerated_low_confidence(0.08)
+MT	12042	T>C	Non-synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	F/L	Ttt/Ctt	deleterious_low_confidence(0.01)
+MT	12092	A>G	Synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	M	atA/atG	-
+MT	12107	C>T	Synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	S	tcC/tcT	-
+MT	12108	G>A	Non-synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	D/N	Gat/Aat	deleterious_low_confidence(0)
+MT	12115	A>G	Non-synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	Y/C	tAc/tGc	deleterious_low_confidence(0.02)
+MT	12129	T>C	Non-synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	F/L	Ttc/Ctc	tolerated_low_confidence(0.07)
+MT	12174	A>T	Non-synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	T/S	Acc/Tcc	tolerated_low_confidence(0.24)
+MT	12177	G>A	Non-synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	A/T	Gca/Aca	deleterious_low_confidence(0)
+MT	12199	T>C	Non-synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	F/S	tTc/tCc	deleterious_low_confidence(0)
+MT	12200	C>T	Synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	F	ttC/ttT	-
+MT	12219	G>A	Non-synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	G/S	Ggc/Agc	deleterious_low_confidence(0)
+MT	12255	G>A	Non-synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	G/S	Ggc/Agc	tolerated_low_confidence(0.06)
+MT	12256	G>C	Non-synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	G/A	gGc/gCc	tolerated_low_confidence(0.07)
+MT	12267	G>A	Non-synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	A/T	Gca/Aca	deleterious_low_confidence(0.02)
+MT	12276	G>A	Non-synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	A/T	Gcc/Acc	deleterious_low_confidence(0)
+MT	12290	C>T	Synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	A	gcC/gcT	-
+MT	12330	A>G	Non-synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	T/A	Acc/Gcc	tolerated_low_confidence(1)
+MT	12332	C>T	Synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	T	acC/acT	-
+MT	12336	G>A	Non-synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	A/T	Gca/Aca	tolerated_low_confidence(0.13)
+MT	12341	A>G	Synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	W	tgA/tgG	-
+MT	12345	C>T	Synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	L	Cta/Tta	-
+MT	12366	G>A	Non-synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	D/N	Gac/Aac	deleterious_low_confidence(0.03)
+MT	12370	T>C	Non-synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	L/P	cTt/cCt	deleterious_low_confidence(0.03)
+MT	12379	T>C	Non-synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	I/T	aTc/aCc	deleterious_low_confidence(0)
+MT	12389	G>A	Synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	T	acG/acA	-
+MT	12410	G>A	Synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	L	ctG/ctA	-
+MT	12419	T>C	Synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	L	ctT/ctC	-
+MT	12420	G>A	Non-synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	G/S	Ggc/Agc	deleterious_low_confidence(0.03)
+MT	12443	T>C	Synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	G	ggT/ggC	-
+MT	12450	G>A	Non-synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	A/T	Gct/Act	deleterious_low_confidence(0)
+MT	12450	G>C	Non-synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	A/P	Gct/Cct	deleterious_low_confidence(0)
+MT	12460	G>A	Non-synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	G/D	gGc/gAc	deleterious_low_confidence(0)
+MT	12505	T>C	Non-synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	V/A	gTa/gCa	deleterious_low_confidence(0)
+MT	12534	G>A	Non-synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	V/I	Gtt/Att	deleterious_low_confidence(0)
+MT	12575	A>G	Synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	L	ctA/ctG	-
+MT	12577	T>C	Non-synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	M/T	aTa/aCa	tolerated_low_confidence(0.35)
+MT	12579	G>A	Non-synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	E/K	Gag/Aag	deleterious_low_confidence(0.03)
+MT	12591	A>G	Non-synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	T/A	Act/Gct	tolerated_low_confidence(0.47)
+MT	12604	T>C	Non-synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	L/P	cTc/cCc	deleterious_low_confidence(0.01)
+MT	12609	T>C	Synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	L	Tta/Cta	-
+MT	12621	G>A	Non-synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	A/T	Gcc/Acc	deleterious_low_confidence(0)
+MT	12628	C>A	Non-synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	T/N	aCt/aAt	deleterious_low_confidence(0)
+MT	12642	G>A	Non-synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	A/T	Gca/Aca	deleterious_low_confidence(0)
+MT	12656	T>C	Synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	L	ctT/ctC	-
+MT	12713	A>T	Synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	L	ctA/ctT	-
+MT	12715	T>C	Non-synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	M/T	aTa/aCa	deleterious_low_confidence(0)
+MT	12720	G>A	Non-synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	V/M	Gta/Ata	deleterious_low_confidence(0.01)
+MT	12721	T>C	Non-synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	V/A	gTa/gCa	deleterious_low_confidence(0.01)
+MT	12729	G>A	Non-synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	G/S	Ggc/Agc	deleterious_low_confidence(0.02)
+MT	12740	G>A	Synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	Q	caG/caA	-
+MT	12757	T>C	Non-synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	L/S	tTa/tCa	deleterious_low_confidence(0)
+MT	12758	A>T	Non-synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	L/F	ttA/ttT	deleterious_low_confidence(0.03)
+MT	12788	T>C	Synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	A	gcT/gcC	-
+MT	12809	G>A	Synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	G	ggG/ggA	-
+MT	12831	G>A	Non-synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	D/N	Gat/Aat	tolerated_low_confidence(0.48)
+MT	12847	G>A	Non-synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	R/Q	cGa/cAa	deleterious_low_confidence(0.01)
+MT	12854	G>A	Synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	M	atG/atA	-
+MT	12858	G>A	Non-synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	G/S	Ggc/Agc	deleterious_low_confidence(0.02)
+MT	12871	T>C	Non-synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	V/A	gTc/gCc	tolerated_low_confidence(0.73)
+MT	12901	T>C	Non-synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	I/T	aTc/aCc	tolerated_low_confidence(0.14)
+MT	12959	G>A	Synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	L	ctG/ctA	-
+MT	12968	G>A	Synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	E	gaG/gaA	-
+MT	12972	G>A	Non-synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	A/T	Gct/Act	tolerated_low_confidence(0.31)
+MT	12999	G>A	Non-synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	A/T	Gcc/Acc	deleterious_low_confidence(0)
+MT	13010	T>C	Synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	I	atT/atC	-
+MT	13017	G>A	Non-synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	V/I	Gtt/Att	tolerated_low_confidence(1)
+MT	13035	G>A	Non-synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	A/T	Gct/Act	deleterious_low_confidence(0)
+MT	13045	G>A	Non-synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	S/N	aGc/aAc	deleterious_low_confidence(0)
+MT	13110	G>A	Non-synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	E/K	Gag/Aag	deleterious_low_confidence(0)
+MT	13114	A>T	Non-synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	N/I	aAt/aTt	deleterious_low_confidence(0)
+MT	13118	T>C	Synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	N	aaT/aaC	-
+MT	13128	A>G	Non-synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	I/V	Att/Gtt	deleterious_low_confidence(0.04)
+MT	13130	T>C	Synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	I	atT/atC	-
+MT	13133	C>T	Synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	N	aaC/aaT	-
+MT	13147	T>C	Non-synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	L/P	cTc/cCc	deleterious_low_confidence(0)
+MT	13163	A>G	Synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	V	gtA/gtG	-
+MT	13189	G>A	Non-synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	S/N	aGc/aAc	tolerated_low_confidence(1)
+MT	13207	T>C	Non-synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	I/T	aTc/aCc	tolerated_low_confidence(1)
+MT	13213	A>T	Non-synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	Q/L	cAg/cTg	tolerated_low_confidence(0.63)
+MT	13214	G>C	Non-synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	Q/H	caG/caC	tolerated_low_confidence(0.37)
+MT	13226	T>C	Synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	P	ccT/ccC	-
+MT	13231	A>T	Non-synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	Y/F	tAt/tTt	tolerated_low_confidence(0.1)
+MT	13240	T>C	Non-synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	M/T	aTg/aCg	tolerated_low_confidence(0.1)
+MT	13254	G>A	Non-synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	V/M	Gta/Ata	tolerated_low_confidence(0.06)
+MT	13256	A>T	Synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	V	gtA/gtT	-
+MT	13266	G>A	Non-synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	G/S	Ggt/Agt	deleterious_low_confidence(0)
+MT	13294	T>C	Non-synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	L/P	cTt/cCt	deleterious_low_confidence(0.03)
+MT	13299	T>A	Non-synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	S/T	Tca/Aca	tolerated_low_confidence(1)
+MT	13306	G>A	Non-synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	G/E	gGa/gAa	deleterious_low_confidence(0.01)
+MT	13318	A>G	Non-synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	N/S	aAc/aGc	tolerated_low_confidence(0.43)
+MT	13331	T>C	Synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	N	aaT/aaC	-
+MT	13348	G>A	Non-synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	S/N	aGc/aAc	tolerated_low_confidence(1)
+MT	13364	T>C	Synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	Y	taT/taC	-
+MT	13394	A>G	Synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	K	aaA/aaG	-
+MT	13411	G>A	Non-synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	S/N	aGc/aAc	tolerated_low_confidence(0.09)
+MT	13422	G>A	Non-synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	A/T	Gca/Aca	deleterious_low_confidence(0.03)
+MT	13459	T>C	Non-synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	I/T	aTc/aCc	tolerated_low_confidence(0.84)
+MT	13514	T>C	Synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	N	aaT/aaC	-
+MT	13523	T>A	Synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	G	ggT/ggA	-
+MT	13535	C>A	Synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	L	ctC/ctA	-
+MT	13566	C>T	Non-synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	L/F	Ctc/Ttc	deleterious_low_confidence(0.03)
+MT	13570	G>A	Non-synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	S/N	aGt/aAt	deleterious_low_confidence(0.01)
+MT	13595	G>A	Synonymous variant	ENSCAFG00000022739	MT-ND5	Protein-coding gene	G	ggG/ggA	-
+MT	13595	G>A	Non-synonymous variant	ENSCAFG00000022740	ND6	Protein-coding gene	T/I	aCc/aTc	tolerated(0.07)
+MT	13606	G>A	Synonymous variant	ENSCAFG00000022740	ND6	Protein-coding gene	I	atC/atT	-
+MT	13614	A>G	Synonymous variant	ENSCAFG00000022740	ND6	Protein-coding gene	L	Ttg/Ctg	-
+MT	13620	C>T	Non-synonymous variant	ENSCAFG00000022740	ND6	Protein-coding gene	G/S	Ggt/Agt	tolerated(0.45)
+MT	13633	T>C	Synonymous variant	ENSCAFG00000022740	ND6	Protein-coding gene	W	tgA/tgG	-
+MT	13636	G>A	Synonymous variant	ENSCAFG00000022740	ND6	Protein-coding gene	G	ggC/ggT	-
+MT	13640	G>A	Non-synonymous variant	ENSCAFG00000022740	ND6	Protein-coding gene	T/M	aCa/aTa	deleterious(0.02)
+MT	13658	G>A	Non-synonymous variant	ENSCAFG00000022740	ND6	Protein-coding gene	T/I	aCt/aTt	tolerated(0.39)
+MT	13689	T>C	Non-synonymous variant	ENSCAFG00000022740	ND6	Protein-coding gene	M/V	Atg/Gtg	tolerated(0.88)
+MT	13712	G>A	Non-synonymous variant	ENSCAFG00000022740	ND6	Protein-coding gene	S/F	tCt/tTt	tolerated(0.71)
+MT	13712	G>C	Non-synonymous variant	ENSCAFG00000022740	ND6	Protein-coding gene	S/C	tCt/tGt	tolerated(0.18)
+MT	13721	G>A	Non-synonymous variant	ENSCAFG00000022740	ND6	Protein-coding gene	T/M	aCg/aTg	tolerated(0.28)
+MT	13721	G>C	STOP	ENSCAFG00000022740	ND6	Protein-coding gene	T/*	aCg/aGg	-
+MT	13724	T>C	Non-synonymous variant	ENSCAFG00000022740	ND6	Protein-coding gene	D/G	gAt/gGt	tolerated(0.19)
+MT	13729	G>A	Synonymous variant	ENSCAFG00000022740	ND6	Protein-coding gene	I	atC/atT	-
+MT	13739	T>A	Non-synonymous variant	ENSCAFG00000022740	ND6	Protein-coding gene	D/V	gAt/gTt	deleterious(0.01)
+MT	13759	T>C	Synonymous variant	ENSCAFG00000022740	ND6	Protein-coding gene	L	ttA/ttG	-
+MT	13765	T>G	Synonymous variant	ENSCAFG00000022740	ND6	Protein-coding gene	V	gtA/gtC	-
+MT	13768	C>T	Synonymous variant	ENSCAFG00000022740	ND6	Protein-coding gene	E	gaG/gaA	-
+MT	13777	G>A	Synonymous variant	ENSCAFG00000022740	ND6	Protein-coding gene	D	gaC/gaT	-
+MT	13788	A>T	Non-synonymous variant	ENSCAFG00000022740	ND6	Protein-coding gene	L/M	Ttg/Atg	tolerated(0.26)
+MT	13795	G>A	Synonymous variant	ENSCAFG00000022740	ND6	Protein-coding gene	C	tgC/tgT	-
+MT	13802	G>C	Non-synonymous variant	ENSCAFG00000022740	ND6	Protein-coding gene	T/S	aCt/aGt	deleterious(0.03)
+MT	13814	G>A	Non-synonymous variant	ENSCAFG00000022740	ND6	Protein-coding gene	S/F	tCt/tTt	tolerated(0.12)
+MT	13830	T>C	Non-synonymous variant	ENSCAFG00000022740	ND6	Protein-coding gene	I/V	Att/Gtt	tolerated(0.57)
+MT	13847	G>A	Non-synonymous variant	ENSCAFG00000022740	ND6	Protein-coding gene	A/V	gCt/gTt	tolerated(1)
+MT	13861	T>C	Synonymous variant	ENSCAFG00000022740	ND6	Protein-coding gene	W	tgA/tgG	-
+MT	13883	G>A	Non-synonymous variant	ENSCAFG00000022740	ND6	Protein-coding gene	T/I	aCt/aTt	tolerated(0.29)
+MT	13935	T>C	Non-synonymous variant	ENSCAFG00000022740	ND6	Protein-coding gene	I/V	Att/Gtt	tolerated(0.53)
+MT	13944	C>T	Non-synonymous variant	ENSCAFG00000022740	ND6	Protein-coding gene	V/M	Gta/Ata	tolerated(0.1)
+MT	13971	A>T	Non-synonymous variant	ENSCAFG00000022740	ND6	Protein-coding gene	F/I	Ttt/Att	deleterious(0.03)
+MT	13985	G>A	Non-synonymous variant	ENSCAFG00000022740	ND6	Protein-coding gene	A/V	gCg/gTg	tolerated(0.33)
+MT	14002	G>A	Synonymous variant	ENSCAFG00000022740	ND6	Protein-coding gene	S	agC/agT	-
+MT	14013	G>A	Synonymous variant	ENSCAFG00000022740	ND6	Protein-coding gene	L	Cta/Tta	-
+MT	14023	A>G	Synonymous variant	ENSCAFG00000022740	ND6	Protein-coding gene	G	ggT/ggC	-
+MT	14045	G>A	Non-synonymous variant	ENSCAFG00000022740	ND6	Protein-coding gene	T/I	aCt/aTt	tolerated(0.06)
+MT	14053	A>G	Synonymous variant	ENSCAFG00000022740	ND6	Protein-coding gene	G	ggT/ggC	-
+MT	14096	A>G	Non-synonymous variant	ENSCAFG00000022740	ND6	Protein-coding gene	I/T	aTt/aCt	tolerated(0.18)
+MT	14102	G>A	Non-synonymous variant	ENSCAFG00000022740	ND6	Protein-coding gene	T/M	aCa/aTa	tolerated(0.66)
+MT	14110	T>C	Non-coding transcript exon variant	ENSCAFG00000022741	N/A	Non-coding tRNA gene	-	-	-
+MT	14123	A>G	Non-coding transcript exon variant	ENSCAFG00000022741	N/A	Non-coding tRNA gene	-	-	-
+MT	14124	A>T	Non-coding transcript exon variant	ENSCAFG00000022741	N/A	Non-coding tRNA gene	-	-	-
+MT	14125	T>C	Non-coding transcript exon variant	ENSCAFG00000022741	N/A	Non-coding tRNA gene	-	-	-
+MT	14137	T>C	Non-coding transcript exon variant	ENSCAFG00000022741	N/A	Non-coding tRNA gene	-	-	-
+MT	14157	G>A	Non-coding transcript exon variant	ENSCAFG00000022741	N/A	Non-coding tRNA gene	-	-	-
+MT	14162	A>G	Non-coding transcript exon variant	ENSCAFG00000022741	N/A	Non-coding tRNA gene	-	-	-
+MT	14178	C>T	Non-coding transcript exon variant	ENSCAFG00000022741	N/A	Non-coding tRNA gene	-	-	-
+MT	14196	G>A	Non-synonymous variant	ENSCAFG00000022742	CYTB	Protein-coding gene	R/Q	cGa/cAa	deleterious_low_confidence(0)
+MT	14201	A>C	Non-synonymous variant	ENSCAFG00000022742	CYTB	Protein-coding gene	T/P	Acc/Ccc	deleterious_low_confidence(0)
+MT	14205	A>G	Non-synonymous variant	ENSCAFG00000022742	CYTB	Protein-coding gene	H/R	cAc/cGc	deleterious_low_confidence(0)
+MT	14211	T>C	Non-synonymous variant	ENSCAFG00000022742	CYTB	Protein-coding gene	L/P	cTa/cCa	deleterious_low_confidence(0)
+MT	14213	G>A	Non-synonymous variant	ENSCAFG00000022742	CYTB	Protein-coding gene	A/T	Gcc/Acc	tolerated_low_confidence(0.08)
+MT	14232	C>T	Non-synonymous variant	ENSCAFG00000022742	CYTB	Protein-coding gene	S/L	tCa/tTa	deleterious_low_confidence(0)
+MT	14240	G>A	Non-synonymous variant	ENSCAFG00000022742	CYTB	Protein-coding gene	D/N	Gac/Aac	deleterious_low_confidence(0.01)
+MT	14242	C>A	Non-synonymous variant	ENSCAFG00000022742	CYTB	Protein-coding gene	D/E	gaC/gaA	deleterious_low_confidence(0.01)
+MT	14242	C>T	Synonymous variant	ENSCAFG00000022742	CYTB	Protein-coding gene	D	gaC/gaT	-
+MT	14244	T>C	Non-synonymous variant	ENSCAFG00000022742	CYTB	Protein-coding gene	L/P	cTc/cCc	deleterious_low_confidence(0.01)
+MT	14249	G>A	Non-synonymous variant	ENSCAFG00000022742	CYTB	Protein-coding gene	A/T	Gcg/Acg	tolerated_low_confidence(1)
+MT	14251	G>A	Synonymous variant	ENSCAFG00000022742	CYTB	Protein-coding gene	A	gcG/gcA	-
+MT	14254	G>A	Synonymous variant	ENSCAFG00000022742	CYTB	Protein-coding gene	P	ccG/ccA	-
+MT	14283	G>A	Non-synonymous variant	ENSCAFG00000022742	CYTB	Protein-coding gene	G/E	gGa/gAa	deleterious_low_confidence(0)
+MT	14297	G>A	Non-synonymous variant	ENSCAFG00000022742	CYTB	Protein-coding gene	V/M	Gta/Ata	tolerated_low_confidence(0.24)
+MT	14301	G>A	Non-synonymous variant	ENSCAFG00000022742	CYTB	Protein-coding gene	C/Y	tGc/tAc	deleterious_low_confidence(0)
+MT	14301	G>C	Non-synonymous variant	ENSCAFG00000022742	CYTB	Protein-coding gene	C/S	tGc/tCc	deleterious_low_confidence(0)
+MT	14310	T>C	Non-synonymous variant	ENSCAFG00000022742	CYTB	Protein-coding gene	L/P	cTa/cCa	deleterious_low_confidence(0)
+MT	14317	T>C	Synonymous variant	ENSCAFG00000022742	CYTB	Protein-coding gene	I	atT/atC	-
+MT	14336	G>A	Non-synonymous variant	ENSCAFG00000022742	CYTB	Protein-coding gene	A/T	Gct/Act	deleterious_low_confidence(0)
+MT	14341	G>A	Synonymous variant	ENSCAFG00000022742	CYTB	Protein-coding gene	M	atG/atA	-
+MT	14345	T>C	Non-synonymous variant	ENSCAFG00000022742	CYTB	Protein-coding gene	Y/H	Tat/Cat	deleterious_low_confidence(0)
+MT	14348	A>T	Non-synonymous variant	ENSCAFG00000022742	CYTB	Protein-coding gene	T/S	Aca/Tca	tolerated_low_confidence(0.06)
+MT	14382	C>A	Non-synonymous variant	ENSCAFG00000022742	CYTB	Protein-coding gene	T/N	aCc/aAc	deleterious_low_confidence(0.02)
+MT	14390	T>C	Non-synonymous variant	ENSCAFG00000022742	CYTB	Protein-coding gene	C/R	Tgc/Cgc	deleterious_low_confidence(0)
+MT	14397	A>G	Non-synonymous variant	ENSCAFG00000022742	CYTB	Protein-coding gene	D/G	gAc/gGc	deleterious_low_confidence(0)
+MT	14402	A>G	Non-synonymous variant	ENSCAFG00000022742	CYTB	Protein-coding gene	N/D	Aac/Gac	deleterious_low_confidence(0)
+MT	14408	G>A	Non-synonymous variant	ENSCAFG00000022742	CYTB	Protein-coding gene	G/S	Ggc/Agc	deleterious_low_confidence(0)
+MT	14417	A>G	Non-synonymous variant	ENSCAFG00000022742	CYTB	Protein-coding gene	I/V	Atc/Gtc	deleterious_low_confidence(0.01)
+MT	14421	G>A	Non-synonymous variant	ENSCAFG00000022742	CYTB	Protein-coding gene	R/H	cGc/cAc	deleterious_low_confidence(0)
+MT	14427	T>C	Non-synonymous variant	ENSCAFG00000022742	CYTB	Protein-coding gene	M/T	aTg/aCg	deleterious_low_confidence(0.03)
+MT	14428	G>A	Synonymous variant	ENSCAFG00000022742	CYTB	Protein-coding gene	M	atG/atA	-
+MT	14437	T>C	Synonymous variant	ENSCAFG00000022742	CYTB	Protein-coding gene	N	aaT/aaC	-
+MT	14438	G>A	Non-synonymous variant	ENSCAFG00000022742	CYTB	Protein-coding gene	G/S	Ggc/Agc	deleterious_low_confidence(0.01)
+MT	14457	T>G	Non-synonymous variant	ENSCAFG00000022742	CYTB	Protein-coding gene	I/S	aTc/aGc	deleterious_low_confidence(0)
+MT	14464	A>T	Synonymous variant	ENSCAFG00000022742	CYTB	Protein-coding gene	L	ctA/ctT	-
+MT	14483	G>A	Non-synonymous variant	ENSCAFG00000022742	CYTB	Protein-coding gene	G/S	Ggc/Agc	deleterious_low_confidence(0.01)
+MT	14484	G>A	Non-synonymous variant	ENSCAFG00000022742	CYTB	Protein-coding gene	G/D	gGc/gAc	deleterious_low_confidence(0)
+MT	14490	A>T	Non-synonymous variant	ENSCAFG00000022742	CYTB	Protein-coding gene	Y/F	tAt/tTt	deleterious_low_confidence(0)
+MT	14492	T>C	Non-synonymous variant	ENSCAFG00000022742	CYTB	Protein-coding gene	Y/H	Tac/Cac	deleterious_low_confidence(0.01)
+MT	14501	T>C	Non-synonymous variant	ENSCAFG00000022742	CYTB	Protein-coding gene	Y/H	Tat/Cat	deleterious_low_confidence(0.03)
+MT	14504	G>A	Non-synonymous variant	ENSCAFG00000022742	CYTB	Protein-coding gene	V/M	Gta/Ata	tolerated_low_confidence(0.42)
+MT	14511	T>C	Non-synonymous variant	ENSCAFG00000022742	CYTB	Protein-coding gene	M/T	aTa/aCa	tolerated_low_confidence(0.48)
+MT	14532	T>C	Non-synonymous variant	ENSCAFG00000022742	CYTB	Protein-coding gene	I/T	aTt/aCt	deleterious_low_confidence(0.02)
+MT	14536	A>G	Synonymous variant	ENSCAFG00000022742	CYTB	Protein-coding gene	V	gtA/gtG	-
+MT	14554	A>G	Synonymous variant	ENSCAFG00000022742	CYTB	Protein-coding gene	M	atA/atG	-
+MT	14577	T>C	Non-synonymous variant	ENSCAFG00000022742	CYTB	Protein-coding gene	V/A	gTa/gCa	deleterious_low_confidence(0)
+MT	14586	G>A	STOP	ENSCAFG00000022742	CYTB	Protein-coding gene	W/*	tGa/tAa	-
+MT	14588	G>A	STOP	ENSCAFG00000022742	CYTB	Protein-coding gene	G/*	Gga/Aga	-
+MT	14602	T>C	Synonymous variant	ENSCAFG00000022742	CYTB	Protein-coding gene	F	ttT/ttC	-
+MT	14639	A>C	Non-synonymous variant	ENSCAFG00000022742	CYTB	Protein-coding gene	I/L	Atc/Ctc	deleterious_low_confidence(0.01)
+MT	14690	G>A	Non-synonymous variant	ENSCAFG00000022742	CYTB	Protein-coding gene	V/M	Gtg/Atg	deleterious_low_confidence(0)
+MT	14692	G>A	Synonymous variant	ENSCAFG00000022742	CYTB	Protein-coding gene	V	gtG/gtA	-
+MT	14693	G>A	Non-synonymous variant	ENSCAFG00000022742	CYTB	Protein-coding gene	D/N	Gac/Aac	deleterious_low_confidence(0.01)
+MT	14753	G>A	Non-synonymous variant	ENSCAFG00000022742	CYTB	Protein-coding gene	A/T	Gct/Act	deleterious_low_confidence(0.02)
+MT	14759	G>A	Non-synonymous variant	ENSCAFG00000022742	CYTB	Protein-coding gene	A/T	Gca/Aca	tolerated_low_confidence(0.56)
+MT	14793	G>A	Non-synonymous variant	ENSCAFG00000022742	CYTB	Protein-coding gene	G/E	gGa/gAa	deleterious_low_confidence(0)
+MT	14807	T>C	Non-synonymous variant	ENSCAFG00000022742	CYTB	Protein-coding gene	S/P	Tca/Cca	deleterious_low_confidence(0.03)
+MT	14825	T>C	Non-synonymous variant	ENSCAFG00000022742	CYTB	Protein-coding gene	S/P	Tca/Cca	tolerated_low_confidence(0.19)
+MT	14829	A>G	Non-synonymous variant	ENSCAFG00000022742	CYTB	Protein-coding gene	D/G	gAc/gGc	deleterious_low_confidence(0)
+MT	14829	A>T	Non-synonymous variant	ENSCAFG00000022742	CYTB	Protein-coding gene	D/V	gAc/gTc	deleterious_low_confidence(0)
+MT	14866	T>C	Synonymous variant	ENSCAFG00000022742	CYTB	Protein-coding gene	D	gaT/gaC	-
+MT	14878	C>T	Synonymous variant	ENSCAFG00000022742	CYTB	Protein-coding gene	A	gcC/gcT	-
+MT	14886	T>C	Non-synonymous variant	ENSCAFG00000022742	CYTB	Protein-coding gene	L/P	cTa/cCa	deleterious_low_confidence(0)
+MT	14895	T>C	Non-synonymous variant	ENSCAFG00000022742	CYTB	Protein-coding gene	I/T	aTc/aCc	tolerated_low_confidence(0.52)
+MT	14895	T>G	Non-synonymous variant	ENSCAFG00000022742	CYTB	Protein-coding gene	I/S	aTc/aGc	tolerated_low_confidence(0.44)
+MT	14898	T>C	Non-synonymous variant	ENSCAFG00000022742	CYTB	Protein-coding gene	L/P	cTa/cCa	deleterious_low_confidence(0.01)
+MT	14909	G>A	Non-synonymous variant	ENSCAFG00000022742	CYTB	Protein-coding gene	V/I	Gtt/Att	deleterious_low_confidence(0.05)
+MT	14936	G>A	Non-synonymous variant	ENSCAFG00000022742	CYTB	Protein-coding gene	D/N	Gac/Aac	deleterious_low_confidence(0)
+MT	14957	G>A	Non-synonymous variant	ENSCAFG00000022742	CYTB	Protein-coding gene	A/T	Gca/Aca	deleterious_low_confidence(0.01)
+MT	14977	T>C	Synonymous variant	ENSCAFG00000022742	CYTB	Protein-coding gene	P	ccT/ccC	-
+MT	14996	T>C	Non-synonymous variant	ENSCAFG00000022742	CYTB	Protein-coding gene	W/R	Tga/Cga	deleterious_low_confidence(0)
+MT	15011	G>A	Non-synonymous variant	ENSCAFG00000022742	CYTB	Protein-coding gene	A/T	Gcc/Acc	deleterious_low_confidence(0)
+MT	15044	T>C	Synonymous variant	ENSCAFG00000022742	CYTB	Protein-coding gene	L	Tta/Cta	-
+MT	15051	G>A	Non-synonymous variant	ENSCAFG00000022742	CYTB	Protein-coding gene	G/D	gGt/gAt	deleterious_low_confidence(0)
+MT	15059	G>A	Non-synonymous variant	ENSCAFG00000022742	CYTB	Protein-coding gene	A/T	Gcc/Acc	deleterious_low_confidence(0.01)
+MT	15086	G>A	Non-synonymous variant	ENSCAFG00000022742	CYTB	Protein-coding gene	A/T	Gca/Aca	tolerated_low_confidence(0.34)
+MT	15120	G>A	Non-synonymous variant	ENSCAFG00000022742	CYTB	Protein-coding gene	R/H	cGc/cAc	deleterious_low_confidence(0.02)
+MT	15123	G>A	Non-synonymous variant	ENSCAFG00000022742	CYTB	Protein-coding gene	S/N	aGc/aAc	deleterious_low_confidence(0.01)
+MT	15135	G>T	Non-synonymous variant	ENSCAFG00000022742	CYTB	Protein-coding gene	R/L	cGg/cTg	deleterious_low_confidence(0)
+MT	15137	C>T	Non-synonymous variant	ENSCAFG00000022742	CYTB	Protein-coding gene	P/S	Ccc/Tcc	deleterious_low_confidence(0)
+MT	15141	T>C	Non-synonymous variant	ENSCAFG00000022742	CYTB	Protein-coding gene	L/P	cTt/cCt	deleterious_low_confidence(0)
+MT	15167	G>A	Non-synonymous variant	ENSCAFG00000022742	CYTB	Protein-coding gene	V/I	Gtc/Atc	tolerated_low_confidence(0.23)
+MT	15170	G>A	Non-synonymous variant	ENSCAFG00000022742	CYTB	Protein-coding gene	A/T	Gcc/Acc	tolerated_low_confidence(0.05)
+MT	15201	G>A	Non-synonymous variant	ENSCAFG00000022742	CYTB	Protein-coding gene	G/E	gGa/gAa	deleterious_low_confidence(0)
+MT	15214	G>A	Synonymous variant	ENSCAFG00000022742	CYTB	Protein-coding gene	E	gaG/gaA	-
+MT	15228	T>C	Non-synonymous variant	ENSCAFG00000022742	CYTB	Protein-coding gene	I/T	aTt/aCt	tolerated_low_confidence(0.27)
+MT	15251	T>C	Synonymous variant	ENSCAFG00000022742	CYTB	Protein-coding gene	L	Tta/Cta	-
+MT	15317	T>C	Non-synonymous variant	ENSCAFG00000022742	CYTB	Protein-coding gene	W/R	Tga/Cga	deleterious_low_confidence(0)
+MT	15318	G>A	STOP	ENSCAFG00000022742	CYTB	Protein-coding gene	W/*	tGa/tAa	-
+MT	15319	A>T	Non-synonymous variant	ENSCAFG00000022742	CYTB	Protein-coding gene	W/C	tgA/tgT	deleterious_low_confidence(0)
+MT	15331	A>G	Non-coding transcript exon variant	ENSCAFG00000022743	N/A	Non-coding tRNA gene	-	-	-
+MT	15338	T>C	Non-coding transcript exon variant	ENSCAFG00000022743	N/A	Non-coding tRNA gene	-	-	-
+MT	15349	G>A	Non-coding transcript exon variant	ENSCAFG00000022743	N/A	Non-coding tRNA gene	-	-	-
+MT	15352	T>C	Non-coding transcript exon variant	ENSCAFG00000022743	N/A	Non-coding tRNA gene	-	-	-
+MT	15372	G>A	Non-coding transcript exon variant	ENSCAFG00000022743	N/A	Non-coding tRNA gene	-	-	-
+MT	15378	G>A	Non-coding transcript exon variant	ENSCAFG00000022743	N/A	Non-coding tRNA gene	-	-	-
+MT	15378	G>C	Non-coding transcript exon variant	ENSCAFG00000022743	N/A	Non-coding tRNA gene	-	-	-
+MT	15478	T>C	Non-coding	N/A	N/A	N/A	-	-	-
+MT	15486	C>T	Non-coding	N/A	N/A	N/A	-	-	-
+MT	15491	C>A	Non-coding	N/A	N/A	N/A	-	-	-
+MT	15495	G>A	Non-coding	N/A	N/A	N/A	-	-	-
+MT	15504	G>A	Non-coding	N/A	N/A	N/A	-	-	-
+MT	15508	C>T	Non-coding	N/A	N/A	N/A	-	-	-
+MT	15524	C>T	Non-coding	N/A	N/A	N/A	-	-	-
+MT	15526	C>T	Non-coding	N/A	N/A	N/A	-	-	-
+MT	15556	G>A	Non-coding	N/A	N/A	N/A	-	-	-
+MT	15560	G>A	Non-coding	N/A	N/A	N/A	-	-	-
+MT	15587	T>C	Non-coding	N/A	N/A	N/A	-	-	-
+MT	15596	C>T	Non-coding	N/A	N/A	N/A	-	-	-
+MT	15603	A>G	Non-coding	N/A	N/A	N/A	-	-	-
+MT	15604	G>A	Non-coding	N/A	N/A	N/A	-	-	-
+MT	15613	A>G	Non-coding	N/A	N/A	N/A	-	-	-
+MT	15620	T>C	Non-coding	N/A	N/A	N/A	-	-	-
+MT	15625	T>C	Non-coding	N/A	N/A	N/A	-	-	-
+MT	15627	A>G	Non-coding	N/A	N/A	N/A	-	-	-
+MT	15630	C>G	Non-coding	N/A	N/A	N/A	-	-	-
+MT	15643	A>G	Non-coding	N/A	N/A	N/A	-	-	-
+MT	15652	G>A	Non-coding	N/A	N/A	N/A	-	-	-
+MT	15750	C>T	Non-coding	N/A	N/A	N/A	-	-	-
+MT	15800	T>C	Non-coding	N/A	N/A	N/A	-	-	-
+MT	15814	C>T	Non-coding	N/A	N/A	N/A	-	-	-
+MT	15912	C>T	Non-coding	N/A	N/A	N/A	-	-	-
+MT	15925	A>T	Non-coding	N/A	N/A	N/A	-	-	-
+MT	15955	C>T	Non-coding	N/A	N/A	N/A	-	-	-
+MT	15959	C>T	Non-coding	N/A	N/A	N/A	-	-	-
+MT	15991	C>T	Non-coding	N/A	N/A	N/A	-	-	-
+MT	16025	T>C	Non-coding	N/A	N/A	N/A	-	-	-
+MT	16083	A>G	Non-coding	N/A	N/A	N/A	-	-	-
+MT	16084	A>G	Non-coding	N/A	N/A	N/A	-	-	-
+MT	16431	C>T	Non-coding	N/A	N/A	N/A	-	-	-
+MT	16454	A>G	Non-coding	N/A	N/A	N/A	-	-	-
+MT	16513	T>C	Non-coding	N/A	N/A	N/A	-	-	-
+MT	16514	G>A	Non-coding	N/A	N/A	N/A	-	-	-
+MT	16643	C>T	Non-coding	N/A	N/A	N/A	-	-	-
+MT	16663	C>T	Non-coding	N/A	N/A	N/A	-	-	-
+MT	16673	C>T	Non-coding	N/A	N/A	N/A	-	-	-
+MT	16685	A>T	Non-coding	N/A	N/A	N/A	-	-	-
