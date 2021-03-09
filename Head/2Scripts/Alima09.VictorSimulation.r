@@ -97,6 +97,20 @@ FreqOfA # 0.3476562
 FreqOfG # 0.0353125
 FreqOfA/FreqOfG # 9.845133 ~ 2.769 / 0.231 = 11.987
 
+##### read simulations of Valerian and merge them with DataT
 
+Val = read.table("../../Body/1Raw/VictorSimulations/Valerian01.txt", header = FALSE, quote = '')
+Val=Val[c(1,3)]
+names(Val) = c('Codons','FreqVal')
+Val$FreqVal = as.numeric(gsub(';','',Val$FreqVal))
+Val$FreqVal = Val$FreqVal/sum(Val$FreqVal)
+
+DataT = merge(DataT,Val, by = 'Codons')
+sum(DataT$FreqVal); sum(DataT$CodonFreq)
+cor.test(DataT$FreqVal,DataT$CodonFreq,method = 'spearman')
+plot(DataT$FreqVal,DataT$CodonFreq, xlab = 'Valerian Codon Usage', ylab = 'Victor Codon Usage')
+plot(log(DataT$FreqVal),log(DataT$CodonFreq), xlab = 'Log Valerian Codon Usage', ylab = 'Log Victor Codon Usage')
+
+DataT
 
 
