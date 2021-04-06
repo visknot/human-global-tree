@@ -1,0 +1,76 @@
+### PRODUCE MutSpec12 for D loop and check if it resembles the expected MutSpec
+rm(list=ls(all=TRUE))
+library('dplyr')
+library('gtools')
+
+VecOfRegions = c('D-loop','rRNA','tRNA','12Proteins, syn','12Proteins, nons','12Proteins, all')
+for (vec in 1:6)
+{ # vec = 3 
+Mut = read.table('../../Body/2Derived/fulltreeCodons.csv', header = TRUE, sep = ';'); # "../../Body/3Results/fulltreeCodons.csv", sep=";"
+#names(Mut)
+# table(Mut$synonymous)
+if (VecOfRegions[vec] == 'D-loop') {Mut = Mut[Mut$gene_info %in% c('D-loop_1','D-loop_2'),]}
+if (VecOfRegions[vec] == 'rRNA') {Mut = Mut[Mut$gene_info %in% c('rRNA_RNR1','rRNA_RNR2'),]}
+if (VecOfRegions[vec] == 'tRNA') {Mut = Mut[grepl('tRNA',Mut$gene_info),]}
+if (VecOfRegions[vec] == '12Proteins, syn') {Mut=Mut[Mut$note == 'normal' & Mut$synonymous == 'synonymous' & Mut$gene_info != 'mRNA_ND6',]}
+if (VecOfRegions[vec] == '12Proteins, nons') {Mut=Mut[Mut$note == 'normal' & Mut$synonymous == 'non-synonymous' & Mut$gene_info != 'mRNA_ND6',]}
+if (VecOfRegions[vec] == '12Proteins, all') {Mut=Mut[Mut$note == 'normal' & Mut$gene_info != 'mRNA_ND6',]}
+
+Pc = Mut
+
+#### frequency of ancestral nucleotides:
+temp = unique(Pc[names(Pc) %in% c('ref_pos','nuc_ref_in_ali')])
+temp = data.frame(table(temp$nuc_ref_in_ali))
+#temp$Freq = temp$Freq/sum(temp$Freq)
+
+#### mutations are only a t g c;  Derive Subst and Context 
+# Subst
+ExtractThird<-function(x) {unlist(strsplit(x,''))[3]}
+Pc$temp1 = apply(as.matrix(Pc$ancestor),1,FUN = ExtractThird); Pc = Pc[Pc$temp1 %in% c('A','T','G','C'),]
+Pc$temp2 = apply(as.matrix(Pc$descendant),1,FUN = ExtractThird); Pc = Pc[Pc$temp2 %in% c('A','T','G','C'),]
+Pc$Subst = paste(Pc$temp1,Pc$temp2,sep='')
+table(Pc$Subst)
+
+# FILTER FOR THE SAME BACKGROUND (Pos1Anc == Pos1Der; Pos5Anc == Pos5Der; ):
+# very first (first) and very last (fifth) should be the same (important for codons - we will garantie, that in the codon there is only one substitution)
+nrow(Pc)
+ExtractFirst<-function(x) {unlist(strsplit(x,''))[1]}
+Pc$Pos1Anc = apply(as.matrix(Pc$ancestor),1,FUN = ExtractFirst);   Pc = Pc[Pc$Pos1Anc %in% c('a','t','g','c'),]
+Pc$Pos1Der = apply(as.matrix(Pc$descendant),1,FUN = ExtractFirst); Pc = Pc[Pc$Pos1Der %in% c('a','t','g','c'),]
+Pc=Pc[Pc$Pos1Anc == Pc$Pos1Der,]; nrow(Pc)
+
+ExtractFifth<-function(x) {unlist(strsplit(x,''))[5]}
+Pc$Pos5Anc = apply(as.matrix(Pc$ancestor),1,FUN = ExtractFifth);   Pc = Pc[Pc$Pos5Anc %in% c('a','t','g','c'),]
+Pc$Pos5Der = apply(as.matrix(Pc$descendant),1,FUN = ExtractFifth); Pc = Pc[Pc$Pos5Der %in% c('a','t','g','c'),]
+Pc=Pc[Pc$Pos5Anc == Pc$Pos5Der,]; nrow(Pc)
+
+# Context
+ExtractSecond<-function(x) {unlist(strsplit(x,''))[2]}
+Pc$Pos2Anc = apply(as.matrix(Pc$ancestor),1,FUN = ExtractSecond); Pc = Pc[Pc$Pos2Anc %in% c('a','t','g','c'),]
+Pc$Pos2Der = apply(as.matrix(Pc$descendant),1,FUN = ExtractSecond); Pc = Pc[Pc$Pos2Der %in% c('a','t','g','c'),]
+Pc=Pc[Pc$Pos2Anc == Pc$Pos2Der,]
+
+ExtractFourth<-function(x) {unlist(strsplit(x,''))[4]}
+Pc$Pos4Anc = apply(as.matrix(Pc$ancestor),1,FUN = ExtractFourth); Pc = Pc[Pc$Pos4Anc %in% c('a','t','g','c'),]
+Pc$Pos4Der = apply(as.matrix(Pc$descendant),1,FUN = ExtractFourth); Pc = Pc[Pc$Pos4Der %in% c('a','t','g','c'),]
+Pc=Pc[Pc$Pos4Anc == Pc$Pos4Der,]
+
+Pc$Context = paste(toupper(Pc$Pos2Anc),Pc$temp1,toupper(Pc$Pos4Anc),sep='')
+
+######### MutSpec12
+MutSpec12 = as.data.frame(table(Pc$Subst))
+names(MutSpec12)=c('Subst','NumbObs')
+MutSpec12 = MutSpec12[order(-MutSpec12$NumbObs),]
+for (i in 1:nrow(MutSpec12))
+{
+  MutSpec12$AncestralNuc[i] = unlist(strsplit(as.character(MutSpec12$Subst[i]),''))[1]
+}
+
+####### merge with temp and normalize
+MutSpec12 = merge(MutSpec12,temp, by.x = 'AncestralNuc', by.y = 'Var1')
+MutSpec12$NormFreq = MutSpec12$NumbObs/MutSpec12$Freq
+MutSpec12$NormFreq = MutSpec12$NormFreq/sum(MutSpec12$NormFreq)
+MutSpec12 = MutSpec12[order(MutSpec12$AncestralNuc,MutSpec12$Subst),]
+barplot(MutSpec12$NormFreq, names = MutSpec12$Subst, main = VecOfRegions[vec])
+}
+
